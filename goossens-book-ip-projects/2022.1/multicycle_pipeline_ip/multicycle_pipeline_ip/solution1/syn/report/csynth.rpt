@@ -1,0 +1,151 @@
+
+
+================================================================
+== Synthesis Summary Report of 'multicycle_pipeline_ip'
+================================================================
++ General Information: 
+    * Date:           Mon Jul 11 09:01:26 2022
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+    * Project:        multicycle_pipeline_ip
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+-----------+----+-----------+------------+-----+
+    |                       Modules                      |  Issue |       | Latency | Latency | Iteration|         | Trip |          |           |    |           |            |     |
+    |                       & Loops                      |  Type  | Slack | (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined|   BRAM    | DSP|     FF    |     LUT    | URAM|
+    +----------------------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+-----------+----+-----------+------------+-----+
+    |+ multicycle_pipeline_ip                            |  Timing|  -4.45|        -|        -|         -|        -|     -|        no|  256 (91%)|   -|  2472 (2%)|  6018 (11%)|    -|
+    | + multicycle_pipeline_ip_Pipeline_VITIS_LOOP_23_1  |       -|   3.89|       34|  340.000|         -|       34|     -|        no|          -|   -|    8 (~0%)|    51 (~0%)|    -|
+    |  o VITIS_LOOP_23_1                                 |       -|   7.30|       32|  320.000|         1|        1|    32|       yes|          -|   -|          -|           -|    -|
+    | + multicycle_pipeline_ip_Pipeline_VITIS_LOOP_87_1  |  Timing|  -4.45|        -|        -|         -|        -|     -|        no|          -|   -|  2131 (2%)|  5564 (10%)|    -|
+    |  o VITIS_LOOP_87_1                                 |       -|   7.30|        -|        -|         2|        2|     -|       yes|          -|   -|          -|           -|    -|
+    +----------------------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+-----------+----+-----------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+-------------------+
+| Interface     | Data Width | Address Width | Offset | Register | Resource Estimate |
++---------------+------------+---------------+--------+----------+-------------------+
+| s_axi_control | 32         | 20            | 16     | 0        | BRAM=256          |
++---------------+------------+---------------+--------+----------+-------------------+
+
+* S_AXILITE Registers
++---------------+---------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register            | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+---------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL                | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER                | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER              | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR              | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | start_pc            | 0x10   | 32    | W      | Data signal of start_pc          |                                                                      |
+| s_axi_control | nb_instruction      | 0x18   | 32    | R      | Data signal of nb_instruction    |                                                                      |
+| s_axi_control | nb_instruction_ctrl | 0x1c   | 32    | R      | Control signal of nb_instruction | 0=nb_instruction_ap_vld                                              |
+| s_axi_control | nb_cycle            | 0x28   | 32    | R      | Data signal of nb_cycle          |                                                                      |
+| s_axi_control | nb_cycle_ctrl       | 0x2c   | 32    | R      | Control signal of nb_cycle       | 0=nb_cycle_ap_vld                                                    |
++---------------+---------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------------+-----------+---------------+
+| Argument       | Direction | Datatype      |
++----------------+-----------+---------------+
+| start_pc       | in        | unsigned int  |
+| code_ram       | in        | unsigned int* |
+| data_ram       | inout     | int*          |
+| nb_instruction | out       | unsigned int* |
+| nb_cycle       | out       | unsigned int* |
++----------------+-----------+---------------+
+
+* SW-to-HW Mapping
++----------------+---------------+----------+-----------------------------------------------+
+| Argument       | HW Interface  | HW Type  | HW Info                                       |
++----------------+---------------+----------+-----------------------------------------------+
+| start_pc       | s_axi_control | register | name=start_pc offset=0x10 range=32            |
+| code_ram       | s_axi_control | memory   | name=code_ram offset=262144 range=262144      |
+| data_ram       | s_axi_control | memory   | name=data_ram offset=524288 range=262144      |
+| nb_instruction | s_axi_control | register | name=nb_instruction offset=0x18 range=32      |
+| nb_instruction | s_axi_control | register | name=nb_instruction_ctrl offset=0x1c range=32 |
+| nb_cycle       | s_axi_control | register | name=nb_cycle offset=0x28 range=32            |
+| nb_cycle       | s_axi_control | register | name=nb_cycle_ctrl offset=0x2c range=32       |
++----------------+---------------+----------+-----------------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------------------------------+-----+--------+--------------------+-----+--------+---------+
+| Name                                               | DSP | Pragma | Variable           | Op  | Impl   | Latency |
++----------------------------------------------------+-----+--------+--------------------+-----+--------+---------+
+| + multicycle_pipeline_ip                           | 0   |        |                    |     |        |         |
+|  + multicycle_pipeline_ip_Pipeline_VITIS_LOOP_23_1 | 0   |        |                    |     |        |         |
+|    add_ln886_fu_942_p2                             | -   |        | add_ln886          | add | fabric | 0       |
+|  + multicycle_pipeline_ip_Pipeline_VITIS_LOOP_87_1 | 0   |        |                    |     |        |         |
+|    nbi_V_3_fu_11698_p2                             | -   |        | nbi_V_3            | add | fabric | 0       |
+|    nbc_V_3_fu_11704_p2                             | -   |        | nbc_V_3            | add | fabric | 0       |
+|    result_26_fu_16001_p2                           | -   |        | result_26          | sub | fabric | 0       |
+|    result_27_fu_16005_p2                           | -   |        | result_27          | add | fabric | 0       |
+|    npc4_fu_12399_p2                                | -   |        | npc4               | add | fabric | 0       |
+|    result_43_fu_12417_p2                           | -   |        | result_43          | add | fabric | 0       |
+|    add_ln78_fu_12423_p2                            | -   |        | add_ln78           | add | fabric | 0       |
+|    result_44_fu_12429_p2                           | -   |        | result_44          | add | fabric | 0       |
+|    j_b_target_pc_V_fu_12543_p2                     | -   |        | j_b_target_pc_V    | add | fabric | 0       |
+|    target_pc_V_fu_12573_p2                         | -   |        | target_pc_V        | add | fabric | 0       |
+|    target_pc_V_6_fu_15640_p2                       | -   |        | target_pc_V_6      | add | fabric | 0       |
+|    f_to_f_next_pc_V_4_fu_17043_p2                  | -   |        | f_to_f_next_pc_V_4 | add | fabric | 0       |
++----------------------------------------------------+-----+--------+--------------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+-----------------------------------------+--------------------------------------------------------------------------+
+| Type            | Options                                 | Location                                                                 |
++-----------------+-----------------------------------------+--------------------------------------------------------------------------+
+| interface       | s_axilite port=start_pc                 | multicycle_pipeline_ip.cpp:49 in multicycle_pipeline_ip, start_pc        |
+| interface       | s_axilite port=code_ram                 | multicycle_pipeline_ip.cpp:50 in multicycle_pipeline_ip, code_ram        |
+| interface       | s_axilite port=data_ram                 | multicycle_pipeline_ip.cpp:51 in multicycle_pipeline_ip, data_ram        |
+| interface       | s_axilite port=nb_instruction           | multicycle_pipeline_ip.cpp:52 in multicycle_pipeline_ip, nb_instruction  |
+| interface       | s_axilite port=nb_cycle                 | multicycle_pipeline_ip.cpp:53 in multicycle_pipeline_ip, nb_cycle        |
+| interface       | s_axilite port=return                   | multicycle_pipeline_ip.cpp:54 in multicycle_pipeline_ip, return          |
+| inline          | recursive                               | multicycle_pipeline_ip.cpp:55 in multicycle_pipeline_ip                  |
+| array_partition | variable=reg_file dim=1 complete        | multicycle_pipeline_ip.cpp:57 in multicycle_pipeline_ip, reg_file        |
+| array_partition | variable=is_reg_computed dim=1 complete | multicycle_pipeline_ip.cpp:59 in multicycle_pipeline_ip, is_reg_computed |
+| pipeline        | II=2                                    | multicycle_pipeline_ip.cpp:88 in multicycle_pipeline_ip                  |
+| latency         | max=1                                   | multicycle_pipeline_ip.cpp:89 in multicycle_pipeline_ip                  |
++-----------------+-----------------------------------------+--------------------------------------------------------------------------+
+
+

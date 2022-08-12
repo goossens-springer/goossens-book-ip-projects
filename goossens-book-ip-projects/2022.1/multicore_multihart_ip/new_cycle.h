@@ -1,0 +1,19 @@
+#ifndef __NEW_CYCLE
+#define __NEW_CYCLE
+#include "multihart_ip.h"
+void new_cycle(
+  from_f_to_d_t  f_to_d,
+  from_d_to_f_t  d_to_f,
+  from_d_to_i_t  d_to_i,
+  from_i_to_e_t  i_to_e,
+  from_e_to_f_t  e_to_f,
+  from_e_to_m_t  e_to_m,
+  from_m_to_w_t  m_to_w,
+  from_d_to_f_t *f_from_d,
+  from_e_to_f_t *f_from_e,
+  from_f_to_d_t *d_from_f,
+  from_d_to_i_t *i_from_d,
+  from_i_to_e_t *e_from_i,
+  from_e_to_m_t *m_from_e,
+  from_m_to_w_t *w_from_m);
+#endif

@@ -1,0 +1,1511 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
+| Date         : Mon Jul 11 11:44:20 2022
+| Host         : goossens-Precision-5530 running 64-bit Ubuntu 22.04 LTS
+| Command      : report_timing_summary -max_paths 10 -report_unconstrained -file design_1_4h_wrapper_timing_summary_routed.rpt -pb design_1_4h_wrapper_timing_summary_routed.pb -rpx design_1_4h_wrapper_timing_summary_routed.rpx -warn_on_violation
+| Design       : design_1_4h_wrapper
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity  Description            Violations  
+---------  --------  ---------------------  ----------  
+TIMING-16  Warning   Large setup violation  3           
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (0)
+6. checking no_output_delay (0)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (0)
+------------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (0)
+-------------------------------
+ There are 0 ports with no output delay specified.
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     -1.393      -24.830                     61                26503        0.010        0.000                      0                26503        3.750        0.000                       0                  9049  
+
+
+Timing constraints are not met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock       Waveform(ns)       Period(ns)      Frequency(MHz)
+-----       ------------       ----------      --------------
+clk_fpga_0  {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk_fpga_0         -1.393      -24.830                     61                26503        0.010        0.000                      0                26503        3.750        0.000                       0                  9049  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                      clk_fpga_0    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_fpga_0
+  To Clock:  clk_fpga_0
+
+Setup :           61  Failing Endpoints,  Worst Slack       -1.393ns,  Total Violation      -24.830ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.010ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        3.750ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (VIOLATED) :        -1.393ns  (required time - arrival time)
+  Source:                 design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_1_0/DIBDI[0]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_fpga_0 rise@10.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        10.802ns  (logic 4.041ns (37.410%)  route 6.761ns (62.590%))
+  Logic Levels:           7  (LUT5=3 LUT6=3 RAMB36E1=1)
+  Clock Path Skew:        -0.196ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.800ns = ( 12.800 - 10.000 ) 
+    Source Clock Delay      (SCD):    3.110ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        1.816     3.110    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/ap_clk
+    RAMB36_X5Y16         RAMB36E1                                     r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X5Y16         RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_CASCADEOUTB)
+                                                      2.872     5.982 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CASCADEOUTB
+                         net (fo=1, routed)           0.065     6.048    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7_n_1
+    RAMB36_X5Y17         RAMB36E1 (Prop_ramb36e1_CASCADEINB_DOBDO[0])
+                                                      0.425     6.473 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_1_7/DOBDO[0]
+                         net (fo=5, routed)           1.489     7.961    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/q0[31]
+    SLICE_X85Y81         LUT5 (Prop_lut5_I4_O)        0.124     8.085 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/m_state_value_10_reg_27954[31]_i_6/O
+                         net (fo=6, routed)           0.673     8.759    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_8_fu_1334_reg[31]_0
+    SLICE_X84Y81         LUT6 (Prop_lut6_I3_O)        0.124     8.883 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_10_reg_27954[30]_i_3/O
+                         net (fo=15, routed)          0.397     9.279    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_10_reg_27954[30]_i_3_n_0
+    SLICE_X82Y80         LUT5 (Prop_lut5_I0_O)        0.124     9.403 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_10_reg_27954[24]_i_2/O
+                         net (fo=10, routed)          1.500    10.904    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/m_state_value_8_fu_1334_reg[24]
+    SLICE_X52Y62         LUT5 (Prop_lut5_I2_O)        0.124    11.028 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/m_state_value_12_reg_27964[24]_i_1/O
+                         net (fo=3, routed)           0.447    11.475    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/mux_42_32_1_1_U39/mem_reg_3_0_7_i_5[24]
+    SLICE_X52Y62         LUT6 (Prop_lut6_I1_O)        0.124    11.599 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/mux_42_32_1_1_U39/mem_reg_3_0_0_i_6/O
+                         net (fo=1, routed)           0.634    12.233    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/value_fu_10158_p6[7]
+    SLICE_X53Y61         LUT6 (Prop_lut6_I2_O)        0.124    12.357 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_0_i_2/O
+                         net (fo=2, routed)           1.556    13.912    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/p_1_in[24]
+    RAMB36_X1Y9          RAMB36E1                                     r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_1_0/DIBDI[0]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     10.000    10.000 r  
+    PS7_X0Y0             PS7                          0.000    10.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088    11.088    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.179 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        1.621    12.800    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/ap_clk
+    RAMB36_X1Y9          RAMB36E1                                     r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_1_0/CLKBWRCLK
+                         clock pessimism              0.115    12.915    
+                         clock uncertainty           -0.154    12.761    
+    RAMB36_X1Y9          RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_DIBDI[0])
+                                                     -0.241    12.520    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_1_0
+  -------------------------------------------------------------------
+                         required time                         12.520    
+                         arrival time                         -13.912    
+  -------------------------------------------------------------------
+                         slack                                 -1.393    
+
+Slack (VIOLATED) :        -1.391ns  (required time - arrival time)
+  Source:                 design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_0/DIBDI[0]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_fpga_0 rise@10.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        10.799ns  (logic 4.041ns (37.419%)  route 6.758ns (62.581%))
+  Logic Levels:           7  (LUT5=3 LUT6=3 RAMB36E1=1)
+  Clock Path Skew:        -0.197ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.799ns = ( 12.799 - 10.000 ) 
+    Source Clock Delay      (SCD):    3.110ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        1.816     3.110    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/ap_clk
+    RAMB36_X5Y16         RAMB36E1                                     r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X5Y16         RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_CASCADEOUTB)
+                                                      2.872     5.982 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CASCADEOUTB
+                         net (fo=1, routed)           0.065     6.048    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7_n_1
+    RAMB36_X5Y17         RAMB36E1 (Prop_ramb36e1_CASCADEINB_DOBDO[0])
+                                                      0.425     6.473 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_1_7/DOBDO[0]
+                         net (fo=5, routed)           1.489     7.961    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/q0[31]
+    SLICE_X85Y81         LUT5 (Prop_lut5_I4_O)        0.124     8.085 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/m_state_value_10_reg_27954[31]_i_6/O
+                         net (fo=6, routed)           0.673     8.759    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_8_fu_1334_reg[31]_0
+    SLICE_X84Y81         LUT6 (Prop_lut6_I3_O)        0.124     8.883 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_10_reg_27954[30]_i_3/O
+                         net (fo=15, routed)          0.397     9.279    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_10_reg_27954[30]_i_3_n_0
+    SLICE_X82Y80         LUT5 (Prop_lut5_I0_O)        0.124     9.403 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_10_reg_27954[24]_i_2/O
+                         net (fo=10, routed)          1.500    10.904    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/m_state_value_8_fu_1334_reg[24]
+    SLICE_X52Y62         LUT5 (Prop_lut5_I2_O)        0.124    11.028 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/m_state_value_12_reg_27964[24]_i_1/O
+                         net (fo=3, routed)           0.447    11.475    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/mux_42_32_1_1_U39/mem_reg_3_0_7_i_5[24]
+    SLICE_X52Y62         LUT6 (Prop_lut6_I1_O)        0.124    11.599 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/mux_42_32_1_1_U39/mem_reg_3_0_0_i_6/O
+                         net (fo=1, routed)           0.634    12.233    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/value_fu_10158_p6[7]
+    SLICE_X53Y61         LUT6 (Prop_lut6_I2_O)        0.124    12.357 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_0_i_2/O
+                         net (fo=2, routed)           1.553    13.910    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/p_1_in[24]
+    RAMB36_X1Y8          RAMB36E1                                     r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_0/DIBDI[0]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     10.000    10.000 r  
+    PS7_X0Y0             PS7                          0.000    10.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088    11.088    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.179 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        1.620    12.799    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/ap_clk
+    RAMB36_X1Y8          RAMB36E1                                     r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_0/CLKBWRCLK
+                         clock pessimism              0.115    12.914    
+                         clock uncertainty           -0.154    12.760    
+    RAMB36_X1Y8          RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_DIBDI[0])
+                                                     -0.241    12.519    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_0
+  -------------------------------------------------------------------
+                         required time                         12.519    
+                         arrival time                         -13.910    
+  -------------------------------------------------------------------
+                         slack                                 -1.391    
+
+Slack (VIOLATED) :        -1.076ns  (required time - arrival time)
+  Source:                 design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_1_0_4/DIBDI[0]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_fpga_0 rise@10.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        10.397ns  (logic 4.041ns (38.867%)  route 6.356ns (61.133%))
+  Logic Levels:           7  (LUT5=3 LUT6=3 RAMB36E1=1)
+  Clock Path Skew:        -0.284ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.712ns = ( 12.712 - 10.000 ) 
+    Source Clock Delay      (SCD):    3.110ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        1.816     3.110    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/ap_clk
+    RAMB36_X5Y16         RAMB36E1                                     r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X5Y16         RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_CASCADEOUTB)
+                                                      2.872     5.982 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CASCADEOUTB
+                         net (fo=1, routed)           0.065     6.048    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7_n_1
+    RAMB36_X5Y17         RAMB36E1 (Prop_ramb36e1_CASCADEINB_DOBDO[0])
+                                                      0.425     6.473 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_1_7/DOBDO[0]
+                         net (fo=5, routed)           1.489     7.961    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/q0[31]
+    SLICE_X85Y81         LUT5 (Prop_lut5_I4_O)        0.124     8.085 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/m_state_value_10_reg_27954[31]_i_6/O
+                         net (fo=6, routed)           0.473     8.558    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_8_fu_1334_reg[31]_0
+    SLICE_X83Y79         LUT6 (Prop_lut6_I0_O)        0.124     8.682 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_10_reg_27954[13]_i_3/O
+                         net (fo=6, routed)           0.636     9.319    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_10_reg_27954[13]_i_3_n_0
+    SLICE_X81Y75         LUT5 (Prop_lut5_I0_O)        0.124     9.443 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_10_reg_27954[12]_i_2/O
+                         net (fo=10, routed)          0.364     9.807    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/m_state_value_8_fu_1334_reg[12]
+    SLICE_X81Y73         LUT5 (Prop_lut5_I2_O)        0.124     9.931 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/m_state_value_11_reg_27959[12]_i_1/O
+                         net (fo=3, routed)           1.378    11.309    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/mux_42_32_1_1_U39/mem_reg_3_0_7_i_5_0[12]
+    SLICE_X55Y62         LUT6 (Prop_lut6_I3_O)        0.124    11.433 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/mux_42_32_1_1_U39/mem_reg_1_0_4_i_4/O
+                         net (fo=2, routed)           0.545    11.978    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/mem_reg_1_0_6[4]
+    SLICE_X51Y61         LUT6 (Prop_lut6_I4_O)        0.124    12.102 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/mem_reg_1_0_4_i_1__0/O
+                         net (fo=2, routed)           1.405    13.507    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147_data_ram_d0[12]
+    RAMB36_X2Y7          RAMB36E1                                     r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_1_0_4/DIBDI[0]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     10.000    10.000 r  
+    PS7_X0Y0             PS7                          0.000    10.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088    11.088    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.179 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        1.533    12.712    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/ap_clk
+    RAMB36_X2Y7          RAMB36E1                                     r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_1_0_4/CLKBWRCLK
+                         clock pessimism              0.115    12.827    
+                         clock uncertainty           -0.154    12.673    
+    RAMB36_X2Y7          RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_DIBDI[0])
+                                                     -0.241    12.432    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_1_0_4
+  -------------------------------------------------------------------
+                         required time                         12.432    
+                         arrival time                         -13.507    
+  -------------------------------------------------------------------
+                         slack                                 -1.076    
+
+Slack (VIOLATED) :        -0.977ns  (required time - arrival time)
+  Source:                 design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_1_1_4/DIBDI[0]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_fpga_0 rise@10.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        10.303ns  (logic 4.041ns (39.223%)  route 6.262ns (60.777%))
+  Logic Levels:           7  (LUT5=3 LUT6=3 RAMB36E1=1)
+  Clock Path Skew:        -0.280ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.716ns = ( 12.716 - 10.000 ) 
+    Source Clock Delay      (SCD):    3.110ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        1.816     3.110    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/ap_clk
+    RAMB36_X5Y16         RAMB36E1                                     r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X5Y16         RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_CASCADEOUTB)
+                                                      2.872     5.982 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CASCADEOUTB
+                         net (fo=1, routed)           0.065     6.048    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7_n_1
+    RAMB36_X5Y17         RAMB36E1 (Prop_ramb36e1_CASCADEINB_DOBDO[0])
+                                                      0.425     6.473 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_1_7/DOBDO[0]
+                         net (fo=5, routed)           1.489     7.961    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/q0[31]
+    SLICE_X85Y81         LUT5 (Prop_lut5_I4_O)        0.124     8.085 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/m_state_value_10_reg_27954[31]_i_6/O
+                         net (fo=6, routed)           0.473     8.558    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_8_fu_1334_reg[31]_0
+    SLICE_X83Y79         LUT6 (Prop_lut6_I0_O)        0.124     8.682 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_10_reg_27954[13]_i_3/O
+                         net (fo=6, routed)           0.636     9.319    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_10_reg_27954[13]_i_3_n_0
+    SLICE_X81Y75         LUT5 (Prop_lut5_I0_O)        0.124     9.443 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_10_reg_27954[12]_i_2/O
+                         net (fo=10, routed)          0.364     9.807    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/m_state_value_8_fu_1334_reg[12]
+    SLICE_X81Y73         LUT5 (Prop_lut5_I2_O)        0.124     9.931 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/m_state_value_11_reg_27959[12]_i_1/O
+                         net (fo=3, routed)           1.378    11.309    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/mux_42_32_1_1_U39/mem_reg_3_0_7_i_5_0[12]
+    SLICE_X55Y62         LUT6 (Prop_lut6_I3_O)        0.124    11.433 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/mux_42_32_1_1_U39/mem_reg_1_0_4_i_4/O
+                         net (fo=2, routed)           0.545    11.978    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/mem_reg_1_0_6[4]
+    SLICE_X51Y61         LUT6 (Prop_lut6_I4_O)        0.124    12.102 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/mem_reg_1_0_4_i_1__0/O
+                         net (fo=2, routed)           1.311    13.413    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147_data_ram_d0[12]
+    RAMB36_X2Y8          RAMB36E1                                     r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_1_1_4/DIBDI[0]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     10.000    10.000 r  
+    PS7_X0Y0             PS7                          0.000    10.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088    11.088    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.179 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        1.537    12.716    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/ap_clk
+    RAMB36_X2Y8          RAMB36E1                                     r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_1_1_4/CLKBWRCLK
+                         clock pessimism              0.115    12.831    
+                         clock uncertainty           -0.154    12.677    
+    RAMB36_X2Y8          RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_DIBDI[0])
+                                                     -0.241    12.436    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_1_1_4
+  -------------------------------------------------------------------
+                         required time                         12.436    
+                         arrival time                         -13.413    
+  -------------------------------------------------------------------
+                         slack                                 -0.977    
+
+Slack (VIOLATED) :        -0.905ns  (required time - arrival time)
+  Source:                 design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_2_1_0/DIBDI[0]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_fpga_0 rise@10.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        10.217ns  (logic 4.041ns (39.552%)  route 6.176ns (60.447%))
+  Logic Levels:           7  (LUT5=3 LUT6=3 RAMB36E1=1)
+  Clock Path Skew:        -0.293ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.688ns = ( 12.688 - 10.000 ) 
+    Source Clock Delay      (SCD):    3.110ns
+    Clock Pessimism Removal (CPR):    0.129ns
+  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        1.816     3.110    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/ap_clk
+    RAMB36_X5Y16         RAMB36E1                                     r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X5Y16         RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_CASCADEOUTB)
+                                                      2.872     5.982 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CASCADEOUTB
+                         net (fo=1, routed)           0.065     6.048    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7_n_1
+    RAMB36_X5Y17         RAMB36E1 (Prop_ramb36e1_CASCADEINB_DOBDO[0])
+                                                      0.425     6.473 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_1_7/DOBDO[0]
+                         net (fo=5, routed)           1.489     7.961    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/q0[31]
+    SLICE_X85Y81         LUT5 (Prop_lut5_I4_O)        0.124     8.085 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/m_state_value_10_reg_27954[31]_i_6/O
+                         net (fo=6, routed)           0.673     8.759    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_8_fu_1334_reg[31]_0
+    SLICE_X84Y81         LUT6 (Prop_lut6_I3_O)        0.124     8.883 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_10_reg_27954[30]_i_3/O
+                         net (fo=15, routed)          0.372     9.255    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_10_reg_27954[30]_i_3_n_0
+    SLICE_X82Y81         LUT5 (Prop_lut5_I0_O)        0.124     9.379 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_10_reg_27954[16]_i_2/O
+                         net (fo=10, routed)          1.698    11.076    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/m_state_value_8_fu_1334_reg[16]
+    SLICE_X44Y63         LUT5 (Prop_lut5_I2_O)        0.124    11.200 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/m_state_value_9_reg_27889[16]_i_1/O
+                         net (fo=3, routed)           0.510    11.710    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/mux_42_32_1_1_U39/D[16]
+    SLICE_X45Y63         LUT6 (Prop_lut6_I5_O)        0.124    11.834 f  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/mux_42_32_1_1_U39/mem_reg_2_0_0_i_5_comp/O
+                         net (fo=1, routed)           0.433    12.267    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/value_fu_10158_p6[9]
+    SLICE_X45Y63         LUT6 (Prop_lut6_I3_O)        0.124    12.391 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/mem_reg_2_0_0_i_1__0_comp/O
+                         net (fo=2, routed)           0.936    13.327    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147_data_ram_d0[16]
+    RAMB36_X2Y14         RAMB36E1                                     r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_2_1_0/DIBDI[0]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     10.000    10.000 r  
+    PS7_X0Y0             PS7                          0.000    10.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088    11.088    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.179 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        1.509    12.688    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/ap_clk
+    RAMB36_X2Y14         RAMB36E1                                     r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_2_1_0/CLKBWRCLK
+                         clock pessimism              0.129    12.817    
+                         clock uncertainty           -0.154    12.663    
+    RAMB36_X2Y14         RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_DIBDI[0])
+                                                     -0.241    12.422    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_2_1_0
+  -------------------------------------------------------------------
+                         required time                         12.422    
+                         arrival time                         -13.327    
+  -------------------------------------------------------------------
+                         slack                                 -0.905    
+
+Slack (VIOLATED) :        -0.888ns  (required time - arrival time)
+  Source:                 design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_2_0_4/DIBDI[0]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_fpga_0 rise@10.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        10.370ns  (logic 4.041ns (38.969%)  route 6.329ns (61.030%))
+  Logic Levels:           7  (LUT5=4 LUT6=2 RAMB36E1=1)
+  Clock Path Skew:        -0.123ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.758ns = ( 12.758 - 10.000 ) 
+    Source Clock Delay      (SCD):    3.110ns
+    Clock Pessimism Removal (CPR):    0.229ns
+  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        1.816     3.110    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/ap_clk
+    RAMB36_X5Y16         RAMB36E1                                     r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X5Y16         RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_CASCADEOUTB)
+                                                      2.872     5.982 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CASCADEOUTB
+                         net (fo=1, routed)           0.065     6.048    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7_n_1
+    RAMB36_X5Y17         RAMB36E1 (Prop_ramb36e1_CASCADEINB_DOBDO[0])
+                                                      0.425     6.473 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_1_7/DOBDO[0]
+                         net (fo=5, routed)           1.489     7.961    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/q0[31]
+    SLICE_X85Y81         LUT5 (Prop_lut5_I4_O)        0.124     8.085 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/m_state_value_10_reg_27954[31]_i_6/O
+                         net (fo=6, routed)           0.673     8.759    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_8_fu_1334_reg[31]_0
+    SLICE_X84Y81         LUT6 (Prop_lut6_I3_O)        0.124     8.883 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_10_reg_27954[30]_i_3/O
+                         net (fo=15, routed)          1.365    10.247    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_10_reg_27954[30]_i_3_n_0
+    SLICE_X62Y68         LUT5 (Prop_lut5_I0_O)        0.124    10.371 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_10_reg_27954[20]_i_2/O
+                         net (fo=10, routed)          0.377    10.749    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/m_state_value_8_fu_1334_reg[20]
+    SLICE_X60Y67         LUT5 (Prop_lut5_I2_O)        0.124    10.873 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/m_state_value_9_reg_27889[20]_i_1/O
+                         net (fo=3, routed)           1.249    12.122    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/mux_42_32_1_1_U39/D[20]
+    SLICE_X54Y56         LUT6 (Prop_lut6_I0_O)        0.124    12.246 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/mux_42_32_1_1_U39/mem_reg_2_0_4_i_4/O
+                         net (fo=1, routed)           0.452    12.698    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/value_fu_10158_p6[13]
+    SLICE_X54Y56         LUT5 (Prop_lut5_I4_O)        0.124    12.822 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/mem_reg_2_0_4_i_1__0/O
+                         net (fo=2, routed)           0.658    13.480    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147_data_ram_d0[20]
+    RAMB36_X3Y10         RAMB36E1                                     r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_2_0_4/DIBDI[0]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     10.000    10.000 r  
+    PS7_X0Y0             PS7                          0.000    10.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088    11.088    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.179 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        1.579    12.758    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/ap_clk
+    RAMB36_X3Y10         RAMB36E1                                     r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_2_0_4/CLKBWRCLK
+                         clock pessimism              0.229    12.987    
+                         clock uncertainty           -0.154    12.833    
+    RAMB36_X3Y10         RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_DIBDI[0])
+                                                     -0.241    12.592    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_2_0_4
+  -------------------------------------------------------------------
+                         required time                         12.592    
+                         arrival time                         -13.480    
+  -------------------------------------------------------------------
+                         slack                                 -0.888    
+
+Slack (VIOLATED) :        -0.848ns  (required time - arrival time)
+  Source:                 design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_2_0_0/DIBDI[0]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_fpga_0 rise@10.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        10.165ns  (logic 4.041ns (39.754%)  route 6.124ns (60.246%))
+  Logic Levels:           7  (LUT5=3 LUT6=3 RAMB36E1=1)
+  Clock Path Skew:        -0.288ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.693ns = ( 12.693 - 10.000 ) 
+    Source Clock Delay      (SCD):    3.110ns
+    Clock Pessimism Removal (CPR):    0.129ns
+  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        1.816     3.110    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/ap_clk
+    RAMB36_X5Y16         RAMB36E1                                     r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X5Y16         RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_CASCADEOUTB)
+                                                      2.872     5.982 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CASCADEOUTB
+                         net (fo=1, routed)           0.065     6.048    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7_n_1
+    RAMB36_X5Y17         RAMB36E1 (Prop_ramb36e1_CASCADEINB_DOBDO[0])
+                                                      0.425     6.473 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_1_7/DOBDO[0]
+                         net (fo=5, routed)           1.489     7.961    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/q0[31]
+    SLICE_X85Y81         LUT5 (Prop_lut5_I4_O)        0.124     8.085 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/m_state_value_10_reg_27954[31]_i_6/O
+                         net (fo=6, routed)           0.673     8.759    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_8_fu_1334_reg[31]_0
+    SLICE_X84Y81         LUT6 (Prop_lut6_I3_O)        0.124     8.883 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_10_reg_27954[30]_i_3/O
+                         net (fo=15, routed)          0.372     9.255    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_10_reg_27954[30]_i_3_n_0
+    SLICE_X82Y81         LUT5 (Prop_lut5_I0_O)        0.124     9.379 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_10_reg_27954[16]_i_2/O
+                         net (fo=10, routed)          1.698    11.076    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/m_state_value_8_fu_1334_reg[16]
+    SLICE_X44Y63         LUT5 (Prop_lut5_I2_O)        0.124    11.200 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/m_state_value_9_reg_27889[16]_i_1/O
+                         net (fo=3, routed)           0.510    11.710    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/mux_42_32_1_1_U39/D[16]
+    SLICE_X45Y63         LUT6 (Prop_lut6_I5_O)        0.124    11.834 f  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/mux_42_32_1_1_U39/mem_reg_2_0_0_i_5_comp/O
+                         net (fo=1, routed)           0.433    12.267    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/value_fu_10158_p6[9]
+    SLICE_X45Y63         LUT6 (Prop_lut6_I3_O)        0.124    12.391 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/mem_reg_2_0_0_i_1__0_comp/O
+                         net (fo=2, routed)           0.884    13.275    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147_data_ram_d0[16]
+    RAMB36_X2Y13         RAMB36E1                                     r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_2_0_0/DIBDI[0]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     10.000    10.000 r  
+    PS7_X0Y0             PS7                          0.000    10.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088    11.088    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.179 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        1.514    12.693    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/ap_clk
+    RAMB36_X2Y13         RAMB36E1                                     r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_2_0_0/CLKBWRCLK
+                         clock pessimism              0.129    12.822    
+                         clock uncertainty           -0.154    12.668    
+    RAMB36_X2Y13         RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_DIBDI[0])
+                                                     -0.241    12.427    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_2_0_0
+  -------------------------------------------------------------------
+                         required time                         12.427    
+                         arrival time                         -13.275    
+  -------------------------------------------------------------------
+                         slack                                 -0.848    
+
+Slack (VIOLATED) :        -0.756ns  (required time - arrival time)
+  Source:                 design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_5/DIBDI[0]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_fpga_0 rise@10.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        10.080ns  (logic 4.041ns (40.091%)  route 6.038ns (59.909%))
+  Logic Levels:           7  (LUT5=3 LUT6=3 RAMB36E1=1)
+  Clock Path Skew:        -0.281ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.700ns = ( 12.700 - 10.000 ) 
+    Source Clock Delay      (SCD):    3.110ns
+    Clock Pessimism Removal (CPR):    0.129ns
+  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        1.816     3.110    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/ap_clk
+    RAMB36_X5Y16         RAMB36E1                                     r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X5Y16         RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_CASCADEOUTB)
+                                                      2.872     5.982 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CASCADEOUTB
+                         net (fo=1, routed)           0.065     6.048    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7_n_1
+    RAMB36_X5Y17         RAMB36E1 (Prop_ramb36e1_CASCADEINB_DOBDO[0])
+                                                      0.425     6.473 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_1_7/DOBDO[0]
+                         net (fo=5, routed)           1.489     7.961    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/q0[31]
+    SLICE_X85Y81         LUT5 (Prop_lut5_I4_O)        0.124     8.085 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/m_state_value_10_reg_27954[31]_i_6/O
+                         net (fo=6, routed)           0.673     8.759    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_8_fu_1334_reg[31]_0
+    SLICE_X84Y81         LUT6 (Prop_lut6_I3_O)        0.124     8.883 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_10_reg_27954[30]_i_3/O
+                         net (fo=15, routed)          0.355     9.238    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_10_reg_27954[30]_i_3_n_0
+    SLICE_X85Y80         LUT5 (Prop_lut5_I0_O)        0.124     9.362 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_10_reg_27954[29]_i_2/O
+                         net (fo=10, routed)          1.216    10.578    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/m_state_value_8_fu_1334_reg[29]
+    SLICE_X62Y67         LUT5 (Prop_lut5_I2_O)        0.124    10.702 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/m_state_value_12_reg_27964[29]_i_1/O
+                         net (fo=3, routed)           0.750    11.452    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/mux_42_32_1_1_U39/mem_reg_3_0_7_i_5[29]
+    SLICE_X59Y65         LUT6 (Prop_lut6_I1_O)        0.124    11.576 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/mux_42_32_1_1_U39/mem_reg_3_0_5_i_5/O
+                         net (fo=1, routed)           0.409    11.985    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/value_fu_10158_p6[12]
+    SLICE_X56Y65         LUT6 (Prop_lut6_I2_O)        0.124    12.109 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_5_i_2/O
+                         net (fo=2, routed)           1.081    13.190    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/p_1_in[29]
+    RAMB36_X2Y11         RAMB36E1                                     r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_5/DIBDI[0]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     10.000    10.000 r  
+    PS7_X0Y0             PS7                          0.000    10.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088    11.088    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.179 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        1.521    12.700    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/ap_clk
+    RAMB36_X2Y11         RAMB36E1                                     r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_5/CLKBWRCLK
+                         clock pessimism              0.129    12.829    
+                         clock uncertainty           -0.154    12.675    
+    RAMB36_X2Y11         RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_DIBDI[0])
+                                                     -0.241    12.434    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_5
+  -------------------------------------------------------------------
+                         required time                         12.434    
+                         arrival time                         -13.190    
+  -------------------------------------------------------------------
+                         slack                                 -0.756    
+
+Slack (VIOLATED) :        -0.743ns  (required time - arrival time)
+  Source:                 design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_2_1_2/DIBDI[0]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_fpga_0 rise@10.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        10.242ns  (logic 4.041ns (39.456%)  route 6.201ns (60.544%))
+  Logic Levels:           7  (LUT5=4 LUT6=2 RAMB36E1=1)
+  Clock Path Skew:        -0.106ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.876ns = ( 12.876 - 10.000 ) 
+    Source Clock Delay      (SCD):    3.110ns
+    Clock Pessimism Removal (CPR):    0.129ns
+  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        1.816     3.110    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/ap_clk
+    RAMB36_X5Y16         RAMB36E1                                     r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X5Y16         RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_CASCADEOUTB)
+                                                      2.872     5.982 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CASCADEOUTB
+                         net (fo=1, routed)           0.065     6.048    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7_n_1
+    RAMB36_X5Y17         RAMB36E1 (Prop_ramb36e1_CASCADEINB_DOBDO[0])
+                                                      0.425     6.473 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_1_7/DOBDO[0]
+                         net (fo=5, routed)           1.489     7.961    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/q0[31]
+    SLICE_X85Y81         LUT5 (Prop_lut5_I4_O)        0.124     8.085 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/m_state_value_10_reg_27954[31]_i_6/O
+                         net (fo=6, routed)           0.673     8.759    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_8_fu_1334_reg[31]_0
+    SLICE_X84Y81         LUT6 (Prop_lut6_I3_O)        0.124     8.883 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_10_reg_27954[30]_i_3/O
+                         net (fo=15, routed)          0.361     9.244    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_10_reg_27954[30]_i_3_n_0
+    SLICE_X83Y81         LUT5 (Prop_lut5_I0_O)        0.124     9.368 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_10_reg_27954[18]_i_2/O
+                         net (fo=10, routed)          0.888    10.255    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/m_state_value_8_fu_1334_reg[18]
+    SLICE_X67Y85         LUT5 (Prop_lut5_I2_O)        0.124    10.379 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/m_state_value_12_reg_27964[18]_i_1/O
+                         net (fo=3, routed)           0.786    11.165    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/mux_42_32_1_1_U39/mem_reg_3_0_7_i_5[18]
+    SLICE_X56Y86         LUT6 (Prop_lut6_I1_O)        0.124    11.289 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/mux_42_32_1_1_U39/mem_reg_2_0_2_i_4/O
+                         net (fo=1, routed)           0.570    11.860    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/value_fu_10158_p6[11]
+    SLICE_X55Y87         LUT5 (Prop_lut5_I4_O)        0.124    11.984 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/mem_reg_2_0_2_i_1__0/O
+                         net (fo=2, routed)           1.368    13.352    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147_data_ram_d0[18]
+    RAMB36_X2Y20         RAMB36E1                                     r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_2_1_2/DIBDI[0]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     10.000    10.000 r  
+    PS7_X0Y0             PS7                          0.000    10.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088    11.088    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.179 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        1.697    12.876    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/ap_clk
+    RAMB36_X2Y20         RAMB36E1                                     r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_2_1_2/CLKBWRCLK
+                         clock pessimism              0.129    13.005    
+                         clock uncertainty           -0.154    12.850    
+    RAMB36_X2Y20         RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_DIBDI[0])
+                                                     -0.241    12.609    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_2_1_2
+  -------------------------------------------------------------------
+                         required time                         12.609    
+                         arrival time                         -13.352    
+  -------------------------------------------------------------------
+                         slack                                 -0.743    
+
+Slack (VIOLATED) :        -0.740ns  (required time - arrival time)
+  Source:                 design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CLKBWRCLK
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_2_1_4/DIBDI[0]
+                            (rising edge-triggered cell RAMB36E1 clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_fpga_0 rise@10.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        10.221ns  (logic 4.041ns (39.536%)  route 6.180ns (60.464%))
+  Logic Levels:           7  (LUT5=4 LUT6=2 RAMB36E1=1)
+  Clock Path Skew:        -0.124ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.757ns = ( 12.757 - 10.000 ) 
+    Source Clock Delay      (SCD):    3.110ns
+    Clock Pessimism Removal (CPR):    0.229ns
+  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        1.816     3.110    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/ap_clk
+    RAMB36_X5Y16         RAMB36E1                                     r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CLKBWRCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X5Y16         RAMB36E1 (Prop_ramb36e1_CLKBWRCLK_CASCADEOUTB)
+                                                      2.872     5.982 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CASCADEOUTB
+                         net (fo=1, routed)           0.065     6.048    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7_n_1
+    RAMB36_X5Y17         RAMB36E1 (Prop_ramb36e1_CASCADEINB_DOBDO[0])
+                                                      0.425     6.473 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_1_7/DOBDO[0]
+                         net (fo=5, routed)           1.489     7.961    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/q0[31]
+    SLICE_X85Y81         LUT5 (Prop_lut5_I4_O)        0.124     8.085 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/m_state_value_10_reg_27954[31]_i_6/O
+                         net (fo=6, routed)           0.673     8.759    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_8_fu_1334_reg[31]_0
+    SLICE_X84Y81         LUT6 (Prop_lut6_I3_O)        0.124     8.883 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_10_reg_27954[30]_i_3/O
+                         net (fo=15, routed)          1.365    10.247    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_10_reg_27954[30]_i_3_n_0
+    SLICE_X62Y68         LUT5 (Prop_lut5_I0_O)        0.124    10.371 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_value_10_reg_27954[20]_i_2/O
+                         net (fo=10, routed)          0.377    10.749    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/m_state_value_8_fu_1334_reg[20]
+    SLICE_X60Y67         LUT5 (Prop_lut5_I2_O)        0.124    10.873 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/m_state_value_9_reg_27889[20]_i_1/O
+                         net (fo=3, routed)           1.249    12.122    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/mux_42_32_1_1_U39/D[20]
+    SLICE_X54Y56         LUT6 (Prop_lut6_I0_O)        0.124    12.246 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/mux_42_32_1_1_U39/mem_reg_2_0_4_i_4/O
+                         net (fo=1, routed)           0.452    12.698    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/value_fu_10158_p6[13]
+    SLICE_X54Y56         LUT5 (Prop_lut5_I4_O)        0.124    12.822 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/mem_reg_2_0_4_i_1__0/O
+                         net (fo=2, routed)           0.510    13.332    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147_data_ram_d0[20]
+    RAMB36_X3Y11         RAMB36E1                                     r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_2_1_4/DIBDI[0]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     10.000    10.000 r  
+    PS7_X0Y0             PS7                          0.000    10.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088    11.088    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.179 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        1.578    12.757    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/ap_clk
+    RAMB36_X3Y11         RAMB36E1                                     r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_2_1_4/CLKBWRCLK
+                         clock pessimism              0.229    12.986    
+                         clock uncertainty           -0.154    12.832    
+    RAMB36_X3Y11         RAMB36E1 (Setup_ramb36e1_CLKBWRCLK_DIBDI[0])
+                                                     -0.241    12.591    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_2_1_4
+  -------------------------------------------------------------------
+                         required time                         12.591    
+                         arrival time                         -13.332    
+  -------------------------------------------------------------------
+                         slack                                 -0.740    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.010ns  (arrival time - required time)
+  Source:                 design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/e_state_fetch_pc_V_9_reg_27499_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/e_state_fetch_pc_V_8_fu_1182_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.262ns  (logic 0.141ns (53.769%)  route 0.121ns (46.231%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.182ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.219ns
+    Source Clock Delay      (SCD):    1.002ns
+    Clock Pessimism Removal (CPR):    0.035ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        0.666     1.002    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/ap_clk
+    SLICE_X80Y100        FDRE                                         r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/e_state_fetch_pc_V_9_reg_27499_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X80Y100        FDRE (Prop_fdre_C_Q)         0.141     1.143 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/e_state_fetch_pc_V_9_reg_27499_reg[4]/Q
+                         net (fo=1, routed)           0.121     1.264    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/e_state_fetch_pc_V_9_reg_27499[4]
+    SLICE_X80Y99         FDRE                                         r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/e_state_fetch_pc_V_8_fu_1182_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        0.853     1.219    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/ap_clk
+    SLICE_X80Y99         FDRE                                         r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/e_state_fetch_pc_V_8_fu_1182_reg[4]/C
+                         clock pessimism             -0.035     1.184    
+    SLICE_X80Y99         FDRE (Hold_fdre_C_D)         0.070     1.254    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/e_state_fetch_pc_V_8_fu_1182_reg[4]
+  -------------------------------------------------------------------
+                         required time                         -1.254    
+                         arrival time                           1.264    
+  -------------------------------------------------------------------
+                         slack                                  0.010    
+
+Slack (MET) :             0.033ns  (arrival time - required time)
+  Source:                 design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/i_state_fetch_pc_V_25_fu_914_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/e_state_fetch_pc_V_fu_1042_reg[10]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.502ns  (logic 0.231ns (46.015%)  route 0.271ns (53.985%))
+  Logic Levels:           2  (LUT5=1 LUT6=1)
+  Clock Path Skew:        0.349ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.297ns
+    Source Clock Delay      (SCD):    0.913ns
+    Clock Pessimism Removal (CPR):    0.035ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        0.577     0.913    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/ap_clk
+    SLICE_X31Y99         FDRE                                         r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/i_state_fetch_pc_V_25_fu_914_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X31Y99         FDRE (Prop_fdre_C_Q)         0.141     1.054 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/i_state_fetch_pc_V_25_fu_914_reg[10]/Q
+                         net (fo=2, routed)           0.124     1.177    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/mux_42_16_1_1_U59/e_state_fetch_pc_V_fu_1042_reg[15]_0[10]
+    SLICE_X31Y99         LUT6 (Prop_lut6_I5_O)        0.045     1.222 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/mux_42_16_1_1_U59/e_state_fetch_pc_V_fu_1042[10]_i_2/O
+                         net (fo=1, routed)           0.147     1.370    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/mux_1_1__7[10]
+    SLICE_X30Y100        LUT5 (Prop_lut5_I2_O)        0.045     1.415 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/e_state_fetch_pc_V_fu_1042[10]_i_1/O
+                         net (fo=1, routed)           0.000     1.415    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/i_to_e_fetch_pc_V_1_fu_15888_p3[10]
+    SLICE_X30Y100        FDRE                                         r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/e_state_fetch_pc_V_fu_1042_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        0.931     1.297    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/ap_clk
+    SLICE_X30Y100        FDRE                                         r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/e_state_fetch_pc_V_fu_1042_reg[10]/C
+                         clock pessimism             -0.035     1.262    
+    SLICE_X30Y100        FDRE (Hold_fdre_C_D)         0.120     1.382    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/e_state_fetch_pc_V_fu_1042_reg[10]
+  -------------------------------------------------------------------
+                         required time                         -1.382    
+                         arrival time                           1.415    
+  -------------------------------------------------------------------
+                         slack                                  0.033    
+
+Slack (MET) :             0.056ns  (arrival time - required time)
+  Source:                 design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/i_state_d_i_rd_V_28_fu_2514_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/i_state_d_i_rd_V_22_reg_27360_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.499ns  (logic 0.186ns (37.307%)  route 0.313ns (62.693%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.350ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.277ns
+    Source Clock Delay      (SCD):    0.892ns
+    Clock Pessimism Removal (CPR):    0.035ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        0.556     0.892    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/ap_clk
+    SLICE_X44Y94         FDRE                                         r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/i_state_d_i_rd_V_28_fu_2514_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X44Y94         FDRE (Prop_fdre_C_Q)         0.141     1.033 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/i_state_d_i_rd_V_28_fu_2514_reg[1]/Q
+                         net (fo=5, routed)           0.313     1.345    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/i_state_d_i_rd_V_21_reg_27353_reg[4][1]
+    SLICE_X40Y102        LUT6 (Prop_lut6_I0_O)        0.045     1.390 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/i_state_d_i_rd_V_22_reg_27360[1]_i_1/O
+                         net (fo=1, routed)           0.000     1.390    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/i_state_d_i_rd_V_22_fu_8592_p3[1]
+    SLICE_X40Y102        FDRE                                         r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/i_state_d_i_rd_V_22_reg_27360_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        0.911     1.277    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/ap_clk
+    SLICE_X40Y102        FDRE                                         r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/i_state_d_i_rd_V_22_reg_27360_reg[1]/C
+                         clock pessimism             -0.035     1.242    
+    SLICE_X40Y102        FDRE (Hold_fdre_C_D)         0.092     1.334    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/i_state_d_i_rd_V_22_reg_27360_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -1.334    
+                         arrival time                           1.390    
+  -------------------------------------------------------------------
+                         slack                                  0.056    
+
+Slack (MET) :             0.058ns  (arrival time - required time)
+  Source:                 design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/d_from_f_instruction_fu_866_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/d_state_instruction_10_reg_26788_reg[10]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.414ns  (logic 0.209ns (50.456%)  route 0.205ns (49.544%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.265ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.175ns
+    Source Clock Delay      (SCD):    0.875ns
+    Clock Pessimism Removal (CPR):    0.035ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        0.539     0.875    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/ap_clk
+    SLICE_X50Y75         FDRE                                         r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/d_from_f_instruction_fu_866_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X50Y75         FDRE (Prop_fdre_C_Q)         0.164     1.039 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/d_from_f_instruction_fu_866_reg[10]/Q
+                         net (fo=5, routed)           0.205     1.244    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/d_state_instruction_reg_26776_reg[31][10]
+    SLICE_X49Y76         LUT6 (Prop_lut6_I0_O)        0.045     1.289 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/d_state_instruction_10_reg_26788[10]_i_1/O
+                         net (fo=1, routed)           0.000     1.289    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/d_state_instruction_10_fu_5170_p3[10]
+    SLICE_X49Y76         FDRE                                         r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/d_state_instruction_10_reg_26788_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        0.809     1.175    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/ap_clk
+    SLICE_X49Y76         FDRE                                         r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/d_state_instruction_10_reg_26788_reg[10]/C
+                         clock pessimism             -0.035     1.140    
+    SLICE_X49Y76         FDRE (Hold_fdre_C_D)         0.091     1.231    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/d_state_instruction_10_reg_26788_reg[10]
+  -------------------------------------------------------------------
+                         required time                         -1.231    
+                         arrival time                           1.289    
+  -------------------------------------------------------------------
+                         slack                                  0.058    
+
+Slack (MET) :             0.079ns  (arrival time - required time)
+  Source:                 design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/and_ln140_2_reg_27877_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_rd_V_5_fu_1318_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.438ns  (logic 0.186ns (42.420%)  route 0.252ns (57.580%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.191ns
+    Source Clock Delay      (SCD):    0.889ns
+    Clock Pessimism Removal (CPR):    0.035ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        0.553     0.889    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/ap_clk
+    SLICE_X51Y99         FDRE                                         r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/and_ln140_2_reg_27877_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X51Y99         FDRE (Prop_fdre_C_Q)         0.141     1.030 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/and_ln140_2_reg_27877_reg[0]/Q
+                         net (fo=14, routed)          0.252     1.282    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/and_ln140_2_reg_27877
+    SLICE_X48Y99         LUT3 (Prop_lut3_I1_O)        0.045     1.327 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_rd_V_5_fu_1318[3]_i_1/O
+                         net (fo=1, routed)           0.000     1.327    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_rd_V_12_fu_17126_p3[3]
+    SLICE_X48Y99         FDRE                                         r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_rd_V_5_fu_1318_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        0.825     1.191    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/ap_clk
+    SLICE_X48Y99         FDRE                                         r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_rd_V_5_fu_1318_reg[3]/C
+                         clock pessimism             -0.035     1.156    
+    SLICE_X48Y99         FDRE (Hold_fdre_C_D)         0.092     1.248    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/m_state_rd_V_5_fu_1318_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -1.248    
+                         arrival time                           1.327    
+  -------------------------------------------------------------------
+                         slack                                  0.079    
+
+Slack (MET) :             0.083ns  (arrival time - required time)
+  Source:                 design_1_4h_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/r_arid_r_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_1_4h_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/transaction_fifo_0/memory_reg[31][8]_srl32/D
+                            (rising edge-triggered cell SRLC32E clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.246ns  (logic 0.128ns (51.940%)  route 0.118ns (48.060%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.033ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.208ns
+    Source Clock Delay      (SCD):    0.911ns
+    Clock Pessimism Removal (CPR):    0.264ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        0.575     0.911    design_1_4h_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/aclk
+    SLICE_X28Y91         FDRE                                         r  design_1_4h_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/r_arid_r_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X28Y91         FDRE (Prop_fdre_C_Q)         0.128     1.039 r  design_1_4h_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/r_arid_r_reg[7]/Q
+                         net (fo=1, routed)           0.118     1.157    design_1_4h_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/transaction_fifo_0/in[8]
+    SLICE_X26Y91         SRLC32E                                      r  design_1_4h_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/transaction_fifo_0/memory_reg[31][8]_srl32/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        0.842     1.208    design_1_4h_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/transaction_fifo_0/aclk
+    SLICE_X26Y91         SRLC32E                                      r  design_1_4h_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/transaction_fifo_0/memory_reg[31][8]_srl32/CLK
+                         clock pessimism             -0.264     0.944    
+    SLICE_X26Y91         SRLC32E (Hold_srlc32e_CLK_D)
+                                                      0.130     1.074    design_1_4h_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/transaction_fifo_0/memory_reg[31][8]_srl32
+  -------------------------------------------------------------------
+                         required time                         -1.074    
+                         arrival time                           1.157    
+  -------------------------------------------------------------------
+                         slack                                  0.083    
+
+Slack (MET) :             0.086ns  (arrival time - required time)
+  Source:                 design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/e_state_fetch_pc_V_fu_1042_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/e_state_fetch_pc_V_10_reg_27504_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.526ns  (logic 0.186ns (35.350%)  route 0.340ns (64.650%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.349ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.296ns
+    Source Clock Delay      (SCD):    0.912ns
+    Clock Pessimism Removal (CPR):    0.035ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        0.576     0.912    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/ap_clk
+    SLICE_X28Y96         FDRE                                         r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/e_state_fetch_pc_V_fu_1042_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X28Y96         FDRE (Prop_fdre_C_Q)         0.141     1.053 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/e_state_fetch_pc_V_fu_1042_reg[1]/Q
+                         net (fo=7, routed)           0.340     1.393    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/e_state_fetch_pc_V_12_reg_27514_reg[15][1]
+    SLICE_X28Y105        LUT6 (Prop_lut6_I0_O)        0.045     1.438 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/e_state_fetch_pc_V_10_reg_27504[1]_i_1/O
+                         net (fo=1, routed)           0.000     1.438    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U_n_1354
+    SLICE_X28Y105        FDRE                                         r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/e_state_fetch_pc_V_10_reg_27504_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        0.930     1.296    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/ap_clk
+    SLICE_X28Y105        FDRE                                         r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/e_state_fetch_pc_V_10_reg_27504_reg[1]/C
+                         clock pessimism             -0.035     1.261    
+    SLICE_X28Y105        FDRE (Hold_fdre_C_D)         0.091     1.352    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/e_state_fetch_pc_V_10_reg_27504_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -1.352    
+                         arrival time                           1.438    
+  -------------------------------------------------------------------
+                         slack                                  0.086    
+
+Slack (MET) :             0.090ns  (arrival time - required time)
+  Source:                 design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/f_state_fetch_pc_V_27_reg_26688_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/f_state_fetch_pc_V_5_fu_830_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.463ns  (logic 0.207ns (44.713%)  route 0.256ns (55.287%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.266ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.186ns
+    Source Clock Delay      (SCD):    0.885ns
+    Clock Pessimism Removal (CPR):    0.035ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        0.549     0.885    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/ap_clk
+    SLICE_X50Y87         FDRE                                         r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/f_state_fetch_pc_V_27_reg_26688_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X50Y87         FDRE (Prop_fdre_C_Q)         0.164     1.049 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/f_state_fetch_pc_V_27_reg_26688_reg[3]/Q
+                         net (fo=1, routed)           0.256     1.305    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/f_state_fetch_pc_V_5_fu_830_reg[15]_0[3]
+    SLICE_X49Y87         LUT3 (Prop_lut3_I0_O)        0.043     1.348 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U/f_state_fetch_pc_V_5_fu_830[3]_i_1/O
+                         net (fo=1, routed)           0.000     1.348    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/flow_control_loop_pipe_sequential_init_U_n_666
+    SLICE_X49Y87         FDRE                                         r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/f_state_fetch_pc_V_5_fu_830_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        0.820     1.186    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/ap_clk
+    SLICE_X49Y87         FDRE                                         r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/f_state_fetch_pc_V_5_fu_830_reg[3]/C
+                         clock pessimism             -0.035     1.151    
+    SLICE_X49Y87         FDRE (Hold_fdre_C_D)         0.107     1.258    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/f_state_fetch_pc_V_5_fu_830_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -1.258    
+                         arrival time                           1.348    
+  -------------------------------------------------------------------
+                         slack                                  0.090    
+
+Slack (MET) :             0.100ns  (arrival time - required time)
+  Source:                 design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_start_pc/q0_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_1_4h_i/multihart_ip_0/inst/f_state_fetch_pc_V_32_reg_282_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.437ns  (logic 0.164ns (37.523%)  route 0.273ns (62.477%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.186ns
+    Source Clock Delay      (SCD):    0.884ns
+    Clock Pessimism Removal (CPR):    0.035ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        0.548     0.884    design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_start_pc/ap_clk
+    SLICE_X50Y84         FDRE                                         r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_start_pc/q0_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X50Y84         FDRE (Prop_fdre_C_Q)         0.164     1.048 r  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_start_pc/q0_reg[3]/Q
+                         net (fo=4, routed)           0.273     1.321    design_1_4h_i/multihart_ip_0/inst/q0[3]
+    SLICE_X44Y87         FDRE                                         r  design_1_4h_i/multihart_ip_0/inst/f_state_fetch_pc_V_32_reg_282_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        0.820     1.186    design_1_4h_i/multihart_ip_0/inst/ap_clk
+    SLICE_X44Y87         FDRE                                         r  design_1_4h_i/multihart_ip_0/inst/f_state_fetch_pc_V_32_reg_282_reg[3]/C
+                         clock pessimism             -0.035     1.151    
+    SLICE_X44Y87         FDRE (Hold_fdre_C_D)         0.070     1.221    design_1_4h_i/multihart_ip_0/inst/f_state_fetch_pc_V_32_reg_282_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -1.221    
+                         arrival time                           1.321    
+  -------------------------------------------------------------------
+                         slack                                  0.100    
+
+Slack (MET) :             0.101ns  (arrival time - required time)
+  Source:                 design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/i_state_d_i_imm_V_27_fu_1006_reg[8]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/e_state_d_i_imm_V_fu_1010_reg[8]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.540ns  (logic 0.271ns (50.201%)  route 0.269ns (49.799%))
+  Logic Levels:           2  (LUT5=1 LUT6=1)
+  Clock Path Skew:        0.348ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.278ns
+    Source Clock Delay      (SCD):    0.895ns
+    Clock Pessimism Removal (CPR):    0.035ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        0.559     0.895    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/ap_clk
+    SLICE_X35Y98         FDRE                                         r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/i_state_d_i_imm_V_27_fu_1006_reg[8]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X35Y98         FDRE (Prop_fdre_C_Q)         0.128     1.023 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/i_state_d_i_imm_V_27_fu_1006_reg[8]/Q
+                         net (fo=2, routed)           0.100     1.123    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/mux_42_20_1_1_U63/Q[8]
+    SLICE_X35Y98         LUT6 (Prop_lut6_I1_O)        0.098     1.221 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/mux_42_20_1_1_U63/e_state_d_i_imm_V_fu_1010[8]_i_2/O
+                         net (fo=1, routed)           0.169     1.389    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/mux_1_1__8[8]
+    SLICE_X35Y101        LUT5 (Prop_lut5_I2_O)        0.045     1.434 r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/e_state_d_i_imm_V_fu_1010[8]_i_1/O
+                         net (fo=1, routed)           0.000     1.434    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/i_to_e_d_i_imm_V_1_fu_15915_p3[8]
+    SLICE_X35Y101        FDRE                                         r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/e_state_d_i_imm_V_fu_1010_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        0.912     1.278    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/ap_clk
+    SLICE_X35Y101        FDRE                                         r  design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/e_state_d_i_imm_V_fu_1010_reg[8]/C
+                         clock pessimism             -0.035     1.243    
+    SLICE_X35Y101        FDRE (Hold_fdre_C_D)         0.091     1.334    design_1_4h_i/multihart_ip_0/inst/grp_multihart_ip_Pipeline_VITIS_LOOP_189_1_fu_147/e_state_d_i_imm_V_fu_1010_reg[8]
+  -------------------------------------------------------------------
+                         required time                         -1.334    
+                         arrival time                           1.434    
+  -------------------------------------------------------------------
+                         slack                                  0.101    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_fpga_0
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0] }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            3.363         10.000      6.637      RAMB36_X0Y8   design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_code_ram/mem_reg_0_0_0/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            3.363         10.000      6.637      RAMB36_X3Y2   design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_code_ram/mem_reg_0_0_1/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            3.363         10.000      6.637      RAMB36_X3Y22  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_code_ram/mem_reg_0_0_2/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            3.363         10.000      6.637      RAMB36_X5Y26  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_code_ram/mem_reg_0_0_3/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            3.363         10.000      6.637      RAMB36_X3Y4   design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_code_ram/mem_reg_0_0_4/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            3.363         10.000      6.637      RAMB36_X5Y4   design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_code_ram/mem_reg_0_0_5/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            3.363         10.000      6.637      RAMB36_X5Y28  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_code_ram/mem_reg_0_0_6/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            3.363         10.000      6.637      RAMB36_X3Y20  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_code_ram/mem_reg_0_0_7/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            3.363         10.000      6.637      RAMB36_X0Y9   design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_code_ram/mem_reg_0_1_0/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            3.363         10.000      6.637      RAMB36_X3Y3   design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_code_ram/mem_reg_0_1_1/CLKARDCLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X46Y76  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_start_pc/mem_reg_0_3_0_0/DP/CLK
+Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X46Y76  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_start_pc/mem_reg_0_3_0_0/DP/CLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X46Y76  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_start_pc/mem_reg_0_3_0_0/SP/CLK
+Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X46Y76  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_start_pc/mem_reg_0_3_0_0/SP/CLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X46Y84  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_start_pc/mem_reg_0_3_10_10/DP/CLK
+Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X46Y84  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_start_pc/mem_reg_0_3_10_10/DP/CLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X46Y84  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_start_pc/mem_reg_0_3_10_10/SP/CLK
+Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X46Y84  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_start_pc/mem_reg_0_3_10_10/SP/CLK
+Low Pulse Width   Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X46Y80  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_start_pc/mem_reg_0_3_11_11/DP/CLK
+Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X46Y80  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_start_pc/mem_reg_0_3_11_11/DP/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X46Y76  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_start_pc/mem_reg_0_3_0_0/DP/CLK
+High Pulse Width  Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X46Y76  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_start_pc/mem_reg_0_3_0_0/DP/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X46Y76  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_start_pc/mem_reg_0_3_0_0/SP/CLK
+High Pulse Width  Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X46Y76  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_start_pc/mem_reg_0_3_0_0/SP/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X46Y84  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_start_pc/mem_reg_0_3_10_10/DP/CLK
+High Pulse Width  Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X46Y84  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_start_pc/mem_reg_0_3_10_10/DP/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X46Y84  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_start_pc/mem_reg_0_3_10_10/SP/CLK
+High Pulse Width  Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X46Y84  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_start_pc/mem_reg_0_3_10_10/SP/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X46Y80  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_start_pc/mem_reg_0_3_11_11/DP/CLK
+High Pulse Width  Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X46Y80  design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_start_pc/mem_reg_0_3_11_11/DP/CLK
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  clk_fpga_0
+
+Max Delay             1 Endpoint
+Min Delay             1 Endpoint
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKRESETN[0]
+                            (internal pin)
+  Destination:            design_1_4h_i/rst_ps7_0_100M/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        2.404ns  (logic 0.124ns (5.158%)  route 2.280ns (94.842%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Uncertainty:      0.152ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    PS7_X0Y0             PS7                          0.000     0.000 f  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKRESETN[0]
+                         net (fo=1, routed)           1.516     1.516    design_1_4h_i/rst_ps7_0_100M/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/ext_reset_in
+    SLICE_X31Y79         LUT1 (Prop_lut1_I0_O)        0.124     1.640 r  design_1_4h_i/rst_ps7_0_100M/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1/O
+                         net (fo=1, routed)           0.764     2.404    design_1_4h_i/rst_ps7_0_100M/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/exr_d1
+    SLICE_X36Y75         FDRE                                         r  design_1_4h_i/rst_ps7_0_100M/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088     1.088    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        1.462     2.641    design_1_4h_i/rst_ps7_0_100M/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/slowest_sync_clk
+    SLICE_X36Y75         FDRE                                         r  design_1_4h_i/rst_ps7_0_100M/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to/C
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKRESETN[0]
+                            (internal pin)
+  Destination:            design_1_4h_i/rst_ps7_0_100M/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.960ns  (logic 0.045ns (4.687%)  route 0.915ns (95.313%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Uncertainty:      0.152ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    PS7_X0Y0             PS7                          0.000     0.000 f  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKRESETN[0]
+                         net (fo=1, routed)           0.544     0.544    design_1_4h_i/rst_ps7_0_100M/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/ext_reset_in
+    SLICE_X31Y79         LUT1 (Prop_lut1_I0_O)        0.045     0.589 r  design_1_4h_i/rst_ps7_0_100M/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1/O
+                         net (fo=1, routed)           0.371     0.960    design_1_4h_i/rst_ps7_0_100M/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/exr_d1
+    SLICE_X36Y75         FDRE                                         r  design_1_4h_i/rst_ps7_0_100M/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_4h_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    design_1_4h_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  design_1_4h_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=9049, routed)        0.808     1.174    design_1_4h_i/rst_ps7_0_100M/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/slowest_sync_clk
+    SLICE_X36Y75         FDRE                                         r  design_1_4h_i/rst_ps7_0_100M/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to/C
+
+
+
+
+

@@ -1,0 +1,50 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
+| Date         : Mon Jul 11 11:44:16 2022
+| Host         : goossens-Precision-5530 running 64-bit Ubuntu 22.04 LTS
+| Command      : report_methodology -file design_1_4h_wrapper_methodology_drc_routed.rpt -pb design_1_4h_wrapper_methodology_drc_routed.pb -rpx design_1_4h_wrapper_methodology_drc_routed.rpx
+| Design       : design_1_4h_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 3
++-----------+----------+-----------------------+------------+
+| Rule      | Severity | Description           | Violations |
++-----------+----------+-----------------------+------------+
+| TIMING-16 | Warning  | Large setup violation | 3          |
++-----------+----------+-----------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -1.076 ns between design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CLKBWRCLK (clocked by clk_fpga_0) and design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_1_0_4/DIBDI[0] (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -1.391 ns between design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CLKBWRCLK (clocked by clk_fpga_0) and design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_0/DIBDI[0] (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -1.393 ns between design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_0_7/CLKBWRCLK (clocked by clk_fpga_0) and design_1_4h_i/multihart_ip_0/inst/control_s_axi_U/int_data_ram/mem_reg_3_1_0/DIBDI[0] (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+

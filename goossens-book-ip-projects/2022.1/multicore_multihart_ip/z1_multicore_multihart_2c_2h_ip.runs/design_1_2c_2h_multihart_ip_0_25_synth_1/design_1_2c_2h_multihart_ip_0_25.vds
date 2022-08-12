@@ -1,0 +1,728 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon May  9 15:24:47 2022
+# Process ID: 25173
+# Current directory: /home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.runs/design_1_2c_2h_multihart_ip_0_25_synth_1
+# Command line: vivado -log design_1_2c_2h_multihart_ip_0_25.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_2c_2h_multihart_ip_0_25.tcl
+# Log file: /home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.runs/design_1_2c_2h_multihart_ip_0_25_synth_1/design_1_2c_2h_multihart_ip_0_25.vds
+# Journal file: /home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.runs/design_1_2c_2h_multihart_ip_0_25_synth_1/vivado.jou
+# Running On: bernard-Precision-5530, OS: Linux, CPU Frequency: 3785.797 MHz, CPU Physical cores: 6, Host memory: 33356 MB
+#-----------------------------------------------------------
+source design_1_2c_2h_multihart_ip_0_25.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2650.277 ; gain = 5.984 ; free physical = 4920 ; free virtual = 44774
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository '/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is '/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.runs/design_1_2c_2h_multihart_ip_0_25_synth_1'.)
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/bernard/Xilinx/Vivado/2022.1/data/ip'.
+Command: synth_design -top design_1_2c_2h_multihart_ip_0_25 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 25211
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2650.281 ; gain = 0.000 ; free physical = 3090 ; free virtual = 42943
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_2c_2h_multihart_ip_0_25' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ip/design_1_2c_2h_multihart_ip_0_25/synth/design_1_2c_2h_multihart_ip_0_25.v:53]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip.v:10]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_multihart_ip_Pipeline_VITIS_LOOP_197_1' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_multihart_ip_Pipeline_VITIS_LOOP_197_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_mux_21_1_1_1' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_mux_21_1_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_mux_21_1_1_1' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_mux_21_1_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_mux_21_18_1_1' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_mux_21_18_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_mux_21_18_1_1' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_mux_21_18_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_mux_21_3_1_1' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_mux_21_3_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_mux_21_3_1_1' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_mux_21_3_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_mux_21_5_1_1' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_mux_21_5_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_mux_21_5_1_1' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_mux_21_5_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_mux_325_1_1_1' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_mux_325_1_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_mux_325_1_1_1' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_mux_325_1_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_mux_21_20_1_1' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_mux_21_20_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_mux_21_20_1_1' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_mux_21_20_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_mux_21_15_1_1' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_mux_21_15_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_mux_21_15_1_1' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_mux_21_15_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_mux_21_32_1_1' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_mux_21_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_mux_21_32_1_1' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_mux_21_32_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_mux_21_7_1_1' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_mux_21_7_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_mux_21_7_1_1' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_mux_21_7_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_mux_325_32_1_1' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_mux_325_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_mux_325_32_1_1' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_mux_325_32_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_flow_control_loop_pipe_sequential_init' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_flow_control_loop_pipe_sequential_init.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_flow_control_loop_pipe_sequential_init' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_flow_control_loop_pipe_sequential_init.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_multihart_ip_Pipeline_VITIS_LOOP_197_1' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_multihart_ip_Pipeline_VITIS_LOOP_197_1.v:10]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_control_s_axi' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_control_s_axi.v:7]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_control_s_axi_ram' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_control_s_axi.v:681]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_control_s_axi_ram' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_control_s_axi.v:681]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_control_s_axi_ram__parameterized0' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_control_s_axi.v:681]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_control_s_axi_ram__parameterized0' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_control_s_axi.v:681]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_control_s_axi.v:318]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_control_s_axi' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_control_s_axi.v:7]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_gmem_m_axi' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:11]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_gmem_m_axi_store' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:780]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_gmem_m_axi_fifo' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_gmem_m_axi_srl' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_gmem_m_axi_srl' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_gmem_m_axi_fifo' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_gmem_m_axi_fifo__parameterized0' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_gmem_m_axi_mem' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2918]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_gmem_m_axi_mem' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2918]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_gmem_m_axi_fifo__parameterized0' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_gmem_m_axi_fifo__parameterized1' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_gmem_m_axi_srl__parameterized0' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_gmem_m_axi_srl__parameterized0' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_gmem_m_axi_fifo__parameterized1' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_gmem_m_axi_fifo__parameterized2' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_gmem_m_axi_srl__parameterized1' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_gmem_m_axi_srl__parameterized1' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_gmem_m_axi_fifo__parameterized2' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2686]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_gmem_m_axi_store' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:780]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_gmem_m_axi_load' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:324]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_gmem_m_axi_fifo__parameterized3' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_gmem_m_axi_mem__parameterized0' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2918]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_gmem_m_axi_mem__parameterized0' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2918]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_gmem_m_axi_fifo__parameterized3' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2686]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_gmem_m_axi_load' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:324]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_gmem_m_axi_write' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:1852]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_gmem_m_axi_reg_slice' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2584]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_gmem_m_axi_reg_slice' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2584]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_gmem_m_axi_fifo__parameterized4' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_gmem_m_axi_srl__parameterized2' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_gmem_m_axi_srl__parameterized2' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_gmem_m_axi_fifo__parameterized4' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_gmem_m_axi_throttle' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2360]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_gmem_m_axi_reg_slice__parameterized0' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2584]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_gmem_m_axi_reg_slice__parameterized0' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2584]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_gmem_m_axi_fifo__parameterized5' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_gmem_m_axi_srl__parameterized3' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_gmem_m_axi_srl__parameterized3' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_gmem_m_axi_fifo__parameterized5' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_gmem_m_axi_fifo__parameterized6' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2686]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_gmem_m_axi_srl__parameterized4' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_gmem_m_axi_srl__parameterized4' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2864]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_gmem_m_axi_fifo__parameterized6' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2686]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_gmem_m_axi_throttle' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2360]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_gmem_m_axi_reg_slice__parameterized1' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2584]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_gmem_m_axi_reg_slice__parameterized1' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2584]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2352]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2355]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_gmem_m_axi_write' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:1852]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_gmem_m_axi_read' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:1468]
+INFO: [Synth 8-6157] synthesizing module 'multihart_ip_gmem_m_axi_reg_slice__parameterized2' [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2584]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_gmem_m_axi_reg_slice__parameterized2' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:2584]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:1844]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_gmem_m_axi_read' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:1468]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip_gmem_m_axi' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_gmem_m_axi.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'multihart_ip' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_2c_2h_multihart_ip_0_25' (0#1) [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ip/design_1_2c_2h_multihart_ip_0_25/synth/design_1_2c_2h_multihart_ip_0_25.v:53]
+WARNING: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_control_s_axi.v:408]
+WARNING: [Synth 8-7129] Port in_BUS_RID[0] in module multihart_ip_gmem_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_RRESP[1] in module multihart_ip_gmem_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_RRESP[0] in module multihart_ip_gmem_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_RUSER[0] in module multihart_ip_gmem_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_BID[0] in module multihart_ip_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_BRESP[1] in module multihart_ip_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_BRESP[0] in module multihart_ip_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_BUSER[0] in module multihart_ip_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[2] in module multihart_ip_gmem_m_axi_srl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port raddr[2] in module multihart_ip_gmem_m_axi_srl__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[3] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[2] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[1] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[0] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[31] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[30] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[29] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[28] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[27] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[26] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[25] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[24] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[23] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[22] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[21] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[20] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[19] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[18] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[17] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[16] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[15] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[14] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[13] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[12] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[11] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[10] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[9] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[8] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[7] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[6] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[5] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[4] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[3] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[2] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[1] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[0] in module multihart_ip_control_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[3] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[2] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[1] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[0] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[31] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[30] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[29] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[28] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[27] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[26] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[25] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[24] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[23] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[22] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[21] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[20] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[19] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[18] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[17] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[16] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[15] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[14] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[13] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[12] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[11] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[10] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[9] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[8] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[7] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[6] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[5] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[4] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[3] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[2] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[1] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[0] in module multihart_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RLAST in module multihart_ip_multihart_ip_Pipeline_VITIS_LOOP_197_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RID[0] in module multihart_ip_multihart_ip_Pipeline_VITIS_LOOP_197_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RFIFONUM[8] in module multihart_ip_multihart_ip_Pipeline_VITIS_LOOP_197_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RFIFONUM[7] in module multihart_ip_multihart_ip_Pipeline_VITIS_LOOP_197_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RFIFONUM[6] in module multihart_ip_multihart_ip_Pipeline_VITIS_LOOP_197_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RFIFONUM[5] in module multihart_ip_multihart_ip_Pipeline_VITIS_LOOP_197_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RFIFONUM[4] in module multihart_ip_multihart_ip_Pipeline_VITIS_LOOP_197_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RFIFONUM[3] in module multihart_ip_multihart_ip_Pipeline_VITIS_LOOP_197_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RFIFONUM[2] in module multihart_ip_multihart_ip_Pipeline_VITIS_LOOP_197_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RFIFONUM[1] in module multihart_ip_multihart_ip_Pipeline_VITIS_LOOP_197_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RFIFONUM[0] in module multihart_ip_multihart_ip_Pipeline_VITIS_LOOP_197_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RUSER[0] in module multihart_ip_multihart_ip_Pipeline_VITIS_LOOP_197_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RRESP[1] in module multihart_ip_multihart_ip_Pipeline_VITIS_LOOP_197_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_RRESP[0] in module multihart_ip_multihart_ip_Pipeline_VITIS_LOOP_197_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_BRESP[1] in module multihart_ip_multihart_ip_Pipeline_VITIS_LOOP_197_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_BRESP[0] in module multihart_ip_multihart_ip_Pipeline_VITIS_LOOP_197_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_BID[0] in module multihart_ip_multihart_ip_Pipeline_VITIS_LOOP_197_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_gmem_BUSER[0] in module multihart_ip_multihart_ip_Pipeline_VITIS_LOOP_197_1 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2650.281 ; gain = 0.000 ; free physical = 4107 ; free virtual = 43961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2650.281 ; gain = 0.000 ; free physical = 4109 ; free virtual = 43963
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2650.281 ; gain = 0.000 ; free physical = 4109 ; free virtual = 43963
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.14 . Memory (MB): peak = 2650.281 ; gain = 0.000 ; free physical = 4098 ; free virtual = 43952
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ip/design_1_2c_2h_multihart_ip_0_25/constraints/multihart_ip_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ip/design_1_2c_2h_multihart_ip_0_25/constraints/multihart_ip_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.runs/design_1_2c_2h_multihart_ip_0_25_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.runs/design_1_2c_2h_multihart_ip_0_25_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2750.121 ; gain = 0.000 ; free physical = 3990 ; free virtual = 43844
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.35 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2750.121 ; gain = 0.000 ; free physical = 3987 ; free virtual = 43841
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 2750.121 ; gain = 99.840 ; free physical = 4085 ; free virtual = 43943
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 2750.121 ; gain = 99.840 ; free physical = 4085 ; free virtual = 43943
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.runs/design_1_2c_2h_multihart_ip_0_25_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 2750.121 ; gain = 99.840 ; free physical = 4085 ; free virtual = 43943
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3936] Found unconnected internal register 'address_V_reg_18040_pp0_iter2_reg_reg' and it is trimmed from '18' to '16' bits. [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_multihart_ip_Pipeline_VITIS_LOOP_197_1.v:6813]
+WARNING: [Synth 8-3936] Found unconnected internal register 'address_V_reg_18040_pp0_iter1_reg_reg' and it is trimmed from '18' to '16' bits. [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_multihart_ip_Pipeline_VITIS_LOOP_197_1.v:6812]
+WARNING: [Synth 8-3936] Found unconnected internal register 'address_V_reg_18040_reg' and it is trimmed from '18' to '16' bits. [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_multihart_ip_Pipeline_VITIS_LOOP_197_1.v:6785]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'multihart_ip_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'multihart_ip_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'multihart_ip_gmem_m_axi_reg_slice'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'multihart_ip_gmem_m_axi_reg_slice__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'multihart_ip_gmem_m_axi_reg_slice__parameterized1'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'multihart_ip_gmem_m_axi_reg_slice__parameterized2'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+WARNING: [Synth 8-6841] Block RAM (mem_reg) originally specified as a Byte Wide Write Enable RAM cannot take advantage of ByteWide feature and is implemented with single write enable per RAM due to following reason.
+(address width (15) is more than optimal threshold of 12. Implementing using BWWE will require more logic and timing would be suboptimal. Please use attribute ram_decomp = power if BWWE is desired.)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'multihart_ip_control_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'multihart_ip_control_s_axi'
+INFO: [Synth 8-7082] The signal mem_reg is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (4 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'multihart_ip_gmem_m_axi_reg_slice'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'multihart_ip_gmem_m_axi_reg_slice__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'multihart_ip_gmem_m_axi_reg_slice__parameterized1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'multihart_ip_gmem_m_axi_reg_slice__parameterized2'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2750.121 ; gain = 99.840 ; free physical = 4047 ; free virtual = 43909
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   64 Bit       Adders := 6     
+	   3 Input   64 Bit       Adders := 2     
+	   2 Input   52 Bit       Adders := 2     
+	   2 Input   32 Bit       Adders := 6     
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   17 Bit       Adders := 1     
+	   2 Input   15 Bit       Adders := 3     
+	   2 Input   12 Bit       Adders := 2     
+	   2 Input    9 Bit       Adders := 4     
+	   2 Input    8 Bit       Adders := 3     
+	   2 Input    6 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 17    
+	   2 Input    4 Bit       Adders := 15    
+	   2 Input    3 Bit       Adders := 6     
+	   2 Input    2 Bit       Adders := 3     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 60    
+	   3 Input      1 Bit         XORs := 1     
++---Registers : 
+	               96 Bit    Registers := 6     
+	               72 Bit    Registers := 3     
+	               64 Bit    Registers := 17    
+	               62 Bit    Registers := 1     
+	               52 Bit    Registers := 2     
+	               37 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
+	               34 Bit    Registers := 1     
+	               33 Bit    Registers := 2     
+	               32 Bit    Registers := 131   
+	               30 Bit    Registers := 1     
+	               20 Bit    Registers := 12    
+	               18 Bit    Registers := 5     
+	               17 Bit    Registers := 2     
+	               16 Bit    Registers := 3     
+	               15 Bit    Registers := 27    
+	               14 Bit    Registers := 4     
+	               13 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 4     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 6     
+	                7 Bit    Registers := 9     
+	                6 Bit    Registers := 3     
+	                5 Bit    Registers := 55    
+	                4 Bit    Registers := 41    
+	                3 Bit    Registers := 31    
+	                2 Bit    Registers := 35    
+	                1 Bit    Registers := 459   
++---RAMs : 
+	            1024K Bit	(32768 X 32 bit)          RAMs := 1     
+	               8K Bit	(255 X 34 bit)          RAMs := 1     
+	              540 Bit	(15 X 36 bit)          RAMs := 1     
+	               64 Bit	(2 X 32 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   96 Bit        Muxes := 2     
+	   2 Input   72 Bit        Muxes := 1     
+	   2 Input   64 Bit        Muxes := 8     
+	   2 Input   52 Bit        Muxes := 2     
+	   2 Input   33 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 419   
+	   4 Input   32 Bit        Muxes := 1     
+	  13 Input   32 Bit        Muxes := 1     
+	   2 Input   20 Bit        Muxes := 36    
+	   2 Input   19 Bit        Muxes := 1     
+	   2 Input   18 Bit        Muxes := 24    
+	   2 Input   16 Bit        Muxes := 3     
+	   2 Input   15 Bit        Muxes := 71    
+	   8 Input   15 Bit        Muxes := 1     
+	   4 Input   12 Bit        Muxes := 2     
+	   2 Input   10 Bit        Muxes := 4     
+	   2 Input    9 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 14    
+	   4 Input    8 Bit        Muxes := 2     
+	   2 Input    7 Bit        Muxes := 23    
+	   2 Input    6 Bit        Muxes := 1     
+	   7 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 94    
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 18    
+	  13 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 63    
+	   3 Input    3 Bit        Muxes := 2     
+	   6 Input    3 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 6     
+	   3 Input    2 Bit        Muxes := 16    
+	   2 Input    2 Bit        Muxes := 65    
+	   2 Input    1 Bit        Muxes := 907   
+	   7 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3936] Found unconnected internal register 'control_s_axi_U/int_start_pc/q0_reg' and it is trimmed from '32' to '15' bits. [/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.gen/sources_1/bd/design_1_2c_2h/ipshared/22ab/hdl/verilog/multihart_ip_control_s_axi.v:745]
+WARNING: [Synth 8-6841] Block RAM (control_s_axi_U/int_ip_code_ram/mem_reg) originally specified as a Byte Wide Write Enable RAM cannot take advantage of ByteWide feature and is implemented with single write enable per RAM due to following reason.
+(address width (15) is more than optimal threshold of 12. Implementing using BWWE will require more logic and timing would be suboptimal. Please use attribute ram_decomp = power if BWWE is desired.)
+INFO: [Synth 8-7082] The signal gmem_m_axi_U/store_unit/buff_wdata/U_fifo_mem/mem_reg is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (4 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+WARNING: [Synth 8-3332] Sequential element (control_s_axi_U/FSM_onehot_rstate_reg[0]) is unused and will be removed from module multihart_ip.
+WARNING: [Synth 8-3332] Sequential element (control_s_axi_U/FSM_onehot_wstate_reg[0]) is unused and will be removed from module multihart_ip.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:48 ; elapsed = 00:01:49 . Memory (MB): peak = 2750.121 ; gain = 99.840 ; free physical = 4034 ; free virtual = 43904
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+-------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                                            | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst        | control_s_axi_U/int_ip_code_ram/mem_reg               | 32 K x 32(READ_FIRST)  | W | R | 32 K x 32(WRITE_FIRST) |   | R | Port A and B     | 0      | 32     | 
+|inst        | gmem_m_axi_U/store_unit/buff_wdata/U_fifo_mem/mem_reg | 15 x 36(READ_FIRST)    | W |   | 15 x 36(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|inst        | gmem_m_axi_U/load_unit/buff_rdata/U_fifo_mem/mem_reg  | 255 x 34(READ_FIRST)   | W |   | 255 x 34(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++------------+-------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+--------------------------------------+-----------+----------------------+----------------+
+|Module Name | RTL Object                           | Inference | Size (Depth x Width) | Primitives     | 
++------------+--------------------------------------+-----------+----------------------+----------------+
+|inst        | control_s_axi_U/int_start_pc/mem_reg | Implied   | 2 x 32               | RAM16X1D x 32  | 
++------------+--------------------------------------+-----------+----------------------+----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:52 ; elapsed = 00:01:54 . Memory (MB): peak = 2750.121 ; gain = 99.840 ; free physical = 3909 ; free virtual = 43779
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:05 ; elapsed = 00:02:07 . Memory (MB): peak = 2790.105 ; gain = 139.824 ; free physical = 3831 ; free virtual = 43700
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+-------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                                            | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst        | control_s_axi_U/int_ip_code_ram/mem_reg               | 32 K x 32(READ_FIRST)  | W | R | 32 K x 32(WRITE_FIRST) |   | R | Port A and B     | 0      | 32     | 
+|inst        | gmem_m_axi_U/store_unit/buff_wdata/U_fifo_mem/mem_reg | 15 x 36(READ_FIRST)    | W |   | 15 x 36(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|inst        | gmem_m_axi_U/load_unit/buff_rdata/U_fifo_mem/mem_reg  | 255 x 34(READ_FIRST)   | W |   | 255 x 34(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++------------+-------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping Report
++------------+--------------------------------------+-----------+----------------------+----------------+
+|Module Name | RTL Object                           | Inference | Size (Depth x Width) | Primitives     | 
++------------+--------------------------------------+-----------+----------------------+----------------+
+|inst        | control_s_axi_U/int_start_pc/mem_reg | Implied   | 2 x 32               | RAM16X1D x 32  | 
++------------+--------------------------------------+-----------+----------------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_0_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_0_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_0_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_0_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_0_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_0_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_0_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_0_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_0_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_0_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_0_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_0_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_0_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_0_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_0_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_0_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_1_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_1_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_1_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_1_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_1_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_1_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_1_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_1_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_1_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_1_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_1_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_1_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_1_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_1_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_1_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_1_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_2_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_2_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_2_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_2_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_2_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_2_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_2_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_2_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_2_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_2_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_2_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_2_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_2_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_2_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_2_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_2_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_3_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_3_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_3_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_3_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_3_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_3_0_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_3_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_3_0_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_3_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_3_0_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_3_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_3_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_3_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_3_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_3_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_3_0_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/gmem_m_axi_U/load_unit/buff_rdata/U_fifo_mem/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:11 ; elapsed = 00:02:13 . Memory (MB): peak = 2837.949 ; gain = 187.668 ; free physical = 3822 ; free virtual = 43692
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:16 ; elapsed = 00:02:17 . Memory (MB): peak = 2840.918 ; gain = 190.637 ; free physical = 3806 ; free virtual = 43675
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:16 ; elapsed = 00:02:17 . Memory (MB): peak = 2840.918 ; gain = 190.637 ; free physical = 3806 ; free virtual = 43675
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:17 ; elapsed = 00:02:19 . Memory (MB): peak = 2840.918 ; gain = 190.637 ; free physical = 3818 ; free virtual = 43687
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:17 ; elapsed = 00:02:19 . Memory (MB): peak = 2840.918 ; gain = 190.637 ; free physical = 3818 ; free virtual = 43687
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:18 ; elapsed = 00:02:19 . Memory (MB): peak = 2840.918 ; gain = 190.637 ; free physical = 3818 ; free virtual = 43688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:18 ; elapsed = 00:02:19 . Memory (MB): peak = 2840.918 ; gain = 190.637 ; free physical = 3818 ; free virtual = 43688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++-------------+----------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name  | RTL Name                                                                                     | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++-------------+----------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|multihart_ip | grp_multihart_ip_Pipeline_VITIS_LOOP_197_1_fu_167/and_ln1544_reg_18191_pp0_iter5_reg_reg[0]  | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|multihart_ip | grp_multihart_ip_Pipeline_VITIS_LOOP_197_1_fu_167/shl_ln95_reg_18130_pp0_iter3_reg_reg[3]    | 3      | 4     | NO           | NO                 | YES               | 4      | 0       | 
+|multihart_ip | grp_multihart_ip_Pipeline_VITIS_LOOP_197_1_fu_167/shl_ln108_reg_18115_pp0_iter3_reg_reg[2]   | 3      | 3     | NO           | NO                 | YES               | 3      | 0       | 
+|multihart_ip | grp_multihart_ip_Pipeline_VITIS_LOOP_197_1_fu_167/shl_ln95_3_reg_18090_pp0_iter3_reg_reg[3]  | 3      | 4     | NO           | NO                 | YES               | 4      | 0       | 
+|multihart_ip | grp_multihart_ip_Pipeline_VITIS_LOOP_197_1_fu_167/shl_ln108_3_reg_18075_pp0_iter3_reg_reg[2] | 3      | 3     | NO           | NO                 | YES               | 3      | 0       | 
+|multihart_ip | grp_multihart_ip_Pipeline_VITIS_LOOP_197_1_fu_167/nbi_V_3_reg_18298_pp0_iter5_reg_reg[31]    | 5      | 32    | NO           | NO                 | NO                | 32     | 0       | 
+|multihart_ip | grp_multihart_ip_Pipeline_VITIS_LOOP_197_1_fu_167/nbc_V_3_reg_18303_pp0_iter5_reg_reg[31]    | 5      | 32    | NO           | NO                 | NO                | 32     | 0       | 
++-------------+----------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+
+Dynamic Shift Register Report:
++------------+-------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name    | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+-------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | mem_reg[3]  | 96     | 96         | 96     | 0       | 0      | 0      | 0      | 
+|dsrl__1     | mem_reg[14] | 1      | 1          | 1      | 0       | 0      | 0      | 0      | 
+|dsrl__2     | mem_reg[3]  | 1      | 1          | 1      | 0       | 0      | 0      | 0      | 
+|dsrl__3     | mem_reg[14] | 8      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__4     | mem_reg[14] | 72     | 72         | 72     | 0       | 0      | 0      | 0      | 
+|dsrl__5     | mem_reg[14] | 37     | 37         | 37     | 0       | 0      | 0      | 0      | 
+|dsrl__10    | mem_reg[3]  | 96     | 96         | 96     | 0       | 0      | 0      | 0      | 
++------------+-------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |   269|
+|2     |LUT1     |    60|
+|3     |LUT2     |   411|
+|4     |LUT3     |  3086|
+|5     |LUT4     |  1674|
+|6     |LUT5     |  1116|
+|7     |LUT6     |  6738|
+|8     |MUXF7    |   463|
+|9     |MUXF8    |    20|
+|10    |RAM16X1D |    32|
+|11    |RAMB18E1 |     2|
+|13    |RAMB36E1 |    32|
+|14    |SRL16E   |   315|
+|15    |FDRE     |  7408|
+|16    |FDSE     |    42|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:18 ; elapsed = 00:02:19 . Memory (MB): peak = 2840.918 ; gain = 190.637 ; free physical = 3818 ; free virtual = 43688
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 97 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:14 ; elapsed = 00:02:17 . Memory (MB): peak = 2840.918 ; gain = 90.797 ; free physical = 3872 ; free virtual = 43741
+Synthesis Optimization Complete : Time (s): cpu = 00:02:18 ; elapsed = 00:02:20 . Memory (MB): peak = 2840.926 ; gain = 190.637 ; free physical = 3872 ; free virtual = 43741
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.14 . Memory (MB): peak = 2843.887 ; gain = 0.000 ; free physical = 3964 ; free virtual = 43834
+INFO: [Netlist 29-17] Analyzing 818 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2878.871 ; gain = 0.000 ; free physical = 3908 ; free virtual = 43777
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 32 instances were transformed.
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 32 instances
+
+Synth Design complete, checksum: 869144c6
+INFO: [Common 17-83] Releasing license: Synthesis
+188 Infos, 114 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:28 ; elapsed = 00:02:26 . Memory (MB): peak = 2878.871 ; gain = 228.594 ; free physical = 4200 ; free virtual = 44069
+INFO: [Common 17-1381] The checkpoint '/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.runs/design_1_2c_2h_multihart_ip_0_25_synth_1/design_1_2c_2h_multihart_ip_0_25.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_2c_2h_multihart_ip_0_25, cache-ID = fce60bc0178857c7
+INFO: [Coretcl 2-1174] Renamed 63 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/bernard/book-2022.1/new_book_ip/multicore_multihart_ip/z1_multicore_multihart_2c_2h_ip.runs/design_1_2c_2h_multihart_ip_0_25_synth_1/design_1_2c_2h_multihart_ip_0_25.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_2c_2h_multihart_ip_0_25_utilization_synth.rpt -pb design_1_2c_2h_multihart_ip_0_25_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon May  9 15:27:28 2022...

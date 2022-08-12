@@ -1,0 +1,20 @@
+#ifndef __MEM
+#define __MEM
+#include "ap_int.h"
+#include "multicycle_pipeline_ip.h"
+int mem_load(
+  ip_num_t         ip_num,
+  bit_t            is_local,
+  int             *ip_data_ram,
+  int              data_ram[][IP_DATA_RAM_SIZE],
+  b_data_address_t address,
+  func3_t          msize);
+void mem_store(
+  ip_num_t         ip_num,
+  bit_t            is_local,
+  int             *ip_data_ram,
+  int              data_ram[][IP_DATA_RAM_SIZE],
+  b_data_address_t address,
+  int              rv2,
+  ap_uint<2>       msize);
+#endif

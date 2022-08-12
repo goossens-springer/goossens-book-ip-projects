@@ -1,0 +1,65 @@
+#include <stdio.h>
+#include "xmultihart_ip.h"
+#include "xparameters.h"
+#define LOG_NB_HART             3
+#define NB_HART                (1<<LOG_NB_HART)
+#define LOG_CODE_RAM_SIZE      16
+//size in words
+#define CODE_RAM_SIZE          (1<<LOG_CODE_RAM_SIZE)
+#define LOG_DATA_RAM_SIZE      16
+//size in words
+#define DATA_RAM_SIZE          (1<<LOG_DATA_RAM_SIZE)
+#define LOG_HART_DATA_RAM_SIZE (LOG_DATA_RAM_SIZE-LOG_NB_HART)
+#define HART_DATA_RAM_SIZE     (1<<LOG_HART_DATA_RAM_SIZE)
+#define NUM_DISCS              13
+#define NUM_MOVES              ((1<<NUM_DISCS)-1)
+#define RESULT                 0x74
+XMultihart_ip_Config *cfg_ptr;
+XMultihart_ip         ip;
+word_type data_ram[DATA_RAM_SIZE]={
+#include "towers_no_print_0_data.hex"
+};
+word_type code_ram[CODE_RAM_SIZE]={
+#include "towers_no_print_0_text.hex"
+};
+word_type start_pc[NB_HART]={0};
+int main(){
+  unsigned int nbi, nbc;
+  int          i;
+  char         c0, c1;
+  cfg_ptr = XMultihart_ip_LookupConfig
+    (XPAR_XMULTIHART_IP_0_DEVICE_ID);
+  XMultihart_ip_CfgInitialize(&ip, cfg_ptr);
+  XMultihart_ip_Set_running_hart_set(&ip, (1<<NB_HART)-1);
+  for (i=0; i<NB_HART; i++)
+    XMultihart_ip_Write_start_pc_Words
+    (&ip, 0, start_pc, 1);
+  XMultihart_ip_Write_code_ram_Words
+    (&ip, 0, code_ram, CODE_RAM_SIZE);
+  for (i=0; i<NB_HART; i++)
+    XMultihart_ip_Write_data_ram_Words
+      (&ip, i<<LOG_HART_DATA_RAM_SIZE, data_ram, HART_DATA_RAM_SIZE);
+  XMultihart_ip_Start(&ip);
+  while (!XMultihart_ip_IsDone(&ip));
+  for (int h=0; h<NB_HART; h++){
+    printf("hart %d\n", h);
+    printf("result for 6 first moves\n");
+    for (i=0; i<12; i+=2){
+      XMultihart_ip_Read_data_ram_Bytes(&ip, (h<<LOG_HART_DATA_RAM_SIZE)*4 + RESULT+i,   &c0, 1);
+      XMultihart_ip_Read_data_ram_Bytes(&ip, (h<<LOG_HART_DATA_RAM_SIZE)*4 + RESULT+i+1, &c1, 1);
+      printf("top disc moves from %c to %c\n", c0, c1);
+    }
+    printf("result for 6 last moves\n");
+    for (i=2*NUM_MOVES-12; i<2*NUM_MOVES; i+=2){
+      XMultihart_ip_Read_data_ram_Bytes(&ip, (h<<LOG_HART_DATA_RAM_SIZE)*4 + RESULT+i,   &c0, 1);
+      XMultihart_ip_Read_data_ram_Bytes(&ip, (h<<LOG_HART_DATA_RAM_SIZE)*4 + RESULT+i+1, &c1, 1);
+      printf("top disc moves from %c to %c\n", c0, c1);
+    }
+  }
+  nbi = (unsigned int)XMultihart_ip_Get_nb_instruction(&ip);
+  nbc = (unsigned int)XMultihart_ip_Get_nb_cycle(&ip);
+  printf("%d fetched and decoded instructions\
+ in %d cycles (ipc = %2.2f)\n", nbi, nbc, ((float)nbi)/nbc);
+  return 0;
+}
+

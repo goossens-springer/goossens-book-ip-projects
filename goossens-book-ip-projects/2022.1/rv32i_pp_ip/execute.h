@@ -1,0 +1,20 @@
+#ifndef __EXECUTE
+#define __EXECUTE
+#include "rv32i_pp_ip.h"
+void execute(
+  from_f_to_e_t  f_to_e,
+  from_f_to_e_t  e_from_f,
+  bit_t          e_cancel,
+  bit_t          m_cancel,
+  bit_t          m_has_no_dest,
+  reg_num_t      m_rd,
+  int            m_result,
+  bit_t          w_cancel,
+  bit_t          w_has_no_dest,
+  reg_num_t      w_rd,
+  int            w_result,
+  int           *reg_file,
+  from_e_to_f_t *e_to_f,
+  from_e_to_e_t *e_to_e,
+  from_e_to_m_t *e_to_m);
+#endif

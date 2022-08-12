@@ -1,0 +1,132 @@
+
+
+================================================================
+== Vitis HLS Report for 'execute'
+================================================================
+* Date:           Thu Jul 28 14:21:45 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        fetching_decoding_ip
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.186 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.18>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%d_i_imm_read = read i17 @_ssdm_op_Read.ap_auto.i17, i17 %d_i_imm" [execute.cpp:4]   --->   Operation 2 'read' 'd_i_imm_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%d_i_type_read = read i3 @_ssdm_op_Read.ap_auto.i3, i3 %d_i_type" [execute.cpp:4]   --->   Operation 3 'read' 'd_i_type_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%pc_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %pc" [execute.cpp:4]   --->   Operation 4 'read' 'pc_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns) (grouped into LUT with out node select_ln7_1)   --->   "%trunc_ln = partselect i16 @_ssdm_op_PartSelect.i16.i17.i32.i32, i17 %d_i_imm_read, i32 1, i32 16"   --->   Operation 5 'partselect' 'trunc_ln' <Predicate = (!icmp_ln7_1 & or_ln7_2 & !or_ln7_3)> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (1.13ns)   --->   "%icmp_ln7 = icmp_eq  i3 %d_i_type_read, i3 6" [execute.cpp:7]   --->   Operation 6 'icmp' 'icmp_ln7' <Predicate = (!or_ln7_3)> <Delay = 1.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 7 [1/1] (1.13ns)   --->   "%icmp_ln7_1 = icmp_eq  i3 %d_i_type_read, i3 5" [execute.cpp:7]   --->   Operation 7 'icmp' 'icmp_ln7_1' <Predicate = (!or_ln7_3)> <Delay = 1.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 8 [1/1] (1.13ns)   --->   "%icmp_ln7_2 = icmp_eq  i3 %d_i_type_read, i3 4" [execute.cpp:7]   --->   Operation 8 'icmp' 'icmp_ln7_2' <Predicate = true> <Delay = 1.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 9 [1/1] (1.13ns)   --->   "%icmp_ln7_3 = icmp_eq  i3 %d_i_type_read, i3 3" [execute.cpp:7]   --->   Operation 9 'icmp' 'icmp_ln7_3' <Predicate = true> <Delay = 1.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 10 [1/1] (1.13ns)   --->   "%icmp_ln7_4 = icmp_eq  i3 %d_i_type_read, i3 2" [execute.cpp:7]   --->   Operation 10 'icmp' 'icmp_ln7_4' <Predicate = true> <Delay = 1.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 11 [1/1] (1.13ns)   --->   "%icmp_ln7_5 = icmp_eq  i3 %d_i_type_read, i3 1" [execute.cpp:7]   --->   Operation 11 'icmp' 'icmp_ln7_5' <Predicate = true> <Delay = 1.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 12 [1/1] (0.00ns) (grouped into LUT with out node next_pc)   --->   "%or_ln7 = or i1 %icmp_ln7_5, i1 %icmp_ln7_4" [execute.cpp:7]   --->   Operation 12 'or' 'or_ln7' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 13 [1/1] (0.00ns) (grouped into LUT with out node next_pc)   --->   "%or_ln7_1 = or i1 %icmp_ln7_3, i1 %icmp_ln7_2" [execute.cpp:7]   --->   Operation 13 'or' 'or_ln7_1' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 14 [1/1] (0.00ns) (grouped into LUT with out node select_ln7_1)   --->   "%select_ln7 = select i1 %icmp_ln7_1, i16 1, i16 %trunc_ln" [execute.cpp:7]   --->   Operation 14 'select' 'select_ln7' <Predicate = (or_ln7_2 & !or_ln7_3)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (0.00ns) (grouped into LUT with out node select_ln7_1)   --->   "%or_ln7_2 = or i1 %icmp_ln7_1, i1 %icmp_ln7" [execute.cpp:7]   --->   Operation 15 'or' 'or_ln7_2' <Predicate = (!or_ln7_3)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (0.00ns) (grouped into LUT with out node next_pc)   --->   "%or_ln7_3 = or i1 %or_ln7, i1 %or_ln7_1" [execute.cpp:7]   --->   Operation 16 'or' 'or_ln7_3' <Predicate = true> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (0.97ns) (out node of the LUT)   --->   "%select_ln7_1 = select i1 %or_ln7_2, i16 %select_ln7, i16 1" [execute.cpp:7]   --->   Operation 17 'select' 'select_ln7_1' <Predicate = (!or_ln7_3)> <Delay = 0.97> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 18 [1/1] (0.00ns) (grouped into LUT with out node next_pc)   --->   "%select_ln7_2 = select i1 %or_ln7_3, i16 1, i16 %select_ln7_1" [execute.cpp:7]   --->   Operation 18 'select' 'select_ln7_2' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 19 [1/1] (2.07ns) (out node of the LUT)   --->   "%next_pc = add i16 %select_ln7_2, i16 %pc_read" [execute.cpp:7]   --->   Operation 19 'add' 'next_pc' <Predicate = true> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%ret_ln38 = ret i16 %next_pc" [execute.cpp:38]   --->   Operation 20 'ret' 'ret_ln38' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 4.19ns
+The critical path consists of the following:
+	wire read operation ('d_i_type_read', execute.cpp:4) on port 'd_i_type' (execute.cpp:4) [5]  (0 ns)
+	'icmp' operation ('icmp_ln7_1', execute.cpp:7) [9]  (1.13 ns)
+	'select' operation ('select_ln7', execute.cpp:7) [16]  (0 ns)
+	'select' operation ('select_ln7_1', execute.cpp:7) [19]  (0.978 ns)
+	'select' operation ('select_ln7_2', execute.cpp:7) [20]  (0 ns)
+	'add' operation ('next_pc', execute.cpp:7) [21]  (2.08 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

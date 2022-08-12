@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/bernard/book-2022.1/new_book_ip/rv32i_npp_ip/rv32i_npp_ip/solution1/./sim/autowrap/testbench/rv32i_npp_ip.cpp_pre.cpp.tb.cpp

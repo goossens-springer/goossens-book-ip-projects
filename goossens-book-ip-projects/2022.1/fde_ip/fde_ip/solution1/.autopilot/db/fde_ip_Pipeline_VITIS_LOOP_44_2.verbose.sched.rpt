@@ -1,0 +1,387 @@
+
+
+================================================================
+== Vitis HLS Report for 'fde_ip_Pipeline_VITIS_LOOP_44_2'
+================================================================
+* Date:           Tue May  3 16:48:28 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        fde_ip
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  |  10.00 ns|  13.863 ns|     2.70 ns|
+    +--------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_44_2  |        ?|        ?|         6|          6|          6|     ?|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 6, depth = 6
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 1
+  Pipeline-0 : II = 6, D = 6, States = { 1 2 3 4 5 6 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.58>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%pc_V_2 = alloca i32 1"   --->   Operation 9 'alloca' 'pc_V_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%reg_file = alloca i32 1"   --->   Operation 10 'alloca' 'reg_file' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%reg_file_1 = alloca i32 1"   --->   Operation 11 'alloca' 'reg_file_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%reg_file_2 = alloca i32 1"   --->   Operation 12 'alloca' 'reg_file_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%reg_file_3 = alloca i32 1"   --->   Operation 13 'alloca' 'reg_file_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%reg_file_4 = alloca i32 1"   --->   Operation 14 'alloca' 'reg_file_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%reg_file_5 = alloca i32 1"   --->   Operation 15 'alloca' 'reg_file_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%reg_file_6 = alloca i32 1"   --->   Operation 16 'alloca' 'reg_file_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%reg_file_7 = alloca i32 1"   --->   Operation 17 'alloca' 'reg_file_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%reg_file_8 = alloca i32 1"   --->   Operation 18 'alloca' 'reg_file_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%reg_file_9 = alloca i32 1"   --->   Operation 19 'alloca' 'reg_file_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%reg_file_10 = alloca i32 1"   --->   Operation 20 'alloca' 'reg_file_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%reg_file_11 = alloca i32 1"   --->   Operation 21 'alloca' 'reg_file_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%reg_file_12 = alloca i32 1"   --->   Operation 22 'alloca' 'reg_file_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%reg_file_13 = alloca i32 1"   --->   Operation 23 'alloca' 'reg_file_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%reg_file_14 = alloca i32 1"   --->   Operation 24 'alloca' 'reg_file_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%reg_file_15 = alloca i32 1"   --->   Operation 25 'alloca' 'reg_file_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%reg_file_16 = alloca i32 1"   --->   Operation 26 'alloca' 'reg_file_16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%reg_file_17 = alloca i32 1"   --->   Operation 27 'alloca' 'reg_file_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%reg_file_18 = alloca i32 1"   --->   Operation 28 'alloca' 'reg_file_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%reg_file_19 = alloca i32 1"   --->   Operation 29 'alloca' 'reg_file_19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%reg_file_20 = alloca i32 1"   --->   Operation 30 'alloca' 'reg_file_20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%reg_file_21 = alloca i32 1"   --->   Operation 31 'alloca' 'reg_file_21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%reg_file_22 = alloca i32 1"   --->   Operation 32 'alloca' 'reg_file_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%reg_file_23 = alloca i32 1"   --->   Operation 33 'alloca' 'reg_file_23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%reg_file_24 = alloca i32 1"   --->   Operation 34 'alloca' 'reg_file_24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%reg_file_25 = alloca i32 1"   --->   Operation 35 'alloca' 'reg_file_25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%reg_file_26 = alloca i32 1"   --->   Operation 36 'alloca' 'reg_file_26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%reg_file_27 = alloca i32 1"   --->   Operation 37 'alloca' 'reg_file_27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%reg_file_28 = alloca i32 1"   --->   Operation 38 'alloca' 'reg_file_28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%reg_file_29 = alloca i32 1"   --->   Operation 39 'alloca' 'reg_file_29' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%reg_file_30 = alloca i32 1"   --->   Operation 40 'alloca' 'reg_file_30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%reg_file_31 = alloca i32 1"   --->   Operation 41 'alloca' 'reg_file_31' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%nbi_1 = alloca i32 1"   --->   Operation 42 'alloca' 'nbi_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %code_ram, i64 666, i64 207, i64 1"   --->   Operation 43 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %code_ram, void @empty_5, i32 0, i32 0, void @empty_0, i32 1, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 44 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%pc_V_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %pc_V"   --->   Operation 45 'read' 'pc_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%reg_file_30_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %reg_file_30_reload"   --->   Operation 46 'read' 'reg_file_30_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%reg_file_29_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %reg_file_29_reload"   --->   Operation 47 'read' 'reg_file_29_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%reg_file_28_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %reg_file_28_reload"   --->   Operation 48 'read' 'reg_file_28_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%reg_file_27_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %reg_file_27_reload"   --->   Operation 49 'read' 'reg_file_27_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%reg_file_26_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %reg_file_26_reload"   --->   Operation 50 'read' 'reg_file_26_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%reg_file_25_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %reg_file_25_reload"   --->   Operation 51 'read' 'reg_file_25_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%reg_file_24_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %reg_file_24_reload"   --->   Operation 52 'read' 'reg_file_24_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%reg_file_23_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %reg_file_23_reload"   --->   Operation 53 'read' 'reg_file_23_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%reg_file_22_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %reg_file_22_reload"   --->   Operation 54 'read' 'reg_file_22_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%reg_file_21_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %reg_file_21_reload"   --->   Operation 55 'read' 'reg_file_21_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%reg_file_20_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %reg_file_20_reload"   --->   Operation 56 'read' 'reg_file_20_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%reg_file_19_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %reg_file_19_reload"   --->   Operation 57 'read' 'reg_file_19_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%reg_file_18_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %reg_file_18_reload"   --->   Operation 58 'read' 'reg_file_18_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%reg_file_17_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %reg_file_17_reload"   --->   Operation 59 'read' 'reg_file_17_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%reg_file_16_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %reg_file_16_reload"   --->   Operation 60 'read' 'reg_file_16_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%reg_file_15_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %reg_file_15_reload"   --->   Operation 61 'read' 'reg_file_15_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%reg_file_14_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %reg_file_14_reload"   --->   Operation 62 'read' 'reg_file_14_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%reg_file_13_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %reg_file_13_reload"   --->   Operation 63 'read' 'reg_file_13_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%reg_file_12_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %reg_file_12_reload"   --->   Operation 64 'read' 'reg_file_12_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%reg_file_11_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %reg_file_11_reload"   --->   Operation 65 'read' 'reg_file_11_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%reg_file_10_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %reg_file_10_reload"   --->   Operation 66 'read' 'reg_file_10_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%reg_file_9_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %reg_file_9_reload"   --->   Operation 67 'read' 'reg_file_9_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%reg_file_8_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %reg_file_8_reload"   --->   Operation 68 'read' 'reg_file_8_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%reg_file_7_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %reg_file_7_reload"   --->   Operation 69 'read' 'reg_file_7_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%reg_file_6_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %reg_file_6_reload"   --->   Operation 70 'read' 'reg_file_6_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%reg_file_5_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %reg_file_5_reload"   --->   Operation 71 'read' 'reg_file_5_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%reg_file_4_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %reg_file_4_reload"   --->   Operation 72 'read' 'reg_file_4_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%reg_file_3_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %reg_file_3_reload"   --->   Operation 73 'read' 'reg_file_3_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%reg_file_2_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %reg_file_2_reload"   --->   Operation 74 'read' 'reg_file_2_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%reg_file_1_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %reg_file_1_reload"   --->   Operation 75 'read' 'reg_file_1_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%reg_file_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %reg_file_reload"   --->   Operation 76 'read' 'reg_file_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%reg_file_31_reload_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %reg_file_31_reload"   --->   Operation 77 'read' 'reg_file_31_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 0, i32 %nbi_1"   --->   Operation 78 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 79 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %reg_file_31_reload_read, i32 %reg_file_31"   --->   Operation 79 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 80 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %reg_file_reload_read, i32 %reg_file_30"   --->   Operation 80 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 81 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %reg_file_1_reload_read, i32 %reg_file_29"   --->   Operation 81 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 82 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %reg_file_2_reload_read, i32 %reg_file_28"   --->   Operation 82 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 83 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %reg_file_3_reload_read, i32 %reg_file_27"   --->   Operation 83 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 84 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %reg_file_4_reload_read, i32 %reg_file_26"   --->   Operation 84 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 85 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %reg_file_5_reload_read, i32 %reg_file_25"   --->   Operation 85 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 86 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %reg_file_6_reload_read, i32 %reg_file_24"   --->   Operation 86 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 87 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %reg_file_7_reload_read, i32 %reg_file_23"   --->   Operation 87 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 88 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %reg_file_8_reload_read, i32 %reg_file_22"   --->   Operation 88 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 89 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %reg_file_9_reload_read, i32 %reg_file_21"   --->   Operation 89 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 90 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %reg_file_10_reload_read, i32 %reg_file_20"   --->   Operation 90 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 91 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %reg_file_11_reload_read, i32 %reg_file_19"   --->   Operation 91 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 92 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %reg_file_12_reload_read, i32 %reg_file_18"   --->   Operation 92 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 93 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %reg_file_13_reload_read, i32 %reg_file_17"   --->   Operation 93 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 94 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %reg_file_14_reload_read, i32 %reg_file_16"   --->   Operation 94 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 95 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %reg_file_15_reload_read, i32 %reg_file_15"   --->   Operation 95 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 96 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %reg_file_16_reload_read, i32 %reg_file_14"   --->   Operation 96 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 97 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %reg_file_17_reload_read, i32 %reg_file_13"   --->   Operation 97 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 98 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %reg_file_18_reload_read, i32 %reg_file_12"   --->   Operation 98 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 99 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %reg_file_19_reload_read, i32 %reg_file_11"   --->   Operation 99 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 100 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %reg_file_20_reload_read, i32 %reg_file_10"   --->   Operation 100 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 101 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %reg_file_21_reload_read, i32 %reg_file_9"   --->   Operation 101 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 102 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %reg_file_22_reload_read, i32 %reg_file_8"   --->   Operation 102 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 103 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %reg_file_23_reload_read, i32 %reg_file_7"   --->   Operation 103 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 104 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %reg_file_24_reload_read, i32 %reg_file_6"   --->   Operation 104 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 105 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %reg_file_25_reload_read, i32 %reg_file_5"   --->   Operation 105 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 106 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %reg_file_26_reload_read, i32 %reg_file_4"   --->   Operation 106 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 107 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %reg_file_27_reload_read, i32 %reg_file_3"   --->   Operation 107 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 108 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %reg_file_28_reload_read, i32 %reg_file_2"   --->   Operation 108 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 109 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %reg_file_29_reload_read, i32 %reg_file_1"   --->   Operation 109 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 110 [1/1] (1.58ns)   --->   "%store_ln0 = store i32 %reg_file_30_reload_read, i32 %reg_file"   --->   Operation 110 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 111 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %pc_V_read, i16 %pc_V_2"   --->   Operation 111 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 112 [1/1] (0.00ns)   --->   "%br_ln0 = br void %do.cond"   --->   Operation 112 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 3.25>
+ST_2 : Operation 113 [1/1] (0.00ns)   --->   "%pc_V_2_load = load i16 %pc_V_2" [fde_ip.cpp:53]   --->   Operation 113 'load' 'pc_V_2_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 114 [2/2] (3.25ns)   --->   "%instruction = call i32 @fetch, i16 %pc_V_2_load, i32 %code_ram" [fde_ip.cpp:46]   --->   Operation 114 'call' 'instruction' <Predicate = true> <Delay = 3.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 13.8>
+ST_3 : Operation 115 [1/1] (0.00ns)   --->   "%reg_file_load = load i32 %reg_file" [fde_ip.cpp:53]   --->   Operation 115 'load' 'reg_file_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 116 [1/1] (0.00ns)   --->   "%reg_file_1_load = load i32 %reg_file_1" [fde_ip.cpp:53]   --->   Operation 116 'load' 'reg_file_1_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 117 [1/1] (0.00ns)   --->   "%reg_file_2_load = load i32 %reg_file_2" [fde_ip.cpp:53]   --->   Operation 117 'load' 'reg_file_2_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 118 [1/1] (0.00ns)   --->   "%reg_file_3_load = load i32 %reg_file_3" [fde_ip.cpp:53]   --->   Operation 118 'load' 'reg_file_3_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 119 [1/1] (0.00ns)   --->   "%reg_file_4_load = load i32 %reg_file_4" [fde_ip.cpp:53]   --->   Operation 119 'load' 'reg_file_4_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 120 [1/1] (0.00ns)   --->   "%reg_file_5_load = load i32 %reg_file_5" [fde_ip.cpp:53]   --->   Operation 120 'load' 'reg_file_5_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 121 [1/1] (0.00ns)   --->   "%reg_file_6_load = load i32 %reg_file_6" [fde_ip.cpp:53]   --->   Operation 121 'load' 'reg_file_6_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 122 [1/1] (0.00ns)   --->   "%reg_file_7_load = load i32 %reg_file_7" [fde_ip.cpp:53]   --->   Operation 122 'load' 'reg_file_7_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 123 [1/1] (0.00ns)   --->   "%reg_file_8_load = load i32 %reg_file_8" [fde_ip.cpp:53]   --->   Operation 123 'load' 'reg_file_8_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 124 [1/1] (0.00ns)   --->   "%reg_file_9_load = load i32 %reg_file_9" [fde_ip.cpp:53]   --->   Operation 124 'load' 'reg_file_9_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 125 [1/1] (0.00ns)   --->   "%reg_file_10_load = load i32 %reg_file_10" [fde_ip.cpp:53]   --->   Operation 125 'load' 'reg_file_10_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 126 [1/1] (0.00ns)   --->   "%reg_file_11_load = load i32 %reg_file_11" [fde_ip.cpp:53]   --->   Operation 126 'load' 'reg_file_11_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 127 [1/1] (0.00ns)   --->   "%reg_file_12_load = load i32 %reg_file_12" [fde_ip.cpp:53]   --->   Operation 127 'load' 'reg_file_12_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 128 [1/1] (0.00ns)   --->   "%reg_file_13_load = load i32 %reg_file_13" [fde_ip.cpp:53]   --->   Operation 128 'load' 'reg_file_13_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 129 [1/1] (0.00ns)   --->   "%reg_file_14_load = load i32 %reg_file_14" [fde_ip.cpp:53]   --->   Operation 129 'load' 'reg_file_14_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 130 [1/1] (0.00ns)   --->   "%reg_file_15_load = load i32 %reg_file_15" [fde_ip.cpp:53]   --->   Operation 130 'load' 'reg_file_15_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 131 [1/1] (0.00ns)   --->   "%reg_file_16_load = load i32 %reg_file_16" [fde_ip.cpp:53]   --->   Operation 131 'load' 'reg_file_16_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 132 [1/1] (0.00ns)   --->   "%reg_file_17_load = load i32 %reg_file_17" [fde_ip.cpp:53]   --->   Operation 132 'load' 'reg_file_17_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 133 [1/1] (0.00ns)   --->   "%reg_file_18_load = load i32 %reg_file_18" [fde_ip.cpp:53]   --->   Operation 133 'load' 'reg_file_18_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 134 [1/1] (0.00ns)   --->   "%reg_file_19_load = load i32 %reg_file_19" [fde_ip.cpp:53]   --->   Operation 134 'load' 'reg_file_19_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 135 [1/1] (0.00ns)   --->   "%reg_file_20_load = load i32 %reg_file_20" [fde_ip.cpp:53]   --->   Operation 135 'load' 'reg_file_20_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 136 [1/1] (0.00ns)   --->   "%reg_file_21_load = load i32 %reg_file_21" [fde_ip.cpp:53]   --->   Operation 136 'load' 'reg_file_21_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 137 [1/1] (0.00ns)   --->   "%reg_file_22_load = load i32 %reg_file_22" [fde_ip.cpp:53]   --->   Operation 137 'load' 'reg_file_22_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 138 [1/1] (0.00ns)   --->   "%reg_file_23_load = load i32 %reg_file_23" [fde_ip.cpp:53]   --->   Operation 138 'load' 'reg_file_23_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 139 [1/1] (0.00ns)   --->   "%reg_file_24_load = load i32 %reg_file_24" [fde_ip.cpp:53]   --->   Operation 139 'load' 'reg_file_24_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 140 [1/1] (0.00ns)   --->   "%reg_file_25_load = load i32 %reg_file_25" [fde_ip.cpp:53]   --->   Operation 140 'load' 'reg_file_25_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 141 [1/1] (0.00ns)   --->   "%reg_file_26_load = load i32 %reg_file_26" [fde_ip.cpp:53]   --->   Operation 141 'load' 'reg_file_26_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 142 [1/1] (0.00ns)   --->   "%reg_file_27_load = load i32 %reg_file_27" [fde_ip.cpp:53]   --->   Operation 142 'load' 'reg_file_27_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 143 [1/1] (0.00ns)   --->   "%reg_file_28_load = load i32 %reg_file_28" [fde_ip.cpp:53]   --->   Operation 143 'load' 'reg_file_28_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 144 [1/1] (0.00ns)   --->   "%reg_file_29_load = load i32 %reg_file_29" [fde_ip.cpp:53]   --->   Operation 144 'load' 'reg_file_29_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 145 [1/1] (0.00ns)   --->   "%reg_file_30_load = load i32 %reg_file_30" [fde_ip.cpp:53]   --->   Operation 145 'load' 'reg_file_30_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 146 [1/1] (0.00ns)   --->   "%reg_file_31_load = load i32 %reg_file_31" [fde_ip.cpp:53]   --->   Operation 146 'load' 'reg_file_31_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 147 [1/2] (3.25ns)   --->   "%instruction = call i32 @fetch, i16 %pc_V_2_load, i32 %code_ram" [fde_ip.cpp:46]   --->   Operation 147 'call' 'instruction' <Predicate = true> <Delay = 3.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 148 [1/1] (4.24ns)   --->   "%decode_ret = call i53 @decode, i32 %instruction" [fde_ip.cpp:47]   --->   Operation 148 'call' 'decode_ret' <Predicate = true> <Delay = 4.24> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 149 [1/1] (0.00ns)   --->   "%d_i_opcode_V = extractvalue i53 %decode_ret" [fde_ip.cpp:47]   --->   Operation 149 'extractvalue' 'd_i_opcode_V' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 150 [1/1] (0.00ns)   --->   "%d_i_rd_V = extractvalue i53 %decode_ret" [fde_ip.cpp:47]   --->   Operation 150 'extractvalue' 'd_i_rd_V' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 151 [1/1] (0.00ns)   --->   "%d_i_func3_V = extractvalue i53 %decode_ret" [fde_ip.cpp:47]   --->   Operation 151 'extractvalue' 'd_i_func3_V' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 152 [1/1] (0.00ns)   --->   "%d_i_rs1_V = extractvalue i53 %decode_ret" [fde_ip.cpp:47]   --->   Operation 152 'extractvalue' 'd_i_rs1_V' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 153 [1/1] (0.00ns)   --->   "%d_i_rs2_V = extractvalue i53 %decode_ret" [fde_ip.cpp:47]   --->   Operation 153 'extractvalue' 'd_i_rs2_V' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 154 [1/1] (0.00ns)   --->   "%d_i_func7_V = extractvalue i53 %decode_ret" [fde_ip.cpp:47]   --->   Operation 154 'extractvalue' 'd_i_func7_V' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 155 [1/1] (0.00ns)   --->   "%trunc_ln47 = trunc i7 %d_i_func7_V" [fde_ip.cpp:47]   --->   Operation 155 'trunc' 'trunc_ln47' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 156 [1/1] (0.00ns)   --->   "%d_i_type_V = extractvalue i53 %decode_ret" [fde_ip.cpp:47]   --->   Operation 156 'extractvalue' 'd_i_type_V' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 157 [1/1] (0.00ns)   --->   "%d_i_imm_V = extractvalue i53 %decode_ret" [fde_ip.cpp:47]   --->   Operation 157 'extractvalue' 'd_i_imm_V' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 158 [4/4] (6.35ns)   --->   "%call_ret = call i1040 @execute, i16 %pc_V_2_load, i32 %reg_file_load, i32 %reg_file_1_load, i32 %reg_file_2_load, i32 %reg_file_3_load, i32 %reg_file_4_load, i32 %reg_file_5_load, i32 %reg_file_6_load, i32 %reg_file_7_load, i32 %reg_file_8_load, i32 %reg_file_9_load, i32 %reg_file_10_load, i32 %reg_file_11_load, i32 %reg_file_12_load, i32 %reg_file_13_load, i32 %reg_file_14_load, i32 %reg_file_15_load, i32 %reg_file_16_load, i32 %reg_file_17_load, i32 %reg_file_18_load, i32 %reg_file_19_load, i32 %reg_file_20_load, i32 %reg_file_21_load, i32 %reg_file_22_load, i32 %reg_file_23_load, i32 %reg_file_24_load, i32 %reg_file_25_load, i32 %reg_file_26_load, i32 %reg_file_27_load, i32 %reg_file_28_load, i32 %reg_file_29_load, i32 %reg_file_30_load, i32 %reg_file_31_load, i5 %d_i_opcode_V, i5 %d_i_rd_V, i3 %d_i_func3_V, i5 %d_i_rs1_V, i5 %d_i_rs2_V, i6 %trunc_ln47, i3 %d_i_type_V, i20 %d_i_imm_V" [fde_ip.cpp:53]   --->   Operation 158 'call' 'call_ret' <Predicate = true> <Delay = 6.35> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 5.12>
+ST_4 : Operation 159 [3/4] (5.12ns)   --->   "%call_ret = call i1040 @execute, i16 %pc_V_2_load, i32 %reg_file_load, i32 %reg_file_1_load, i32 %reg_file_2_load, i32 %reg_file_3_load, i32 %reg_file_4_load, i32 %reg_file_5_load, i32 %reg_file_6_load, i32 %reg_file_7_load, i32 %reg_file_8_load, i32 %reg_file_9_load, i32 %reg_file_10_load, i32 %reg_file_11_load, i32 %reg_file_12_load, i32 %reg_file_13_load, i32 %reg_file_14_load, i32 %reg_file_15_load, i32 %reg_file_16_load, i32 %reg_file_17_load, i32 %reg_file_18_load, i32 %reg_file_19_load, i32 %reg_file_20_load, i32 %reg_file_21_load, i32 %reg_file_22_load, i32 %reg_file_23_load, i32 %reg_file_24_load, i32 %reg_file_25_load, i32 %reg_file_26_load, i32 %reg_file_27_load, i32 %reg_file_28_load, i32 %reg_file_29_load, i32 %reg_file_30_load, i32 %reg_file_31_load, i5 %d_i_opcode_V, i5 %d_i_rd_V, i3 %d_i_func3_V, i5 %d_i_rs1_V, i5 %d_i_rs2_V, i6 %trunc_ln47, i3 %d_i_type_V, i20 %d_i_imm_V" [fde_ip.cpp:53]   --->   Operation 159 'call' 'call_ret' <Predicate = true> <Delay = 5.12> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 5.12>
+ST_5 : Operation 160 [2/4] (5.12ns)   --->   "%call_ret = call i1040 @execute, i16 %pc_V_2_load, i32 %reg_file_load, i32 %reg_file_1_load, i32 %reg_file_2_load, i32 %reg_file_3_load, i32 %reg_file_4_load, i32 %reg_file_5_load, i32 %reg_file_6_load, i32 %reg_file_7_load, i32 %reg_file_8_load, i32 %reg_file_9_load, i32 %reg_file_10_load, i32 %reg_file_11_load, i32 %reg_file_12_load, i32 %reg_file_13_load, i32 %reg_file_14_load, i32 %reg_file_15_load, i32 %reg_file_16_load, i32 %reg_file_17_load, i32 %reg_file_18_load, i32 %reg_file_19_load, i32 %reg_file_20_load, i32 %reg_file_21_load, i32 %reg_file_22_load, i32 %reg_file_23_load, i32 %reg_file_24_load, i32 %reg_file_25_load, i32 %reg_file_26_load, i32 %reg_file_27_load, i32 %reg_file_28_load, i32 %reg_file_29_load, i32 %reg_file_30_load, i32 %reg_file_31_load, i5 %d_i_opcode_V, i5 %d_i_rd_V, i3 %d_i_func3_V, i5 %d_i_rs1_V, i5 %d_i_rs2_V, i6 %trunc_ln47, i3 %d_i_type_V, i20 %d_i_imm_V" [fde_ip.cpp:53]   --->   Operation 160 'call' 'call_ret' <Predicate = true> <Delay = 5.12> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 10.1>
+ST_6 : Operation 161 [1/1] (0.00ns)   --->   "%nbi_1_load = load i32 %nbi_1" [fde_ip.cpp:54]   --->   Operation 161 'load' 'nbi_1_load' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 162 [1/1] (0.00ns)   --->   "%specpipeline_ln45 = specpipeline void @_ssdm_op_SpecPipeline, i32 6, i32 0, i32 0, i32 0, void @empty_0" [fde_ip.cpp:45]   --->   Operation 162 'specpipeline' 'specpipeline_ln45' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 163 [1/1] (0.00ns)   --->   "%specloopname_ln46 = specloopname void @_ssdm_op_SpecLoopName, void @empty_8" [fde_ip.cpp:46]   --->   Operation 163 'specloopname' 'specloopname_ln46' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 164 [1/4] (5.12ns)   --->   "%call_ret = call i1040 @execute, i16 %pc_V_2_load, i32 %reg_file_load, i32 %reg_file_1_load, i32 %reg_file_2_load, i32 %reg_file_3_load, i32 %reg_file_4_load, i32 %reg_file_5_load, i32 %reg_file_6_load, i32 %reg_file_7_load, i32 %reg_file_8_load, i32 %reg_file_9_load, i32 %reg_file_10_load, i32 %reg_file_11_load, i32 %reg_file_12_load, i32 %reg_file_13_load, i32 %reg_file_14_load, i32 %reg_file_15_load, i32 %reg_file_16_load, i32 %reg_file_17_load, i32 %reg_file_18_load, i32 %reg_file_19_load, i32 %reg_file_20_load, i32 %reg_file_21_load, i32 %reg_file_22_load, i32 %reg_file_23_load, i32 %reg_file_24_load, i32 %reg_file_25_load, i32 %reg_file_26_load, i32 %reg_file_27_load, i32 %reg_file_28_load, i32 %reg_file_29_load, i32 %reg_file_30_load, i32 %reg_file_31_load, i5 %d_i_opcode_V, i5 %d_i_rd_V, i3 %d_i_func3_V, i5 %d_i_rs1_V, i5 %d_i_rs2_V, i6 %trunc_ln47, i3 %d_i_type_V, i20 %d_i_imm_V" [fde_ip.cpp:53]   --->   Operation 164 'call' 'call_ret' <Predicate = true> <Delay = 5.12> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 165 [1/1] (0.00ns)   --->   "%pc_V_1 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 165 'extractvalue' 'pc_V_1' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 166 [1/1] (0.00ns)   --->   "%reg_file_32 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 166 'extractvalue' 'reg_file_32' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 167 [1/1] (0.00ns)   --->   "%reg_file_33 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 167 'extractvalue' 'reg_file_33' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 168 [1/1] (0.00ns)   --->   "%reg_file_34 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 168 'extractvalue' 'reg_file_34' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 169 [1/1] (0.00ns)   --->   "%reg_file_35 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 169 'extractvalue' 'reg_file_35' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 170 [1/1] (0.00ns)   --->   "%reg_file_36 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 170 'extractvalue' 'reg_file_36' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 171 [1/1] (0.00ns)   --->   "%reg_file_37 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 171 'extractvalue' 'reg_file_37' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 172 [1/1] (0.00ns)   --->   "%reg_file_38 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 172 'extractvalue' 'reg_file_38' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 173 [1/1] (0.00ns)   --->   "%reg_file_39 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 173 'extractvalue' 'reg_file_39' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 174 [1/1] (0.00ns)   --->   "%reg_file_40 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 174 'extractvalue' 'reg_file_40' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 175 [1/1] (0.00ns)   --->   "%reg_file_41 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 175 'extractvalue' 'reg_file_41' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 176 [1/1] (0.00ns)   --->   "%reg_file_42 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 176 'extractvalue' 'reg_file_42' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 177 [1/1] (0.00ns)   --->   "%reg_file_43 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 177 'extractvalue' 'reg_file_43' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 178 [1/1] (0.00ns)   --->   "%reg_file_44 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 178 'extractvalue' 'reg_file_44' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 179 [1/1] (0.00ns)   --->   "%reg_file_45 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 179 'extractvalue' 'reg_file_45' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 180 [1/1] (0.00ns)   --->   "%reg_file_46 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 180 'extractvalue' 'reg_file_46' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 181 [1/1] (0.00ns)   --->   "%reg_file_47 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 181 'extractvalue' 'reg_file_47' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 182 [1/1] (0.00ns)   --->   "%reg_file_48 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 182 'extractvalue' 'reg_file_48' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 183 [1/1] (0.00ns)   --->   "%reg_file_49 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 183 'extractvalue' 'reg_file_49' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 184 [1/1] (0.00ns)   --->   "%reg_file_50 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 184 'extractvalue' 'reg_file_50' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 185 [1/1] (0.00ns)   --->   "%reg_file_51 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 185 'extractvalue' 'reg_file_51' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 186 [1/1] (0.00ns)   --->   "%reg_file_52 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 186 'extractvalue' 'reg_file_52' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 187 [1/1] (0.00ns)   --->   "%reg_file_53 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 187 'extractvalue' 'reg_file_53' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 188 [1/1] (0.00ns)   --->   "%reg_file_54 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 188 'extractvalue' 'reg_file_54' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 189 [1/1] (0.00ns)   --->   "%reg_file_55 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 189 'extractvalue' 'reg_file_55' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 190 [1/1] (0.00ns)   --->   "%reg_file_56 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 190 'extractvalue' 'reg_file_56' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 191 [1/1] (0.00ns)   --->   "%reg_file_57 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 191 'extractvalue' 'reg_file_57' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 192 [1/1] (0.00ns)   --->   "%reg_file_58 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 192 'extractvalue' 'reg_file_58' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 193 [1/1] (0.00ns)   --->   "%reg_file_59 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 193 'extractvalue' 'reg_file_59' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 194 [1/1] (0.00ns)   --->   "%reg_file_60 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 194 'extractvalue' 'reg_file_60' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 195 [1/1] (0.00ns)   --->   "%reg_file_61 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 195 'extractvalue' 'reg_file_61' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 196 [1/1] (0.00ns)   --->   "%reg_file_62 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 196 'extractvalue' 'reg_file_62' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 197 [1/1] (0.00ns)   --->   "%reg_file_63 = extractvalue i1040 %call_ret" [fde_ip.cpp:53]   --->   Operation 197 'extractvalue' 'reg_file_63' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 198 [1/1] (2.55ns)   --->   "%nbi = call i32 @statistic_update, i32 %nbi_1_load" [fde_ip.cpp:54]   --->   Operation 198 'call' 'nbi' <Predicate = true> <Delay = 2.55> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 199 [1/1] (3.45ns)   --->   "%is_running_V = call i1 @running_cond_update, i32 %instruction, i16 %pc_V_1" [fde_ip.cpp:55]   --->   Operation 199 'call' 'is_running_V' <Predicate = true> <Delay = 3.45> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 200 [1/1] (0.00ns)   --->   "%br_ln56 = br i1 %is_running_V, void %do.end.exitStub, void %do.cond.do.cond_crit_edge" [fde_ip.cpp:56]   --->   Operation 200 'br' 'br_ln56' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 201 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %nbi, i32 %nbi_1" [fde_ip.cpp:56]   --->   Operation 201 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 202 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %reg_file_63, i32 %reg_file_31" [fde_ip.cpp:56]   --->   Operation 202 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 203 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %reg_file_62, i32 %reg_file_30" [fde_ip.cpp:56]   --->   Operation 203 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 204 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %reg_file_61, i32 %reg_file_29" [fde_ip.cpp:56]   --->   Operation 204 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 205 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %reg_file_60, i32 %reg_file_28" [fde_ip.cpp:56]   --->   Operation 205 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 206 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %reg_file_59, i32 %reg_file_27" [fde_ip.cpp:56]   --->   Operation 206 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 207 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %reg_file_58, i32 %reg_file_26" [fde_ip.cpp:56]   --->   Operation 207 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 208 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %reg_file_57, i32 %reg_file_25" [fde_ip.cpp:56]   --->   Operation 208 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 209 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %reg_file_56, i32 %reg_file_24" [fde_ip.cpp:56]   --->   Operation 209 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 210 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %reg_file_55, i32 %reg_file_23" [fde_ip.cpp:56]   --->   Operation 210 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 211 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %reg_file_54, i32 %reg_file_22" [fde_ip.cpp:56]   --->   Operation 211 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 212 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %reg_file_53, i32 %reg_file_21" [fde_ip.cpp:56]   --->   Operation 212 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 213 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %reg_file_52, i32 %reg_file_20" [fde_ip.cpp:56]   --->   Operation 213 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 214 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %reg_file_51, i32 %reg_file_19" [fde_ip.cpp:56]   --->   Operation 214 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 215 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %reg_file_50, i32 %reg_file_18" [fde_ip.cpp:56]   --->   Operation 215 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 216 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %reg_file_49, i32 %reg_file_17" [fde_ip.cpp:56]   --->   Operation 216 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 217 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %reg_file_48, i32 %reg_file_16" [fde_ip.cpp:56]   --->   Operation 217 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 218 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %reg_file_47, i32 %reg_file_15" [fde_ip.cpp:56]   --->   Operation 218 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 219 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %reg_file_46, i32 %reg_file_14" [fde_ip.cpp:56]   --->   Operation 219 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 220 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %reg_file_45, i32 %reg_file_13" [fde_ip.cpp:56]   --->   Operation 220 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 221 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %reg_file_44, i32 %reg_file_12" [fde_ip.cpp:56]   --->   Operation 221 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 222 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %reg_file_43, i32 %reg_file_11" [fde_ip.cpp:56]   --->   Operation 222 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 223 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %reg_file_42, i32 %reg_file_10" [fde_ip.cpp:56]   --->   Operation 223 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 224 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %reg_file_41, i32 %reg_file_9" [fde_ip.cpp:56]   --->   Operation 224 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 225 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %reg_file_40, i32 %reg_file_8" [fde_ip.cpp:56]   --->   Operation 225 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 226 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %reg_file_39, i32 %reg_file_7" [fde_ip.cpp:56]   --->   Operation 226 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 227 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %reg_file_38, i32 %reg_file_6" [fde_ip.cpp:56]   --->   Operation 227 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 228 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %reg_file_37, i32 %reg_file_5" [fde_ip.cpp:56]   --->   Operation 228 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 229 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %reg_file_36, i32 %reg_file_4" [fde_ip.cpp:56]   --->   Operation 229 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 230 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %reg_file_35, i32 %reg_file_3" [fde_ip.cpp:56]   --->   Operation 230 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 231 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %reg_file_34, i32 %reg_file_2" [fde_ip.cpp:56]   --->   Operation 231 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 232 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %reg_file_33, i32 %reg_file_1" [fde_ip.cpp:56]   --->   Operation 232 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 233 [1/1] (1.58ns)   --->   "%store_ln56 = store i32 %reg_file_32, i32 %reg_file" [fde_ip.cpp:56]   --->   Operation 233 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 234 [1/1] (1.58ns)   --->   "%store_ln56 = store i16 %pc_V_1, i16 %pc_V_2" [fde_ip.cpp:56]   --->   Operation 234 'store' 'store_ln56' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_6 : Operation 235 [1/1] (0.00ns)   --->   "%br_ln56 = br void %do.cond" [fde_ip.cpp:56]   --->   Operation 235 'br' 'br_ln56' <Predicate = (is_running_V)> <Delay = 0.00>
+ST_6 : Operation 236 [1/1] (0.00ns)   --->   "%write_ln54 = write void @_ssdm_op_Write.ap_auto.i32P0A, i32 %nbi_out, i32 %nbi" [fde_ip.cpp:54]   --->   Operation 236 'write' 'write_ln54' <Predicate = (!is_running_V)> <Delay = 0.00>
+ST_6 : Operation 237 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 237 'ret' 'ret_ln0' <Predicate = (!is_running_V)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 1.59ns
+The critical path consists of the following:
+	'store' operation ('store_ln0') of constant 0 on local variable 'nbi' [105]  (1.59 ns)
+
+ <State 2>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('pc_V_2_load', fde_ip.cpp:53) on local variable 'pc.V' [141]  (0 ns)
+	'call' operation ('instruction', fde_ip.cpp:46) to 'fetch' [177]  (3.25 ns)
+
+ <State 3>: 13.9ns
+The critical path consists of the following:
+	'call' operation ('instruction', fde_ip.cpp:46) to 'fetch' [177]  (3.25 ns)
+	'call' operation ('decode_ret', fde_ip.cpp:47) to 'decode' [178]  (4.25 ns)
+	'call' operation ('call_ret', fde_ip.cpp:53) to 'execute' [188]  (6.36 ns)
+
+ <State 4>: 5.13ns
+The critical path consists of the following:
+	'call' operation ('call_ret', fde_ip.cpp:53) to 'execute' [188]  (5.13 ns)
+
+ <State 5>: 5.13ns
+The critical path consists of the following:
+	'call' operation ('call_ret', fde_ip.cpp:53) to 'execute' [188]  (5.13 ns)
+
+ <State 6>: 10.2ns
+The critical path consists of the following:
+	'call' operation ('call_ret', fde_ip.cpp:53) to 'execute' [188]  (5.13 ns)
+	'call' operation ('is_running.V', fde_ip.cpp:55) to 'running_cond_update' [223]  (3.45 ns)
+	blocking operation 1.59 ns on control path)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

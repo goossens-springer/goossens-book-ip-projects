@@ -1,0 +1,82 @@
+<stg><name>execute</name>
+
+
+<trans_list>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="2" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="2" bw="16" op_0_bw="16" op_1_bw="16">
+<![CDATA[
+entry:0 %pc_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %pc
+
+]]></Node>
+<StgValue><ssdm name="pc_read"/></StgValue>
+</operation>
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>Adder</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="3" bw="16" op_0_bw="16" op_1_bw="16">
+<![CDATA[
+entry:1 %add_ln232 = add i16 %pc_read, i16 1
+
+]]></Node>
+<StgValue><ssdm name="add_ln232"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="4" bw="0" op_0_bw="16">
+<![CDATA[
+entry:2 %ret_ln12 = ret i16 %add_ln232
+
+]]></Node>
+<StgValue><ssdm name="ret_ln12"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="5" name="pc" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="pc"/></StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="7" from="_ssdm_op_Read.ap_auto.i16" to="pc_read" fromId="6" toId="2">
+</dataflow>
+<dataflow id="8" from="pc" to="pc_read" fromId="5" toId="2">
+</dataflow>
+<dataflow id="9" from="pc_read" to="add_ln232" fromId="2" toId="3">
+</dataflow>
+<dataflow id="11" from="StgValue_10" to="add_ln232" fromId="10" toId="3">
+</dataflow>
+<dataflow id="12" from="add_ln232" to="ret_ln12" fromId="3" toId="4">
+</dataflow>
+</dataflows>
+
+
+</stg>

@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/bernard/Vitis/Vitis/2020.1/hls_riscv_cpu_ip/fetching_ip/fetching_ip/solution1/./sim/autowrap/testbench/fetching_ip.cpp_pre.cpp.tb.cpp

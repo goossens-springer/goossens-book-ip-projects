@@ -1,0 +1,17 @@
+WORKFLOW_OPERATION simulation,dialog;
+
+DEFINE_MEMORY_TYPE code_ram_256K_1_MEM_DEVICE [0x00040000] 32;
+DEFINE_MEMORY_TYPE data_ram_256K_1_MEM_DEVICE [0x00040000] 32;
+
+ADDRESS_MAP processing_system7_0 ARM 100 processing_system7_0
+   ADDRESS_SPACE code_ram_256K_1_ADDR_SPACE code_ram_256K_1_MEM_DEVICE  [0x40000000:0x4003FFFF] axi_bram_ctrl_0
+     BUS_BLOCK
+      code_ram_256K_1_BUS_BLK [31:0] INPUT = "design_1_blk_mem_gen_0_2.mem";
+     END_BUS_BLOCK;
+   END_ADDRESS_SPACE;
+   ADDRESS_SPACE data_ram_256K_1_ADDR_SPACE data_ram_256K_1_MEM_DEVICE  [0x40040000:0x4007FFFF] axi_bram_ctrl_1
+     BUS_BLOCK
+      data_ram_256K_1_BUS_BLK [31:0] INPUT = "design_1_blk_mem_gen_0_3.mem";
+     END_BUS_BLOCK;
+   END_ADDRESS_SPACE;
+END_ADDRESS_MAP;

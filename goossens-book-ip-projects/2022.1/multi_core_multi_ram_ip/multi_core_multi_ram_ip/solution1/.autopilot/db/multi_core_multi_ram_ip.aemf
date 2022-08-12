@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1659795244173">
+  <ports id="1" name="gmem" type="PortType" coreId="3621216858" bitwidth="32" direction="DirInOut" iftype="IfTypeFifo">
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="2" name="ip_num" type="PortType" originalName="ip_num" coreId="1600746604" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="local_ram" type="PortType" coreName="RAM" coreId="0" bitwidth="32" direction="DirInOut" iftype="IfTypeRegister" arraysize="32768">
+    <dataInputObjs>getelementptr</dataInputObjs>
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="4" name="data_ram" type="PortType" originalName="data_ram" coreId="128" bitwidth="64">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <edges id="75" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="78" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="79" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="80" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="87" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="90" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="93" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="94" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="95" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="96" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="99" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="102" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="103" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="104" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="105" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="108" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="114" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="119" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="122" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="125" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="128" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="129" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="130" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="131" source_obj="//@ports.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="134" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="137" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="142" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="143" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="144" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="145" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="146" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="147" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="148" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
+  <edges id="149" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.1"/>
+  <edges id="150" source_obj="//@regions.0/@basic_blocks.2/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.2"/>
+  <edges id="151" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.2"/>
+  <edges id="154" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.3"/>
+  <edges id="158" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.4"/>
+  <edges id="159" source_obj="//@regions.0/@basic_blocks.2/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.4"/>
+  <edges id="164" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.5"/>
+  <edges id="165" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.6"/>
+  <edges id="166" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.0"/>
+  <edges id="169" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.1"/>
+  <edges id="173" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.2"/>
+  <edges id="174" source_obj="//@regions.0/@basic_blocks.3/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.3"/>
+  <edges id="175" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.3"/>
+  <edges id="176" source_obj="//@regions.0/@basic_blocks.3/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.4"/>
+  <edges id="177" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.4"/>
+  <edges id="178" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.5"/>
+  <edges id="179" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.0"/>
+  <edges id="180" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.0"/>
+  <edges id="181" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.1"/>
+  <edges id="359" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="360" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="361" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="362" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.3"/>
+  <edges id="363" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.2"/>
+  <edges id="364" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.4"/>
+  <edges id="365" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.4"/>
+  <edges id="366" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="367" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.2/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.5"/>
+  <edges id="368" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.2/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.4"/>
+  <edges id="369" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.3/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.2"/>
+  <edges id="370" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="371" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.3"/>
+  <edges id="372" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.4"/>
+  <edges id="373" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.1"/>
+  <edges id="374" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
+  <edges id="375" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.0"/>
+  <edges id="376" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.0"/>
+  <edges id="-131" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@ports.2"/>
+  <edges id="-143" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@ports.0"/>
+  <blocks id="27" name="entry" type="BlockType">
+    <controlOutputObjs>for.body</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="i_V" originalName="i.V" coreId="156" bitwidth="5" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="local_value" originalName="local_value" coreId="0" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="global_value" originalName="global_value" coreId="1667592275" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="data_ram_read" lineNumber="4" originalName="data_ram" fileName="multi_core_multi_ram_ip.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="multi_core_multi_ram_ip" bitwidth="64" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="multi_core_multi_ram_ip.cpp" linenumber="4" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="multi_core_multi_ram_ip"/>
+      <dataInputObjs>data_ram</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="ip_num_read" lineNumber="4" originalName="ip_num" fileName="multi_core_multi_ram_ip.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="multi_core_multi_ram_ip" bitwidth="32" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="multi_core_multi_ram_ip.cpp" linenumber="4" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="multi_core_multi_ram_ip"/>
+      <dataInputObjs>ip_num</dataInputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="ip_V" lineNumber="260" originalName="ip.V" fileName="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="ip_V_fu_171_p1" coreId="543716455" contextFuncName="ap_int_base" bitwidth="1" opcode="trunc" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" linenumber="260" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="ap_int_base"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="select_ln1541" lineNumber="1541" fileName="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="select_ln1541_fu_175_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="operator_add_16_false_16_false" bitwidth="16" opcode="select" m_display="0" m_delay="0.8" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" linenumber="1541" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="operator+&amp;lt;16, false, 16, false&amp;gt;"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="global_value_write_ln23" lineNumber="23" fileName="multi_core_multi_ram_ip.cpp" fileDirectory=".." coreId="3221392118" contextFuncName="multi_core_multi_ram_ip" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="multi_core_multi_ram_ip.cpp" linenumber="23" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="multi_core_multi_ram_ip"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="local_value_write_ln23" lineNumber="23" fileName="multi_core_multi_ram_ip.cpp" fileDirectory=".." coreId="542329928" contextFuncName="multi_core_multi_ram_ip" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="multi_core_multi_ram_ip.cpp" linenumber="23" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="multi_core_multi_ram_ip"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="i_V_write_ln23" lineNumber="23" fileName="multi_core_multi_ram_ip.cpp" fileDirectory=".." coreId="2764726080" contextFuncName="multi_core_multi_ram_ip" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="multi_core_multi_ram_ip.cpp" linenumber="23" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="multi_core_multi_ram_ip"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="br_ln23" lineNumber="23" fileName="multi_core_multi_ram_ip.cpp" fileDirectory=".." coreId="2764737024" contextFuncName="multi_core_multi_ram_ip" opcode="br" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="multi_core_multi_ram_ip.cpp" linenumber="23" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="multi_core_multi_ram_ip"/>
+      <controlInputObjs>for.body</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="multi_core_multi_ram_ip.cpp">
+      <validLinenumbers>4</validLinenumbers>
+      <validLinenumbers>23</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h">
+      <validLinenumbers>260</validLinenumbers>
+      <validLinenumbers>1541</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="68" name="for.end" type="BlockType">
+    <controlInputObjs>for.body</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="67" name="_ln38" lineNumber="38" fileName="multi_core_multi_ram_ip.cpp" fileDirectory=".." coreId="0" contextFuncName="multi_core_multi_ram_ip" opcode="ret" nodeLabel="11.0" m_display="0" m_topoIndex="43" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="multi_core_multi_ram_ip.cpp" linenumber="38" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="multi_core_multi_ram_ip"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="multi_core_multi_ram_ip.cpp">
+      <validLinenumbers>38</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="10" typeName="Pipeline" iiViolation="" id="262" pipe_depth="10" RegionName="VITIS_LOOP_23_1">
+    <basic_blocks id="33" name="for.body" type="BlockType">
+      <controlInputObjs>entry</controlInputObjs>
+      <controlInputObjs>for.inc</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.end</controlOutputObjs>
+      <controlOutputObjs>for.body.split</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="i_V_1" lineNumber="232" originalName="i.V" fileName="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." coreId="1399922325" contextFuncName="ap_int_base_5_false_s" bitwidth="5" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" linenumber="232" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="ap_int_base&amp;lt;5, false&amp;gt;"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="icmp_ln1073" lineNumber="1073" fileName="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="icmp_ln1073_fu_201_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="operator_lt_32_true" bitwidth="1" opcode="icmp" nodeLabel="1.0" m_display="0" m_delay="1.36" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" linenumber="1073" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="operator&amp;lt;&amp;lt;32, true&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="add_ln886" lineNumber="886" fileName="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="add_ln886_fu_207_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="operator_add_assign_1_false" bitwidth="5" opcode="add" nodeLabel="1.0" m_display="0" m_delay="1.78" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" linenumber="886" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="operator+=&amp;lt;1, false&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="br_ln23" lineNumber="23" fileName="multi_core_multi_ram_ip.cpp" fileDirectory=".." coreId="0" contextFuncName="multi_core_multi_ram_ip" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="multi_core_multi_ram_ip.cpp" linenumber="23" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="multi_core_multi_ram_ip"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>for.body.split</controlInputObjs>
+        <controlInputObjs>for.end</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="multi_core_multi_ram_ip.cpp">
+        <validLinenumbers>23</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h">
+        <validLinenumbers>232</validLinenumbers>
+        <validLinenumbers>1073</validLinenumbers>
+        <validLinenumbers>886</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="48" name="for.body.split" type="BlockType">
+      <controlInputObjs>for.body</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>if.else</controlOutputObjs>
+      <controlOutputObjs>if.then</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="i0_V" lineNumber="232" originalName="i0.V" fileName="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="i0_V_fu_213_p1" coreId="0" contextFuncName="ap_int_base_5_false_s" bitwidth="1" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" linenumber="232" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="ap_int_base&amp;lt;5, false&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="r_V" lineNumber="1715" fileName="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="r_V_fu_217_p4" coreId="8" contextFuncName="operator_rs_5_false" bitwidth="3" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" linenumber="1715" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="operator&amp;gt;&amp;gt;&amp;lt;5, false&amp;gt;"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="tmp" lineNumber="1541" fileName="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="tmp_fu_227_p4" coreId="1399925654" contextFuncName="operator_add_16_false_16_false" bitwidth="12" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" linenumber="1541" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="operator+&amp;lt;16, false, 16, false&amp;gt;"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataOutputObjs>bitconcatenate</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="zext_ln34" lineNumber="34" fileName="multi_core_multi_ram_ip.cpp" fileDirectory=".." rtlName="zext_ln34_fu_236_p1" coreId="1024" contextFuncName="multi_core_multi_ram_ip" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="multi_core_multi_ram_ip.cpp" linenumber="34" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="multi_core_multi_ram_ip"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="shl_ln" lineNumber="35" fileName="multi_core_multi_ram_ip.cpp" fileDirectory=".." rtlName="shl_ln_fu_241_p5" coreId="2764797120" contextFuncName="multi_core_multi_ram_ip" bitwidth="18" opcode="bitconcatenate" nodeLabel="1.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="multi_core_multi_ram_ip.cpp" linenumber="35" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="multi_core_multi_ram_ip"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="zext_ln35" lineNumber="35" fileName="multi_core_multi_ram_ip.cpp" fileDirectory=".." rtlName="zext_ln35_fu_253_p1" coreId="2764772208" contextFuncName="multi_core_multi_ram_ip" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="multi_core_multi_ram_ip.cpp" linenumber="35" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="multi_core_multi_ram_ip"/>
+        <dataInputObjs>bitconcatenate</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="add_ln35" lineNumber="35" fileName="multi_core_multi_ram_ip.cpp" fileDirectory=".." rtlName="add_ln35_fu_257_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="multi_core_multi_ram_ip" bitwidth="64" opcode="add" nodeLabel="1.0" m_display="0" m_delay="3.52" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="multi_core_multi_ram_ip.cpp" linenumber="35" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="multi_core_multi_ram_ip"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>partselect</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="local_ram_addr" lineNumber="34" fileName="multi_core_multi_ram_ip.cpp" fileDirectory=".." coreId="1399935409" contextFuncName="multi_core_multi_ram_ip" bitwidth="15" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="multi_core_multi_ram_ip.cpp" linenumber="34" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="multi_core_multi_ram_ip"/>
+        <dataInputObjs>local_ram</dataInputObjs>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>local_ram</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="trunc_ln" lineNumber="35" fileName="multi_core_multi_ram_ip.cpp" fileDirectory=".." rtlName="trunc_ln_fu_262_p4" coreId="0" contextFuncName="multi_core_multi_ram_ip" bitwidth="62" opcode="partselect" nodeLabel="1.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="multi_core_multi_ram_ip.cpp" linenumber="35" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="multi_core_multi_ram_ip"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>sext</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="sext_ln35" lineNumber="35" fileName="multi_core_multi_ram_ip.cpp" fileDirectory=".." rtlName="sext_ln35_fu_272_p1" coreId="24" contextFuncName="multi_core_multi_ram_ip" bitwidth="64" opcode="sext" nodeLabel="1.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="multi_core_multi_ram_ip.cpp" linenumber="35" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="multi_core_multi_ram_ip"/>
+        <dataInputObjs>partselect</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="gmem_addr" lineNumber="35" fileName="multi_core_multi_ram_ip.cpp" fileDirectory=".." coreId="1399967064" contextFuncName="multi_core_multi_ram_ip" bitwidth="32" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="multi_core_multi_ram_ip.cpp" linenumber="35" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="multi_core_multi_ram_ip"/>
+        <dataInputObjs>gmem</dataInputObjs>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataOutputObjs>writereq</dataOutputObjs>
+        <dataOutputObjs>write</dataOutputObjs>
+        <dataOutputObjs>writeresp</dataOutputObjs>
+        <dataOutputObjs>readreq</dataOutputObjs>
+        <dataOutputObjs>read</dataOutputObjs>
+        <dataOutputObjs>gmem</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="br_ln29" lineNumber="29" fileName="multi_core_multi_ram_ip.cpp" fileDirectory=".." coreId="3" contextFuncName="multi_core_multi_ram_ip" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="multi_core_multi_ram_ip.cpp" linenumber="29" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="multi_core_multi_ram_ip"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <controlInputObjs>if.then</controlInputObjs>
+        <controlInputObjs>if.else</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="multi_core_multi_ram_ip.cpp">
+        <validLinenumbers>34</validLinenumbers>
+        <validLinenumbers>35</validLinenumbers>
+        <validLinenumbers>29</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h">
+        <validLinenumbers>232</validLinenumbers>
+        <validLinenumbers>1715</validLinenumbers>
+        <validLinenumbers>1541</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="56" name="if.then" type="BlockType">
+      <controlInputObjs>for.body.split</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.inc</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="local_value_load" lineNumber="30" fileName="multi_core_multi_ram_ip.cpp" fileDirectory=".." coreId="0" contextFuncName="multi_core_multi_ram_ip" bitwidth="32" opcode="load" nodeLabel="1.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="multi_core_multi_ram_ip.cpp" linenumber="30" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="multi_core_multi_ram_ip"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="global_value_load" lineNumber="31" fileName="multi_core_multi_ram_ip.cpp" fileDirectory=".." coreId="2727490696" contextFuncName="multi_core_multi_ram_ip" bitwidth="32" opcode="load" nodeLabel="3.0" m_display="0" m_topoIndex="34" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="multi_core_multi_ram_ip.cpp" linenumber="31" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="multi_core_multi_ram_ip"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>write</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="local_ram_addr_write_ln30" lineNumber="30" fileName="multi_core_multi_ram_ip.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="multi_core_multi_ram_ip" opcode="store" nodeLabel="1.0" m_display="0" m_delay="3.25" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="multi_core_multi_ram_ip.cpp" linenumber="30" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="multi_core_multi_ram_ip"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="gmem_addr_req" lineNumber="31" fileName="multi_core_multi_ram_ip.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="113" contextFuncName="multi_core_multi_ram_ip" bitwidth="1" opcode="writereq" nodeLabel="2.0" m_display="0" m_delay="7.3" m_topoIndex="31" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="multi_core_multi_ram_ip.cpp" linenumber="31" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="multi_core_multi_ram_ip"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="gmem_addr_write_ln31" lineNumber="31" fileName="multi_core_multi_ram_ip.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="113" contextFuncName="multi_core_multi_ram_ip" opcode="write" nodeLabel="3.0" m_display="0" m_delay="7.3" m_topoIndex="35" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="multi_core_multi_ram_ip.cpp" linenumber="31" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="multi_core_multi_ram_ip"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="gmem_addr_resp" lineNumber="31" fileName="multi_core_multi_ram_ip.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="113" contextFuncName="multi_core_multi_ram_ip" bitwidth="1" opcode="writeresp" nodeLabel="4.0" nodeLatency="4" m_display="0" m_delay="7.3" m_topoIndex="36" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="multi_core_multi_ram_ip.cpp" linenumber="31" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="multi_core_multi_ram_ip"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="br_ln32" lineNumber="32" fileName="multi_core_multi_ram_ip.cpp" fileDirectory=".." coreId="2764843880" contextFuncName="multi_core_multi_ram_ip" opcode="br" nodeLabel="8.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="multi_core_multi_ram_ip.cpp" linenumber="32" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="multi_core_multi_ram_ip"/>
+        <controlInputObjs>for.inc</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="multi_core_multi_ram_ip.cpp">
+        <validLinenumbers>30</validLinenumbers>
+        <validLinenumbers>31</validLinenumbers>
+        <validLinenumbers>32</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="63" name="if.else" type="BlockType">
+      <controlInputObjs>for.body.split</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.inc</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="local_value_1" lineNumber="34" originalName="local_value" fileName="multi_core_multi_ram_ip.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="82" contextFuncName="multi_core_multi_ram_ip" bitwidth="32" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="30" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="multi_core_multi_ram_ip.cpp" linenumber="34" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="multi_core_multi_ram_ip"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="global_value_2_req" lineNumber="35" fileName="multi_core_multi_ram_ip.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="113" contextFuncName="multi_core_multi_ram_ip" bitwidth="1" opcode="readreq" nodeLabel="2.0" nodeLatency="6" m_display="0" m_delay="7.3" m_topoIndex="32" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="multi_core_multi_ram_ip.cpp" linenumber="35" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="multi_core_multi_ram_ip"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="global_value_1" lineNumber="35" originalName="global_value" fileName="multi_core_multi_ram_ip.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="113" contextFuncName="multi_core_multi_ram_ip" bitwidth="32" opcode="read" nodeLabel="9.0" m_display="0" m_delay="7.3" m_topoIndex="38" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="multi_core_multi_ram_ip.cpp" linenumber="35" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="multi_core_multi_ram_ip"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="60" name="global_value_write_ln35" lineNumber="35" fileName="multi_core_multi_ram_ip.cpp" fileDirectory=".." coreId="0" contextFuncName="multi_core_multi_ram_ip" opcode="store" nodeLabel="10.0" m_display="0" m_delay="1.58" m_topoIndex="39" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="multi_core_multi_ram_ip.cpp" linenumber="35" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="multi_core_multi_ram_ip"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="local_value_write_ln34" lineNumber="34" fileName="multi_core_multi_ram_ip.cpp" fileDirectory=".." coreId="2764850496" contextFuncName="multi_core_multi_ram_ip" opcode="store" nodeLabel="2.0" m_display="0" m_delay="1.58" m_topoIndex="33" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="multi_core_multi_ram_ip.cpp" linenumber="34" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="multi_core_multi_ram_ip"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="br_ln0" coreId="2764851712" opcode="br" nodeLabel="10.0" m_display="0" m_topoIndex="40" m_clusterGroupNumber="-1">
+        <controlInputObjs>for.inc</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="multi_core_multi_ram_ip.cpp">
+        <validLinenumbers>34</validLinenumbers>
+        <validLinenumbers>35</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="66" name="for.inc" type="BlockType">
+      <controlInputObjs>if.then</controlInputObjs>
+      <controlInputObjs>if.else</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.body</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="64" name="i_V_write_ln23" lineNumber="23" fileName="multi_core_multi_ram_ip.cpp" fileDirectory=".." coreId="2764851520" contextFuncName="multi_core_multi_ram_ip" opcode="store" nodeLabel="10.0" m_display="0" m_delay="1.58" m_topoIndex="41" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="multi_core_multi_ram_ip.cpp" linenumber="23" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="multi_core_multi_ram_ip"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="65" name="br_ln23" lineNumber="23" fileName="multi_core_multi_ram_ip.cpp" fileDirectory=".." coreId="2764854144" contextFuncName="multi_core_multi_ram_ip" opcode="br" nodeLabel="10.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="multi_core_multi_ram_ip.cpp" linenumber="23" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/multi_core_multi_ram_ip" functionName="multi_core_multi_ram_ip"/>
+        <controlInputObjs>for.body</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="multi_core_multi_ram_ip.cpp">
+        <validLinenumbers>23</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <regnodes realName="gmem_addr_reg_352">
+    <nodeIds>46</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln886_reg_338">
+    <nodeIds>31</nodeIds>
+  </regnodes>
+  <regnodes realName="local_ram_addr_reg_347">
+    <nodeIds>43</nodeIds>
+  </regnodes>
+  <regnodes realName="select_ln1541_reg_329">
+    <nodeIds>22</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln1073_reg_334">
+    <nodeIds>29</nodeIds>
+  </regnodes>
+  <regnodes realName="global_value_reg_317">
+    <nodeIds>7</nodeIds>
+  </regnodes>
+  <regnodes realName="i0_V_reg_343">
+    <nodeIds>36</nodeIds>
+  </regnodes>
+  <regnodes realName="global_value_1_reg_359">
+    <nodeIds>59</nodeIds>
+  </regnodes>
+  <regnodes realName="local_value_reg_310">
+    <nodeIds>6</nodeIds>
+  </regnodes>
+  <regnodes realName="data_ram_read_reg_324">
+    <nodeIds>19</nodeIds>
+  </regnodes>
+  <regnodes realName="i_V_reg_303">
+    <nodeIds>5</nodeIds>
+  </regnodes>
+  <expressionNodes realName="global_value_fu_120">
+    <nodeIds>7</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln1073_fu_201">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln886_fu_207">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_V_fu_112">
+    <nodeIds>5</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="local_value_fu_116">
+    <nodeIds>6</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_fu_227">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln35_fu_257">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="r_V_fu_217">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ip_V_fu_171">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln1541_fu_175">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="shl_ln_fu_241">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i0_V_fu_213">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln34_fu_236">
+    <nodeIds>39</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="local_ram_addr_gep_fu_158">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln35_fu_253">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="gmem_addr_fu_276">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln35_fu_272">
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln_fu_262">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="global_value_load_load_fu_291">
+    <nodeIds>50</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln23_store_fu_193">
+    <nodeIds>25</nodeIds>
+  </ioNodes>
+  <ioNodes realName="data_ram_read_read_fu_124">
+    <nodeIds>19</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln31_write_fu_144">
+    <nodeIds>53</nodeIds>
+  </ioNodes>
+  <ioNodes realName="local_value_load_load_fu_282">
+    <nodeIds>49</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln23_store_fu_183">
+    <nodeIds>23</nodeIds>
+  </ioNodes>
+  <ioNodes realName="ip_num_read_read_fu_130">
+    <nodeIds>20</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln23_store_fu_188">
+    <nodeIds>24</nodeIds>
+  </ioNodes>
+  <ioNodes realName="i_V_1_load_fu_198">
+    <nodeIds>28</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln23_store_fu_299">
+    <nodeIds>64</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln35_store_fu_295">
+    <nodeIds>60</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln34_store_fu_286">
+    <nodeIds>61</nodeIds>
+  </ioNodes>
+  <ioNodes realName="grp_writeresp_fu_136">
+    <nodeIds>52</nodeIds>
+    <nodeIds>58</nodeIds>
+    <nodeIds>54</nodeIds>
+  </ioNodes>
+  <ioNodes realName="global_value_1_read_fu_153">
+    <nodeIds>59</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="local_ram">
+    <nodeIds>51</nodeIds>
+    <nodeIds>57</nodeIds>
+  </memoryPorts>
+  <ioPorts name="data_ram">
+    <contents name="read">
+      <nodeIds>19</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="gmem">
+    <contents name="read">
+      <nodeIds>59</nodeIds>
+    </contents>
+    <contents name="readreq">
+      <nodeIds>58</nodeIds>
+    </contents>
+    <contents name="write">
+      <nodeIds>53</nodeIds>
+    </contents>
+    <contents name="writereq">
+      <nodeIds>52</nodeIds>
+    </contents>
+    <contents name="writeresp">
+      <nodeIds>54</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ip_num">
+    <contents name="read">
+      <nodeIds>20</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="local_ram(p0)">
+    <contents name="load">
+      <nodeIds>57</nodeIds>
+    </contents>
+    <contents name="store">
+      <nodeIds>51</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="57" stage="2" latency="2"/>
+    </states>
+    <states id="3">
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="2"/>
+      <operations id="58" stage="7" latency="7"/>
+      <operations id="61" stage="1" latency="1"/>
+    </states>
+    <states id="4">
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="58" stage="6" latency="7"/>
+    </states>
+    <states id="5">
+      <operations id="54" stage="5" latency="5"/>
+      <operations id="58" stage="5" latency="7"/>
+    </states>
+    <states id="6">
+      <operations id="54" stage="4" latency="5"/>
+      <operations id="58" stage="4" latency="7"/>
+    </states>
+    <states id="7">
+      <operations id="54" stage="3" latency="5"/>
+      <operations id="58" stage="3" latency="7"/>
+    </states>
+    <states id="8">
+      <operations id="54" stage="2" latency="5"/>
+      <operations id="58" stage="2" latency="7"/>
+    </states>
+    <states id="9">
+      <operations id="54" stage="1" latency="5"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="7"/>
+    </states>
+    <states id="10">
+      <operations id="59" stage="1" latency="1"/>
+    </states>
+    <states id="11">
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="65" stage="1" latency="1"/>
+    </states>
+    <states id="12">
+      <operations id="67" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="multi_core_multi_ram_ip" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="162" mMaxLatency="162">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>27</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="VITIS_LOOP_23_1" mII="10" mDepth="10" mMinTripCount="16" mMaxTripCount="16" mMinLatency="160" mMaxLatency="160" mType="1">
+      <basicBlocks>33</basicBlocks>
+      <basicBlocks>48</basicBlocks>
+      <basicBlocks>56</basicBlocks>
+      <basicBlocks>63</basicBlocks>
+      <basicBlocks>66</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>68</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

@@ -1,0 +1,194 @@
+
+
+================================================================
+== Vitis HLS Report for 'fetching_decoding_ip'
+================================================================
+* Date:           Thu Jul 28 14:21:45 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        fetching_decoding_ip
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.504 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_31_1  |        ?|        ?|         4|          3|          3|     ?|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 3, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 1
+  Pipeline-0 : II = 3, D = 4, States = { 2 3 4 5 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 2 
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.58>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%pc_V = alloca i32 1"   --->   Operation 7 'alloca' 'pc_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%nbi_1 = alloca i32 1"   --->   Operation 8 'alloca' 'nbi_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%spectopmodule_ln16 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_7" [fetching_decoding_ip.cpp:16]   --->   Operation 9 'spectopmodule' 'spectopmodule_ln16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %start_pc"   --->   Operation 10 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %start_pc, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_2, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %start_pc, void @empty_3, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %code_ram, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_4, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %code_ram, void @empty_5, i32 0, i32 0, void @empty_0, i32 1, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %code_ram, i64 666, i64 207, i64 1"   --->   Operation 15 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %code_ram"   --->   Operation 16 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %nb_instruction"   --->   Operation 17 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %nb_instruction, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_6, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 18 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %nb_instruction, void @empty_3, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 20 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (1.00ns)   --->   "%start_pc_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %start_pc" [fetching_decoding_ip.cpp:17]   --->   Operation 21 'read' 'start_pc_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%pc_V_2 = trunc i32 %start_pc_read"   --->   Operation 22 'trunc' 'pc_V_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (1.58ns)   --->   "%store_ln31 = store i32 0, i32 %nbi_1" [fetching_decoding_ip.cpp:31]   --->   Operation 23 'store' 'store_ln31' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 24 [1/1] (1.58ns)   --->   "%store_ln31 = store i16 %pc_V_2, i16 %pc_V" [fetching_decoding_ip.cpp:31]   --->   Operation 24 'store' 'store_ln31' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%br_ln31 = br void %do.cond" [fetching_decoding_ip.cpp:31]   --->   Operation 25 'br' 'br_ln31' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 3.25>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%pc_V_load = load i16 %pc_V" [fetching_decoding_ip.cpp:35]   --->   Operation 26 'load' 'pc_V_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 27 [2/2] (3.25ns)   --->   "%instruction = call i32 @fetch, i16 %pc_V_load, i32 %code_ram" [fetching_decoding_ip.cpp:33]   --->   Operation 27 'call' 'instruction' <Predicate = true> <Delay = 3.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 7.50>
+ST_4 : Operation 28 [1/2] (3.25ns)   --->   "%instruction = call i32 @fetch, i16 %pc_V_load, i32 %code_ram" [fetching_decoding_ip.cpp:33]   --->   Operation 28 'call' 'instruction' <Predicate = true> <Delay = 3.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 29 [1/1] (4.24ns)   --->   "%decode_ret = call i23 @decode, i32 %instruction" [fetching_decoding_ip.cpp:34]   --->   Operation 29 'call' 'decode_ret' <Predicate = true> <Delay = 4.24> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 30 [1/1] (0.00ns)   --->   "%d_i_type_V = extractvalue i23 %decode_ret" [fetching_decoding_ip.cpp:34]   --->   Operation 30 'extractvalue' 'd_i_type_V' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 31 [1/1] (0.00ns)   --->   "%d_i_imm_V = extractvalue i23 %decode_ret" [fetching_decoding_ip.cpp:34]   --->   Operation 31 'extractvalue' 'd_i_imm_V' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 32 [1/1] (0.00ns)   --->   "%trunc_ln34 = trunc i20 %d_i_imm_V" [fetching_decoding_ip.cpp:34]   --->   Operation 32 'trunc' 'trunc_ln34' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 33 [1/1] (2.47ns)   --->   "%is_running_V = call i1 @running_cond_update, i32 %instruction" [fetching_decoding_ip.cpp:37]   --->   Operation 33 'call' 'is_running_V' <Predicate = true> <Delay = 2.47> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 34 [1/1] (0.00ns)   --->   "%br_ln38 = br i1 %is_running_V, void %do.end, void %do.cond.do.cond_crit_edge" [fetching_decoding_ip.cpp:38]   --->   Operation 34 'br' 'br_ln38' <Predicate = true> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 5.77>
+ST_5 : Operation 35 [1/1] (0.00ns)   --->   "%nbi_1_load = load i32 %nbi_1" [fetching_decoding_ip.cpp:36]   --->   Operation 35 'load' 'nbi_1_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 36 [1/1] (0.00ns)   --->   "%specpipeline_ln32 = specpipeline void @_ssdm_op_SpecPipeline, i32 3, i32 0, i32 0, i32 0, void @empty_0" [fetching_decoding_ip.cpp:32]   --->   Operation 36 'specpipeline' 'specpipeline_ln32' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 37 [1/1] (0.00ns)   --->   "%specloopname_ln33 = specloopname void @_ssdm_op_SpecLoopName, void @empty_8" [fetching_decoding_ip.cpp:33]   --->   Operation 37 'specloopname' 'specloopname_ln33' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 38 [1/1] (4.18ns)   --->   "%pc_V_1 = call i16 @execute, i16 %pc_V_load, i3 %d_i_type_V, i17 %trunc_ln34" [fetching_decoding_ip.cpp:35]   --->   Operation 38 'call' 'pc_V_1' <Predicate = true> <Delay = 4.18> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 39 [1/1] (2.55ns)   --->   "%nbi = call i32 @statistic_update, i32 %nbi_1_load" [fetching_decoding_ip.cpp:36]   --->   Operation 39 'call' 'nbi' <Predicate = true> <Delay = 2.55> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 40 [1/1] (1.58ns)   --->   "%store_ln38 = store i32 %nbi, i32 %nbi_1" [fetching_decoding_ip.cpp:38]   --->   Operation 40 'store' 'store_ln38' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_5 : Operation 41 [1/1] (1.58ns)   --->   "%store_ln38 = store i16 %pc_V_1, i16 %pc_V" [fetching_decoding_ip.cpp:38]   --->   Operation 41 'store' 'store_ln38' <Predicate = (is_running_V)> <Delay = 1.58>
+ST_5 : Operation 42 [1/1] (0.00ns)   --->   "%br_ln38 = br void %do.cond" [fetching_decoding_ip.cpp:38]   --->   Operation 42 'br' 'br_ln38' <Predicate = (is_running_V)> <Delay = 0.00>
+
+State 6 <SV = 5> <Delay = 1.00>
+ST_6 : Operation 43 [1/1] (1.00ns)   --->   "%write_ln39 = write void @_ssdm_op_Write.s_axilite.i32P0A, i32 %nb_instruction, i32 %nbi" [fetching_decoding_ip.cpp:39]   --->   Operation 43 'write' 'write_ln39' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_6 : Operation 44 [1/1] (0.00ns)   --->   "%ret_ln40 = ret" [fetching_decoding_ip.cpp:40]   --->   Operation 44 'ret' 'ret_ln40' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 2.59ns
+The critical path consists of the following:
+	s_axi read operation ('start_pc', fetching_decoding_ip.cpp:17) on port 'start_pc' (fetching_decoding_ip.cpp:17) [18]  (1 ns)
+	'store' operation ('store_ln31', fetching_decoding_ip.cpp:31) of variable 'pc.V' on local variable 'pc.V' [21]  (1.59 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('pc_V_load', fetching_decoding_ip.cpp:35) on local variable 'pc.V' [24]  (0 ns)
+	'call' operation ('instruction', fetching_decoding_ip.cpp:33) to 'fetch' [28]  (3.25 ns)
+
+ <State 4>: 7.5ns
+The critical path consists of the following:
+	'call' operation ('instruction', fetching_decoding_ip.cpp:33) to 'fetch' [28]  (3.25 ns)
+	'call' operation ('decode_ret', fetching_decoding_ip.cpp:34) to 'decode' [29]  (4.25 ns)
+
+ <State 5>: 5.77ns
+The critical path consists of the following:
+	'call' operation ('pc.V', fetching_decoding_ip.cpp:35) to 'execute' [33]  (4.19 ns)
+	'store' operation ('store_ln38', fetching_decoding_ip.cpp:38) of variable 'pc.V', fetching_decoding_ip.cpp:35 on local variable 'pc.V' [39]  (1.59 ns)
+
+ <State 6>: 1ns
+The critical path consists of the following:
+	s_axi write operation ('write_ln39', fetching_decoding_ip.cpp:39) on port 'nb_instruction' (fetching_decoding_ip.cpp:39) [42]  (1 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

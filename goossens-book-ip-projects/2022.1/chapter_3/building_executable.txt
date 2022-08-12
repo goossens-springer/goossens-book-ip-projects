@@ -1,0 +1,18 @@
+To base test_op_imm at address 0:
+
+riscv32-unknown-elf-gcc -nostartfiles -Ttext 0 test_op_imm.s -o test_op_imm_0.elf
+
+To dump the based 0 executable:
+
+riscv32-unknown-elf-objdump -d test_op_imm_0.elf > test_op_imm_0.dump
+cat test_op_imm_0.dump
+
+To transform the ELF file into binary:
+
+riscv32-unknown-elf-objcopy -O binary test_op_imm_0.elf test_op_imm_0_text.bin
+od -t x4 test_op_imm_0_text.bin
+
+To translate binary into hexadecimal:
+
+hexdump -v -e '"0x" /4 "%08x" ",\n"' test_op_imm_0_text.bin > test_op_imm_0_text.hex
+cat test_op_imm_0_text.hex

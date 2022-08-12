@@ -1,0 +1,149 @@
+
+
+================================================================
+== Synthesis Summary Report of 'rv32i_npp_ip'
+================================================================
++ General Information: 
+    * Date:           Mon Jul 11 17:49:08 2022
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+    * Project:        rv32i_npp_ip
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+-----------+----+-----------+-----------+-----+
+    |                  Modules                 |  Issue |       | Latency | Latency | Iteration|         | Trip |          |           |    |           |           |     |
+    |                  & Loops                 |  Type  | Slack | (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined|   BRAM    | DSP|     FF    |    LUT    | URAM|
+    +------------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+-----------+----+-----------+-----------+-----+
+    |+ rv32i_npp_ip                            |  Timing|  -3.06|        -|        -|         -|        -|     -|        no|  256 (91%)|   -|  1682 (1%)|  3358 (6%)|    -|
+    | + rv32i_npp_ip_Pipeline_VITIS_LOOP_42_1  |       -|   3.89|       34|  340.000|         -|       34|     -|        no|          -|   -|    8 (~0%)|   51 (~0%)|    -|
+    |  o VITIS_LOOP_42_1                       |       -|   7.30|       32|  320.000|         1|        1|    32|       yes|          -|   -|          -|          -|    -|
+    | + rv32i_npp_ip_Pipeline_VITIS_LOOP_45_2  |  Timing|  -3.06|        -|        -|         -|        -|     -|        no|          -|   -|  1379 (1%)|  2968 (5%)|    -|
+    |  o VITIS_LOOP_45_2                       |       -|   7.30|        -|        -|         7|        7|     -|       yes|          -|   -|          -|          -|    -|
+    +------------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+-----------+----+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+-------------------+
+| Interface     | Data Width | Address Width | Offset | Register | Resource Estimate |
++---------------+------------+---------------+--------+----------+-------------------+
+| s_axi_control | 32         | 20            | 16     | 0        | BRAM=256          |
++---------------+------------+---------------+--------+----------+-------------------+
+
+* S_AXILITE Registers
++---------------+---------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register            | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+---------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL                | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER                | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER              | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR              | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | start_pc            | 0x10   | 32    | W      | Data signal of start_pc          |                                                                      |
+| s_axi_control | nb_instruction      | 0x18   | 32    | R      | Data signal of nb_instruction    |                                                                      |
+| s_axi_control | nb_instruction_ctrl | 0x1c   | 32    | R      | Control signal of nb_instruction | 0=nb_instruction_ap_vld                                              |
++---------------+---------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------------+-----------+---------------+
+| Argument       | Direction | Datatype      |
++----------------+-----------+---------------+
+| start_pc       | in        | unsigned int  |
+| code_ram       | in        | unsigned int* |
+| data_ram       | inout     | int*          |
+| nb_instruction | out       | unsigned int* |
++----------------+-----------+---------------+
+
+* SW-to-HW Mapping
++----------------+---------------+----------+-----------------------------------------------+
+| Argument       | HW Interface  | HW Type  | HW Info                                       |
++----------------+---------------+----------+-----------------------------------------------+
+| start_pc       | s_axi_control | register | name=start_pc offset=0x10 range=32            |
+| code_ram       | s_axi_control | memory   | name=code_ram offset=262144 range=262144      |
+| data_ram       | s_axi_control | memory   | name=data_ram offset=524288 range=262144      |
+| nb_instruction | s_axi_control | register | name=nb_instruction offset=0x18 range=32      |
+| nb_instruction | s_axi_control | register | name=nb_instruction_ctrl offset=0x1c range=32 |
++----------------+---------------+----------+-----------------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++------------------------------------------+-----+--------+-------------+-----+--------+---------+
+| Name                                     | DSP | Pragma | Variable    | Op  | Impl   | Latency |
++------------------------------------------+-----+--------+-------------+-----+--------+---------+
+| + rv32i_npp_ip                           | 0   |        |             |     |        |         |
+|  + rv32i_npp_ip_Pipeline_VITIS_LOOP_42_1 | 0   |        |             |     |        |         |
+|    add_ln42_fu_522_p2                    | -   |        | add_ln42    | add | fabric | 0       |
+|  + rv32i_npp_ip_Pipeline_VITIS_LOOP_45_2 | 0   |        |             |     |        |         |
+|    npc4_fu_1605_p2                       | -   |        | npc4        | add | fabric | 0       |
+|    result_2_fu_1615_p2                   | -   |        | result_2    | add | fabric | 0       |
+|    grp_fu_871_p2                         | -   |        | result      | add | fabric | 0       |
+|    result_18_fu_1825_p2                  | -   |        | result_18   | sub | fabric | 0       |
+|    grp_fu_871_p2                         | -   |        | result_19   | add | fabric | 0       |
+|    grp_fu_871_p2                         | -   |        | result_16   | add | fabric | 0       |
+|    result_5_fu_1906_p2                   | -   |        | result_5    | sub | fabric | 0       |
+|    result_6_fu_1910_p2                   | -   |        | result_6    | add | fabric | 0       |
+|    grp_fu_905_p2                         | -   |        | next_pc_V_7 | add | fabric | 0       |
+|    grp_fu_910_p2                         | -   |        | next_pc_V_6 | add | fabric | 0       |
+|    grp_fu_910_p2                         | -   |        | add_ln232_1 | add | fabric | 0       |
+|    grp_fu_905_p2                         | -   |        | add_ln232   | add | fabric | 0       |
+|    grp_fu_910_p2                         | -   |        | next_pc_V_5 | add | fabric | 0       |
+|    add_ln138_fu_2362_p2                  | -   |        | add_ln138   | add | fabric | 0       |
+|    grp_fu_910_p2                         | -   |        | next_pc_V_3 | add | fabric | 0       |
+|    grp_fu_910_p2                         | -   |        | next_pc_V_1 | add | fabric | 0       |
+|    grp_fu_910_p2                         | -   |        | next_pc_V   | add | fabric | 0       |
+|    add_ln40_fu_2419_p2                   | -   |        | add_ln40    | add | fabric | 0       |
++------------------------------------------+-----+--------+-------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+----------------------------------+-----------------------------------------------------+
+| Type            | Options                          | Location                                            |
++-----------------+----------------------------------+-----------------------------------------------------+
+| interface       | s_axilite port=start_pc          | rv32i_npp_ip.cpp:29 in rv32i_npp_ip, start_pc       |
+| interface       | s_axilite port=code_ram          | rv32i_npp_ip.cpp:30 in rv32i_npp_ip, code_ram       |
+| interface       | s_axilite port=data_ram          | rv32i_npp_ip.cpp:31 in rv32i_npp_ip, data_ram       |
+| interface       | s_axilite port=nb_instruction    | rv32i_npp_ip.cpp:32 in rv32i_npp_ip, nb_instruction |
+| interface       | s_axilite port=return            | rv32i_npp_ip.cpp:33 in rv32i_npp_ip, return         |
+| inline          | recursive                        | rv32i_npp_ip.cpp:34 in rv32i_npp_ip                 |
+| array_partition | variable=reg_file dim=1 complete | rv32i_npp_ip.cpp:37 in rv32i_npp_ip, reg_file       |
+| pipeline        | II=7                             | rv32i_npp_ip.cpp:46 in rv32i_npp_ip                 |
++-----------------+----------------------------------+-----------------------------------------------------+
+
+

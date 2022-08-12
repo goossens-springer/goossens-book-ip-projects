@@ -1,0 +1,141 @@
+
+
+================================================================
+== Synthesis Summary Report of 'simple_pipeline_ip'
+================================================================
++ General Information: 
+    * Date:           Thu Jul 28 14:55:41 2022
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+    * Project:        simple_pipeline_ip
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+-----------+----+-----------+-----------+-----+
+    |                     Modules                    |  Issue |       | Latency | Latency | Iteration|         | Trip |          |           |    |           |           |     |
+    |                     & Loops                    |  Type  | Slack | (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined|   BRAM    | DSP|     FF    |    LUT    | URAM|
+    +------------------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+-----------+----+-----------+-----------+-----+
+    |+ simple_pipeline_ip                            |  Timing|  -3.73|        -|        -|         -|        -|     -|        no|  256 (91%)|   -|  3096 (2%)|  4373 (8%)|    -|
+    | + simple_pipeline_ip_Pipeline_VITIS_LOOP_42_1  |       -|   3.89|       34|  340.000|         -|       34|     -|        no|          -|   -|    8 (~0%)|   51 (~0%)|    -|
+    |  o VITIS_LOOP_42_1                             |       -|   7.30|       32|  320.000|         1|        1|    32|       yes|          -|   -|          -|          -|    -|
+    | + simple_pipeline_ip_Pipeline_VITIS_LOOP_47_2  |  Timing|  -3.73|        -|        -|         -|        -|     -|        no|          -|   -|  2761 (2%)|  3983 (7%)|    -|
+    |  o VITIS_LOOP_47_2                             |       -|   7.30|        -|        -|         5|        5|     -|       yes|          -|   -|          -|          -|    -|
+    +------------------------------------------------+--------+-------+---------+---------+----------+---------+------+----------+-----------+----+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+-------------------+
+| Interface     | Data Width | Address Width | Offset | Register | Resource Estimate |
++---------------+------------+---------------+--------+----------+-------------------+
+| s_axi_control | 32         | 20            | 16     | 0        | BRAM=256          |
++---------------+------------+---------------+--------+----------+-------------------+
+
+* S_AXILITE Registers
++---------------+---------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register            | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+---------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL                | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER                | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER              | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR              | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | start_pc            | 0x10   | 32    | W      | Data signal of start_pc          |                                                                      |
+| s_axi_control | nb_instruction      | 0x18   | 32    | R      | Data signal of nb_instruction    |                                                                      |
+| s_axi_control | nb_instruction_ctrl | 0x1c   | 32    | R      | Control signal of nb_instruction | 0=nb_instruction_ap_vld                                              |
++---------------+---------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------------+-----------+---------------+
+| Argument       | Direction | Datatype      |
++----------------+-----------+---------------+
+| start_pc       | in        | unsigned int  |
+| code_ram       | in        | unsigned int* |
+| data_ram       | inout     | int*          |
+| nb_instruction | out       | unsigned int* |
++----------------+-----------+---------------+
+
+* SW-to-HW Mapping
++----------------+---------------+----------+-----------------------------------------------+
+| Argument       | HW Interface  | HW Type  | HW Info                                       |
++----------------+---------------+----------+-----------------------------------------------+
+| start_pc       | s_axi_control | register | name=start_pc offset=0x10 range=32            |
+| code_ram       | s_axi_control | memory   | name=code_ram offset=262144 range=262144      |
+| data_ram       | s_axi_control | memory   | name=data_ram offset=524288 range=262144      |
+| nb_instruction | s_axi_control | register | name=nb_instruction offset=0x18 range=32      |
+| nb_instruction | s_axi_control | register | name=nb_instruction_ctrl offset=0x1c range=32 |
++----------------+---------------+----------+-----------------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++------------------------------------------------+-----+--------+--------------------+-----+--------+---------+
+| Name                                           | DSP | Pragma | Variable           | Op  | Impl   | Latency |
++------------------------------------------------+-----+--------+--------------------+-----+--------+---------+
+| + simple_pipeline_ip                           | 0   |        |                    |     |        |         |
+|  + simple_pipeline_ip_Pipeline_VITIS_LOOP_42_1 | 0   |        |                    |     |        |         |
+|    add_ln42_fu_522_p2                          | -   |        | add_ln42           | add | fabric | 0       |
+|  + simple_pipeline_ip_Pipeline_VITIS_LOOP_47_2 | 0   |        |                    |     |        |         |
+|    f_to_f_next_pc_V_3_fu_5156_p2               | -   |        | f_to_f_next_pc_V_3 | add | fabric | 0       |
+|    result_1_fu_5458_p2                         | -   |        | result_1           | sub | fabric | 0       |
+|    result_2_fu_5463_p2                         | -   |        | result_2           | add | fabric | 0       |
+|    npc4_fu_5575_p2                             | -   |        | npc4               | add | fabric | 0       |
+|    result_19_fu_5585_p2                        | -   |        | result_19          | add | fabric | 0       |
+|    add_ln83_fu_5590_p2                         | -   |        | add_ln83           | add | fabric | 0       |
+|    result_20_fu_5934_p2                        | -   |        | result_20          | add | fabric | 0       |
+|    npc_fu_5698_p2                              | -   |        | npc                | add | fabric | 0       |
+|    next_pc_V_4_fu_5714_p2                      | -   |        | next_pc_V_4        | add | fabric | 0       |
+|    nbi_1_out                                   | -   |        | nbi_1              | add | fabric | 0       |
++------------------------------------------------+-----+--------+--------------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+----------------------------------+-----------------------------------------------------------------+
+| Type            | Options                          | Location                                                        |
++-----------------+----------------------------------+-----------------------------------------------------------------+
+| interface       | s_axilite port=start_pc          | simple_pipeline_ip.cpp:28 in simple_pipeline_ip, start_pc       |
+| interface       | s_axilite port=code_ram          | simple_pipeline_ip.cpp:29 in simple_pipeline_ip, code_ram       |
+| interface       | s_axilite port=data_ram          | simple_pipeline_ip.cpp:30 in simple_pipeline_ip, data_ram       |
+| interface       | s_axilite port=nb_instruction    | simple_pipeline_ip.cpp:31 in simple_pipeline_ip, nb_instruction |
+| interface       | s_axilite port=return            | simple_pipeline_ip.cpp:32 in simple_pipeline_ip, return         |
+| inline          | recursive                        | simple_pipeline_ip.cpp:33 in simple_pipeline_ip                 |
+| array_partition | variable=reg_file dim=1 complete | simple_pipeline_ip.cpp:35 in simple_pipeline_ip, reg_file       |
+| pipeline        | II=5                             | simple_pipeline_ip.cpp:48 in simple_pipeline_ip                 |
++-----------------+----------------------------------+-----------------------------------------------------------------+
+
+

@@ -1,0 +1,173 @@
+
+
+================================================================
+== Synthesis Summary Report of 'multihart_ip'
+================================================================
++ General Information: 
+    * Date:           Wed Aug 10 07:57:55 2022
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+    * Project:        multihart_ip
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------------------------+--------+-------+---------+--------+----------+---------+------+----------+-----------+----+-------------+-------------+-----+
+    |                  Modules                  |  Issue |       | Latency | Latency| Iteration|         | Trip |          |           |    |             |             |     |
+    |                  & Loops                  |  Type  | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|   BRAM    | DSP|      FF     |     LUT     | URAM|
+    +-------------------------------------------+--------+-------+---------+--------+----------+---------+------+----------+-----------+----+-------------+-------------+-----+
+    |+ multihart_ip                             |  Timing|  -7.17|        -|       -|         -|        -|     -|        no|  256 (91%)|   -|  15687 (14%)|  29548 (55%)|    -|
+    | + multihart_ip_Pipeline_VITIS_LOOP_189_1  |  Timing|  -7.17|        -|       -|         -|        -|     -|        no|          -|   -|  15076 (14%)|  28973 (54%)|    -|
+    |  o VITIS_LOOP_189_1                       |       -|   7.30|        -|       -|         2|        2|     -|       yes|          -|   -|            -|            -|    -|
+    +-------------------------------------------+--------+-------+---------+--------+----------+---------+------+----------+-----------+----+-------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+-------------------+
+| Interface     | Data Width | Address Width | Offset | Register | Resource Estimate |
++---------------+------------+---------------+--------+----------+-------------------+
+| s_axi_control | 32         | 20            | 16     | 0        | BRAM=256          |
++---------------+------------+---------------+--------+----------+-------------------+
+
+* S_AXILITE Registers
++---------------+---------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register            | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+---------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL                | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER                | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER              | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR              | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | running_hart_set    | 0x10   | 32    | W      | Data signal of running_hart_set  |                                                                      |
+| s_axi_control | nb_instruction      | 0x40   | 32    | R      | Data signal of nb_instruction    |                                                                      |
+| s_axi_control | nb_instruction_ctrl | 0x44   | 32    | R      | Control signal of nb_instruction | 0=nb_instruction_ap_vld                                              |
+| s_axi_control | nb_cycle            | 0x50   | 32    | R      | Data signal of nb_cycle          |                                                                      |
+| s_axi_control | nb_cycle_ctrl       | 0x54   | 32    | R      | Control signal of nb_cycle       | 0=nb_cycle_ap_vld                                                    |
++---------------+---------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++------------------+-----------+---------------+
+| Argument         | Direction | Datatype      |
++------------------+-----------+---------------+
+| running_hart_set | in        | unsigned int  |
+| start_pc         | in        | unsigned int* |
+| code_ram         | in        | unsigned int* |
+| data_ram         | inout     | int*          |
+| nb_instruction   | out       | unsigned int* |
+| nb_cycle         | out       | unsigned int* |
++------------------+-----------+---------------+
+
+* SW-to-HW Mapping
++------------------+---------------+----------+-----------------------------------------------+
+| Argument         | HW Interface  | HW Type  | HW Info                                       |
++------------------+---------------+----------+-----------------------------------------------+
+| running_hart_set | s_axi_control | register | name=running_hart_set offset=0x10 range=32    |
+| start_pc         | s_axi_control | memory   | name=start_pc offset=32 range=32              |
+| code_ram         | s_axi_control | memory   | name=code_ram offset=262144 range=262144      |
+| data_ram         | s_axi_control | memory   | name=data_ram offset=524288 range=262144      |
+| nb_instruction   | s_axi_control | register | name=nb_instruction offset=0x40 range=32      |
+| nb_instruction   | s_axi_control | register | name=nb_instruction_ctrl offset=0x44 range=32 |
+| nb_cycle         | s_axi_control | register | name=nb_cycle offset=0x50 range=32            |
+| nb_cycle         | s_axi_control | register | name=nb_cycle_ctrl offset=0x54 range=32       |
++------------------+---------------+----------+-----------------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------------------------+-----+--------+-----------------------+-----+--------+---------+
+| Name                                      | DSP | Pragma | Variable              | Op  | Impl   | Latency |
++-------------------------------------------+-----+--------+-----------------------+-----+--------+---------+
+| + multihart_ip                            | 0   |        |                       |     |        |         |
+|  + multihart_ip_Pipeline_VITIS_LOOP_189_1 | 0   |        |                       |     |        |         |
+|    nbi_V_3_fu_19473_p2                    | -   |        | nbi_V_3               | add | fabric | 0       |
+|    nbc_V_3_fu_19480_p2                    | -   |        | nbc_V_3               | add | fabric | 0       |
+|    d_state_relative_pc_V_fu_20729_p2      | -   |        | d_state_relative_pc_V | add | fabric | 0       |
+|    result_1_fu_30595_p2                   | -   |        | result_1              | sub | fabric | 0       |
+|    result_2_fu_30599_p2                   | -   |        | result_2              | add | fabric | 0       |
+|    npc4_fu_30719_p2                       | -   |        | npc4                  | add | fabric | 0       |
+|    result_20_fu_30729_p2                  | -   |        | result_20             | add | fabric | 0       |
+|    add_ln77_fu_30733_p2                   | -   |        | add_ln77              | add | fabric | 0       |
+|    result_21_fu_30737_p2                  | -   |        | result_21             | add | fabric | 0       |
+|    j_b_target_pc_V_fu_30839_p2            | -   |        | j_b_target_pc_V       | add | fabric | 0       |
+|    m_state_accessed_h_V_fu_17576_p2       | -   |        | m_state_accessed_h_V  | add | fabric | 0       |
++-------------------------------------------+-----+--------+-----------------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+-----------------------------------------+--------------------------------------------------------+
+| Type            | Options                                 | Location                                               |
++-----------------+-----------------------------------------+--------------------------------------------------------+
+| unroll          |                                         | decode.cpp:15 in init_d_state                          |
+| inline          |                                         | decode.cpp:101 in stage_job                            |
+| unroll          |                                         | execute.cpp:15 in init_e_state                         |
+| unroll          |                                         | fetch.cpp:17 in init_f_state                           |
+| unroll          |                                         | issue.cpp:12 in init_i_state                           |
+| unroll          |                                         | mem_access.cpp:14 in init_m_state                      |
+| unroll          |                                         | multihart_ip.cpp:27 in init_file                       |
+| unroll          |                                         | multihart_ip.cpp:30 in init_file                       |
+| unroll          |                                         | multihart_ip.cpp:49 in init_exit                       |
+| unroll          |                                         | multihart_ip.cpp:63 in running_cond_update             |
+| interface       | s_axilite port=running_hart_set         | multihart_ip.cpp:104 in multihart_ip, running_hart_set |
+| interface       | s_axilite port=start_pc                 | multihart_ip.cpp:105 in multihart_ip, start_pc         |
+| interface       | s_axilite port=code_ram                 | multihart_ip.cpp:106 in multihart_ip, code_ram         |
+| interface       | s_axilite port=data_ram                 | multihart_ip.cpp:107 in multihart_ip, data_ram         |
+| interface       | s_axilite port=nb_instruction           | multihart_ip.cpp:108 in multihart_ip, nb_instruction   |
+| interface       | s_axilite port=nb_cycle                 | multihart_ip.cpp:109 in multihart_ip, nb_cycle         |
+| interface       | s_axilite port=return                   | multihart_ip.cpp:110 in multihart_ip, return           |
+| inline          | recursive                               | multihart_ip.cpp:111 in multihart_ip                   |
+| array_partition | variable=reg_file dim=0 complete        | multihart_ip.cpp:113 in multihart_ip, reg_file         |
+| array_partition | variable=is_reg_computed dim=0 complete | multihart_ip.cpp:115 in multihart_ip, is_reg_computed  |
+| array_partition | variable=f_state_is_full dim=1 complete | multihart_ip.cpp:119 in multihart_ip, f_state_is_full  |
+| array_partition | variable=f_state dim=1 complete         | multihart_ip.cpp:121 in multihart_ip, f_state          |
+| array_partition | variable=d_state_is_full dim=1 complete | multihart_ip.cpp:125 in multihart_ip, d_state_is_full  |
+| array_partition | variable=d_state dim=1 complete         | multihart_ip.cpp:127 in multihart_ip, d_state          |
+| array_partition | variable=i_state_is_full dim=1 complete | multihart_ip.cpp:132 in multihart_ip, i_state_is_full  |
+| array_partition | variable=i_state dim=1 complete         | multihart_ip.cpp:134 in multihart_ip, i_state          |
+| array_partition | variable=e_state_is_full dim=1 complete | multihart_ip.cpp:138 in multihart_ip, e_state_is_full  |
+| array_partition | variable=e_state dim=1 complete         | multihart_ip.cpp:140 in multihart_ip, e_state          |
+| array_partition | variable=m_state_is_full dim=1 complete | multihart_ip.cpp:145 in multihart_ip, m_state_is_full  |
+| array_partition | variable=m_state dim=1 complete         | multihart_ip.cpp:147 in multihart_ip, m_state          |
+| array_partition | variable=w_state_is_full dim=1 complete | multihart_ip.cpp:151 in multihart_ip, w_state_is_full  |
+| array_partition | variable=w_state dim=1 complete         | multihart_ip.cpp:153 in multihart_ip, w_state          |
+| array_partition | variable=has_exited dim=1 complete      | multihart_ip.cpp:155 in multihart_ip, has_exited       |
+| pipeline        | II=2                                    | multihart_ip.cpp:190 in multihart_ip                   |
+| latency         | max=1                                   | multihart_ip.cpp:191 in multihart_ip                   |
+| unroll          |                                         | wb.cpp:18 in init_w_state                              |
++-----------------+-----------------------------------------+--------------------------------------------------------+
+
+
