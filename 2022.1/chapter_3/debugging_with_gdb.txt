@@ -1,8 +1,5 @@
-Installing gdb:
-
 sudo apt-get install build-essential gdb
 
-Installing OpenOCD:
 
 git clone https://git.code.sf.net/p/openocd/code openocd-code
 cd openocd-code
@@ -11,27 +8,18 @@ cd openocd-code
 make
 sudo make install
 
-Using the spike.lds linker script:
 
-cd $HOME/riscv-gnu-toolchain
 riscv32-unknown-elf-gcc -g -nostartfiles -T spike.lds test_op_imm.s -o test_op_imm
 
-Connecting spike:
 
-cd $HOME/riscv-gnu-toolchain
 spike --rbb-port=9824 -m0x0010010000:0x10000 test_op_imm
 
-Connecting OpenOCD:
 
-cd $HOME/riscv-gnu-toolchain
 openocd -f spike.cfg
 
-Connecting gdb:
 
-cd $HOME/riscv-gnu-toolchain
 riscv32-unknown-elf-gdb
 
-Debugging session:
 
 target remote localhost:3333
 file test_op_imm
@@ -45,23 +33,19 @@ l
 b 16
 c
 
-Compiling basicmath_simple:
 
 riscv32-unknown-elf-gcc -nostartfiles -T spike.lds -g -O3 basicmath_simple.c -o basicmath_simple -lm
 
-Simulate basicmath_simple:
-
-Connecting spike:
 
 spike --rbb-port=9824 -m0x0010010000:0x10000 basicmath_simple
 
-Connecting OpenOCD:
 
 openocd -f spike.cfg
 
-Connecting gdb:
 
 riscv32-unknown-elf-gdb
+
+
 target remote localhost:3333
 file basicmath_simple
 load
