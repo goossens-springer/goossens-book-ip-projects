@@ -1,6 +1,7 @@
 sudo apt-get install build-essential gdb
 
 
+cd
 git clone https://git.code.sf.net/p/openocd/code openocd-code
 cd openocd-code
 ./bootstrap
@@ -19,8 +20,6 @@ openocd -f spike.cfg
 
 
 riscv32-unknown-elf-gdb
-
-
 target remote localhost:3333
 file test_op_imm
 load
@@ -44,8 +43,6 @@ openocd -f spike.cfg
 
 
 riscv32-unknown-elf-gdb
-
-
 target remote localhost:3333
 file basicmath_simple
 load
