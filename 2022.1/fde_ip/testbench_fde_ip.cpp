@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "fde_ip.h"
 unsigned int code_ram[CODE_RAM_SIZE]={
-#include "test_sum_0_text.hex"
+#include "test_op_imm_0_text.hex"
 };
 int main(){
   unsigned int nbi;

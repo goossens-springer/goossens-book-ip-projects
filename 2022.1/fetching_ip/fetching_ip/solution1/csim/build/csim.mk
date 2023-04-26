@@ -17,7 +17,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../testbench_fetching_ip.cpp ../../../../fetching_ip.cpp ../../../../fetch.cpp ../../../../execute.cpp
+HLS_SOURCES = ../../../../testbench_fetching_ip.cpp ../../../../execute.cpp ../../../../fetch.cpp ../../../../fetching_ip.cpp
 
 override TARGET := csim.exe
 
@@ -75,11 +75,11 @@ $(ObjDir)/testbench_fetching_ip.o: ../../../../testbench_fetching_ip.cpp $(ObjDi
 
 -include $(ObjDir)/testbench_fetching_ip.d
 
-$(ObjDir)/fetching_ip.o: ../../../../fetching_ip.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../fetching_ip.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/execute.o: ../../../../execute.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../execute.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/fetching_ip.d
+-include $(ObjDir)/execute.d
 
 $(ObjDir)/fetch.o: ../../../../fetch.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../fetch.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
@@ -87,8 +87,8 @@ $(ObjDir)/fetch.o: ../../../../fetch.cpp $(ObjDir)/.dir
 
 -include $(ObjDir)/fetch.d
 
-$(ObjDir)/execute.o: ../../../../execute.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../execute.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/fetching_ip.o: ../../../../fetching_ip.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../fetching_ip.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/execute.d
+-include $(ObjDir)/fetching_ip.d

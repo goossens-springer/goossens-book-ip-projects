@@ -1,0 +1,111 @@
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'goossens' on host 'goossens-Precision-5530' (Linux_x86_64 version 5.15.0-47-generic) on Fri Sep 16 07:29:48 CEST 2022
+INFO: [HLS 200-10] On os Ubuntu 22.04.1 LTS
+INFO: [HLS 200-10] In directory '/home/goossens/goossens-springer-github/2022.1/fde_ip'
+Sourcing Tcl script '/home/goossens/goossens-springer-github/2022.1/fde_ip/fde_ip/solution1/csim.tcl'
+INFO: [HLS 200-1510] Running: source /home/goossens/goossens-springer-github/2022.1/fde_ip/fde_ip/solution1/csim.tcl
+INFO: [HLS 200-1510] Running: open_project fde_ip 
+INFO: [HLS 200-10] Opening project '/home/goossens/goossens-springer-github/2022.1/fde_ip/fde_ip'.
+INFO: [HLS 200-1510] Running: set_top fde_ip 
+INFO: [HLS 200-1510] Running: add_files decode.cpp 
+INFO: [HLS 200-10] Adding design file 'decode.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files disassemble.cpp 
+INFO: [HLS 200-10] Adding design file 'disassemble.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files emulate.cpp 
+INFO: [HLS 200-10] Adding design file 'emulate.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files execute.cpp 
+INFO: [HLS 200-10] Adding design file 'execute.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files fde_ip.cpp 
+INFO: [HLS 200-10] Adding design file 'fde_ip.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files fetch.cpp 
+INFO: [HLS 200-10] Adding design file 'fetch.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files immediate.cpp 
+INFO: [HLS 200-10] Adding design file 'immediate.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files print.cpp 
+INFO: [HLS 200-10] Adding design file 'print.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files type.cpp 
+INFO: [HLS 200-10] Adding design file 'type.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb testbench_fde_ip.cpp 
+INFO: [HLS 200-10] Adding test bench file 'testbench_fde_ip.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/goossens/goossens-springer-github/2022.1/fde_ip/fde_ip/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./fde_ip/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name fde_ip fde_ip 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../testbench_fde_ip.cpp in debug mode
+   Generating csim.exe
+0000: 00500593      li a1, 5
+     a1  =                5 (       5)
+0004: 00158613      addi a2, a1, 1
+     a2  =                6 (       6)
+0008: 00c67693      andi a3, a2, 12
+     a3  =                4 (       4)
+0012: fff68713      addi a4, a3, -1
+     a4  =                3 (       3)
+0016: 00576793      ori a5, a4, 5
+     a5  =                7 (       7)
+0020: 00c7c813      xori a6, a5, 12
+     a6  =               11 (       b)
+0024: 00d83893      sltiu a7, a6, 13
+     a7  =                1 (       1)
+0028: 00b83293      sltiu t0, a6, 11
+     t0  =                0 (       0)
+0032: 01c81313      slli t1, a6, 28
+     t1  =      -1342177280 (b0000000)
+0036: ff632393      slti t2, t1, -10
+     t2  =                1 (       1)
+0040: 7e633e13      sltiu t3, t1, 2022
+     t3  =                0 (       0)
+0044: 01c35e93      srli t4, t1, 28
+     t4  =               11 (       b)
+0048: 41c35f13      srai t5, t1, 28
+     t5  =               -5 (fffffffb)
+0052: 00008067      ret
+     pc  =                0 (       0)
+ra  =                0 (       0)
+sp  =                0 (       0)
+gp  =                0 (       0)
+tp  =                0 (       0)
+t0  =                0 (       0)
+t1  =      -1342177280 (b0000000)
+t2  =                1 (       1)
+s0  =                0 (       0)
+s1  =                0 (       0)
+a0  =                0 (       0)
+a1  =                5 (       5)
+a2  =                6 (       6)
+a3  =                4 (       4)
+a4  =                3 (       3)
+a5  =                7 (       7)
+a6  =               11 (       b)
+a7  =                1 (       1)
+s2  =                0 (       0)
+s3  =                0 (       0)
+s4  =                0 (       0)
+s5  =                0 (       0)
+s6  =                0 (       0)
+s7  =                0 (       0)
+s8  =                0 (       0)
+s9  =                0 (       0)
+s10 =                0 (       0)
+s11 =                0 (       0)
+t3  =                0 (       0)
+t4  =               11 (       b)
+t5  =               -5 (fffffffb)
+t6  =                0 (       0)
+14 fetched, decoded and executed instructions
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1.5 seconds. CPU system time: 0.29 seconds. Elapsed time: 1.26 seconds; current allocated memory: -1033.656 MB.
+INFO: [HLS 200-112] Total CPU user time: 4.24 seconds. Total CPU system time: 0.88 seconds. Total elapsed time: 3.18 seconds; peak allocated memory: 462.895 MB.

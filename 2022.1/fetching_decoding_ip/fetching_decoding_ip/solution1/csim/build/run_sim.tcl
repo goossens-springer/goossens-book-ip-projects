@@ -3,12 +3,12 @@
 # Tool Version Limit: 2022.04
 # Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 # ==============================================================
-set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/home/bernard/Xilinx/Vitis_HLS/2022.1/lnx64/tools/fpo_v7_0
-set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/home/bernard/Xilinx/Vitis_HLS/2022.1/lnx64/tools/fft_v9_1
-set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/home/bernard/Xilinx/Vitis_HLS/2022.1/lnx64/tools/fir_v7_0
-set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/home/bernard/Xilinx/Vitis_HLS/2022.1/lnx64/tools/dds_v6_0
+set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/opt/Xilinx/Vitis_HLS/2022.1/lnx64/tools/fpo_v7_0
+set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/opt/Xilinx/Vitis_HLS/2022.1/lnx64/tools/fft_v9_1
+set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/opt/Xilinx/Vitis_HLS/2022.1/lnx64/tools/fir_v7_0
+set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/opt/Xilinx/Vitis_HLS/2022.1/lnx64/tools/dds_v6_0
 set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/usr/lib/x86_64-linux-gnu
-set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/home/bernard/Xilinx/Vitis_HLS/2022.1/lnx64/csim
+set ::env(LD_LIBRARY_PATH) $::env(LD_LIBRARY_PATH):/opt/Xilinx/Vitis_HLS/2022.1/lnx64/csim
 ### C sim ###
 if {![file exists csim.exe]} {
   puts "@E C-simulation is not set up properly. Please re-run csim."

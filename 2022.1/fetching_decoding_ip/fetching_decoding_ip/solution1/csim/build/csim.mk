@@ -17,11 +17,11 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../../testbench_fetching_decoding_ip.cpp ../../../../decode.cpp ../../../../execute.cpp ../../../../fetch.cpp ../../../../fetching_decoding_ip.cpp ../../../../immediate.cpp ../../../../print.cpp ../../../../type.cpp
+HLS_SOURCES = ../../../../testbench_fetching_decoding_ip.cpp ../../../../type.cpp ../../../../print.cpp ../../../../immediate.cpp ../../../../fetching_decoding_ip.cpp ../../../../fetch.cpp ../../../../execute.cpp ../../../../decode.cpp
 
 override TARGET := csim.exe
 
-AUTOPILOT_ROOT := /home/bernard/Xilinx/Vitis_HLS/2022.1
+AUTOPILOT_ROOT := /opt/Xilinx/Vitis_HLS/2022.1
 AUTOPILOT_MACH := lnx64
 ifdef AP_GCC_M32
   AUTOPILOT_MACH := Linux_x86
@@ -29,7 +29,7 @@ ifdef AP_GCC_M32
 endif
 IFLAG += -fPIC
 ifndef AP_GCC_PATH
-  AP_GCC_PATH := /home/bernard/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/bin
+  AP_GCC_PATH := /opt/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/bin
 endif
 AUTOPILOT_TOOL := ${AUTOPILOT_ROOT}/${AUTOPILOT_MACH}/tools
 AP_CLANG_PATH := ${AUTOPILOT_TOOL}/clang-3.9/bin
@@ -75,35 +75,11 @@ $(ObjDir)/testbench_fetching_decoding_ip.o: ../../../../testbench_fetching_decod
 
 -include $(ObjDir)/testbench_fetching_decoding_ip.d
 
-$(ObjDir)/decode.o: ../../../../decode.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../decode.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/type.o: ../../../../type.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../type.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/decode.d
-
-$(ObjDir)/execute.o: ../../../../execute.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../execute.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/execute.d
-
-$(ObjDir)/fetch.o: ../../../../fetch.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../fetch.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/fetch.d
-
-$(ObjDir)/fetching_decoding_ip.o: ../../../../fetching_decoding_ip.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../fetching_decoding_ip.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/fetching_decoding_ip.d
-
-$(ObjDir)/immediate.o: ../../../../immediate.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../immediate.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
-
--include $(ObjDir)/immediate.d
+-include $(ObjDir)/type.d
 
 $(ObjDir)/print.o: ../../../../print.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../../print.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
@@ -111,8 +87,32 @@ $(ObjDir)/print.o: ../../../../print.cpp $(ObjDir)/.dir
 
 -include $(ObjDir)/print.d
 
-$(ObjDir)/type.o: ../../../../type.cpp $(ObjDir)/.dir
-	$(Echo) "   Compiling ../../../../type.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+$(ObjDir)/immediate.o: ../../../../immediate.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../immediate.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
 	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
--include $(ObjDir)/type.d
+-include $(ObjDir)/immediate.d
+
+$(ObjDir)/fetching_decoding_ip.o: ../../../../fetching_decoding_ip.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../fetching_decoding_ip.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/fetching_decoding_ip.d
+
+$(ObjDir)/fetch.o: ../../../../fetch.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../fetch.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/fetch.d
+
+$(ObjDir)/execute.o: ../../../../execute.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../execute.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/execute.d
+
+$(ObjDir)/decode.o: ../../../../decode.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../../decode.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/decode.d

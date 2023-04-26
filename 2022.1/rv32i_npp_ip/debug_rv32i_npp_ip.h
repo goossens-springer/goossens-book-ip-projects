@@ -2,14 +2,14 @@
 #define __DEBUG_RV32I_NPP_IP
 //comment the next line to turn off
 //fetch debugging prints
-//#define DEBUG_FETCH
+#define DEBUG_FETCH
 //comment the next line to turn off
 //disassembling debugging prints
-//#define DEBUG_DISASSEMBLE
+#define DEBUG_DISASSEMBLE
 //comment the next line to turn off
 //register file dump debugging prints
 #define DEBUG_REG_FILE
 //comment the next line to turn off
 //emulation debugging prints
-//#define DEBUG_EMULATE
+#define DEBUG_EMULATE
 #endif
