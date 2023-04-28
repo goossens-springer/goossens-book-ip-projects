@@ -14,3 +14,15 @@ For riscv-pk, the hash value is:
 And for riscv-isa-sim (spike):
 
 ac466a21df442c59962589ba296c702631e041b5
+
+For example, to install the same riscv-tool-chain as the one used in the book:
+
+git clone https://github.com/riscv/riscv-gnu-toolchain
+
+cd riscv-gnu-toolchain
+
+git reset --hard 409b951ba6621f2f115aebddfb15ce2dd78ec24f
+
+./configure --prefix=/opt/riscv --enable-multilib --with-arch=rv32i
+
+sudo make
