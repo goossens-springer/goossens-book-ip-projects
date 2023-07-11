@@ -3,7 +3,9 @@ The resources to run the experimentations presented in the springer book on Risc
 
 Erratum for Basys3 implementation (i.e. Artix-7 based boards needing the use of a microblaze): the microblaze should have at least 32KB of ram (run block automation/Local Memory: set at 32KB, Debug Module: set at Debug and UART).
 
-Moreover, the size of the code and data ram should not exceed 8KB (instead as 64KB as stated in the book). E.g. in the "fetching_ip", line 4 of the "fetching_ip.h" file should be updated as "#define LOG_CODE_RAM_SIZE 11" (instead of 16 for a Pynq-Z1 or Pynq-Z2 board). The microblaze IP uses some of the available BRAM blocks.
+Moreover, the size of the code and data ram should not exceed 8KB (instead as 64KB as stated in the book). E.g. in the "fetching_ip", line 4 of the "fetching_ip.h" file should be updated as "#define LOG_CODE_RAM_SIZE 11" (instead of 16 for a Pynq-Z1 or Pynq-Z2 board). The microblaze IP uses some of the available BRAM blocks. In the multi_core_multi_ram_ip (chapter 11), set LOG_RAM_SIZE as 11 in the multi_core_multi_ram_ip.h file. Set the axi_bram_ctrl_0 Master Base Address as c000_0000, Range 4K, axi_bram_ctrl_1 Master Base Address as c000_1000, Range 4K, microblaze_0_local_memory Range 32K. In the driver (file helloworld.c), set BASE_RAM as c000_0000 and define ram0 and ram1 as :
+int *ram0 = (int *)(BASE_RAM + 0);
+int *ram1 = (int *)(BASE_RAM + 0x1000);
 
 For the riscv toolchain and tools, here are the hash value I used to do my builts (riscv32-unknown-elf-gcc version 12.2.0, spike and pk)
 
