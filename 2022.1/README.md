@@ -34,7 +34,7 @@ git reset --hard 409b951ba6621f2f115aebddfb15ce2dd78ec24f
 
 sudo make
 
-In the book, there are a few misprinted figures :
+In the book, there are a few misprinted figures or mistakes:
 
 Fig 1.3 (chapter 1): the second line of the table should be "1  0" (instead of "space 0")
 
@@ -42,3 +42,4 @@ Fig 1.4 (chapter 1): the second line of the "propagate" LUT should be "1  0" (in
 
 Page 29, the print should be "10000 + 20000 is 30000" and not "10,000 + 20,000 is 30,000"
 
+Page 131, "ap_<size>" should be replaced by "ap_uint<size>" (two incorrect occurrences)
