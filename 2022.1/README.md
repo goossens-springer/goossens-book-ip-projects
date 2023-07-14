@@ -1,7 +1,7 @@
 # goossens-springer-book
 The resources to run the experimentations presented in the springer book on Risc-V processors in HLS.
 
-The experiments have been successfully tested on the Basys3, Vitis 2022.2, Windows 10, but there are a few elements to be corrected from what is given in the book for the Pynq boards.
+The experiments have been successfully tested on the Basys3, Vitis 2022.2, Windows 10, thanks to M. Wanlong Liu from the university of Jiangnan, but there are a few elements to be corrected from what is given in the book for the Pynq boards.
 
 For Basys3 implementation (i.e. Artix-7 based boards needing the use of a microblaze): the microblaze should have at least 32KB of ram (run block automation/Local Memory: set at 32KB, Debug Module: set at Debug and UART).
 
