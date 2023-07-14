@@ -47,4 +47,4 @@ Page 29, the print should be "10000 + 20000 is 30000" and not "10,000 + 20,000 i
 
 Page 131, "ap_\<size\>" should be replaced by "ap_uint\<size\>" (two incorrect occurrences)
 
-Page 277, "multicycle_pipeline_ip.cpp" should be replaced by "multicycle_pipeline.h"
+Page 277, "multicycle_pipeline_ip.cpp" should be replaced by "multicycle_pipeline_ip.h"
