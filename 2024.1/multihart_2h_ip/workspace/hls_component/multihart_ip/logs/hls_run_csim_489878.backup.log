@@ -1,0 +1,542 @@
+INFO: [vitis-run 60-1548] Creating build summary session with primary output /home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/workspace_seq/hls_component/multihart_ip/multihart_ip.hlsrun_csim_summary, at Sun Sep  8 18:04:21 2024
+INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run csim -work_dir /home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/workspace_seq/hls_component/multihart_ip -config /home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/workspace_seq/hls_component/hls_config.cfg -cmdlineconfig /home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/workspace_seq/hls_component/multihart_ip/hls/config.cmdline
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1 (64-bit)
+  **** SW Build 5069499 on May 21 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Sun Sep  8 18:04:22 2024
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vitis_HLS/2024.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'goossens' on host 'goossens-Precision-5530' (Linux_x86_64 version 6.8.0-40-generic) on Sun Sep 08 18:04:24 CEST 2024
+INFO: [HLS 200-10] On os Ubuntu 22.04.4 LTS
+INFO: [HLS 200-10] In directory '/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/workspace_seq/hls_component'
+INFO: [HLS 200-2005] Using work_dir /home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/workspace_seq/hls_component/multihart_ip 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/compute.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/workspace_seq/hls_component/hls_config.cfg(6)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/compute.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/decode.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/workspace_seq/hls_component/hls_config.cfg(7)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/decode.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/disassemble.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/workspace_seq/hls_component/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/disassemble.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/emulate.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/workspace_seq/hls_component/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/emulate.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/execute.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/workspace_seq/hls_component/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/execute.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/fetch.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/workspace_seq/hls_component/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/fetch.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/immediate.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/workspace_seq/hls_component/hls_config.cfg(12)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/immediate.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/issue.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/workspace_seq/hls_component/hls_config.cfg(13)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/issue.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/mem.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/workspace_seq/hls_component/hls_config.cfg(14)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/mem.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/mem_access.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/workspace_seq/hls_component/hls_config.cfg(15)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/mem_access.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/multihart_ip.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/workspace_seq/hls_component/hls_config.cfg(16)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/multihart_ip.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/new_cycle.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/workspace_seq/hls_component/hls_config.cfg(17)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/new_cycle.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/print.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/workspace_seq/hls_component/hls_config.cfg(18)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/print.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/type.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/workspace_seq/hls_component/hls_config.cfg(19)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/type.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/wb.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/workspace_seq/hls_component/hls_config.cfg(20)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/wb.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/testbench_par_multihart_ip.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/workspace_seq/hls_component/hls_config.cfg(25)
+INFO: [HLS 200-10] Adding test bench file '/home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/testbench_par_multihart_ip.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=multihart_ip' from /home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/workspace_seq/hls_component/hls_config.cfg(21)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from /home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/workspace_seq/hls_component/hls_config.cfg(5)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' from /home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/workspace_seq/hls_component/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' from /home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/workspace_seq/hls_component/hls_config.cfg(4)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from /home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/workspace_seq/hls_component/hls_config.cfg(22)
+INFO: [HLS 200-1465] Applying ini 'vivado.rtl=verilog' from /home/goossens/goossens-book-ip-projects/2024.1/multihart_2h_ip/workspace_seq/hls_component/hls_config.cfg(23)
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+make: 'csim.exe' is up to date.
+hart 0: 0000: 00000513      li a0, 0
+hart 0:       a0  =                0 (       0)
+hart 1: 0116: 00359293      slli t0, a1, 3
+hart 1:       t0  =                8 (       8)
+hart 0: 0004: 00000593      li a1, 0
+hart 0:       a1  =                0 (       0)
+hart 1: 0120: 00159313      slli t1, a1, 1
+hart 1:       t1  =                2 (       2)
+hart 0: 0008: 00000613      li a2, 0
+hart 0:       a2  =                0 (       0)
+hart 1: 0124: 00000513      li a0, 0
+hart 1:       a0  =                0 (       0)
+hart 1: 0128: 006285b3      add a1, t0, t1
+hart 1:       a1  =               10 (       a)
+hart 0: 0012: 02860693      addi a3, a2, 40
+hart 0:       a3  =               40 (      28)
+hart 1: 0132: 00000613      li a2, 0
+hart 1:       a2  =                0 (       0)
+hart 0: 0016: 00158593      addi a1, a1, 1
+hart 0:       a1  =                1 (       1)
+hart 1: 0136: 02860693      addi a3, a2, 40
+hart 1:       a3  =               40 (      28)
+hart 0: 0020: 00b62023      sw a1, 0(a2)
+hart 0:       m[    0] =                1 (       1)
+hart 1: 0140: 00158593      addi a1, a1, 1
+hart 1:       a1  =               11 (       b)
+hart 0: 0024: 00460613      addi a2, a2, 4
+hart 0:       a2  =                4 (       4)
+hart 1: 0144: 00b62023      sw a1, 0(a2)
+hart 1:       m[10000] =               11 (       b)
+hart 0: 0028: fed61ae3      bne a2, a3, 16
+hart 0:       pc  =               16 (      10)
+hart 1: 0148: 00460613      addi a2, a2, 4
+hart 1:       a2  =                4 (       4)
+hart 0: 0016: 00158593      addi a1, a1, 1
+hart 0:       a1  =                2 (       2)
+hart 1: 0152: fed61ae3      bne a2, a3, 140
+hart 1:       pc  =              140 (      8c)
+hart 0: 0020: 00b62023      sw a1, 0(a2)
+hart 0:       m[    4] =                2 (       2)
+hart 1: 0140: 00158593      addi a1, a1, 1
+hart 1:       a1  =               12 (       c)
+hart 0: 0024: 00460613      addi a2, a2, 4
+hart 0:       a2  =                8 (       8)
+hart 1: 0144: 00b62023      sw a1, 0(a2)
+hart 1:       m[10004] =               12 (       c)
+hart 0: 0028: fed61ae3      bne a2, a3, 16
+hart 0:       pc  =               16 (      10)
+hart 1: 0148: 00460613      addi a2, a2, 4
+hart 1:       a2  =                8 (       8)
+hart 0: 0016: 00158593      addi a1, a1, 1
+hart 0:       a1  =                3 (       3)
+hart 1: 0152: fed61ae3      bne a2, a3, 140
+hart 1:       pc  =              140 (      8c)
+hart 0: 0020: 00b62023      sw a1, 0(a2)
+hart 0:       m[    8] =                3 (       3)
+hart 1: 0140: 00158593      addi a1, a1, 1
+hart 1:       a1  =               13 (       d)
+hart 0: 0024: 00460613      addi a2, a2, 4
+hart 0:       a2  =               12 (       c)
+hart 1: 0144: 00b62023      sw a1, 0(a2)
+hart 1:       m[10008] =               13 (       d)
+hart 0: 0028: fed61ae3      bne a2, a3, 16
+hart 0:       pc  =               16 (      10)
+hart 1: 0148: 00460613      addi a2, a2, 4
+hart 1:       a2  =               12 (       c)
+hart 0: 0016: 00158593      addi a1, a1, 1
+hart 0:       a1  =                4 (       4)
+hart 1: 0152: fed61ae3      bne a2, a3, 140
+hart 1:       pc  =              140 (      8c)
+hart 0: 0020: 00b62023      sw a1, 0(a2)
+hart 0:       m[    c] =                4 (       4)
+hart 1: 0140: 00158593      addi a1, a1, 1
+hart 1:       a1  =               14 (       e)
+hart 0: 0024: 00460613      addi a2, a2, 4
+hart 0:       a2  =               16 (      10)
+hart 1: 0144: 00b62023      sw a1, 0(a2)
+hart 1:       m[1000c] =               14 (       e)
+hart 0: 0028: fed61ae3      bne a2, a3, 16
+hart 0:       pc  =               16 (      10)
+hart 1: 0148: 00460613      addi a2, a2, 4
+hart 1:       a2  =               16 (      10)
+hart 0: 0016: 00158593      addi a1, a1, 1
+hart 0:       a1  =                5 (       5)
+hart 1: 0152: fed61ae3      bne a2, a3, 140
+hart 1:       pc  =              140 (      8c)
+hart 0: 0020: 00b62023      sw a1, 0(a2)
+hart 0:       m[   10] =                5 (       5)
+hart 1: 0140: 00158593      addi a1, a1, 1
+hart 1:       a1  =               15 (       f)
+hart 0: 0024: 00460613      addi a2, a2, 4
+hart 0:       a2  =               20 (      14)
+hart 1: 0144: 00b62023      sw a1, 0(a2)
+hart 1:       m[10010] =               15 (       f)
+hart 0: 0028: fed61ae3      bne a2, a3, 16
+hart 0:       pc  =               16 (      10)
+hart 1: 0148: 00460613      addi a2, a2, 4
+hart 1:       a2  =               20 (      14)
+hart 0: 0016: 00158593      addi a1, a1, 1
+hart 0:       a1  =                6 (       6)
+hart 1: 0152: fed61ae3      bne a2, a3, 140
+hart 1:       pc  =              140 (      8c)
+hart 0: 0020: 00b62023      sw a1, 0(a2)
+hart 0:       m[   14] =                6 (       6)
+hart 1: 0140: 00158593      addi a1, a1, 1
+hart 1:       a1  =               16 (      10)
+hart 0: 0024: 00460613      addi a2, a2, 4
+hart 0:       a2  =               24 (      18)
+hart 1: 0144: 00b62023      sw a1, 0(a2)
+hart 1:       m[10014] =               16 (      10)
+hart 0: 0028: fed61ae3      bne a2, a3, 16
+hart 0:       pc  =               16 (      10)
+hart 1: 0148: 00460613      addi a2, a2, 4
+hart 1:       a2  =               24 (      18)
+hart 0: 0016: 00158593      addi a1, a1, 1
+hart 0:       a1  =                7 (       7)
+hart 1: 0152: fed61ae3      bne a2, a3, 140
+hart 1:       pc  =              140 (      8c)
+hart 0: 0020: 00b62023      sw a1, 0(a2)
+hart 0:       m[   18] =                7 (       7)
+hart 1: 0140: 00158593      addi a1, a1, 1
+hart 1:       a1  =               17 (      11)
+hart 0: 0024: 00460613      addi a2, a2, 4
+hart 0:       a2  =               28 (      1c)
+hart 1: 0144: 00b62023      sw a1, 0(a2)
+hart 1:       m[10018] =               17 (      11)
+hart 0: 0028: fed61ae3      bne a2, a3, 16
+hart 0:       pc  =               16 (      10)
+hart 1: 0148: 00460613      addi a2, a2, 4
+hart 1:       a2  =               28 (      1c)
+hart 0: 0016: 00158593      addi a1, a1, 1
+hart 0:       a1  =                8 (       8)
+hart 1: 0152: fed61ae3      bne a2, a3, 140
+hart 1:       pc  =              140 (      8c)
+hart 0: 0020: 00b62023      sw a1, 0(a2)
+hart 0:       m[   1c] =                8 (       8)
+hart 1: 0140: 00158593      addi a1, a1, 1
+hart 1:       a1  =               18 (      12)
+hart 0: 0024: 00460613      addi a2, a2, 4
+hart 0:       a2  =               32 (      20)
+hart 1: 0144: 00b62023      sw a1, 0(a2)
+hart 1:       m[1001c] =               18 (      12)
+hart 0: 0028: fed61ae3      bne a2, a3, 16
+hart 0:       pc  =               16 (      10)
+hart 1: 0148: 00460613      addi a2, a2, 4
+hart 1:       a2  =               32 (      20)
+hart 0: 0016: 00158593      addi a1, a1, 1
+hart 0:       a1  =                9 (       9)
+hart 1: 0152: fed61ae3      bne a2, a3, 140
+hart 1:       pc  =              140 (      8c)
+hart 0: 0020: 00b62023      sw a1, 0(a2)
+hart 0:       m[   20] =                9 (       9)
+hart 1: 0140: 00158593      addi a1, a1, 1
+hart 1:       a1  =               19 (      13)
+hart 0: 0024: 00460613      addi a2, a2, 4
+hart 0:       a2  =               36 (      24)
+hart 1: 0144: 00b62023      sw a1, 0(a2)
+hart 1:       m[10020] =               19 (      13)
+hart 0: 0028: fed61ae3      bne a2, a3, 16
+hart 0:       pc  =               16 (      10)
+hart 1: 0148: 00460613      addi a2, a2, 4
+hart 1:       a2  =               36 (      24)
+hart 0: 0016: 00158593      addi a1, a1, 1
+hart 0:       a1  =               10 (       a)
+hart 1: 0152: fed61ae3      bne a2, a3, 140
+hart 1:       pc  =              140 (      8c)
+hart 0: 0020: 00b62023      sw a1, 0(a2)
+hart 0:       m[   24] =               10 (       a)
+hart 1: 0140: 00158593      addi a1, a1, 1
+hart 1:       a1  =               20 (      14)
+hart 0: 0024: 00460613      addi a2, a2, 4
+hart 0:       a2  =               40 (      28)
+hart 1: 0144: 00b62023      sw a1, 0(a2)
+hart 1:       m[10024] =               20 (      14)
+hart 0: 0028: fed61ae3      bne a2, a3, 16
+hart 0:       pc  =               32 (      20)
+hart 1: 0148: 00460613      addi a2, a2, 4
+hart 1:       a2  =               40 (      28)
+hart 0: 0032: 00000593      li a1, 0
+hart 0:       a1  =                0 (       0)
+hart 1: 0152: fed61ae3      bne a2, a3, 140
+hart 1:       pc  =              156 (      9c)
+hart 0: 0036: 00000613      li a2, 0
+hart 0:       a2  =                0 (       0)
+hart 1: 0156: 00000593      li a1, 0
+hart 1:       a1  =                0 (       0)
+hart 0: 0040: 00062703      lw a4, 0(a2)
+hart 0:       a4  =                1 (       1)    (m[    0])
+hart 1: 0160: 00000613      li a2, 0
+hart 1:       a2  =                0 (       0)
+hart 0: 0044: 00460613      addi a2, a2, 4
+hart 0:       a2  =                4 (       4)
+hart 0: 0048: 00e50533      add a0, a0, a4
+hart 0:       a0  =                1 (       1)
+hart 1: 0164: 00062703      lw a4, 0(a2)
+hart 1:       a4  =               11 (       b)    (m[10000])
+hart 0: 0052: fed61ae3      bne a2, a3, 40
+hart 0:       pc  =               40 (      28)
+hart 1: 0168: 00460613      addi a2, a2, 4
+hart 1:       a2  =                4 (       4)
+hart 1: 0172: 00e50533      add a0, a0, a4
+hart 1:       a0  =               11 (       b)
+hart 0: 0040: 00062703      lw a4, 0(a2)
+hart 0:       a4  =                2 (       2)    (m[    4])
+hart 1: 0176: fed61ae3      bne a2, a3, 164
+hart 1:       pc  =              164 (      a4)
+hart 0: 0044: 00460613      addi a2, a2, 4
+hart 0:       a2  =                8 (       8)
+hart 0: 0048: 00e50533      add a0, a0, a4
+hart 0:       a0  =                3 (       3)
+hart 1: 0164: 00062703      lw a4, 0(a2)
+hart 1:       a4  =               12 (       c)    (m[10004])
+hart 0: 0052: fed61ae3      bne a2, a3, 40
+hart 0:       pc  =               40 (      28)
+hart 1: 0168: 00460613      addi a2, a2, 4
+hart 1:       a2  =                8 (       8)
+hart 1: 0172: 00e50533      add a0, a0, a4
+hart 1:       a0  =               23 (      17)
+hart 0: 0040: 00062703      lw a4, 0(a2)
+hart 0:       a4  =                3 (       3)    (m[    8])
+hart 1: 0176: fed61ae3      bne a2, a3, 164
+hart 1:       pc  =              164 (      a4)
+hart 0: 0044: 00460613      addi a2, a2, 4
+hart 0:       a2  =               12 (       c)
+hart 0: 0048: 00e50533      add a0, a0, a4
+hart 0:       a0  =                6 (       6)
+hart 1: 0164: 00062703      lw a4, 0(a2)
+hart 1:       a4  =               13 (       d)    (m[10008])
+hart 0: 0052: fed61ae3      bne a2, a3, 40
+hart 0:       pc  =               40 (      28)
+hart 1: 0168: 00460613      addi a2, a2, 4
+hart 1:       a2  =               12 (       c)
+hart 1: 0172: 00e50533      add a0, a0, a4
+hart 1:       a0  =               36 (      24)
+hart 0: 0040: 00062703      lw a4, 0(a2)
+hart 0:       a4  =                4 (       4)    (m[    c])
+hart 1: 0176: fed61ae3      bne a2, a3, 164
+hart 1:       pc  =              164 (      a4)
+hart 0: 0044: 00460613      addi a2, a2, 4
+hart 0:       a2  =               16 (      10)
+hart 0: 0048: 00e50533      add a0, a0, a4
+hart 0:       a0  =               10 (       a)
+hart 1: 0164: 00062703      lw a4, 0(a2)
+hart 1:       a4  =               14 (       e)    (m[1000c])
+hart 0: 0052: fed61ae3      bne a2, a3, 40
+hart 0:       pc  =               40 (      28)
+hart 1: 0168: 00460613      addi a2, a2, 4
+hart 1:       a2  =               16 (      10)
+hart 1: 0172: 00e50533      add a0, a0, a4
+hart 1:       a0  =               50 (      32)
+hart 0: 0040: 00062703      lw a4, 0(a2)
+hart 0:       a4  =                5 (       5)    (m[   10])
+hart 1: 0176: fed61ae3      bne a2, a3, 164
+hart 1:       pc  =              164 (      a4)
+hart 0: 0044: 00460613      addi a2, a2, 4
+hart 0:       a2  =               20 (      14)
+hart 0: 0048: 00e50533      add a0, a0, a4
+hart 0:       a0  =               15 (       f)
+hart 1: 0164: 00062703      lw a4, 0(a2)
+hart 1:       a4  =               15 (       f)    (m[10010])
+hart 0: 0052: fed61ae3      bne a2, a3, 40
+hart 0:       pc  =               40 (      28)
+hart 1: 0168: 00460613      addi a2, a2, 4
+hart 1:       a2  =               20 (      14)
+hart 1: 0172: 00e50533      add a0, a0, a4
+hart 1:       a0  =               65 (      41)
+hart 0: 0040: 00062703      lw a4, 0(a2)
+hart 0:       a4  =                6 (       6)    (m[   14])
+hart 1: 0176: fed61ae3      bne a2, a3, 164
+hart 1:       pc  =              164 (      a4)
+hart 0: 0044: 00460613      addi a2, a2, 4
+hart 0:       a2  =               24 (      18)
+hart 0: 0048: 00e50533      add a0, a0, a4
+hart 0:       a0  =               21 (      15)
+hart 1: 0164: 00062703      lw a4, 0(a2)
+hart 1:       a4  =               16 (      10)    (m[10014])
+hart 0: 0052: fed61ae3      bne a2, a3, 40
+hart 0:       pc  =               40 (      28)
+hart 1: 0168: 00460613      addi a2, a2, 4
+hart 1:       a2  =               24 (      18)
+hart 1: 0172: 00e50533      add a0, a0, a4
+hart 1:       a0  =               81 (      51)
+hart 0: 0040: 00062703      lw a4, 0(a2)
+hart 0:       a4  =                7 (       7)    (m[   18])
+hart 1: 0176: fed61ae3      bne a2, a3, 164
+hart 1:       pc  =              164 (      a4)
+hart 0: 0044: 00460613      addi a2, a2, 4
+hart 0:       a2  =               28 (      1c)
+hart 0: 0048: 00e50533      add a0, a0, a4
+hart 0:       a0  =               28 (      1c)
+hart 1: 0164: 00062703      lw a4, 0(a2)
+hart 1:       a4  =               17 (      11)    (m[10018])
+hart 0: 0052: fed61ae3      bne a2, a3, 40
+hart 0:       pc  =               40 (      28)
+hart 1: 0168: 00460613      addi a2, a2, 4
+hart 1:       a2  =               28 (      1c)
+hart 1: 0172: 00e50533      add a0, a0, a4
+hart 1:       a0  =               98 (      62)
+hart 0: 0040: 00062703      lw a4, 0(a2)
+hart 0:       a4  =                8 (       8)    (m[   1c])
+hart 1: 0176: fed61ae3      bne a2, a3, 164
+hart 1:       pc  =              164 (      a4)
+hart 0: 0044: 00460613      addi a2, a2, 4
+hart 0:       a2  =               32 (      20)
+hart 0: 0048: 00e50533      add a0, a0, a4
+hart 0:       a0  =               36 (      24)
+hart 1: 0164: 00062703      lw a4, 0(a2)
+hart 1:       a4  =               18 (      12)    (m[1001c])
+hart 0: 0052: fed61ae3      bne a2, a3, 40
+hart 0:       pc  =               40 (      28)
+hart 1: 0168: 00460613      addi a2, a2, 4
+hart 1:       a2  =               32 (      20)
+hart 1: 0172: 00e50533      add a0, a0, a4
+hart 1:       a0  =              116 (      74)
+hart 0: 0040: 00062703      lw a4, 0(a2)
+hart 0:       a4  =                9 (       9)    (m[   20])
+hart 1: 0176: fed61ae3      bne a2, a3, 164
+hart 1:       pc  =              164 (      a4)
+hart 0: 0044: 00460613      addi a2, a2, 4
+hart 0:       a2  =               36 (      24)
+hart 0: 0048: 00e50533      add a0, a0, a4
+hart 0:       a0  =               45 (      2d)
+hart 1: 0164: 00062703      lw a4, 0(a2)
+hart 1:       a4  =               19 (      13)    (m[10020])
+hart 0: 0052: fed61ae3      bne a2, a3, 40
+hart 0:       pc  =               40 (      28)
+hart 1: 0168: 00460613      addi a2, a2, 4
+hart 1:       a2  =               36 (      24)
+hart 1: 0172: 00e50533      add a0, a0, a4
+hart 1:       a0  =              135 (      87)
+hart 0: 0040: 00062703      lw a4, 0(a2)
+hart 0:       a4  =               10 (       a)    (m[   24])
+hart 1: 0176: fed61ae3      bne a2, a3, 164
+hart 1:       pc  =              164 (      a4)
+hart 0: 0044: 00460613      addi a2, a2, 4
+hart 0:       a2  =               40 (      28)
+hart 0: 0048: 00e50533      add a0, a0, a4
+hart 0:       a0  =               55 (      37)
+hart 1: 0164: 00062703      lw a4, 0(a2)
+hart 1:       a4  =               20 (      14)    (m[10024])
+hart 0: 0052: fed61ae3      bne a2, a3, 40
+hart 0:       pc  =               56 (      38)
+hart 1: 0168: 00460613      addi a2, a2, 4
+hart 1:       a2  =               40 (      28)
+hart 1: 0172: 00e50533      add a0, a0, a4
+hart 1:       a0  =              155 (      9b)
+hart 0: 0056: 02800613      li a2, 40
+hart 0:       a2  =               40 (      28)
+hart 1: 0176: fed61ae3      bne a2, a3, 164
+hart 1:       pc  =              180 (      b4)
+hart 0: 0060: 00a62023      sw a0, 0(a2)
+hart 0:       m[   28] =               55 (      37)
+hart 1: 0180: 02800613      li a2, 40
+hart 1:       a2  =               40 (      28)
+hart 0: 0064: 00100593      li a1, 1
+hart 0:       a1  =                1 (       1)
+hart 0: 0068: 00200613      li a2, 2
+hart 0:       a2  =                2 (       2)
+hart 1: 0184: 00a62023      sw a0, 0(a2)
+hart 1:       m[10028] =              155 (      9b)
+hart 0: 0072: 00010737      lui a4, 65536
+hart 0:       a4  =            65536 (   10000)
+hart 1: 0188: 00008067      ret
+hart 1:       pc  =                0 (       0)
+hart 0: 0076: 00070793      addi a5, a4, 0
+hart 0:       a5  =            65536 (   10000)
+hart 0: 0080: 02872683      lw a3, 40(a4)
+hart 0:       a3  =              155 (      9b)    (m[10028])
+hart 0: 0084: fe068ee3      beq a3, zero, 80
+hart 0:       pc  =               88 (      58)
+hart 0: 0088: 00d50533      add a0, a0, a3
+hart 0:       a0  =              210 (      d2)
+hart 0: 0092: 00f70733      add a4, a4, a5
+hart 0:       a4  =           131072 (   20000)
+hart 0: 0096: 00158593      addi a1, a1, 1
+hart 0:       a1  =                2 (       2)
+hart 0: 0100: fec596e3      bne a1, a2, 80
+hart 0:       pc  =              104 (      68)
+hart 0: 0104: 02c00613      li a2, 44
+hart 0:       a2  =               44 (      2c)
+hart 0: 0108: 00a62023      sw a0, 0(a2)
+hart 0:       m[   2c] =              210 (      d2)
+hart 0: 0112: 00008067      ret
+hart 0:       pc  =                0 (       0)
+register file for hart 0
+ra  =                0 (       0)
+sp  =            65536 (   10000)
+gp  =                0 (       0)
+tp  =                0 (       0)
+t0  =                0 (       0)
+t1  =                0 (       0)
+t2  =                0 (       0)
+s0  =                0 (       0)
+s1  =                0 (       0)
+a0  =              210 (      d2)
+a1  =                2 (       2)
+a2  =               44 (      2c)
+a3  =              155 (      9b)
+a4  =           131072 (   20000)
+a5  =            65536 (   10000)
+a6  =                0 (       0)
+a7  =                0 (       0)
+s2  =                0 (       0)
+s3  =                0 (       0)
+s4  =                0 (       0)
+s5  =                0 (       0)
+s6  =                0 (       0)
+s7  =                0 (       0)
+s8  =                0 (       0)
+s9  =                0 (       0)
+s10 =                0 (       0)
+s11 =                0 (       0)
+t3  =                0 (       0)
+t4  =                0 (       0)
+t5  =                0 (       0)
+t6  =                0 (       0)
+register file for hart 1
+ra  =                0 (       0)
+sp  =            65536 (   10000)
+gp  =                0 (       0)
+tp  =                0 (       0)
+t0  =                8 (       8)
+t1  =                2 (       2)
+t2  =                0 (       0)
+s0  =                0 (       0)
+s1  =                0 (       0)
+a0  =              155 (      9b)
+a1  =                0 (       0)
+a2  =               40 (      28)
+a3  =               40 (      28)
+a4  =               20 (      14)
+a5  =                0 (       0)
+a6  =                0 (       0)
+a7  =                0 (       0)
+s2  =                0 (       0)
+s3  =                0 (       0)
+s4  =                0 (       0)
+s5  =                0 (       0)
+s6  =                0 (       0)
+s7  =                0 (       0)
+s8  =                0 (       0)
+s9  =                0 (       0)
+s10 =                0 (       0)
+s11 =                0 (       0)
+t3  =                0 (       0)
+t4  =                0 (       0)
+t5  =                0 (       0)
+t6  =                0 (       0)
+192 fetched and decoded instructions in 305 cycles (ipc = 0.63)
+hart 0: data memory dump (non null words)
+m[    0] =                1 (       1)
+m[    4] =                2 (       2)
+m[    8] =                3 (       3)
+m[    c] =                4 (       4)
+m[   10] =                5 (       5)
+m[   14] =                6 (       6)
+m[   18] =                7 (       7)
+m[   1c] =                8 (       8)
+m[   20] =                9 (       9)
+m[   24] =               10 (       a)
+m[   28] =               55 (      37)
+m[   2c] =              210 (      d2)
+hart 1: data memory dump (non null words)
+m[10000] =               11 (       b)
+m[10004] =               12 (       c)
+m[10008] =               13 (       d)
+m[1000c] =               14 (       e)
+m[10010] =               15 (       f)
+m[10014] =               16 (      10)
+m[10018] =               17 (      11)
+m[1001c] =               18 (      12)
+m[10020] =               19 (      13)
+m[10024] =               20 (      14)
+m[10028] =              155 (      9b)
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-112] Total CPU user time: 3.91 seconds. Total CPU system time: 0.54 seconds. Total elapsed time: 4.25 seconds; peak allocated memory: 340.113 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 8s

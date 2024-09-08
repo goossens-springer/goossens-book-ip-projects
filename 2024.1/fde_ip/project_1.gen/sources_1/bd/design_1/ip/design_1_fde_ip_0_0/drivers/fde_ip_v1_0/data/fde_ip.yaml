@@ -1,0 +1,24 @@
+# ==============================================================
+# Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1 (64-bit)
+# Tool Version Limit: 2024.05
+# Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+# Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+# 
+# ==============================================================
+%YAML 1.2
+---
+title: fde_ip driver
+type: driver
+properties:
+    compatible:
+        items:
+            - const: xlnx,fde-ip-1.0
+config:
+    - XFde_ip_Config
+required:
+    - compatible
+    - reg
+additionalProperties:
+   - interrupts
+   - interrupt-parent
+

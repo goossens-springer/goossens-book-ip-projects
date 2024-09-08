@@ -1,0 +1,213 @@
+
+
+================================================================
+== Vitis HLS Report for 'multihart_ip'
+================================================================
+* Date:           Sun Sep  8 19:25:47 2024
+
+* Version:        2024.1 (Build 5069499 on May 21 2024)
+* Project:        multihart_ip
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  |  10.00 ns|  18.680 ns|     2.70 ns|
+    +--------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 7
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.32>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%c_nbc_loc = alloca i64 1"   --->   Operation 8 'alloca' 'c_nbc_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%c_nbi_loc = alloca i64 1"   --->   Operation 9 'alloca' 'c_nbi_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%start_pc_addr = getelementptr i32 %start_pc, i64 0, i64 0" [../../fetch.cpp:21->../../multihart_ip.cpp:176]   --->   Operation 10 'getelementptr' 'start_pc_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [2/2] (2.32ns)   --->   "%start_pc_load = load i2 %start_pc_addr" [../../fetch.cpp:21->../../multihart_ip.cpp:176]   --->   Operation 11 'load' 'start_pc_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 85 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4> <RAM>
+
+State 2 <SV = 1> <Delay = 2.32>
+ST_2 : Operation 12 [1/2] (2.32ns)   --->   "%start_pc_load = load i2 %start_pc_addr" [../../fetch.cpp:21->../../multihart_ip.cpp:176]   --->   Operation 12 'load' 'start_pc_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 85 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4> <RAM>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%f_state_fetch_pc = trunc i32 %start_pc_load" [../../fetch.cpp:21->../../multihart_ip.cpp:176]   --->   Operation 13 'trunc' 'f_state_fetch_pc' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%start_pc_addr_1 = getelementptr i32 %start_pc, i64 0, i64 1" [../../fetch.cpp:21->../../multihart_ip.cpp:176]   --->   Operation 14 'getelementptr' 'start_pc_addr_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [2/2] (2.32ns)   --->   "%start_pc_load_1 = load i2 %start_pc_addr_1" [../../fetch.cpp:21->../../multihart_ip.cpp:176]   --->   Operation 15 'load' 'start_pc_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 85 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4> <RAM>
+
+State 3 <SV = 2> <Delay = 2.32>
+ST_3 : Operation 16 [1/2] (2.32ns)   --->   "%start_pc_load_1 = load i2 %start_pc_addr_1" [../../fetch.cpp:21->../../multihart_ip.cpp:176]   --->   Operation 16 'load' 'start_pc_load_1' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 85 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4> <RAM>
+ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%f_state_fetch_pc_20 = trunc i32 %start_pc_load_1" [../../fetch.cpp:21->../../multihart_ip.cpp:176]   --->   Operation 17 'trunc' 'f_state_fetch_pc_20' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 18 [1/1] (0.00ns)   --->   "%start_pc_addr_2 = getelementptr i32 %start_pc, i64 0, i64 2" [../../fetch.cpp:21->../../multihart_ip.cpp:176]   --->   Operation 18 'getelementptr' 'start_pc_addr_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 19 [2/2] (2.32ns)   --->   "%start_pc_load_2 = load i2 %start_pc_addr_2" [../../fetch.cpp:21->../../multihart_ip.cpp:176]   --->   Operation 19 'load' 'start_pc_load_2' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 85 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4> <RAM>
+
+State 4 <SV = 3> <Delay = 2.32>
+ST_4 : Operation 20 [1/2] (2.32ns)   --->   "%start_pc_load_2 = load i2 %start_pc_addr_2" [../../fetch.cpp:21->../../multihart_ip.cpp:176]   --->   Operation 20 'load' 'start_pc_load_2' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 85 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4> <RAM>
+ST_4 : Operation 21 [1/1] (0.00ns)   --->   "%f_state_fetch_pc_21 = trunc i32 %start_pc_load_2" [../../fetch.cpp:21->../../multihart_ip.cpp:176]   --->   Operation 21 'trunc' 'f_state_fetch_pc_21' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 22 [1/1] (0.00ns)   --->   "%start_pc_addr_3 = getelementptr i32 %start_pc, i64 0, i64 3" [../../fetch.cpp:21->../../multihart_ip.cpp:176]   --->   Operation 22 'getelementptr' 'start_pc_addr_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 23 [2/2] (2.32ns)   --->   "%start_pc_load_3 = load i2 %start_pc_addr_3" [../../fetch.cpp:21->../../multihart_ip.cpp:176]   --->   Operation 23 'load' 'start_pc_load_3' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 85 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4> <RAM>
+
+State 5 <SV = 4> <Delay = 3.91>
+ST_5 : Operation 24 [1/1] (1.00ns)   --->   "%running_hart_set_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %running_hart_set"   --->   Operation 24 'read' 'running_hart_set_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 112 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_5 : Operation 25 [1/1] (0.00ns)   --->   "%h_running = trunc i32 %running_hart_set_read" [../../multihart_ip.cpp:55->../../multihart_ip.cpp:175]   --->   Operation 25 'trunc' 'h_running' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 26 [1/1] (0.97ns)   --->   "%has_exited = xor i1 %h_running, i1 1" [../../multihart_ip.cpp:56->../../multihart_ip.cpp:175]   --->   Operation 26 'xor' 'has_exited' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 27 [1/1] (0.00ns)   --->   "%h_running_4 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %running_hart_set_read, i32 1" [../../multihart_ip.cpp:55->../../multihart_ip.cpp:175]   --->   Operation 27 'bitselect' 'h_running_4' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 28 [1/1] (0.97ns)   --->   "%has_exited_12 = xor i1 %h_running_4, i1 1" [../../multihart_ip.cpp:56->../../multihart_ip.cpp:175]   --->   Operation 28 'xor' 'has_exited_12' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 29 [1/1] (0.00ns)   --->   "%h_running_5 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %running_hart_set_read, i32 2" [../../multihart_ip.cpp:55->../../multihart_ip.cpp:175]   --->   Operation 29 'bitselect' 'h_running_5' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 30 [1/1] (0.97ns)   --->   "%has_exited_13 = xor i1 %h_running_5, i1 1" [../../multihart_ip.cpp:56->../../multihart_ip.cpp:175]   --->   Operation 30 'xor' 'has_exited_13' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 31 [1/1] (0.00ns)   --->   "%h_running_6 = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %running_hart_set_read, i32 3" [../../multihart_ip.cpp:55->../../multihart_ip.cpp:175]   --->   Operation 31 'bitselect' 'h_running_6' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 32 [1/1] (0.97ns)   --->   "%has_exited_14 = xor i1 %h_running_6, i1 1" [../../multihart_ip.cpp:56->../../multihart_ip.cpp:175]   --->   Operation 32 'xor' 'has_exited_14' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 33 [1/2] (2.32ns)   --->   "%start_pc_load_3 = load i2 %start_pc_addr_3" [../../fetch.cpp:21->../../multihart_ip.cpp:176]   --->   Operation 33 'load' 'start_pc_load_3' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM_1P">   --->   Core 85 'RAM_1P' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4> <RAM>
+ST_5 : Operation 34 [1/1] (0.00ns)   --->   "%f_state_fetch_pc_22 = trunc i32 %start_pc_load_3" [../../fetch.cpp:21->../../multihart_ip.cpp:176]   --->   Operation 34 'trunc' 'f_state_fetch_pc_22' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 35 [2/2] (1.58ns)   --->   "%call_ln56 = call void @multihart_ip_Pipeline_VITIS_LOOP_193_1, i1 %has_exited_14, i1 %has_exited_13, i1 %has_exited_12, i1 %has_exited, i15 %f_state_fetch_pc_22, i15 %f_state_fetch_pc_21, i15 %f_state_fetch_pc_20, i15 %f_state_fetch_pc, i1 %h_running_6, i1 %h_running_5, i1 %h_running_4, i1 %h_running, i32 %code_ram, i32 %data_ram, i32 %c_nbi_loc, i32 %c_nbc_loc" [../../multihart_ip.cpp:56->../../multihart_ip.cpp:175]   --->   Operation 35 'call' 'call_ln56' <Predicate = true> <Delay = 1.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 2.55>
+ST_6 : Operation 36 [1/2] (2.55ns)   --->   "%call_ln56 = call void @multihart_ip_Pipeline_VITIS_LOOP_193_1, i1 %has_exited_14, i1 %has_exited_13, i1 %has_exited_12, i1 %has_exited, i15 %f_state_fetch_pc_22, i15 %f_state_fetch_pc_21, i15 %f_state_fetch_pc_20, i15 %f_state_fetch_pc, i1 %h_running_6, i1 %h_running_5, i1 %h_running_4, i1 %h_running, i32 %code_ram, i32 %data_ram, i32 %c_nbi_loc, i32 %c_nbc_loc" [../../multihart_ip.cpp:56->../../multihart_ip.cpp:175]   --->   Operation 36 'call' 'call_ln56' <Predicate = true> <Delay = 2.55> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 1.00>
+ST_7 : Operation 37 [1/1] (0.00ns)   --->   "%spectopmodule_ln102 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_10" [../../multihart_ip.cpp:102]   --->   Operation 37 'spectopmodule' 'spectopmodule_ln102' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 38 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %running_hart_set"   --->   Operation 38 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 39 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %running_hart_set, void @empty_0, i32 4294967295, i32 4294967295, void @empty_1, i32 0, i32 0, void @empty_2, void @empty_3, void @empty_12, i32 0, i32 0, i32 0, i32 0, void @empty_12, void @empty_12, i32 4294967295, i32 0, i32 0"   --->   Operation 39 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 40 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %running_hart_set, void @empty_4, i32 4294967295, i32 4294967295, void @empty_12, i32 0, i32 0, void @empty_12, void @empty_12, void @empty_12, i32 0, i32 0, i32 0, i32 0, void @empty_12, void @empty_12, i32 4294967295, i32 0, i32 0"   --->   Operation 40 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 41 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %start_pc, void @empty_0, i32 0, i32 0, void @empty_12, i32 0, i32 0, void @empty_2, void @empty_13, void @empty_12, i32 0, i32 0, i32 0, i32 0, void @empty_12, void @empty_12, i32 4294967295, i32 0, i32 0"   --->   Operation 41 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 42 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %start_pc, void @empty_5, i32 0, i32 0, void @empty_12, i32 1, i32 0, void @empty_12, void @empty_12, void @empty_12, i32 0, i32 0, i32 0, i32 0, void @empty_12, void @empty_12, i32 4294967295, i32 0, i32 0"   --->   Operation 42 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 43 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %start_pc, i64 666, i64 207, i64 1"   --->   Operation 43 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 44 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %start_pc"   --->   Operation 44 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 45 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %code_ram, void @empty_0, i32 0, i32 0, void @empty_12, i32 0, i32 0, void @empty_2, void @empty_6, void @empty_12, i32 0, i32 0, i32 0, i32 0, void @empty_12, void @empty_12, i32 4294967295, i32 0, i32 0"   --->   Operation 45 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 46 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %code_ram, void @empty_5, i32 0, i32 0, void @empty_12, i32 1, i32 0, void @empty_12, void @empty_12, void @empty_12, i32 0, i32 0, i32 0, i32 0, void @empty_12, void @empty_12, i32 4294967295, i32 0, i32 0"   --->   Operation 46 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 47 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %code_ram, i64 666, i64 207, i64 1"   --->   Operation 47 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 48 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %code_ram"   --->   Operation 48 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 49 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_ram, void @empty_0, i32 0, i32 0, void @empty_12, i32 0, i32 0, void @empty_2, void @empty_7, void @empty_12, i32 0, i32 0, i32 0, i32 0, void @empty_12, void @empty_12, i32 4294967295, i32 0, i32 0"   --->   Operation 49 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 50 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %data_ram, void @empty_5, i32 0, i32 0, void @empty_12, i32 1, i32 0, void @empty_12, void @empty_12, void @empty_12, i32 0, i32 0, i32 0, i32 0, void @empty_12, void @empty_12, i32 4294967295, i32 0, i32 0"   --->   Operation 50 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 51 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %data_ram, i64 666, i64 207, i64 1"   --->   Operation 51 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 52 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %data_ram"   --->   Operation 52 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 53 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %nb_instruction"   --->   Operation 53 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 54 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %nb_instruction, void @empty_0, i32 4294967295, i32 4294967295, void @empty_1, i32 0, i32 0, void @empty_2, void @empty_8, void @empty_12, i32 0, i32 0, i32 0, i32 0, void @empty_12, void @empty_12, i32 4294967295, i32 0, i32 0"   --->   Operation 54 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 55 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %nb_instruction, void @empty_4, i32 4294967295, i32 4294967295, void @empty_12, i32 0, i32 0, void @empty_12, void @empty_12, void @empty_12, i32 0, i32 0, i32 0, i32 0, void @empty_12, void @empty_12, i32 4294967295, i32 0, i32 0"   --->   Operation 55 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 56 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %nb_cycle"   --->   Operation 56 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 57 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %nb_cycle, void @empty_0, i32 4294967295, i32 4294967295, void @empty_1, i32 0, i32 0, void @empty_2, void @empty_9, void @empty_12, i32 0, i32 0, i32 0, i32 0, void @empty_12, void @empty_12, i32 4294967295, i32 0, i32 0"   --->   Operation 57 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 58 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %nb_cycle, void @empty_4, i32 4294967295, i32 4294967295, void @empty_12, i32 0, i32 0, void @empty_12, void @empty_12, void @empty_12, i32 0, i32 0, i32 0, i32 0, void @empty_12, void @empty_12, i32 4294967295, i32 0, i32 0"   --->   Operation 58 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 59 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_0, i32 0, i32 0, void @empty_12, i32 0, i32 0, void @empty_2, void @empty_12, void @empty_12, i32 0, i32 0, i32 0, i32 0, void @empty_12, void @empty_12, i32 4294967295, i32 0, i32 0"   --->   Operation 59 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 60 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i32 %data_ram"   --->   Operation 60 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 61 [1/1] (0.00ns)   --->   "%c_nbi_loc_load = load i32 %c_nbi_loc"   --->   Operation 61 'load' 'c_nbi_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 62 [1/1] (0.00ns)   --->   "%c_nbc_loc_load = load i32 %c_nbc_loc"   --->   Operation 62 'load' 'c_nbc_loc_load' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 63 [1/1] (1.00ns)   --->   "%write_ln233 = write void @_ssdm_op_Write.s_axilite.i32P0A, i32 %nb_instruction, i32 %c_nbi_loc_load" [../../multihart_ip.cpp:233]   --->   Operation 63 'write' 'write_ln233' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 112 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_7 : Operation 64 [1/1] (1.00ns)   --->   "%write_ln234 = write void @_ssdm_op_Write.s_axilite.i32P0A, i32 %nb_cycle, i32 %c_nbc_loc_load" [../../multihart_ip.cpp:234]   --->   Operation 64 'write' 'write_ln234' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 112 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_7 : Operation 65 [1/1] (0.00ns)   --->   "%ret_ln244 = ret" [../../multihart_ip.cpp:244]   --->   Operation 65 'ret' 'ret_ln244' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 2.322ns
+The critical path consists of the following:
+	'getelementptr' operation 2 bit ('start_pc_addr', ../../fetch.cpp:21->../../multihart_ip.cpp:176) [42]  (0.000 ns)
+	'load' operation 32 bit ('start_pc_load', ../../fetch.cpp:21->../../multihart_ip.cpp:176) on array 'start_pc' [43]  (2.322 ns)
+
+ <State 2>: 2.322ns
+The critical path consists of the following:
+	'load' operation 32 bit ('start_pc_load', ../../fetch.cpp:21->../../multihart_ip.cpp:176) on array 'start_pc' [43]  (2.322 ns)
+
+ <State 3>: 2.322ns
+The critical path consists of the following:
+	'load' operation 32 bit ('start_pc_load_1', ../../fetch.cpp:21->../../multihart_ip.cpp:176) on array 'start_pc' [46]  (2.322 ns)
+
+ <State 4>: 2.322ns
+The critical path consists of the following:
+	'load' operation 32 bit ('start_pc_load_2', ../../fetch.cpp:21->../../multihart_ip.cpp:176) on array 'start_pc' [49]  (2.322 ns)
+
+ <State 5>: 3.910ns
+The critical path consists of the following:
+	'load' operation 32 bit ('start_pc_load_3', ../../fetch.cpp:21->../../multihart_ip.cpp:176) on array 'start_pc' [52]  (2.322 ns)
+	'call' operation 0 bit ('call_ln56', ../../multihart_ip.cpp:56->../../multihart_ip.cpp:175) to 'multihart_ip_Pipeline_VITIS_LOOP_193_1' [54]  (1.588 ns)
+
+ <State 6>: 2.552ns
+The critical path consists of the following:
+	'call' operation 0 bit ('call_ln56', ../../multihart_ip.cpp:56->../../multihart_ip.cpp:175) to 'multihart_ip_Pipeline_VITIS_LOOP_193_1' [54]  (2.552 ns)
+
+ <State 7>: 1.000ns
+The critical path consists of the following:
+	'load' operation 32 bit ('c_nbi_loc_load') on local variable 'c_nbi_loc' [55]  (0.000 ns)
+	s_axi write operation ('write_ln233', ../../multihart_ip.cpp:233) on port 'nb_instruction' (../../multihart_ip.cpp:233) [57]  (1.000 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

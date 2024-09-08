@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1659010905992">
+  <ports id="1" name="start_pc" type="PortType" originalName="start_pc" coreId="997420912" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="code_ram" type="PortType" coreName="RAM_1P" coreId="997420912" bitwidth="32" iftype="IfTypeRegister" arraysize="65536">
+    <dataOutputObjs>call</dataOutputObjs>
+  </ports>
+  <ports id="3" name="nb_instruction" type="PortType" originalName="nb_instruction" coreId="0" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="50" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="51" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="54" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="55" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="56" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="57" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="58" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="59" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="62" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="63" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="66" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="67" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="68" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.5"/>
+  <edges id="69" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="72" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="73" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="74" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="77" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="80" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="81" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="82" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="83" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="84" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="85" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="86" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="87" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="88" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="91" source_obj="//@blocks.1/@node_objs.0" sink_obj="//@ports.2"/>
+  <edges id="92" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="268" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="269" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="270" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="271" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="272" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="273" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="274" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="275" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="276" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="277" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <blocks id="23" name="entry" type="BlockType">
+    <controlOutputObjs>do.cond</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="4" name="pc_V" originalName="pc.V" coreId="1228655792" bitwidth="16" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="5" name="nbi_1" originalName="nbi" coreId="3190167320" bitwidth="32" opcode="alloca" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="start_pc_read" lineNumber="17" originalName="start_pc" fileName="fetching_decoding_ip.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="fetching_decoding_ip" bitwidth="32" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fetching_decoding_ip.cpp" linenumber="17" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/fetching_decoding_ip" functionName="fetching_decoding_ip"/>
+      <dataInputObjs>start_pc</dataInputObjs>
+      <dataOutputObjs>trunc</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="pc_V_2" lineNumber="261" originalName="pc.V" fileName="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" fileDirectory=".." rtlName="pc_V_2_fu_118_p1" coreId="176" contextFuncName="ap_int_base" bitwidth="16" opcode="trunc" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h" linenumber="261" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/fetching_decoding_ip" functionName="ap_int_base"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="nbi_1_write_ln31" lineNumber="31" fileName="fetching_decoding_ip.cpp" fileDirectory=".." coreId="0" contextFuncName="fetching_decoding_ip" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fetching_decoding_ip.cpp" linenumber="31" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/fetching_decoding_ip" functionName="fetching_decoding_ip"/>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="pc_V_write_ln31" lineNumber="31" fileName="fetching_decoding_ip.cpp" fileDirectory=".." coreId="0" contextFuncName="fetching_decoding_ip" opcode="store" m_display="0" m_delay="1.58" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fetching_decoding_ip.cpp" linenumber="31" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/fetching_decoding_ip" functionName="fetching_decoding_ip"/>
+      <dataInputObjs>trunc</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="br_ln31" lineNumber="31" fileName="fetching_decoding_ip.cpp" fileDirectory=".." coreId="0" contextFuncName="fetching_decoding_ip" opcode="br" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fetching_decoding_ip.cpp" linenumber="31" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/fetching_decoding_ip" functionName="fetching_decoding_ip"/>
+      <controlInputObjs>do.cond</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="/opt/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_base.h">
+      <validLinenumbers>261</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="fetching_decoding_ip.cpp">
+      <validLinenumbers>17</validLinenumbers>
+      <validLinenumbers>31</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="44" name="do.end" type="BlockType">
+    <controlInputObjs>do.cond</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="nb_instruction_write_ln39" lineNumber="39" fileName="fetching_decoding_ip.cpp" fileDirectory=".." coreName="s_axilite" implIndex="s_axilite" control="no" opType="adapter" coreId="114" contextFuncName="fetching_decoding_ip" opcode="write" nodeLabel="5.0" m_display="0" m_delay="1.0" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fetching_decoding_ip.cpp" linenumber="39" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/fetching_decoding_ip" functionName="fetching_decoding_ip"/>
+      <dataInputObjs>call</dataInputObjs>
+      <dataOutputObjs>nb_instruction</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="_ln40" lineNumber="40" fileName="fetching_decoding_ip.cpp" fileDirectory=".." coreId="1228704192" contextFuncName="fetching_decoding_ip" opcode="ret" nodeLabel="5.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="fetching_decoding_ip.cpp" linenumber="40" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/fetching_decoding_ip" functionName="fetching_decoding_ip"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="fetching_decoding_ip.cpp">
+      <validLinenumbers>39</validLinenumbers>
+      <validLinenumbers>40</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="3" typeName="Pipeline" iiViolation="" id="141" pipe_depth="4" RegionName="VITIS_LOOP_31_1">
+    <basic_blocks id="37" name="do.cond" type="BlockType">
+      <controlInputObjs>entry</controlInputObjs>
+      <controlInputObjs>do.cond.do.cond_crit_edge</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>do.cond.do.cond_crit_edge</controlOutputObjs>
+      <controlOutputObjs>do.end</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="pc_V_load" lineNumber="35" fileName="fetching_decoding_ip.cpp" fileDirectory=".." coreId="48" contextFuncName="fetching_decoding_ip" bitwidth="16" opcode="load" nodeLabel="2.0" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fetching_decoding_ip.cpp" linenumber="35" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/fetching_decoding_ip" functionName="fetching_decoding_ip"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="nbi_1_load" lineNumber="36" fileName="fetching_decoding_ip.cpp" fileDirectory=".." coreId="1228412208" contextFuncName="fetching_decoding_ip" bitwidth="32" opcode="load" nodeLabel="4.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fetching_decoding_ip.cpp" linenumber="36" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/fetching_decoding_ip" functionName="fetching_decoding_ip"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="instruction" lineNumber="33" originalName="instruction" fileName="fetching_decoding_ip.cpp" fileDirectory=".." rtlName="grp_fetch_fu_87" coreId="1228412816" contextFuncName="fetching_decoding_ip" bitwidth="32" opcode="call" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="3.25" m_isOnCriticalPath="true" m_isStartOfPath="true" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fetching_decoding_ip.cpp" linenumber="33" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/fetching_decoding_ip" functionName="fetching_decoding_ip"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>code_ram</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+        <constName>fetch</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="decode_ret" lineNumber="34" fileName="fetching_decoding_ip.cpp" fileDirectory=".." rtlName="decode_ret_decode_fu_94" coreId="3190348676" contextFuncName="fetching_decoding_ip" bitwidth="23" opcode="call" nodeLabel="3.0" m_display="0" m_delay="4.24" m_isOnCriticalPath="true" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fetching_decoding_ip.cpp" linenumber="34" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/fetching_decoding_ip" functionName="fetching_decoding_ip"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <dataOutputObjs>extractvalue</dataOutputObjs>
+        <constName>decode</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="d_i_type_V" lineNumber="34" originalName="d_i.type.V" fileName="fetching_decoding_ip.cpp" fileDirectory=".." coreId="1702043749" contextFuncName="fetching_decoding_ip" bitwidth="3" opcode="extractvalue" nodeLabel="3.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fetching_decoding_ip.cpp" linenumber="34" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/fetching_decoding_ip" functionName="fetching_decoding_ip"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="d_i_imm_V" lineNumber="34" originalName="d_i.imm.V" fileName="fetching_decoding_ip.cpp" fileDirectory=".." coreId="1228704192" contextFuncName="fetching_decoding_ip" bitwidth="20" opcode="extractvalue" nodeLabel="3.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fetching_decoding_ip.cpp" linenumber="34" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/fetching_decoding_ip" functionName="fetching_decoding_ip"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="trunc_ln34" lineNumber="34" fileName="fetching_decoding_ip.cpp" fileDirectory=".." rtlName="trunc_ln34_fu_144_p1" coreId="1228704192" contextFuncName="fetching_decoding_ip" bitwidth="17" opcode="trunc" nodeLabel="3.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fetching_decoding_ip.cpp" linenumber="34" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/fetching_decoding_ip" functionName="fetching_decoding_ip"/>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataOutputObjs>call</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="pc_V_1" lineNumber="35" originalName="pc.V" fileName="fetching_decoding_ip.cpp" fileDirectory=".." rtlName="pc_V_1_execute_fu_106" coreId="1228411920" contextFuncName="fetching_decoding_ip" bitwidth="16" opcode="call" nodeLabel="4.0" m_display="0" m_delay="4.18" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fetching_decoding_ip.cpp" linenumber="35" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/fetching_decoding_ip" functionName="fetching_decoding_ip"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>extractvalue</dataInputObjs>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>execute</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="nbi" lineNumber="36" originalName="nbi" fileName="fetching_decoding_ip.cpp" fileDirectory=".." rtlName="nbi_statistic_update_fu_113" coreId="540698478" contextFuncName="fetching_decoding_ip" bitwidth="32" opcode="call" nodeLabel="4.0" m_display="0" m_delay="2.55" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fetching_decoding_ip.cpp" linenumber="36" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/fetching_decoding_ip" functionName="fetching_decoding_ip"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>write</dataOutputObjs>
+        <constName>statistic_update</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="is_running_V" lineNumber="37" originalName="is_running.V" fileName="fetching_decoding_ip.cpp" fileDirectory=".." rtlName="is_running_V_running_cond_update_fu_100" coreId="1228683040" contextFuncName="fetching_decoding_ip" bitwidth="1" opcode="call" nodeLabel="3.0" m_display="0" m_delay="2.47" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fetching_decoding_ip.cpp" linenumber="37" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/fetching_decoding_ip" functionName="fetching_decoding_ip"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>running_cond_update</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="br_ln38" lineNumber="38" fileName="fetching_decoding_ip.cpp" fileDirectory=".." coreId="304" contextFuncName="fetching_decoding_ip" opcode="br" nodeLabel="3.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fetching_decoding_ip.cpp" linenumber="38" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/fetching_decoding_ip" functionName="fetching_decoding_ip"/>
+        <dataInputObjs>call</dataInputObjs>
+        <controlInputObjs>do.end</controlInputObjs>
+        <controlInputObjs>do.cond.do.cond_crit_edge</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="fetching_decoding_ip.cpp">
+        <validLinenumbers>35</validLinenumbers>
+        <validLinenumbers>36</validLinenumbers>
+        <validLinenumbers>33</validLinenumbers>
+        <validLinenumbers>34</validLinenumbers>
+        <validLinenumbers>37</validLinenumbers>
+        <validLinenumbers>38</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="41" name="do.cond.do.cond_crit_edge" type="BlockType">
+      <controlInputObjs>do.cond</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>do.cond</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="nbi_1_write_ln38" lineNumber="38" fileName="fetching_decoding_ip.cpp" fileDirectory=".." coreId="1228328864" contextFuncName="fetching_decoding_ip" opcode="store" nodeLabel="4.0" m_display="0" m_delay="1.58" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fetching_decoding_ip.cpp" linenumber="38" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/fetching_decoding_ip" functionName="fetching_decoding_ip"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="pc_V_write_ln38" lineNumber="38" fileName="fetching_decoding_ip.cpp" fileDirectory=".." coreId="1397508187" contextFuncName="fetching_decoding_ip" opcode="store" nodeLabel="4.0" m_display="0" m_delay="1.58" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fetching_decoding_ip.cpp" linenumber="38" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/fetching_decoding_ip" functionName="fetching_decoding_ip"/>
+        <dataInputObjs>call</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="br_ln38" lineNumber="38" fileName="fetching_decoding_ip.cpp" fileDirectory=".." coreId="1228704192" contextFuncName="fetching_decoding_ip" opcode="br" nodeLabel="4.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="fetching_decoding_ip.cpp" linenumber="38" fileDirectory="/home/goossens/goossens-springer-book/2022.1/book_experiments/fetching_decoding_ip" functionName="fetching_decoding_ip"/>
+        <controlInputObjs>do.cond</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="fetching_decoding_ip.cpp">
+        <validLinenumbers>38</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <regnodes realName="nbi_reg_196">
+    <nodeIds>34</nodeIds>
+  </regnodes>
+  <regnodes realName="pc_V_reg_162">
+    <nodeIds>4</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln34_reg_187">
+    <nodeIds>32</nodeIds>
+  </regnodes>
+  <regnodes realName="d_i_type_V_reg_182">
+    <nodeIds>30</nodeIds>
+  </regnodes>
+  <regnodes realName="pc_V_load_reg_176">
+    <nodeIds>24</nodeIds>
+  </regnodes>
+  <regnodes realName="is_running_V_reg_192">
+    <nodeIds>35</nodeIds>
+  </regnodes>
+  <regnodes realName="nbi_1_reg_169">
+    <nodeIds>5</nodeIds>
+  </regnodes>
+  <expressionNodes realName="pc_V_2_fu_118">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="nbi_1_fu_70">
+    <nodeIds>5</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln34_fu_144">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="d_i_imm_V_fu_140">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="d_i_type_V_fu_136">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="pc_V_fu_66">
+    <nodeIds>4</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_fetch_fu_87">
+    <nodeIds>28</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="pc_V_1_execute_fu_106">
+    <nodeIds>33</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="decode_ret_decode_fu_94">
+    <nodeIds>29</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="is_running_V_running_cond_update_fu_100">
+    <nodeIds>35</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="nbi_statistic_update_fu_113">
+    <nodeIds>34</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="start_pc_read_read_fu_74">
+    <nodeIds>18</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln31_store_fu_122">
+    <nodeIds>20</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln39_write_fu_80">
+    <nodeIds>42</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln31_store_fu_127">
+    <nodeIds>21</nodeIds>
+  </ioNodes>
+  <ioNodes realName="nbi_1_load_load_fu_148">
+    <nodeIds>25</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln38_store_fu_152">
+    <nodeIds>38</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln38_store_fu_157">
+    <nodeIds>39</nodeIds>
+  </ioNodes>
+  <ioNodes realName="pc_V_load_load_fu_132">
+    <nodeIds>24</nodeIds>
+  </ioNodes>
+  <ioPorts name="nb_instruction">
+    <contents name="write">
+      <nodeIds>42</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="start_pc">
+    <contents name="read">
+      <nodeIds>18</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+    </states>
+    <states id="2"/>
+    <states id="3">
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="28" stage="2" latency="2"/>
+    </states>
+    <states id="4">
+      <operations id="28" stage="1" latency="2"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+    </states>
+    <states id="5">
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+    </states>
+    <states id="6">
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="fetching_decoding_ip" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>23</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="VITIS_LOOP_31_1" mII="3" mDepth="4" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="-1" mMaxLatency="-1" mType="1">
+      <basicBlocks>37</basicBlocks>
+      <basicBlocks>41</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>44</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

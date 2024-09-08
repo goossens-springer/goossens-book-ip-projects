@@ -1,0 +1,252 @@
+
+
+================================================================
+== Vitis HLS Report for 'fde_ip_Pipeline_VITIS_LOOP_44_2'
+================================================================
+* Date:           Tue May  3 16:48:30 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        fde_ip
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  |  10.00 ns|  13.863 ns|     2.70 ns|
+    +--------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------------------+---------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |                                         |                     |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+        |                 Instance                |        Module       |   min   |   max   |    min    |    max    | min | max |   Type  |
+        +-----------------------------------------+---------------------+---------+---------+-----------+-----------+-----+-----+---------+
+        |grp_fetch_fu_455                         |fetch                |        1|        1|  10.000 ns|  10.000 ns|    2|    2|      yes|
+        |decode_ret_decode_fu_462                 |decode               |        0|        0|       0 ns|       0 ns|    1|    1|      yes|
+        |grp_execute_fu_468                       |execute              |        3|        3|  30.000 ns|  30.000 ns|    4|    4|      yes|
+        |nbi_statistic_update_fu_513              |statistic_update     |        0|        0|       0 ns|       0 ns|    1|    1|      yes|
+        |is_running_V_running_cond_update_fu_519  |running_cond_update  |        0|        0|       0 ns|       0 ns|    1|    1|      yes|
+        +-----------------------------------------+---------------------+---------+---------+-----------+-----------+-----+-----+---------+
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_44_2  |        ?|        ?|         6|          6|          6|     ?|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       -|      -|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|    1453|   3500|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|    352|    -|
+|Register         |        -|    -|    1129|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|    2582|   3852|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|       2|      7|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------------------+---------------------+---------+----+------+------+-----+
+    |                 Instance                |        Module       | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +-----------------------------------------+---------------------+---------+----+------+------+-----+
+    |decode_ret_decode_fu_462                 |decode               |        0|   0|     0|    79|    0|
+    |grp_execute_fu_468                       |execute              |        0|   0|  1451|  3335|    0|
+    |grp_fetch_fu_455                         |fetch                |        0|   0|     2|    14|    0|
+    |is_running_V_running_cond_update_fu_519  |running_cond_update  |        0|   0|     0|    33|    0|
+    |nbi_statistic_update_fu_513              |statistic_update     |        0|   0|     0|    39|    0|
+    +-----------------------------------------+---------------------+---------+----+------+------+-----+
+    |Total                                    |                     |        0|   0|  1453|  3500|    0|
+    +-----------------------------------------+---------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +--------------------+----+-----------+-----+-----------+
+    |        Name        | LUT| Input Size| Bits| Total Bits|
+    +--------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm           |  37|          7|    1|          7|
+    |ap_done_int         |   9|          2|    1|          2|
+    |nbi_1_fu_246        |   9|          2|   32|         64|
+    |pc_V_2_fu_114       |   9|          2|   16|         32|
+    |reg_file_10_fu_158  |   9|          2|   32|         64|
+    |reg_file_11_fu_162  |   9|          2|   32|         64|
+    |reg_file_12_fu_166  |   9|          2|   32|         64|
+    |reg_file_13_fu_170  |   9|          2|   32|         64|
+    |reg_file_14_fu_174  |   9|          2|   32|         64|
+    |reg_file_15_fu_178  |   9|          2|   32|         64|
+    |reg_file_16_fu_182  |   9|          2|   32|         64|
+    |reg_file_17_fu_186  |   9|          2|   32|         64|
+    |reg_file_18_fu_190  |   9|          2|   32|         64|
+    |reg_file_19_fu_194  |   9|          2|   32|         64|
+    |reg_file_1_fu_122   |   9|          2|   32|         64|
+    |reg_file_20_fu_198  |   9|          2|   32|         64|
+    |reg_file_21_fu_202  |   9|          2|   32|         64|
+    |reg_file_22_fu_206  |   9|          2|   32|         64|
+    |reg_file_23_fu_210  |   9|          2|   32|         64|
+    |reg_file_24_fu_214  |   9|          2|   32|         64|
+    |reg_file_25_fu_218  |   9|          2|   32|         64|
+    |reg_file_26_fu_222  |   9|          2|   32|         64|
+    |reg_file_27_fu_226  |   9|          2|   32|         64|
+    |reg_file_28_fu_230  |   9|          2|   32|         64|
+    |reg_file_29_fu_234  |   9|          2|   32|         64|
+    |reg_file_2_fu_126   |   9|          2|   32|         64|
+    |reg_file_30_fu_238  |   9|          2|   32|         64|
+    |reg_file_31_fu_242  |   9|          2|   32|         64|
+    |reg_file_3_fu_130   |   9|          2|   32|         64|
+    |reg_file_4_fu_134   |   9|          2|   32|         64|
+    |reg_file_5_fu_138   |   9|          2|   32|         64|
+    |reg_file_6_fu_142   |   9|          2|   32|         64|
+    |reg_file_7_fu_146   |   9|          2|   32|         64|
+    |reg_file_8_fu_150   |   9|          2|   32|         64|
+    |reg_file_9_fu_154   |   9|          2|   32|         64|
+    |reg_file_fu_118     |   9|          2|   32|         64|
+    +--------------------+----+-----------+-----+-----------+
+    |Total               | 352|         77| 1074|       2153|
+    +--------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------+----+----+-----+-----------+
+    |               Name              | FF | LUT| Bits| Const Bits|
+    +---------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                        |   6|   0|    6|          0|
+    |ap_done_reg                      |   1|   0|    1|          0|
+    |grp_execute_fu_468_ap_start_reg  |   1|   0|    1|          0|
+    |grp_fetch_fu_455_ap_start_reg    |   1|   0|    1|          0|
+    |instruction_reg_1422             |  32|   0|   32|          0|
+    |nbi_1_fu_246                     |  32|   0|   32|          0|
+    |pc_V_2_fu_114                    |  16|   0|   16|          0|
+    |pc_V_2_load_reg_1416             |  16|   0|   16|          0|
+    |reg_file_10_fu_158               |  32|   0|   32|          0|
+    |reg_file_11_fu_162               |  32|   0|   32|          0|
+    |reg_file_12_fu_166               |  32|   0|   32|          0|
+    |reg_file_13_fu_170               |  32|   0|   32|          0|
+    |reg_file_14_fu_174               |  32|   0|   32|          0|
+    |reg_file_15_fu_178               |  32|   0|   32|          0|
+    |reg_file_16_fu_182               |  32|   0|   32|          0|
+    |reg_file_17_fu_186               |  32|   0|   32|          0|
+    |reg_file_18_fu_190               |  32|   0|   32|          0|
+    |reg_file_19_fu_194               |  32|   0|   32|          0|
+    |reg_file_1_fu_122                |  32|   0|   32|          0|
+    |reg_file_20_fu_198               |  32|   0|   32|          0|
+    |reg_file_21_fu_202               |  32|   0|   32|          0|
+    |reg_file_22_fu_206               |  32|   0|   32|          0|
+    |reg_file_23_fu_210               |  32|   0|   32|          0|
+    |reg_file_24_fu_214               |  32|   0|   32|          0|
+    |reg_file_25_fu_218               |  32|   0|   32|          0|
+    |reg_file_26_fu_222               |  32|   0|   32|          0|
+    |reg_file_27_fu_226               |  32|   0|   32|          0|
+    |reg_file_28_fu_230               |  32|   0|   32|          0|
+    |reg_file_29_fu_234               |  32|   0|   32|          0|
+    |reg_file_2_fu_126                |  32|   0|   32|          0|
+    |reg_file_30_fu_238               |  32|   0|   32|          0|
+    |reg_file_31_fu_242               |  32|   0|   32|          0|
+    |reg_file_3_fu_130                |  32|   0|   32|          0|
+    |reg_file_4_fu_134                |  32|   0|   32|          0|
+    |reg_file_5_fu_138                |  32|   0|   32|          0|
+    |reg_file_6_fu_142                |  32|   0|   32|          0|
+    |reg_file_7_fu_146                |  32|   0|   32|          0|
+    |reg_file_8_fu_150                |  32|   0|   32|          0|
+    |reg_file_9_fu_154                |  32|   0|   32|          0|
+    |reg_file_fu_118                  |  32|   0|   32|          0|
+    +---------------------------------+----+----+-----+-----------+
+    |Total                            |1129|   0| 1129|          0|
+    +---------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------+-----+-----+------------+---------------------------------+--------------+
+|      RTL Ports     | Dir | Bits|  Protocol  |          Source Object          |    C Type    |
++--------------------+-----+-----+------------+---------------------------------+--------------+
+|ap_clk              |   in|    1|  ap_ctrl_hs|  fde_ip_Pipeline_VITIS_LOOP_44_2|  return value|
+|ap_rst              |   in|    1|  ap_ctrl_hs|  fde_ip_Pipeline_VITIS_LOOP_44_2|  return value|
+|ap_start            |   in|    1|  ap_ctrl_hs|  fde_ip_Pipeline_VITIS_LOOP_44_2|  return value|
+|ap_done             |  out|    1|  ap_ctrl_hs|  fde_ip_Pipeline_VITIS_LOOP_44_2|  return value|
+|ap_idle             |  out|    1|  ap_ctrl_hs|  fde_ip_Pipeline_VITIS_LOOP_44_2|  return value|
+|ap_ready            |  out|    1|  ap_ctrl_hs|  fde_ip_Pipeline_VITIS_LOOP_44_2|  return value|
+|reg_file_31_reload  |   in|   32|     ap_none|               reg_file_31_reload|        scalar|
+|reg_file_reload     |   in|   32|     ap_none|                  reg_file_reload|        scalar|
+|reg_file_1_reload   |   in|   32|     ap_none|                reg_file_1_reload|        scalar|
+|reg_file_2_reload   |   in|   32|     ap_none|                reg_file_2_reload|        scalar|
+|reg_file_3_reload   |   in|   32|     ap_none|                reg_file_3_reload|        scalar|
+|reg_file_4_reload   |   in|   32|     ap_none|                reg_file_4_reload|        scalar|
+|reg_file_5_reload   |   in|   32|     ap_none|                reg_file_5_reload|        scalar|
+|reg_file_6_reload   |   in|   32|     ap_none|                reg_file_6_reload|        scalar|
+|reg_file_7_reload   |   in|   32|     ap_none|                reg_file_7_reload|        scalar|
+|reg_file_8_reload   |   in|   32|     ap_none|                reg_file_8_reload|        scalar|
+|reg_file_9_reload   |   in|   32|     ap_none|                reg_file_9_reload|        scalar|
+|reg_file_10_reload  |   in|   32|     ap_none|               reg_file_10_reload|        scalar|
+|reg_file_11_reload  |   in|   32|     ap_none|               reg_file_11_reload|        scalar|
+|reg_file_12_reload  |   in|   32|     ap_none|               reg_file_12_reload|        scalar|
+|reg_file_13_reload  |   in|   32|     ap_none|               reg_file_13_reload|        scalar|
+|reg_file_14_reload  |   in|   32|     ap_none|               reg_file_14_reload|        scalar|
+|reg_file_15_reload  |   in|   32|     ap_none|               reg_file_15_reload|        scalar|
+|reg_file_16_reload  |   in|   32|     ap_none|               reg_file_16_reload|        scalar|
+|reg_file_17_reload  |   in|   32|     ap_none|               reg_file_17_reload|        scalar|
+|reg_file_18_reload  |   in|   32|     ap_none|               reg_file_18_reload|        scalar|
+|reg_file_19_reload  |   in|   32|     ap_none|               reg_file_19_reload|        scalar|
+|reg_file_20_reload  |   in|   32|     ap_none|               reg_file_20_reload|        scalar|
+|reg_file_21_reload  |   in|   32|     ap_none|               reg_file_21_reload|        scalar|
+|reg_file_22_reload  |   in|   32|     ap_none|               reg_file_22_reload|        scalar|
+|reg_file_23_reload  |   in|   32|     ap_none|               reg_file_23_reload|        scalar|
+|reg_file_24_reload  |   in|   32|     ap_none|               reg_file_24_reload|        scalar|
+|reg_file_25_reload  |   in|   32|     ap_none|               reg_file_25_reload|        scalar|
+|reg_file_26_reload  |   in|   32|     ap_none|               reg_file_26_reload|        scalar|
+|reg_file_27_reload  |   in|   32|     ap_none|               reg_file_27_reload|        scalar|
+|reg_file_28_reload  |   in|   32|     ap_none|               reg_file_28_reload|        scalar|
+|reg_file_29_reload  |   in|   32|     ap_none|               reg_file_29_reload|        scalar|
+|reg_file_30_reload  |   in|   32|     ap_none|               reg_file_30_reload|        scalar|
+|pc_V                |   in|   16|     ap_none|                             pc_V|        scalar|
+|code_ram_address0   |  out|   16|   ap_memory|                         code_ram|         array|
+|code_ram_ce0        |  out|    1|   ap_memory|                         code_ram|         array|
+|code_ram_q0         |   in|   32|   ap_memory|                         code_ram|         array|
+|nbi_out             |  out|   32|      ap_vld|                          nbi_out|       pointer|
+|nbi_out_ap_vld      |  out|    1|      ap_vld|                          nbi_out|       pointer|
++--------------------+-----+-----+------------+---------------------------------+--------------+
+

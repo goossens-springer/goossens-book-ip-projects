@@ -1,0 +1,82 @@
+<stg><name>statistic_update</name>
+
+
+<trans_list>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="2" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="2" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+entry:0 %nbi_read_1 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %nbi_read
+
+]]></Node>
+<StgValue><ssdm name="nbi_read_1"/></StgValue>
+</operation>
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>Adder</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="3" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+entry:1 %add_ln14 = add i32 %nbi_read_1, i32 1
+
+]]></Node>
+<StgValue><ssdm name="add_ln14"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="4" bw="0" op_0_bw="32">
+<![CDATA[
+entry:2 %ret_ln15 = ret i32 %add_ln14
+
+]]></Node>
+<StgValue><ssdm name="ret_ln15"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="6" name="nbi_read" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="nbi_read"/></StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="8" from="_ssdm_op_Read.ap_auto.i32" to="nbi_read_1" fromId="7" toId="2">
+</dataflow>
+<dataflow id="9" from="nbi_read" to="nbi_read_1" fromId="6" toId="2">
+</dataflow>
+<dataflow id="10" from="nbi_read_1" to="add_ln14" fromId="2" toId="3">
+</dataflow>
+<dataflow id="12" from="StgValue_11" to="add_ln14" fromId="11" toId="3">
+</dataflow>
+<dataflow id="13" from="add_ln14" to="ret_ln15" fromId="3" toId="4">
+</dataflow>
+</dataflows>
+
+
+</stg>

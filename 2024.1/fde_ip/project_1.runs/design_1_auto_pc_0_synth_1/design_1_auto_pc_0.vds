@@ -1,0 +1,476 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Sun Sep  8 15:27:54 2024
+# Process ID: 115354
+# Current directory: /home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.runs/design_1_auto_pc_0_synth_1
+# Command line: vivado -log design_1_auto_pc_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_auto_pc_0.tcl
+# Log file: /home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.runs/design_1_auto_pc_0_synth_1/design_1_auto_pc_0.vds
+# Journal file: /home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.runs/design_1_auto_pc_0_synth_1/vivado.jou
+# Running On        :goossens-Precision-5530
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 22.04.4 LTS
+# Processor Detail  :Intel(R) Xeon(R) E-2176M  CPU @ 2.70GHz
+# CPU Frequency     :4074.159 MHz
+# CPU Physical cores:6
+# CPU Logical cores :12
+# Host memory       :33276 MB
+# Swap memory       :2147 MB
+# Total Virtual     :35424 MB
+# Available Virtual :27472 MB
+#-----------------------------------------------------------
+source design_1_auto_pc_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1477.227 ; gain = 91.836 ; free physical = 16208 ; free virtual = 24436
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/workspace/hls_component/fde_ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2024.1/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_auto_pc_0
+Command: synth_design -top design_1_auto_pc_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Device 21-9227] Part: xc7z020clg400-1 does not have CEAM library.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 115505
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2275.191 ; gain = 422.684 ; free physical = 11544 ; free virtual = 19775
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/synth/design_1_auto_pc_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_31_axi_protocol_converter' [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:5285]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_31_b2s' [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4704]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_31_b2s_aw_channel' [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4360]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_31_b2s_cmd_translator' [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3720]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_31_b2s_incr_cmd' [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3216]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_31_b2s_incr_cmd' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3216]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_31_b2s_wrap_cmd' [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2982]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_31_b2s_wrap_cmd' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2982]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_31_b2s_cmd_translator' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3720]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_31_b2s_wr_cmd_fsm' [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3392]
+INFO: [Synth 8-226] default block is never used [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3446]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_31_b2s_wr_cmd_fsm' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3392]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_31_b2s_aw_channel' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4360]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_31_b2s_b_channel' [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3906]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_31_b2s_simple_fifo' [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2852]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_31_b2s_simple_fifo' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2852]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_31_b2s_simple_fifo__parameterized0' [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2852]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_31_b2s_simple_fifo__parameterized0' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2852]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_31_b2s_b_channel' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3906]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_31_b2s_ar_channel' [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4516]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm' [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3546]
+INFO: [Synth 8-226] default block is never used [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3608]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3546]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_31_b2s_ar_channel' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4516]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_31_b2s_r_channel' [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4155]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_31_b2s_simple_fifo__parameterized1' [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2852]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_31_b2s_simple_fifo__parameterized1' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2852]
+INFO: [Synth 8-6157] synthesizing module 'axi_protocol_converter_v2_1_31_b2s_simple_fifo__parameterized2' [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2852]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_31_b2s_simple_fifo__parameterized2' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:2852]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_31_b2s_r_channel' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4155]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_31_axi_register_slice' [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:3718]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice' [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice__parameterized0' [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice__parameterized0' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice__parameterized1' [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice__parameterized1' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice__parameterized2' [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice__parameterized2' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_31_axi_register_slice' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:3718]
+WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_31_axi_register_slice' is unconnected for instance 'SI_REG' [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4871]
+WARNING: [Synth 8-7023] instance 'SI_REG' of module 'axi_register_slice_v2_1_31_axi_register_slice' has 93 connections declared, but only 92 given [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4871]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_31_axi_register_slice__parameterized0' [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:3718]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized0' [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized0' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized0' [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized0' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice__parameterized3' [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice__parameterized3' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice__parameterized4' [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice__parameterized4' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice__parameterized5' [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice__parameterized5' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice__parameterized6' [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice__parameterized6' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_31_axi_register_slice__parameterized0' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:3718]
+WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_31_axi_register_slice' is unconnected for instance 'MI_REG' [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:5126]
+WARNING: [Synth 8-7023] instance 'MI_REG' of module 'axi_register_slice_v2_1_31_axi_register_slice' has 93 connections declared, but only 92 given [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:5126]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_31_b2s' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:4704]
+INFO: [Synth 8-6155] done synthesizing module 'axi_protocol_converter_v2_1_31_axi_protocol_converter' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:5285]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/synth/design_1_auto_pc_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element state_r1_reg was removed.  [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3596]
+WARNING: [Synth 8-6014] Unused sequential element s_arlen_r_reg was removed.  [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/3c06/hdl/axi_protocol_converter_v2_1_vl_rfs.v:3597]
+WARNING: [Synth 8-7129] Port ACLK in module axi_register_slice_v2_1_31_axic_register_slice__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESET in module axi_register_slice_v2_1_31_axic_register_slice__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module axi_register_slice_v2_1_31_axic_register_slice__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESET in module axi_register_slice_v2_1_31_axic_register_slice__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module axi_register_slice_v2_1_31_axic_register_slice__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESET in module axi_register_slice_v2_1_31_axic_register_slice__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module axi_register_slice_v2_1_31_axic_register_slice__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESET in module axi_register_slice_v2_1_31_axic_register_slice__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_bid[0] in module axi_infrastructure_v1_1_0_vector2axi__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_buser[0] in module axi_infrastructure_v1_1_0_vector2axi__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_rid[0] in module axi_infrastructure_v1_1_0_vector2axi__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_rlast in module axi_infrastructure_v1_1_0_vector2axi__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_ruser[0] in module axi_infrastructure_v1_1_0_vector2axi__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awid[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[7] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[6] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[5] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[4] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[3] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[2] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[1] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awsize[2] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awsize[1] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awsize[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awburst[1] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awburst[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlock[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awcache[3] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awcache[2] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awcache[1] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awcache[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[3] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[2] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[1] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awqos[3] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awqos[2] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awqos[1] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awqos[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awuser[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wlast in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wuser[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arid[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlen[7] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlen[6] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlen[5] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlen[4] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlen[3] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlen[2] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlen[1] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlen[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arsize[2] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arsize[1] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arsize[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arburst[1] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arburst[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlock[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arcache[3] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arcache[2] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arcache[1] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arcache[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[3] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[2] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[1] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arqos[3] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arqos[2] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arqos[1] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arqos[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_aruser[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclk2x in module axi_register_slice_v2_1_31_axi_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module axi_register_slice_v2_1_31_axic_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESET in module axi_register_slice_v2_1_31_axic_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_buser[0] in module axi_infrastructure_v1_1_0_vector2axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_ruser[0] in module axi_infrastructure_v1_1_0_vector2axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[3] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[2] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[1] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awregion[0] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awuser[0] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wuser[0] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[3] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[2] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[1] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arregion[0] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_aruser[0] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclk2x in module axi_register_slice_v2_1_31_axi_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arlen[7] in module axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arlen[6] in module axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arlen[5] in module axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arlen[4] in module axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arlen[3] in module axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arlen[2] in module axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arlen[1] in module axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arlen[0] in module axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axlen[7] in module axi_protocol_converter_v2_1_31_b2s_wrap_cmd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axlen[6] in module axi_protocol_converter_v2_1_31_b2s_wrap_cmd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port axlen[5] in module axi_protocol_converter_v2_1_31_b2s_wrap_cmd is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2464.129 ; gain = 611.621 ; free physical = 11248 ; free virtual = 19483
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2467.098 ; gain = 614.590 ; free physical = 11247 ; free virtual = 19484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2467.098 ; gain = 614.590 ; free physical = 11247 ; free virtual = 19484
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2467.098 ; gain = 0.000 ; free physical = 11246 ; free virtual = 19480
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.runs/design_1_auto_pc_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.runs/design_1_auto_pc_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2575.910 ; gain = 0.000 ; free physical = 11237 ; free virtual = 19473
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2575.910 ; gain = 0.000 ; free physical = 11237 ; free virtual = 19473
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2575.910 ; gain = 723.402 ; free physical = 11215 ; free virtual = 19451
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2583.914 ; gain = 731.406 ; free physical = 11215 ; free virtual = 19451
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.runs/design_1_auto_pc_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2583.914 ; gain = 731.406 ; free physical = 11215 ; free virtual = 19451
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_protocol_converter_v2_1_31_b2s_wr_cmd_fsm'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 SM_IDLE |                               01 |                               00
+               SM_CMD_EN |                               11 |                               01
+         SM_CMD_ACCEPTED |                               10 |                               10
+            SM_DONE_WAIT |                               00 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'axi_protocol_converter_v2_1_31_b2s_wr_cmd_fsm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 SM_IDLE |                               01 |                               00
+               SM_CMD_EN |                               11 |                               01
+         SM_CMD_ACCEPTED |                               10 |                               10
+                 SM_DONE |                               00 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2583.914 ; gain = 731.406 ; free physical = 11219 ; free virtual = 19456
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   12 Bit       Adders := 8     
+	   2 Input    9 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 4     
+	   2 Input    4 Bit       Adders := 4     
+	   2 Input    2 Bit       Adders := 2     
++---Registers : 
+	               66 Bit    Registers := 4     
+	               47 Bit    Registers := 2     
+	               14 Bit    Registers := 2     
+	               12 Bit    Registers := 9     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
+	                5 Bit    Registers := 4     
+	                4 Bit    Registers := 6     
+	                2 Bit    Registers := 7     
+	                1 Bit    Registers := 28    
++---Muxes : 
+	   2 Input   66 Bit        Muxes := 4     
+	   2 Input   47 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 8     
+	   2 Input   14 Bit        Muxes := 2     
+	   2 Input   12 Bit        Muxes := 6     
+	   2 Input    9 Bit        Muxes := 4     
+	   2 Input    5 Bit        Muxes := 4     
+	   2 Input    4 Bit        Muxes := 18    
+	   2 Input    2 Bit        Muxes := 17    
+	   4 Input    2 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 29    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-3936] Found unconnected internal register 'gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg' and it is trimmed from '66' to '62' bits. [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1726]
+INFO: [Synth 8-3936] Found unconnected internal register 'gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg' and it is trimmed from '66' to '62' bits. [/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1726]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2583.914 ; gain = 731.406 ; free physical = 11213 ; free virtual = 19450
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 2583.914 ; gain = 731.406 ; free physical = 11728 ; free virtual = 19964
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2583.914 ; gain = 731.406 ; free physical = 11704 ; free virtual = 19939
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 2583.914 ; gain = 731.406 ; free physical = 11704 ; free virtual = 19940
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 2583.914 ; gain = 731.406 ; free physical = 14699 ; free virtual = 22936
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 2583.914 ; gain = 731.406 ; free physical = 14699 ; free virtual = 22936
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 2583.914 ; gain = 731.406 ; free physical = 14699 ; free virtual = 22936
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 2583.914 ; gain = 731.406 ; free physical = 14699 ; free virtual = 22936
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 2583.914 ; gain = 731.406 ; free physical = 14699 ; free virtual = 22936
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 2583.914 ; gain = 731.406 ; free physical = 14699 ; free virtual = 22936
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Dynamic Shift Register Report:
++------------+----------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name       | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+----------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | memory_reg[3]  | 20     | 20         | 20     | 0       | 0      | 0      | 0      | 
+|dsrl__1     | memory_reg[3]  | 2      | 2          | 2      | 0       | 0      | 0      | 0      | 
+|dsrl__2     | memory_reg[31] | 34     | 34         | 0      | 34      | 0      | 0      | 0      | 
+|dsrl__3     | memory_reg[31] | 13     | 13         | 0      | 13      | 0      | 0      | 0      | 
+|dsrl__4     | memory_reg[3]  | 20     | 20         | 20     | 0       | 0      | 0      | 0      | 
+|dsrl__5     | memory_reg[3]  | 2      | 2          | 2      | 0       | 0      | 0      | 0      | 
++------------+----------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |    18|
+|2     |LUT1    |     5|
+|3     |LUT2    |    19|
+|4     |LUT3    |   236|
+|5     |LUT4    |    43|
+|6     |LUT5    |    53|
+|7     |LUT6    |   130|
+|8     |SRL16E  |    18|
+|9     |SRLC32E |    47|
+|10    |FDRE    |   546|
+|11    |FDSE    |    16|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 2583.914 ; gain = 731.406 ; free physical = 14699 ; free virtual = 22936
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 72 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 2583.914 ; gain = 622.594 ; free physical = 14699 ; free virtual = 22936
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 2583.922 ; gain = 731.406 ; free physical = 14699 ; free virtual = 22936
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2583.922 ; gain = 0.000 ; free physical = 15093 ; free virtual = 23330
+INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2639.941 ; gain = 0.000 ; free physical = 15103 ; free virtual = 23348
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: ee0838fe
+INFO: [Common 17-83] Releasing license: Synthesis
+89 Infos, 107 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:40 . Memory (MB): peak = 2639.941 ; gain = 1142.902 ; free physical = 15103 ; free virtual = 23348
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2033.502; main = 1676.146; forked = 429.733
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3687.008; main = 2639.945; forked = 1103.090
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2663.953 ; gain = 0.000 ; free physical = 15103 ; free virtual = 23348
+INFO: [Common 17-1381] The checkpoint '/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.runs/design_1_auto_pc_0_synth_1/design_1_auto_pc_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_auto_pc_0, cache-ID = 28dbe6f2fca8b92b
+INFO: [Coretcl 2-1174] Renamed 23 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2663.953 ; gain = 0.000 ; free physical = 15042 ; free virtual = 23288
+INFO: [Common 17-1381] The checkpoint '/home/goossens/goossens-book-ip-projects/2024.1/fde_ip/project_1.runs/design_1_auto_pc_0_synth_1/design_1_auto_pc_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_auto_pc_0_utilization_synth.rpt -pb design_1_auto_pc_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Sep  8 15:28:50 2024...

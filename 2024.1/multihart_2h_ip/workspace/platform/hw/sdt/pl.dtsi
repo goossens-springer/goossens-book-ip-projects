@@ -1,0 +1,26 @@
+/ {
+	amba_pl: amba_pl {
+		ranges;
+		compatible = "simple-bus";
+		#address-cells = <1>;
+		#size-cells = <1>;
+		multihart_ip_0: multihart_ip@40000000 {
+			compatible = "xlnx,multihart-ip-1.0";
+			xlnx,ii = "undef";
+			xlnx,s-axi-control-addr-width = <19>;
+			xlnx,machine = <64>;
+			xlnx,rable = <0>;
+			xlnx,ip-name = "multihart_ip";
+			reg = <0x40000000 0x20000>;
+			clocks = <&clkc 15>;
+			xlnx,clk-period = <10>;
+			xlnx,s-axi-control-data-width = <32>;
+			xlnx,edk-iptype = "PERIPHERAL";
+			status = "okay";
+			clock-names = "ap_clk";
+			xlnx,combinational = <0>;
+			xlnx,latency = "undef";
+			xlnx,name = "multihart_ip_0";
+		};
+	};
+};

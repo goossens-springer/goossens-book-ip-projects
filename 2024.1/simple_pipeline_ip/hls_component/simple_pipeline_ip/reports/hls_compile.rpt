@@ -1,0 +1,217 @@
+
+
+================================================================
+== Synthesis Summary Report of 'simple_pipeline_ip'
+================================================================
++ General Information: 
+    * Date:           Sun Sep  8 15:54:33 2024
+    * Version:        2024.1 (Build 5069499 on May 21 2024)
+    * Project:        simple_pipeline_ip
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------+--------+-------+---------+--------+----------+---------+------+----------+-----------+----+-----------+-----------+-----+
+    |        Modules       |  Issue |       | Latency | Latency| Iteration|         | Trip |          |           |    |           |           |     |
+    |        & Loops       |  Type  | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|   BRAM    | DSP|     FF    |    LUT    | URAM|
+    +----------------------+--------+-------+---------+--------+----------+---------+------+----------+-----------+----+-----------+-----------+-----+
+    |+ simple_pipeline_ip  |  Timing|  -0.00|        -|       -|         -|        0|     -|    rewind|  128 (45%)|   -|  2041 (1%)|  4307 (8%)|    -|
+    | o VITIS_LOOP_47_2    |       -|   7.30|        -|       -|         5|        5|     -|       yes|          -|   -|          -|          -|    -|
+    +----------------------+--------+-------+---------+--------+----------+---------+------+----------+-----------+----+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+-------------------+
+| Interface     | Data Width | Address Width | Offset | Register | Resource Estimate |
++---------------+------------+---------------+--------+----------+-------------------+
+| s_axi_control | 32         | 19            | 16     | 0        | BRAM=128          |
++---------------+------------+---------------+--------+----------+-------------------+
+
+* S_AXILITE Registers
++---------------+---------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register            | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+---------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL                | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER                | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER              | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR              | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | start_pc            | 0x10   | 32    | W      | Data signal of start_pc          |                                                                      |
+| s_axi_control | nb_instruction      | 0x18   | 32    | R      | Data signal of nb_instruction    |                                                                      |
+| s_axi_control | nb_instruction_ctrl | 0x1c   | 32    | R      | Control signal of nb_instruction | 0=nb_instruction_ap_vld                                              |
++---------------+---------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------------+-----------+---------------+
+| Argument       | Direction | Datatype      |
++----------------+-----------+---------------+
+| start_pc       | in        | unsigned int  |
+| code_ram       | in        | unsigned int* |
+| data_ram       | inout     | int*          |
+| nb_instruction | out       | unsigned int* |
++----------------+-----------+---------------+
+
+* SW-to-HW Mapping
++----------------+---------------+----------+-----------------------------------------------+
+| Argument       | HW Interface  | HW Type  | HW Info                                       |
++----------------+---------------+----------+-----------------------------------------------+
+| start_pc       | s_axi_control | register | name=start_pc offset=0x10 range=32            |
+| code_ram       | s_axi_control | memory   | name=code_ram offset=131072 range=131072      |
+| data_ram       | s_axi_control | memory   | name=data_ram offset=262144 range=131072      |
+| nb_instruction | s_axi_control | register | name=nb_instruction offset=0x18 range=32      |
+| nb_instruction | s_axi_control | register | name=nb_instruction_ctrl offset=0x1c range=32 |
++----------------+---------------+----------+-----------------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------+-----+--------+----------------------+-----------+-----------+---------+
+| Name                              | DSP | Pragma | Variable             | Op        | Impl      | Latency |
++-----------------------------------+-----+--------+----------------------+-----------+-----------+---------+
+| + simple_pipeline_ip              | 0   |        |                      |           |           |         |
+|   pc_fu_4722_p3                   |     |        | pc                   | select    | auto_sel  | 0       |
+|   f_to_f_fu_5597_p2               |     |        | f_to_f               | add       | fabric    | 0       |
+|   f_to_e_d_i_is_load_fu_5124_p2   |     |        | f_to_e_d_i_is_load   | seteq     | auto      | 0       |
+|   f_to_e_d_i_is_store_fu_5130_p2  |     |        | f_to_e_d_i_is_store  | seteq     | auto      | 0       |
+|   f_to_e_d_i_is_branch_fu_5136_p2 |     |        | f_to_e_d_i_is_branch | seteq     | auto      | 0       |
+|   f_to_e_d_i_is_jalr_fu_5142_p2   |     |        | f_to_e_d_i_is_jalr   | seteq     | auto      | 0       |
+|   f_to_e_d_i_is_jal_fu_5148_p2    |     |        | f_to_e_d_i_is_jal    | seteq     | auto      | 0       |
+|   f_to_e_d_i_is_lui_fu_5154_p2    |     |        | f_to_e_d_i_is_lui    | seteq     | auto      | 0       |
+|   f_to_e_d_i_is_op_imm_fu_5160_p2 |     |        | f_to_e_d_i_is_op_imm | seteq     | auto      | 0       |
+|   f_to_e_d_i_is_r_type_fu_5817_p2 |     |        | f_to_e_d_i_is_r_type | seteq     | auto      | 0       |
+|   sparsemux_65_5_32_1_1_U1        |     |        | rv1                  | sparsemux | auto      | 0       |
+|   sparsemux_65_5_32_1_1_U2        |     |        | rv2                  | sparsemux | auto      | 0       |
+|   icmp_ln34_fu_5221_p2            |     |        | icmp_ln34            | setlt     | auto      | 0       |
+|   bcond_fu_5321_p14               |     |        | xor_ln34             | xor       | auto      | 0       |
+|   bcond_fu_5321_p10               |     |        | icmp_ln27            | seteq     | auto      | 0       |
+|   bcond_fu_5321_p8                |     |        | icmp_ln28            | setne     | auto      | 0       |
+|   bcond_fu_5321_p6                |     |        | icmp_ln31            | setlt     | auto      | 0       |
+|   icmp_ln32_fu_5243_p2            |     |        | icmp_ln32            | setlt     | auto      | 0       |
+|   bcond_fu_5321_p4                |     |        | xor_ln32             | xor       | auto      | 0       |
+|   bcond_fu_5321_p2                |     |        | icmp_ln33            | setlt     | auto      | 0       |
+|   icmp_ln26_fu_5257_p2            |     |        | icmp_ln26            | seteq     | auto      | 0       |
+|   icmp_ln26_1_fu_5263_p2          |     |        | icmp_ln26_1          | seteq     | auto      | 0       |
+|   icmp_ln26_2_fu_5269_p2          |     |        | icmp_ln26_2          | seteq     | auto      | 0       |
+|   icmp_ln26_3_fu_5275_p2          |     |        | icmp_ln26_3          | seteq     | auto      | 0       |
+|   icmp_ln26_4_fu_5281_p2          |     |        | icmp_ln26_4          | seteq     | auto      | 0       |
+|   icmp_ln26_5_fu_5287_p2          |     |        | icmp_ln26_5          | seteq     | auto      | 0       |
+|   icmp_ln26_6_fu_5293_p2          |     |        | icmp_ln26_6          | seteq     | auto      | 0       |
+|   or_ln26_fu_5299_p2              |     |        | or_ln26              | or        | auto      | 0       |
+|   sparsemux_15_6_1_1_1_U3         |     |        | bcond                | sparsemux | auto      | 0       |
+|   taken_branch_fu_5602_p2         |     |        | taken_branch         | and       | auto      | 0       |
+|   rs_fu_5014_p3                   |     |        | rs                   | select    | auto_sel  | 0       |
+|   shift_1_fu_5026_p3              |     |        | shift_1              | select    | auto_sel  | 0       |
+|   result_13_fu_5450_p16           |     |        | result               | and       | auto      | 0       |
+|   and_ln50_fu_5361_p2             |     |        | and_ln50             | and       | auto      | 0       |
+|   result_1_fu_5366_p2             |     |        | result_1             | sub       | fabric    | 0       |
+|   result_2_fu_5370_p2             |     |        | result_2             | add       | fabric    | 0       |
+|   result_13_fu_5450_p14           |     |        | result_3             | select    | auto_sel  | 0       |
+|   result_13_fu_5450_p12           |     |        | result_4             | shl       | auto_pipe | 0       |
+|   result_5_fu_5390_p2             |     |        | result_5             | setlt     | auto      | 0       |
+|   result_6_fu_5398_p2             |     |        | result_6             | setlt     | auto      | 0       |
+|   result_13_fu_5450_p6            |     |        | result_7             | xor       | auto      | 0       |
+|   result_8_fu_5410_p2             |     |        | result_8             | ashr      | auto_pipe | 0       |
+|   result_9_fu_5415_p2             |     |        | result_9             | lshr      | auto_pipe | 0       |
+|   result_13_fu_5450_p4            |     |        | result_10            | select    | auto_sel  | 0       |
+|   result_13_fu_5450_p2            |     |        | result_11            | or        | auto      | 0       |
+|   sparsemux_17_7_32_1_1_U4        |     |        | result_13            | sparsemux | auto      | 0       |
+|   npc4_fu_5503_p2                 |     |        | npc4                 | add       | fabric    | 0       |
+|   result_14_fu_5509_p2            |     |        | result_14            | add       | fabric    | 0       |
+|   result_16_fu_5517_p2            |     |        | result_16            | add       | fabric    | 0       |
+|   result_17_fu_5523_p3            |     |        | result_17            | select    | auto_sel  | 0       |
+|   result_19_fu_5647_p14           |     |        | result_18            | select    | auto_sel  | 0       |
+|   icmp_ln84_fu_5531_p2            |     |        | icmp_ln84            | seteq     | auto      | 0       |
+|   icmp_ln84_1_fu_5537_p2          |     |        | icmp_ln84_1          | seteq     | auto      | 0       |
+|   icmp_ln84_2_fu_5543_p2          |     |        | icmp_ln84_2          | seteq     | auto      | 0       |
+|   icmp_ln84_3_fu_5549_p2          |     |        | icmp_ln84_3          | seteq     | auto      | 0       |
+|   icmp_ln84_4_fu_5555_p2          |     |        | icmp_ln84_4          | seteq     | auto      | 0       |
+|   sel_tmp24_fu_5615_p2            |     |        | sel_tmp24            | and       | auto      | 0       |
+|   sel_tmp26_fu_5561_p2            |     |        | sel_tmp26            | xor       | auto      | 0       |
+|   sel_tmp27_fu_5567_p2            |     |        | sel_tmp27            | and       | auto      | 0       |
+|   sel_tmp28_fu_5619_p2            |     |        | sel_tmp28            | and       | auto      | 0       |
+|   sel_tmp32_fu_5623_p2            |     |        | sel_tmp32            | xor       | auto      | 0       |
+|   sel_tmp33_fu_5628_p2            |     |        | sel_tmp33            | and       | auto      | 0       |
+|   sparsemux_17_7_32_1_1_U5        |     |        | result_19            | sparsemux | auto      | 0       |
+|   icmp_ln182_fu_6003_p2           |     |        | icmp_ln182           | seteq     | auto      | 0       |
+|   icmp_ln182_1_fu_6009_p2         |     |        | icmp_ln182_1         | seteq     | auto      | 0       |
+|   icmp_ln182_2_fu_6015_p2         |     |        | icmp_ln182_2         | seteq     | auto      | 0       |
+|   sparsemux_9_3_8_1_1_U6          |     |        | b                    | sparsemux | auto      | 0       |
+|   h_fu_6063_p3                    |     |        | h                    | select    | auto_sel  | 0       |
+|   shl_ln230_fu_5727_p2            |     |        | shl_ln230            | shl       | auto_pipe | 0       |
+|   shl_ln230_2_fu_5745_p2          |     |        | shl_ln230_2          | shl       | auto_pipe | 0       |
+|   shl_ln227_fu_5763_p2            |     |        | shl_ln227            | shl       | auto_pipe | 0       |
+|   shl_ln227_2_fu_5781_p2          |     |        | shl_ln227_2          | shl       | auto_pipe | 0       |
+|   icmp_ln16_fu_6092_p2            |     |        | icmp_ln16            | seteq     | auto      | 0       |
+|   or_ln16_fu_6097_p2              |     |        | or_ln16              | or        | auto      | 0       |
+|   or_ln16_1_fu_6101_p2            |     |        | or_ln16_1            | or        | auto      | 0       |
+|   npc_fu_5573_p2                  |     |        | npc                  | add       | fabric    | 0       |
+|   j_b_target_pc_fu_5588_p2        |     |        | j_b_target_pc        | add       | fabric    | 0       |
+|   select_ln141_fu_5796_p3         |     |        | select_ln141         | select    | auto_sel  | 0       |
+|   select_ln135_fu_5801_p3         |     |        | select_ln135         | select    | auto_sel  | 0       |
+|   or_ln40_1_fu_5807_p2            |     |        | or_ln40_1            | or        | auto      | 0       |
+|   or_ln40_fu_5812_p2              |     |        | or_ln40              | or        | auto      | 0       |
+|   xor_ln21_fu_6116_p2             |     |        | xor_ln21             | xor       | auto      | 0       |
+|   nbi_fu_6126_p2                  |     |        | nbi                  | add       | fabric    | 0       |
+|   or_ln16_2_fu_6137_p2            |     |        | or_ln16_2            | or        | auto      | 0       |
+|   or_ln16_3_fu_6143_p2            |     |        | or_ln16_3            | or        | auto      | 0       |
+|   icmp_ln39_fu_6156_p2            |     |        | icmp_ln39            | setne     | auto      | 0       |
++-----------------------------------+-----+--------+----------------------+-----------+-----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++----------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| Name                 | Usage     | Type      | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
+|                      |           |           |      |      |        |          |      |         | Banks            |
++----------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| + simple_pipeline_ip |           |           | 128  | 0    |        |          |      |         |                  |
+|   control_s_axi_U    | interface | s_axilite | 128  |      |        |          |      |         |                  |
++----------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+----------------------------------+-----------------------------------------------------------------------+
+| Type            | Options                          | Location                                                              |
++-----------------+----------------------------------+-----------------------------------------------------------------------+
+| interface       | s_axilite port=start_pc          | ../../simple_pipeline_ip.cpp:28 in simple_pipeline_ip, start_pc       |
+| interface       | s_axilite port=code_ram          | ../../simple_pipeline_ip.cpp:29 in simple_pipeline_ip, code_ram       |
+| interface       | s_axilite port=data_ram          | ../../simple_pipeline_ip.cpp:30 in simple_pipeline_ip, data_ram       |
+| interface       | s_axilite port=nb_instruction    | ../../simple_pipeline_ip.cpp:31 in simple_pipeline_ip, nb_instruction |
+| interface       | s_axilite port=return            | ../../simple_pipeline_ip.cpp:32 in simple_pipeline_ip, return         |
+| inline          | recursive                        | ../../simple_pipeline_ip.cpp:33 in simple_pipeline_ip                 |
+| array_partition | variable=reg_file dim=1 complete | ../../simple_pipeline_ip.cpp:35 in simple_pipeline_ip, reg_file       |
+| pipeline        | II=5                             | ../../simple_pipeline_ip.cpp:48 in simple_pipeline_ip                 |
++-----------------+----------------------------------+-----------------------------------------------------------------------+
+
+

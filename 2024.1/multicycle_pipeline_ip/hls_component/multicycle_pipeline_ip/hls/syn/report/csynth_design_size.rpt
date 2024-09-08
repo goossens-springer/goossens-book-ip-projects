@@ -1,0 +1,93 @@
+================================================================
+== Design Size Report
+================================================================
+
+* Total Instructions per Compilation Phase
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Phase         | Step                        | Instructions | Description                                                                            |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Compile/Link  |                             | 9,729        | After all functions are compiled and linked into a single design                       |
+|               |                             |              |                                                                                        |
+| Unroll/Inline |                             |              | After user unroll and inline pragmas are applied                                       |
+|               | (1) unroll                  |   881        | user unroll pragmas are applied                                                        |
+|               | (2) simplification          |   695        | simplification of applied user unroll pragmas                                          |
+|               | (3) inline                  |   676        | user inline pragmas are applied                                                        |
+|               | (4) simplification          |   676        | simplification of applied user inline pragmas                                          |
+|               |                             |              |                                                                                        |
+| Array/Struct  |                             |              | After user array partition and struct aggregate/disaggregate pragmas are applied       |
+|               | (1) array partition         | 1,190        | user array partition pragmas are applied                                               |
+|               | (2) simplification          | 1,042        | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
+|               | (3) aggregate/disaggregate  | 1,042        | user struct aggregate/disaggregate pragmas are applied                                 |
+|               | (4) array reshape           | 1,042        | apply array reshape pragmas                                                            |
+|               | (5) access patterns         |   887        | array access pattern optmizations                                                      |
+|               |                             |              |                                                                                        |
+| Performance   |                             |              | After transformations are applied to meet performance pragma targets                   |
+|               | (1) loop simplification     |   887        | loop and instruction simplification                                                    |
+|               | (2) parallelization         |   885        | loops are unrolled or pipelined to meet performance targets                            |
+|               | (3) array partition         |   885        | arrays are partitioned to meet performance targets                                     |
+|               | (4) simplification          |   885        | simplification of design after performance transformations                             |
+|               |                             |              |                                                                                        |
+| HW Transforms |                             |              | After hardware transfomations                                                          |
+|               | (1) lowering                |   918        | initial conversion to HW specific instructions                                         |
+|               | (2) optimizations           |   901        | high level synthesis optimizations                                                     |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+
+* Instructions per Function for each Compilation Phase
++----------------------------+-------------------------------+--------------+---------------+--------------+-------------+---------------+
+| Function                   | Location                      | Compile/Link | Unroll/Inline | Array/Struct | Performance | HW Transforms |
++----------------------------+-------------------------------+--------------+---------------+--------------+-------------+---------------+
+| + multicycle_pipeline_ip   | multicycle_pipeline_ip.cpp:48 | 9,729        | 676           | 887          | 885         | 901           |
+|    init_reg_file           | multicycle_pipeline_ip.cpp:23 |  156         |               |              |             |               |
+|    statistic_update        | multicycle_pipeline_ip.cpp:40 |   20         |               |              |             |               |
+|    running_cond_update     | multicycle_pipeline_ip.cpp:32 |   49         |               |              |             |               |
+|  + write_back              | wb.cpp:19                     |   88         |               |              |             |               |
+|     stage_job              | wb.cpp:12                     |   20         |               |              |             |               |
+|  + mem_access              | mem_access.cpp:45             |  946         |               |              |             |               |
+|   + stage_job              | mem_access.cpp:10             |  879         |               |              |             |               |
+|      mem_load              | mem.cpp:3                     |  589         |               |              |             |               |
+|      mem_store             | mem.cpp:62                    |  222         |               |              |             |               |
+|     set_output_to_w        | mem_access.cpp:22             |   12         |               |              |             |               |
+|  + execute                 | execute.cpp:76                | 1,600        |               |              |             |               |
+|   + compute                | execute.cpp:10                | 1,069        |               |              |             |               |
+|      compute_branch_result | compute.cpp:3                 |  185         |               |              |             |               |
+|      compute_op_result     | compute.cpp:29                |  232         |               |              |             |               |
+|      compute_result        | compute.cpp:71                |  400         |               |              |             |               |
+|      compute_next_pc       | compute.cpp:114               |  212         |               |              |             |               |
+|     stage_job              | execute.cpp:24                |  169         |               |              |             |               |
+|     set_output_to_f        | execute.cpp:33                |    4         |               |              |             |               |
+|     set_output_to_m        | execute.cpp:38                |  166         |               |              |             |               |
+|  + issue                   | issue.cpp:45                  |  373         |               |              |             |               |
+|     save_input_from_d      | issue.cpp:8                   |    9         |               |              |             |               |
+|     stage_job              | issue.cpp:18                  |   23         |               |              |             |               |
+|     set_output_to_e        | issue.cpp:26                  |   11         |               |              |             |               |
+|  + decode                  | decode.cpp:111                | 5,433        |               |              |             |               |
+|   + stage_job              | decode.cpp:77                 | 5,310        |               |              |             |               |
+|    + decode_instruction    | decode.cpp:11                 | 1,757        |               |              |             |               |
+|     + type                 | type.cpp:55                   |  892         |               |              |             |               |
+|        type_00             | type.cpp:3                    |  180         |               |              |             |               |
+|        type_01             | type.cpp:16                   |  180         |               |              |             |               |
+|        type_10             | type.cpp:29                   |  180         |               |              |             |               |
+|        type_11             | type.cpp:42                   |  180         |               |              |             |               |
+|    + decode_immediate      | decode.cpp:55                 | 3,313        |               |              |             |               |
+|       i_immediate          | immediate.cpp:2               |  504         |               |              |             |               |
+|       s_immediate          | immediate.cpp:8               |  504         |               |              |             |               |
+|       b_immediate          | immediate.cpp:14              |  504         |               |              |             |               |
+|       u_immediate          | immediate.cpp:20              |  658         |               |              |             |               |
+|       j_immediate          | immediate.cpp:27              |  658         |               |              |             |               |
+|     set_output_to_f        | decode.cpp:91                 |    4         |               |              |             |               |
+|     set_output_to_i        | decode.cpp:96                 |    7         |               |              |             |               |
+|  + fetch                   | fetch.cpp:41                  |  615         |               |              |             |               |
+|   + stage_job              | fetch.cpp:17                  |  201         |               |              |             |               |
+|      decode_control        | fetch.cpp:8                   |  188         |               |              |             |               |
+|     set_output_to_f        | fetch.cpp:25                  |  144         |               |              |             |               |
+|     set_output_to_d        | fetch.cpp:30                  |   18         |               |              |             |               |
++----------------------------+-------------------------------+--------------+---------------+--------------+-------------+---------------+
+
+* Design Size Message Settings
++---------------------------------------------+--------+------------------------------------------------------------------+
+| Message Setting                             | Value  | Description                                                      |
++---------------------------------------------+--------+------------------------------------------------------------------+
+| config_compile -design_size_maximum_warning | 100000 | Show a warning when total design instructions exceeds this value |
++---------------------------------------------+--------+------------------------------------------------------------------+
+
+

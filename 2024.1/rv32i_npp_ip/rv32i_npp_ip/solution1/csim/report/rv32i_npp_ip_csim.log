@@ -1,0 +1,102 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../rv32i_npp_ip.cpp in debug mode
+   Compiling ../../../../fetch.cpp in debug mode
+   Compiling ../../../../execute.cpp in debug mode
+   Generating csim.exe
+0000: 00100293      li t0, 1
+     t0  =                1 (       1)
+0004: 00200313      li t1, 2
+     t1  =                2 (       2)
+0008: ffd00393      li t2, -3
+     t2  =               -3 (fffffffd)
+0012: ffc00e13      li t3, -4
+     t3  =               -4 (fffffffc)
+0016: 00000513      li a0, 0
+     a0  =                0 (       0)
+0020: 00552023      sw t0, 0(a0)
+     m[    0] =                1 (       1)
+0024: 00450513      addi a0, a0, 4
+     a0  =                4 (       4)
+0028: 00651023      sh t1, 0(a0)
+     m[    4] =                2 (       2)
+0032: 00551123      sh t0, 2(a0)
+     m[    6] =                1 (       1)
+0036: 00450513      addi a0, a0, 4
+     a0  =                8 (       8)
+0040: 01c50023      sb t3, 0(a0)
+     m[    8] =               -4 (fffffffc)
+0044: 007500a3      sb t2, 1(a0)
+     m[    9] =               -3 (fffffffd)
+0048: 00650123      sb t1, 2(a0)
+     m[    a] =                2 (       2)
+0052: 005501a3      sb t0, 3(a0)
+     m[    b] =                1 (       1)
+0056: 00050583      lb a1, 0(a0)
+     a1  =               -4 (fffffffc)    (m[    8])
+0060: 00150603      lb a2, 1(a0)
+     a2  =               -3 (fffffffd)    (m[    9])
+0064: 00250683      lb a3, 2(a0)
+     a3  =                2 (       2)    (m[    a])
+0068: 00350703      lb a4, 3(a0)
+     a4  =                1 (       1)    (m[    b])
+0072: 00054783      lbu a5, 0(a0)
+     a5  =              252 (      fc)    (m[    8])
+0076: 00154803      lbu a6, 1(a0)
+     a6  =              253 (      fd)    (m[    9])
+0080: 00254883      lbu a7, 2(a0)
+     a7  =                2 (       2)    (m[    a])
+0084: ffc50513      addi a0, a0, -4
+     a0  =                4 (       4)
+0088: 00251403      lh s0, 2(a0)
+     s0  =                1 (       1)    (m[    6])
+0092: 00051483      lh s1, 0(a0)
+     s1  =                2 (       2)    (m[    4])
+0096: 00455903      lhu s2, 4(a0)
+     s2  =            65020 (    fdfc)    (m[    8])
+0100: 00655983      lhu s3, 6(a0)
+     s3  =              258 (     102)    (m[    a])
+0104: ffc50513      addi a0, a0, -4
+     a0  =                0 (       0)
+0108: 00852a03      lw s4, 8(a0)
+     s4  =         16973308 ( 102fdfc)    (m[    8])
+0112: 00008067      ret
+     pc  =                0 (       0)
+ra  =                0 (       0)
+sp  =                0 (       0)
+gp  =                0 (       0)
+tp  =                0 (       0)
+t0  =                1 (       1)
+t1  =                2 (       2)
+t2  =               -3 (fffffffd)
+s0  =                1 (       1)
+s1  =                2 (       2)
+a0  =                0 (       0)
+a1  =               -4 (fffffffc)
+a2  =               -3 (fffffffd)
+a3  =                2 (       2)
+a4  =                1 (       1)
+a5  =              252 (      fc)
+a6  =              253 (      fd)
+a7  =                2 (       2)
+s2  =            65020 (    fdfc)
+s3  =              258 (     102)
+s4  =         16973308 ( 102fdfc)
+s5  =                0 (       0)
+s6  =                0 (       0)
+s7  =                0 (       0)
+s8  =                0 (       0)
+s9  =                0 (       0)
+s10 =                0 (       0)
+s11 =                0 (       0)
+t3  =               -4 (fffffffc)
+t4  =                0 (       0)
+t5  =                0 (       0)
+t6  =                0 (       0)
+29 fetched and decoded instructions
+data memory dump (non null words)
+m[    0] =                1 (       1)
+m[    4] =            65538 (   10002)
+m[    8] =         16973308 ( 102fdfc)
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

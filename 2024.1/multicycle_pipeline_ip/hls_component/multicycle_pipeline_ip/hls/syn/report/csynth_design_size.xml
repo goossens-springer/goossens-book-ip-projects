@@ -1,0 +1,105 @@
+<design_size title="Design Size Report">
+    <item name="Total Instructions per Compilation Phase">
+        <table>
+            <keys size="4">Phase, Step, Instructions, Description</keys>
+            <column name="Compile/Link">, 9729, After all functions are compiled and linked into a single design</column>
+            <column name="">, , </column>
+            <column name="Unroll/Inline">, , After user unroll and inline pragmas are applied</column>
+            <column name="">(1) unroll,   881, user unroll pragmas are applied</column>
+            <column name="">(2) simplification,   695, simplification of applied user unroll pragmas</column>
+            <column name="">(3) inline,   676, user inline pragmas are applied</column>
+            <column name="">(4) simplification,   676, simplification of applied user inline pragmas</column>
+            <column name="">, , </column>
+            <column name="Array/Struct">, , After user array partition and struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(1) array partition, 1190, user array partition pragmas are applied</column>
+            <column name="">(2) simplification, 1042, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
+            <column name="">(3) aggregate/disaggregate , 1042, user struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(4) array reshape, 1042, apply array reshape pragmas</column>
+            <column name="">(5) access patterns,   887, array access pattern optmizations</column>
+            <column name="">, , </column>
+            <column name="Performance">, , After transformations are applied to meet performance pragma targets</column>
+            <column name="">(1) loop simplification,   887, loop and instruction simplification</column>
+            <column name="">(2) parallelization,   885, loops are unrolled or pipelined to meet performance targets</column>
+            <column name="">(3) array partition,   885, arrays are partitioned to meet performance targets</column>
+            <column name="">(4) simplification,   885, simplification of design after performance transformations</column>
+            <column name="">, , </column>
+            <column name="HW Transforms">, , After hardware transfomations</column>
+            <column name="">(1) lowering,   918, initial conversion to HW specific instructions</column>
+            <column name="">(2) optimizations,   901, high level synthesis optimizations</column>
+        </table>
+    </item>
+    <item name="Instructions per Function for each Compilation Phase">
+        <hiertable>
+            <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
+            <rows>
+                <row id="0" col0="multicycle_pipeline_ip" col1="multicycle_pipeline_ip.cpp:48" col2="9729" col3="676" col4="887" col5="885" col6="901">
+                    <row id="11" col0="init_reg_file" col1="multicycle_pipeline_ip.cpp:23" col2="156" col3="" col4="" col5="" col6=""/>
+                    <row id="16" col0="statistic_update" col1="multicycle_pipeline_ip.cpp:40" col2="20" col3="" col4="" col5="" col6=""/>
+                    <row id="27" col0="running_cond_update" col1="multicycle_pipeline_ip.cpp:32" col2="49" col3="" col4="" col5="" col6=""/>
+                    <row id="30" col0="write_back" col1="wb.cpp:19" col2="88" col3="" col4="" col5="" col6="">
+                        <row id="33" col0="stage_job" col1="wb.cpp:12" col2="20" col3="" col4="" col5="" col6=""/>
+                    </row>
+                    <row id="37" col0="mem_access" col1="mem_access.cpp:45" col2="946" col3="" col4="" col5="" col6="">
+                        <row id="43" col0="stage_job" col1="mem_access.cpp:10" col2="879" col3="" col4="" col5="" col6="">
+                            <row id="5" col0="mem_load" col1="mem.cpp:3" col2="589" col3="" col4="" col5="" col6=""/>
+                            <row id="7" col0="mem_store" col1="mem.cpp:62" col2="222" col3="" col4="" col5="" col6=""/>
+                        </row>
+                        <row id="3" col0="set_output_to_w" col1="mem_access.cpp:22" col2="12" col3="" col4="" col5="" col6=""/>
+                    </row>
+                    <row id="31" col0="execute" col1="execute.cpp:76" col2="1600" col3="" col4="" col5="" col6="">
+                        <row id="20" col0="compute" col1="execute.cpp:10" col2="1069" col3="" col4="" col5="" col6="">
+                            <row id="15" col0="compute_branch_result" col1="compute.cpp:3" col2="185" col3="" col4="" col5="" col6=""/>
+                            <row id="26" col0="compute_op_result" col1="compute.cpp:29" col2="232" col3="" col4="" col5="" col6=""/>
+                            <row id="10" col0="compute_result" col1="compute.cpp:71" col2="400" col3="" col4="" col5="" col6=""/>
+                            <row id="17" col0="compute_next_pc" col1="compute.cpp:114" col2="212" col3="" col4="" col5="" col6=""/>
+                        </row>
+                        <row id="13" col0="stage_job" col1="execute.cpp:24" col2="169" col3="" col4="" col5="" col6=""/>
+                        <row id="9" col0="set_output_to_f" col1="execute.cpp:33" col2="4" col3="" col4="" col5="" col6=""/>
+                        <row id="41" col0="set_output_to_m" col1="execute.cpp:38" col2="166" col3="" col4="" col5="" col6=""/>
+                    </row>
+                    <row id="1" col0="issue" col1="issue.cpp:45" col2="373" col3="" col4="" col5="" col6="">
+                        <row id="34" col0="save_input_from_d" col1="issue.cpp:8" col2="9" col3="" col4="" col5="" col6=""/>
+                        <row id="40" col0="stage_job" col1="issue.cpp:18" col2="23" col3="" col4="" col5="" col6=""/>
+                        <row id="2" col0="set_output_to_e" col1="issue.cpp:26" col2="11" col3="" col4="" col5="" col6=""/>
+                    </row>
+                    <row id="12" col0="decode" col1="decode.cpp:111" col2="5433" col3="" col4="" col5="" col6="">
+                        <row id="6" col0="stage_job" col1="decode.cpp:77" col2="5310" col3="" col4="" col5="" col6="">
+                            <row id="19" col0="decode_instruction" col1="decode.cpp:11" col2="1757" col3="" col4="" col5="" col6="">
+                                <row id="28" col0="type" col1="type.cpp:55" col2="892" col3="" col4="" col5="" col6="">
+                                    <row id="23" col0="type_00" col1="type.cpp:3" col2="180" col3="" col4="" col5="" col6=""/>
+                                    <row id="44" col0="type_01" col1="type.cpp:16" col2="180" col3="" col4="" col5="" col6=""/>
+                                    <row id="42" col0="type_10" col1="type.cpp:29" col2="180" col3="" col4="" col5="" col6=""/>
+                                    <row id="39" col0="type_11" col1="type.cpp:42" col2="180" col3="" col4="" col5="" col6=""/>
+                                </row>
+                            </row>
+                            <row id="38" col0="decode_immediate" col1="decode.cpp:55" col2="3313" col3="" col4="" col5="" col6="">
+                                <row id="14" col0="i_immediate" col1="immediate.cpp:2" col2="504" col3="" col4="" col5="" col6=""/>
+                                <row id="32" col0="s_immediate" col1="immediate.cpp:8" col2="504" col3="" col4="" col5="" col6=""/>
+                                <row id="35" col0="b_immediate" col1="immediate.cpp:14" col2="504" col3="" col4="" col5="" col6=""/>
+                                <row id="36" col0="u_immediate" col1="immediate.cpp:20" col2="658" col3="" col4="" col5="" col6=""/>
+                                <row id="4" col0="j_immediate" col1="immediate.cpp:27" col2="658" col3="" col4="" col5="" col6=""/>
+                            </row>
+                        </row>
+                        <row id="24" col0="set_output_to_f" col1="decode.cpp:91" col2="4" col3="" col4="" col5="" col6=""/>
+                        <row id="21" col0="set_output_to_i" col1="decode.cpp:96" col2="7" col3="" col4="" col5="" col6=""/>
+                    </row>
+                    <row id="18" col0="fetch" col1="fetch.cpp:41" col2="615" col3="" col4="" col5="" col6="">
+                        <row id="22" col0="stage_job" col1="fetch.cpp:17" col2="201" col3="" col4="" col5="" col6="">
+                            <row id="8" col0="decode_control" col1="fetch.cpp:8" col2="188" col3="" col4="" col5="" col6=""/>
+                        </row>
+                        <row id="25" col0="set_output_to_f" col1="fetch.cpp:25" col2="144" col3="" col4="" col5="" col6=""/>
+                        <row id="29" col0="set_output_to_d" col1="fetch.cpp:30" col2="18" col3="" col4="" col5="" col6=""/>
+                    </row>
+                </row>
+            </rows>
+            <notes/>
+        </hiertable>
+    </item>
+    <item name="Design Size Message Settings">
+        <table>
+            <keys size="3">Message Setting, Value, Description</keys>
+            <column name="config_compile -design_size_maximum_warning">100000, Show a warning when total design instructions exceeds this value</column>
+        </table>
+    </item>
+</design_size>
+

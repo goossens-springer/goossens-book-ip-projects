@@ -1,0 +1,116 @@
+
+
+================================================================
+== Vitis HLS Report for 'running_cond_update'
+================================================================
+* Date:           Tue May  3 16:48:28 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        fde_ip
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  3.451 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    1|    1|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.45>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%pc_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %pc" [fde_ip.cpp:15]   --->   Operation 2 'read' 'pc_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%instruction_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %instruction" [fde_ip.cpp:15]   --->   Operation 3 'read' 'instruction_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (2.42ns)   --->   "%icmp_ln1069 = icmp_ne  i16 %pc_read, i16 0"   --->   Operation 4 'icmp' 'icmp_ln1069' <Predicate = true> <Delay = 2.42> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 5 [1/1] (2.47ns)   --->   "%icmp_ln19 = icmp_ne  i32 %instruction_read, i32 32871" [fde_ip.cpp:19]   --->   Operation 5 'icmp' 'icmp_ln19' <Predicate = true> <Delay = 2.47> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 6 [1/1] (0.97ns)   --->   "%or_ln19 = or i1 %icmp_ln1069, i1 %icmp_ln19" [fde_ip.cpp:19]   --->   Operation 6 'or' 'or_ln19' <Predicate = true> <Delay = 0.97> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%ret_ln20 = ret i1 %or_ln19" [fde_ip.cpp:20]   --->   Operation 7 'ret' 'ret_ln20' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 3.45ns
+The critical path consists of the following:
+	wire read operation ('instruction_read', fde_ip.cpp:15) on port 'instruction' (fde_ip.cpp:15) [4]  (0 ns)
+	'icmp' operation ('icmp_ln19', fde_ip.cpp:19) [6]  (2.47 ns)
+	'or' operation ('is_running.V', fde_ip.cpp:19) [7]  (0.978 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

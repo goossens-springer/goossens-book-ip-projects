@@ -1,0 +1,160 @@
+
+
+================================================================
+== Vitis HLS Report for 'fetching_ip'
+================================================================
+* Date:           Thu Jul 28 09:55:15 2022
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        fetching_ip
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  5.727 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_20_1  |        ?|        ?|         4|          -|          -|     ?|        no|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.58>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%pc_V = alloca i32 1"   --->   Operation 5 'alloca' 'pc_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%spectopmodule_ln10 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_6" [fetching_ip.cpp:10]   --->   Operation 6 'spectopmodule' 'spectopmodule_ln10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %start_pc"   --->   Operation 7 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %start_pc, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_2, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %start_pc, void @empty_3, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %code_ram, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_4, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %code_ram, void @empty_5, i32 0, i32 0, void @empty_0, i32 1, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %code_ram, i64 666, i64 207, i64 1"   --->   Operation 12 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %code_ram"   --->   Operation 13 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (1.00ns)   --->   "%start_pc_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %start_pc" [fetching_ip.cpp:11]   --->   Operation 15 'read' 'start_pc_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 114 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%pc_V_2 = trunc i32 %start_pc_read"   --->   Operation 16 'trunc' 'pc_V_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (1.58ns)   --->   "%store_ln20 = store i16 %pc_V_2, i16 %pc_V" [fetching_ip.cpp:20]   --->   Operation 17 'store' 'store_ln20' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln20 = br void %do.cond" [fetching_ip.cpp:20]   --->   Operation 18 'br' 'br_ln20' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 3.25>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%pc_V_load = load i16 %pc_V" [fetching_ip.cpp:23]   --->   Operation 19 'load' 'pc_V_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [2/2] (3.25ns)   --->   "%instruction = call i32 @fetch, i16 %pc_V_load, i32 %code_ram" [fetching_ip.cpp:22]   --->   Operation 20 'call' 'instruction' <Predicate = true> <Delay = 3.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 5.72>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "%specloopname_ln22 = specloopname void @_ssdm_op_SpecLoopName, void @empty_7" [fetching_ip.cpp:22]   --->   Operation 21 'specloopname' 'specloopname_ln22' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 22 [1/2] (3.25ns)   --->   "%instruction = call i32 @fetch, i16 %pc_V_load, i32 %code_ram" [fetching_ip.cpp:22]   --->   Operation 22 'call' 'instruction' <Predicate = true> <Delay = 3.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 23 [1/1] (2.07ns)   --->   "%pc_V_1 = call i16 @execute, i16 %pc_V_load" [fetching_ip.cpp:23]   --->   Operation 23 'call' 'pc_V_1' <Predicate = true> <Delay = 2.07> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 24 [1/1] (2.47ns)   --->   "%is_running_V = call i1 @running_cond_update, i32 %instruction" [fetching_ip.cpp:24]   --->   Operation 24 'call' 'is_running_V' <Predicate = true> <Delay = 2.47> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%br_ln25 = br i1 %is_running_V, void %do.end, void %do.cond.do.cond_crit_edge" [fetching_ip.cpp:25]   --->   Operation 25 'br' 'br_ln25' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%ret_ln26 = ret" [fetching_ip.cpp:26]   --->   Operation 26 'ret' 'ret_ln26' <Predicate = (!is_running_V)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 1.58>
+ST_4 : Operation 27 [1/1] (1.58ns)   --->   "%store_ln25 = store i16 %pc_V_1, i16 %pc_V" [fetching_ip.cpp:25]   --->   Operation 27 'store' 'store_ln25' <Predicate = true> <Delay = 1.58>
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "%br_ln25 = br void %do.cond" [fetching_ip.cpp:25]   --->   Operation 28 'br' 'br_ln25' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 2.59ns
+The critical path consists of the following:
+	s_axi read operation ('start_pc', fetching_ip.cpp:11) on port 'start_pc' (fetching_ip.cpp:11) [13]  (1 ns)
+	'store' operation ('store_ln20', fetching_ip.cpp:20) of variable 'pc.V' on local variable 'pc.V' [15]  (1.59 ns)
+
+ <State 2>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('pc_V_load', fetching_ip.cpp:23) on local variable 'pc.V' [18]  (0 ns)
+	'call' operation ('instruction', fetching_ip.cpp:22) to 'fetch' [20]  (3.25 ns)
+
+ <State 3>: 5.73ns
+The critical path consists of the following:
+	'call' operation ('instruction', fetching_ip.cpp:22) to 'fetch' [20]  (3.25 ns)
+	'call' operation ('is_running.V', fetching_ip.cpp:24) to 'running_cond_update' [22]  (2.47 ns)
+
+ <State 4>: 1.59ns
+The critical path consists of the following:
+	'store' operation ('store_ln25', fetching_ip.cpp:25) of variable 'pc.V', fetching_ip.cpp:23 on local variable 'pc.V' [25]  (1.59 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

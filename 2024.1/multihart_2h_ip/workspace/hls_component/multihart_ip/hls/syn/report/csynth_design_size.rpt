@@ -1,0 +1,112 @@
+================================================================
+== Design Size Report
+================================================================
+
+* Total Instructions per Compilation Phase
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Phase         | Step                        | Instructions | Description                                                                            |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+| Compile/Link  |                             | 15,859       | After all functions are compiled and linked into a single design                       |
+|               |                             |              |                                                                                        |
+| Unroll/Inline |                             |              | After user unroll and inline pragmas are applied                                       |
+|               | (1) unroll                  |  2,922       | user unroll pragmas are applied                                                        |
+|               | (2) simplification          |  1,826       | simplification of applied user unroll pragmas                                          |
+|               | (3) inline                  |  1,816       | user inline pragmas are applied                                                        |
+|               | (4) simplification          |  1,800       | simplification of applied user inline pragmas                                          |
+|               |                             |              |                                                                                        |
+| Array/Struct  |                             |              | After user array partition and struct aggregate/disaggregate pragmas are applied       |
+|               | (1) array partition         |  3,229       | user array partition pragmas are applied                                               |
+|               | (2) simplification          |  2,136       | simplification of applied user array partition & struct aggregate/disaggregate pragmas |
+|               | (3) aggregate/disaggregate  |  2,136       | user struct aggregate/disaggregate pragmas are applied                                 |
+|               | (4) array reshape           |  2,135       | apply array reshape pragmas                                                            |
+|               | (5) access patterns         |  2,141       | array access pattern optmizations                                                      |
+|               |                             |              |                                                                                        |
+| Performance   |                             |              | After transformations are applied to meet performance pragma targets                   |
+|               | (1) loop simplification     |  2,125       | loop and instruction simplification                                                    |
+|               | (2) parallelization         |  2,123       | loops are unrolled or pipelined to meet performance targets                            |
+|               | (3) array partition         |  2,123       | arrays are partitioned to meet performance targets                                     |
+|               | (4) simplification          |  2,123       | simplification of design after performance transformations                             |
+|               |                             |              |                                                                                        |
+| HW Transforms |                             |              | After hardware transfomations                                                          |
+|               | (1) lowering                |  2,169       | initial conversion to HW specific instructions                                         |
+|               | (2) optimizations           |  2,144       | high level synthesis optimizations                                                     |
++---------------+-----------------------------+--------------+----------------------------------------------------------------------------------------+
+
+* Instructions per Function for each Compilation Phase
++----------------------------+----------------------+--------------+---------------+--------------+-------------+---------------+
+| Function                   | Location             | Compile/Link | Unroll/Inline | Array/Struct | Performance | HW Transforms |
++----------------------------+----------------------+--------------+---------------+--------------+-------------+---------------+
+| + multihart_ip             | multihart_ip.cpp:102 | 15,859       | 1,800         | 2,141        | 2,123       | 2,144         |
+|    init_exit               | multihart_ip.cpp:46  |   287        |               |              |             |               |
+|    init_f_state            | fetch.cpp:8          |   294        |               |              |             |               |
+|    init_d_state            | decode.cpp:11        |   191        |               |              |             |               |
+|    init_i_state            | issue.cpp:8          |   191        |               |              |             |               |
+|    init_e_state            | execute.cpp:11       |   191        |               |              |             |               |
+|    init_m_state            | mem_access.cpp:10    |   191        |               |              |             |               |
+|    init_w_state            | wb.cpp:13            |   191        |               |              |             |               |
+|    init_file               | multihart_ip.cpp:23  |   477        |               |              |             |               |
+|    new_cycle               | new_cycle.cpp:2      |    15        |               |              |             |               |
+|    statistic_update        | multihart_ip.cpp:73  |    20        |               |              |             |               |
+|    running_cond_update     | multihart_ip.cpp:59  |   282        |               |              |             |               |
+|  + fetch                   | fetch.cpp:103        |   573        |               |              |             |               |
+|     select_hart            | fetch.cpp:49         |   176        |               |              |             |               |
+|     save_input_from_d      | fetch.cpp:24         |    14        |               |              |             |               |
+|     save_input_from_e      | fetch.cpp:29         |    14        |               |              |             |               |
+|     stage_job              | fetch.cpp:34         |    29        |               |              |             |               |
+|     set_output_to_d        | fetch.cpp:41         |    28        |               |              |             |               |
+|  + decode                  | decode.cpp:185       | 6,224        |               |              |             |               |
+|     select_hart            | decode.cpp:131       |   176        |               |              |             |               |
+|     save_input_from_f      | decode.cpp:89        |    33        |               |              |             |               |
+|   + stage_job              | decode.cpp:98        | 5,680        |               |              |             |               |
+|    + decode_instruction    | decode.cpp:20        | 1,925        |               |              |             |               |
+|     + type                 | type.cpp:55          |   892        |               |              |             |               |
+|        type_00             | type.cpp:3           |   180        |               |              |             |               |
+|        type_01             | type.cpp:16          |   180        |               |              |             |               |
+|        type_10             | type.cpp:29          |   180        |               |              |             |               |
+|        type_11             | type.cpp:42          |   180        |               |              |             |               |
+|    + decode_immediate      | decode.cpp:67        | 3,313        |               |              |             |               |
+|       i_immediate          | immediate.cpp:2      |   504        |               |              |             |               |
+|       s_immediate          | immediate.cpp:8      |   504        |               |              |             |               |
+|       b_immediate          | immediate.cpp:14     |   504        |               |              |             |               |
+|       u_immediate          | immediate.cpp:20     |   658        |               |              |             |               |
+|       j_immediate          | immediate.cpp:27     |   658        |               |              |             |               |
+|     set_output_to_f        | decode.cpp:112       |    16        |               |              |             |               |
+|     set_output_to_i        | decode.cpp:119       |    40        |               |              |             |               |
+|  + issue                   | issue.cpp:184        | 1,210        |               |              |             |               |
+|     select_hart            | issue.cpp:61         |   533        |               |              |             |               |
+|     save_input_from_d      | issue.cpp:17         |   230        |               |              |             |               |
+|     stage_job              | issue.cpp:40         |    75        |               |              |             |               |
+|     set_output_to_e        | issue.cpp:47         |    64        |               |              |             |               |
+|  + execute                 | execute.cpp:163      | 2,185        |               |              |             |               |
+|     select_hart            | execute.cpp:109      |   176        |               |              |             |               |
+|     save_input_from_i      | execute.cpp:20       |    69        |               |              |             |               |
+|   + compute                | execute.cpp:34       | 1,183        |               |              |             |               |
+|      compute_branch_result | compute.cpp:3        |   185        |               |              |             |               |
+|      compute_op_result     | compute.cpp:29       |   232        |               |              |             |               |
+|      compute_result        | compute.cpp:70       |   400        |               |              |             |               |
+|      compute_next_pc       | compute.cpp:113      |   212        |               |              |             |               |
+|     stage_job              | execute.cpp:58       |   195        |               |              |             |               |
+|     set_output_to_f        | execute.cpp:73       |    16        |               |              |             |               |
+|     set_output_to_m        | execute.cpp:80       |   252        |               |              |             |               |
+|  + mem_access              | mem_access.cpp:126   | 1,977        |               |              |             |               |
+|     select_hart            | mem_access.cpp:72    |   176        |               |              |             |               |
+|     save_input_from_e      | mem_access.cpp:19    |   348        |               |              |             |               |
+|   + stage_job              | mem_access.cpp:42    | 1,132        |               |              |             |               |
+|      mem_load              | mem.cpp:3            |   597        |               |              |             |               |
+|      mem_store             | mem.cpp:64           |   461        |               |              |             |               |
+|     set_output_to_w        | mem_access.cpp:56    |    52        |               |              |             |               |
+|  + write_back              | wb.cpp:102           |   530        |               |              |             |               |
+|     select_hart            | wb.cpp:49            |    94        |               |              |             |               |
+|     save_input_from_m      | wb.cpp:23            |    57        |               |              |             |               |
+|     stage_job              | wb.cpp:39            |   120        |               |              |             |               |
+|    lock_unlock_update      | multihart_ip.cpp:81  |   254        |               |              |             |               |
++----------------------------+----------------------+--------------+---------------+--------------+-------------+---------------+
+
+* Design Size Message Settings
++---------------------------------------------+--------+------------------------------------------------------------------+
+| Message Setting                             | Value  | Description                                                      |
++---------------------------------------------+--------+------------------------------------------------------------------+
+| config_compile -design_size_maximum_warning | 100000 | Show a warning when total design instructions exceeds this value |
++---------------------------------------------+--------+------------------------------------------------------------------+
+
+
