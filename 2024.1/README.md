@@ -1,50 +1,39 @@
 # goossens-springer-book
 The resources to run the experimentations presented in the springer book on Risc-V processors in HLS.
 
-The experiments have been successfully tested on the Basys3, Vitis 2022.2, Windows 10, thanks to M. Wanlong Liu from the university of Jiangnan, but there are a few elements to be corrected from what is given in the book for the Pynq boards.
+These are the updates fo the VITIS 2024.1 version.
 
-For Basys3 implementation (i.e. Artix-7 based boards needing the use of a microblaze): the microblaze should have at least 32KB of ram (run block automation/Local Memory: set at 32KB, Debug Module: set at Debug and UART).
+How to implement an HLS project up to the run on a development board.
 
-Moreover, the size of the code and data ram should not exceed 8KB (instead of 64KB as stated in the book). E.g. in the "fetching_ip", line 4 of the "fetching_ip.h" file should be updated as "#define LOG_CODE_RAM_SIZE 11" (instead of 16 for a Pynq-Z1 or Pynq-Z2 board). The microblaze IP uses some of the available BRAM blocks. In the multi_core_multi_ram_ip (chapter 11), set LOG_RAM_SIZE as 11 in the multi_core_multi_ram_ip.h file. Set the axi_bram_ctrl_0 Master Base Address as c000_0000, Range 4K, axi_bram_ctrl_1 Master Base Address as c000_1000, Range 4K, microblaze_0_local_memory Range 32K. In the driver (file helloworld.c), set BASE_RAM as c000_0000 and define ram0 and ram1 as :
-int *ram0 = (int *)(BASE_RAM + 0);
-int *ram1 = (int *)(BASE_RAM + 0x1000);
+Example for chapter 2 "adder_ip" project (for other projects you will find a "readme.md" file in each project folder, e.g. "2024.1/fetching_ip", explaining how to set up the experiments):
 
-Still for Basys3, updates are needed for the experiments in chapter 12 (multicore_multicycle_ip) for 2 cores and for the experiments in chapter 13 (multicore_multihart_ip) with 2 cores and 2 harts. The code and data ram sizes should be set as 2K words (LOG_CODE_RAM_SIZE 11, LOG_DATA_RAM_SIZE 11) in the multihart_ip.h file and the Vivado address map should start at C000_0000 with a range of 4KB (ending at C000_0FFF for the first core, starting at C000_1000 for the second core). In the helloworld.c Vitis_IDE driver, DATA_RAM should be set as 0xc0000000 and the ram sizes should be set like in the multihart_ip.h file.
+(1) Create a "workspace" folder (for example for chapter 2 experiment, in the "2024.1/chapter_2" folder)
 
-For the riscv toolchain and tools, here are the hash value I used to do my builts (riscv32-unknown-elf-gcc version 12.2.0, spike and pk)
+(2) Launch the "Vitis IDE" application (cd /opt/Xilinx/Vitis/2024.1 ; source settings64.sh ; vitis)
 
-The hash value for riscv-gnu-toolchain is:
+(3) In the "HLS Development" tab of the "Vitis IDE" window, "Create Component", "Next", "Next", set the "Top Function" as "my_adder_ip", "Next", part "xc7z020clg400-1", "Next", "Next", "Finish"
 
-409b951ba6621f2f115aebddfb15ce2dd78ec24f
+(4) Expand "hls_component" in the "WORKSPACE" tab, "Sources", right-click, "Add Source File", navigate up to "chapter_2" folder, open "my_adder_ip.cpp", "Test Bench", right-click, "Add Test Bench File", open "testbench_my_adder_ip.cpp"
 
-For riscv-pk, the hash value is:
+(5) In the "Flow" tab, "C SIMULATION", click on "Run" (the run prints "10000 + 20000 is 30000")
 
-2efabd3e6604b8a9e8f70baf52f57696680c7855
+(6) "C SYNTHESIS", click on "Run" (the run should print "Synthesis finished successfully")
 
-And for riscv-isa-sim (spike):
+(7) "PACKAGE", click on "Run" (this is to export the RTL as a Vivado IP ; "Package finished successfully")
 
-ac466a21df442c59962589ba296c702631e041b5
+To run the "adder_ip" on the development board, first the design should be built in Vivado (same procedure as the one described in the book). When the bitstream has been built and exported, it can be used in the "Vitis IDE" application. A pre-built project is available, with a "xsa" file containing the bitstream to be loaded on the board. It is located in the "chapter_2" folder, in the "design_1_wrapper.xsa" file.
 
-For example, to install the same riscv-tool-chain as the one used in the book:
+(8) In the top menu, "File", "New Component", "Platform", "Next", select the "Hardware Design" (move up to the "chapter_2" folder and open file "design_1_wrapper.xsa"), "Next", "Next", "Finish" (the creation prints "Generated platform metadata for creating application(s) based on platform platform")
 
-git clone https://github.com/riscv/riscv-gnu-toolchain
+(9) In the leftmost set of icons, click on the "Examples" one, "Hello World", "Create Application Component from Template", "Next", select "platform", "Next", "Next", "Finish"
 
-cd riscv-gnu-toolchain
+(10) In the "WORKSPACE" tab, expand "hello_world" and "Sources", open file "hello_world.c", replace the code with the one taken from file "helloworld.c" in the "chapter_2" folder
 
-git reset --hard 409b951ba6621f2f115aebddfb15ce2dd78ec24f
+(11) Plug the board, start a "putty" (terminal to display the run result) as explained in the book
 
-./configure --prefix=/opt/riscv --enable-multilib --with-arch=rv32i
+(12) In the "Flow" tab, click on "Build" (Component "hello_world" should be selected), "OK" (the build should print "Build Finished successfully"), click on "Run" (the run should print "10000 + 20000 is 30000" on the putty window)
 
-sudo make
+If the run sets the "invalid command name ps7_init" error message, update the "workspace/hello_world/_ide/.theia/launch.json" file by replacing the occurrence of "my_adder_ip.tcl" with "ps7_init.tcl"
 
-In the book, there are a few misprinted figures or mistakes:
 
-Fig 1.3 (chapter 1): the second line of the table should be "1  0" (instead of "space 0")
 
-Fig 1.4 (chapter 1): the second line of the "propagate" LUT should be "1  0" (instead of "space 0")
-
-Page 29, the print should be "10000 + 20000 is 30000" and not "10,000 + 20,000 is 30,000"
-
-Page 131, "ap_\<size\>" should be replaced by "ap_uint\<size\>" (two incorrect occurrences)
-
-Page 277, "multicycle_pipeline_ip.cpp" should be replaced by "multicycle_pipeline_ip.h"
