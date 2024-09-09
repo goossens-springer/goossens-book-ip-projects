@@ -1,0 +1,1689 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon Sep  9 21:11:10 2024
+# Process ID: 901709
+# Current directory: /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/project_1.runs/impl_1
+# Command line: vivado -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+# Log file: /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/project_1.runs/impl_1/design_1_wrapper.vdi
+# Journal file: /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/project_1.runs/impl_1/vivado.jou
+# Running On        :goossens-Precision-5530
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 22.04.4 LTS
+# Processor Detail  :Intel(R) Xeon(R) E-2176M  CPU @ 2.70GHz
+# CPU Frequency     :4199.351 MHz
+# CPU Physical cores:6
+# CPU Logical cores :12
+# Host memory       :33276 MB
+# Swap memory       :2147 MB
+# Total Virtual     :35424 MB
+# Available Virtual :27945 MB
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1476.730 ; gain = 42.836 ; free physical = 9373 ; free virtual = 26263
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/multicycle_pipeline_ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2024.1/data/ip'.
+Command: link_design -top design_1_wrapper -part xc7z020clg400-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Device 21-9227] Part: xc7z020clg400-1 does not have CEAM library.
+INFO: [Project 1-454] Reading design checkpoint '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_0/design_1_axi_bram_ctrl_0_0.dcp' for cell 'design_1_i/axi_bram_ctrl_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_1/design_1_axi_bram_ctrl_0_1.dcp' for cell 'design_1_i/axi_bram_ctrl_1'
+INFO: [Project 1-454] Reading design checkpoint '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/project_1.gen/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0/design_1_blk_mem_gen_0_0.dcp' for cell 'design_1_i/blk_mem_gen_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/project_1.gen/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_1/design_1_blk_mem_gen_0_1.dcp' for cell 'design_1_i/blk_mem_gen_1'
+INFO: [Project 1-454] Reading design checkpoint '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/project_1.gen/sources_1/bd/design_1/ip/design_1_multicycle_pipeline_0_0/design_1_multicycle_pipeline_0_0.dcp' for cell 'design_1_i/multicycle_pipeline_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/project_1.gen/sources_1/bd/design_1/ip/design_1_multicycle_pipeline_0_1/design_1_multicycle_pipeline_0_1.dcp' for cell 'design_1_i/multicycle_pipeline_1'
+INFO: [Project 1-454] Reading design checkpoint '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/project_1.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.dcp' for cell 'design_1_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/project_1.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.dcp' for cell 'design_1_i/rst_ps7_0_100M'
+INFO: [Project 1-454] Reading design checkpoint '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/project_1.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0.dcp' for cell 'design_1_i/axi_interconnect_0/xbar'
+INFO: [Project 1-454] Reading design checkpoint '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/project_1.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp' for cell 'design_1_i/axi_interconnect_0/s00_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/project_1.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1.dcp' for cell 'design_1_i/axi_interconnect_0/s01_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/project_1.gen/sources_1/bd/design_1/ip/design_1_auto_pc_2/design_1_auto_pc_2.dcp' for cell 'design_1_i/axi_interconnect_0/s02_couplers/auto_pc'
+Netlist sorting complete. Time (s): cpu = 00:00:00.2 ; elapsed = 00:00:00.2 . Memory (MB): peak = 1914.676 ; gain = 0.000 ; free physical = 8942 ; free virtual = 25825
+INFO: [Netlist 29-17] Analyzing 1054 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2024.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/project_1.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Finished Parsing XDC File [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/project_1.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Parsing XDC File [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/project_1.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/project_1.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Parsing XDC File [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/project_1.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/project_1.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Generating merged BMM file for the design top 'design_1_wrapper'...
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2360.039 ; gain = 0.000 ; free physical = 8779 ; free virtual = 25663
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+23 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2360.039 ; gain = 849.621 ; free physical = 8779 ; free virtual = 25663
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.55 . Memory (MB): peak = 2360.039 ; gain = 0.000 ; free physical = 8742 ; free virtual = 25626
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 1f87c341a
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2753.297 ; gain = 393.258 ; free physical = 8353 ; free virtual = 25236
+
+Starting Logic Optimization Task
+
+Phase 1 Initialization
+
+Phase 1.1 Core Generation And Design Setup
+Phase 1.1 Core Generation And Design Setup | Checksum: 1f87c341a
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3070.070 ; gain = 0.000 ; free physical = 8031 ; free virtual = 24915
+
+Phase 1.2 Setup Constraints And Sort Netlist
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 1f87c341a
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3070.070 ; gain = 0.000 ; free physical = 8031 ; free virtual = 24915
+Phase 1 Initialization | Checksum: 1f87c341a
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3070.070 ; gain = 0.000 ; free physical = 8031 ; free virtual = 24915
+
+Phase 2 Timer Update And Timing Data Collection
+
+Phase 2.1 Timer Update
+Phase 2.1 Timer Update | Checksum: 1f87c341a
+
+Time (s): cpu = 00:00:00.93 ; elapsed = 00:00:00.24 . Memory (MB): peak = 3070.070 ; gain = 0.000 ; free physical = 8031 ; free virtual = 24915
+
+Phase 2.2 Timing Data Collection
+Phase 2.2 Timing Data Collection | Checksum: 1f87c341a
+
+Time (s): cpu = 00:00:00.96 ; elapsed = 00:00:00.27 . Memory (MB): peak = 3070.070 ; gain = 0.000 ; free physical = 8023 ; free virtual = 24907
+Phase 2 Timer Update And Timing Data Collection | Checksum: 1f87c341a
+
+Time (s): cpu = 00:00:00.96 ; elapsed = 00:00:00.28 . Memory (MB): peak = 3070.070 ; gain = 0.000 ; free physical = 8023 ; free virtual = 24907
+
+Phase 3 Retarget
+INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
+INFO: [Opt 31-1566] Pulled 2 inverters resulting in an inversion of 44 pins
+INFO: [Opt 31-138] Pushed 4 inverter(s) to 12 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: 107aa4adb
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.63 . Memory (MB): peak = 3070.070 ; gain = 0.000 ; free physical = 8031 ; free virtual = 24915
+Retarget | Checksum: 107aa4adb
+INFO: [Opt 31-389] Phase Retarget created 145 cells and removed 200 cells
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 2 inverter(s) to 8 load pin(s).
+Phase 4 Constant propagation | Checksum: 10e3c0e4f
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.87 . Memory (MB): peak = 3070.070 ; gain = 0.000 ; free physical = 8031 ; free virtual = 24915
+Constant propagation | Checksum: 10e3c0e4f
+INFO: [Opt 31-389] Phase Constant propagation created 194 cells and removed 459 cells
+
+Phase 5 Sweep
+Phase 5 Sweep | Checksum: 144f46914
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3070.070 ; gain = 0.000 ; free physical = 8032 ; free virtual = 24915
+Sweep | Checksum: 144f46914
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 486 cells
+
+Phase 6 BUFG optimization
+Phase 6 BUFG optimization | Checksum: 144f46914
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3070.070 ; gain = 0.000 ; free physical = 8031 ; free virtual = 24915
+BUFG optimization | Checksum: 144f46914
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 7 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 7 Shift Register Optimization | Checksum: 144f46914
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 3070.070 ; gain = 0.000 ; free physical = 8031 ; free virtual = 24915
+Shift Register Optimization | Checksum: 144f46914
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 8 Post Processing Netlist
+Phase 8 Post Processing Netlist | Checksum: 11067e4c5
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3070.070 ; gain = 0.000 ; free physical = 8031 ; free virtual = 24915
+Post Processing Netlist | Checksum: 11067e4c5
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+
+Phase 9 Finalization
+
+Phase 9.1 Finalizing Design Cores and Updating Shapes
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 143aa383e
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3070.070 ; gain = 0.000 ; free physical = 8031 ; free virtual = 24915
+
+Phase 9.2 Verifying Netlist Connectivity
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3070.070 ; gain = 0.000 ; free physical = 8031 ; free virtual = 24915
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 143aa383e
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3070.070 ; gain = 0.000 ; free physical = 8031 ; free virtual = 24915
+Phase 9 Finalization | Checksum: 143aa383e
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3070.070 ; gain = 0.000 ; free physical = 8031 ; free virtual = 24915
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |             145  |             200  |                                              0  |
+|  Constant propagation         |             194  |             459  |                                              0  |
+|  Sweep                        |               0  |             486  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 143aa383e
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 3070.070 ; gain = 0.000 ; free physical = 8031 ; free virtual = 24915
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 68 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 2 newly gated: 4 Total Ports: 136
+Ending PowerOpt Patch Enables Task | Checksum: 110d03462
+
+Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.23 . Memory (MB): peak = 3342.938 ; gain = 0.000 ; free physical = 7798 ; free virtual = 24682
+Ending Power Optimization Task | Checksum: 110d03462
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 3342.938 ; gain = 272.867 ; free physical = 7798 ; free virtual = 24682
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 110d03462
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3342.938 ; gain = 0.000 ; free physical = 7798 ; free virtual = 24682
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3342.938 ; gain = 0.000 ; free physical = 7798 ; free virtual = 24682
+Ending Netlist Obfuscation Task | Checksum: f8b5617f
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3342.938 ; gain = 0.000 ; free physical = 7798 ; free virtual = 24682
+INFO: [Common 17-83] Releasing license: Implementation
+47 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:24 . Memory (MB): peak = 3342.938 ; gain = 982.898 ; free physical = 7798 ; free virtual = 24682
+INFO: [Vivado 12-24828] Executing command : report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
+Command: report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/project_1.runs/impl_1/design_1_wrapper_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7803 ; free virtual = 24688
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7803 ; free virtual = 24688
+Writing XDEF routing.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7799 ; free virtual = 24686
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7799 ; free virtual = 24686
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7799 ; free virtual = 24686
+Wrote Device Cache: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7798 ; free virtual = 24686
+Write Physdb Complete: Time (s): cpu = 00:00:00.24 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7798 ; free virtual = 24686
+INFO: [Common 17-1381] The checkpoint '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/project_1.runs/impl_1/design_1_wrapper_opt.dcp' has been generated.
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-83] Releasing license: Implementation
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Starting Placer Task
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7779 ; free virtual = 24668
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 92b43ec3
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7779 ; free virtual = 24668
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7779 ; free virtual = 24668
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 25b9d1d1
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7778 ; free virtual = 24667
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 184b240f0
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7792 ; free virtual = 24681
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 184b240f0
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7792 ; free virtual = 24681
+Phase 1 Placer Initialization | Checksum: 184b240f0
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7792 ; free virtual = 24681
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: dcee209b
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7817 ; free virtual = 24706
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 152029f88
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:06 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7816 ; free virtual = 24705
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 152029f88
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:06 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7816 ; free virtual = 24705
+
+Phase 2.4 Global Placement Core
+
+Phase 2.4.1 UpdateTiming Before Physical Synthesis
+Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 234dcba95
+
+Time (s): cpu = 00:00:57 ; elapsed = 00:00:16 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7819 ; free virtual = 24708
+
+Phase 2.4.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 138 LUTNM shape to break, 406 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 43, two critical 95, total 138, new lutff created 4
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 229 nets or LUTs. Breaked 138 LUTs, combined 91 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1402] Pass 1: Identified 106 candidate cells for Shift Register optimization.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 6 nets or cells. Created 6 new cells, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7818 ; free virtual = 24707
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7818 ; free virtual = 24707
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |          138  |             91  |                   229  |           0  |           1  |  00:00:00  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            6  |              0  |                     6  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |          144  |             91  |                   235  |           0  |           9  |  00:00:01  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.4.2 Physical Synthesis In Placer | Checksum: 1df5d012d
+
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:18 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7815 ; free virtual = 24704
+Phase 2.4 Global Placement Core | Checksum: 17886e611
+
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:19 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7815 ; free virtual = 24704
+Phase 2 Global Placement | Checksum: 17886e611
+
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:19 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7815 ; free virtual = 24704
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 1519caddb
+
+Time (s): cpu = 00:01:07 ; elapsed = 00:00:20 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7815 ; free virtual = 24704
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 25132ee57
+
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:22 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7814 ; free virtual = 24703
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 23bca5cbc
+
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:22 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7814 ; free virtual = 24703
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 18bbf31dd
+
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:22 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7814 ; free virtual = 24703
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 25c9bb2e6
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:00:26 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7808 ; free virtual = 24697
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 18980abd8
+
+Time (s): cpu = 00:01:32 ; elapsed = 00:00:33 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7807 ; free virtual = 24696
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 1d3e74eef
+
+Time (s): cpu = 00:01:33 ; elapsed = 00:00:34 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7807 ; free virtual = 24696
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 1b30d4713
+
+Time (s): cpu = 00:01:33 ; elapsed = 00:00:34 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7810 ; free virtual = 24699
+
+Phase 3.9 Fast Optimization
+Phase 3.9 Fast Optimization | Checksum: 20d10ab1f
+
+Time (s): cpu = 00:01:48 ; elapsed = 00:00:41 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7512 ; free virtual = 24511
+Phase 3 Detail Placement | Checksum: 20d10ab1f
+
+Time (s): cpu = 00:01:48 ; elapsed = 00:00:41 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7495 ; free virtual = 24509
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 128200188
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-6.447 | TNS=-38025.777 |
+Phase 1 Physical Synthesis Initialization | Checksum: 10026fc95
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.68 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7342 ; free virtual = 24405
+INFO: [Place 46-33] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/bus_write/wreq_burst_conv/rs_req/SR[0], BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-33] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/bus_write/wreq_burst_conv/rs_req/SR[0], BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-56] BUFG insertion identified 2 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 2, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
+Ending Physical Synthesis Task | Checksum: 174ff8ae3
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7315 ; free virtual = 24384
+Phase 4.1.1.1 BUFG Insertion | Checksum: 128200188
+
+Time (s): cpu = 00:02:01 ; elapsed = 00:00:46 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7314 ; free virtual = 24383
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-5.031. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 5b09ce23
+
+Time (s): cpu = 00:02:26 ; elapsed = 00:01:00 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7122 ; free virtual = 24293
+
+Time (s): cpu = 00:02:26 ; elapsed = 00:01:00 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7122 ; free virtual = 24293
+Phase 4.1 Post Commit Optimization | Checksum: 5b09ce23
+
+Time (s): cpu = 00:02:26 ; elapsed = 00:01:00 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7126 ; free virtual = 24297
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 5b09ce23
+
+Time (s): cpu = 00:02:26 ; elapsed = 00:01:01 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7139 ; free virtual = 24301
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                2x2|                8x8|
+|___________|___________________|___________________|
+|      South|                1x1|                4x4|
+|___________|___________________|___________________|
+|       East|                4x4|                8x8|
+|___________|___________________|___________________|
+|       West|                2x2|                2x2|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 5b09ce23
+
+Time (s): cpu = 00:02:27 ; elapsed = 00:01:01 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7139 ; free virtual = 24303
+Phase 4.3 Placer Reporting | Checksum: 5b09ce23
+
+Time (s): cpu = 00:02:27 ; elapsed = 00:01:01 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7139 ; free virtual = 24303
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7139 ; free virtual = 24303
+
+Time (s): cpu = 00:02:27 ; elapsed = 00:01:01 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7139 ; free virtual = 24303
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 13f06f490
+
+Time (s): cpu = 00:02:27 ; elapsed = 00:01:01 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7139 ; free virtual = 24303
+Ending Placer Task | Checksum: 100ecb4b9
+
+Time (s): cpu = 00:02:27 ; elapsed = 00:01:01 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7139 ; free virtual = 24303
+91 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:02:30 ; elapsed = 00:01:02 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7139 ; free virtual = 24303
+INFO: [Vivado 12-24838] Running report commands "report_control_sets, report_io, report_utilization" in parallel.
+Running report generation with 3 threads.
+INFO: [Vivado 12-24828] Executing command : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.3 ; elapsed = 00:00:00.18 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7110 ; free virtual = 24275
+INFO: [Vivado 12-24828] Executing command : report_io -file design_1_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.45 ; elapsed = 00:00:00.27 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7100 ; free virtual = 24267
+INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_wrapper_utilization_placed.rpt -pb design_1_wrapper_utilization_placed.pb
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7112 ; free virtual = 24283
+Wrote PlaceDB: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7063 ; free virtual = 24267
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7063 ; free virtual = 24267
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7063 ; free virtual = 24267
+Wrote Netlist Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7063 ; free virtual = 24269
+Wrote Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7063 ; free virtual = 24270
+Write Physdb Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 7063 ; free virtual = 24270
+INFO: [Common 17-1381] The checkpoint '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/project_1.runs/impl_1/design_1_wrapper_placed.dcp' has been generated.
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:02 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 6986 ; free virtual = 24228
+INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 8.61s |  WALL: 2.48s
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 6986 ; free virtual = 24228
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-5.031 | TNS=-30334.699 |
+Phase 1 Physical Synthesis Initialization | Checksum: 23e34f055
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 6959 ; free virtual = 24205
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-5.031 | TNS=-30334.699 |
+
+Phase 2 DSP Register Optimization
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 2 DSP Register Optimization | Checksum: 23e34f055
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 6959 ; free virtual = 24205
+
+Phase 3 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-5.031 | TNS=-30334.699 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/is_reg_computed_73_reg_9412. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 23 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_72_reg_9614[0]_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-5.031 | TNS=-30333.942 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/is_reg_computed_77_reg_8604. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_77_reg_8604_reg[0]. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_comp_1.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_76_reg_8806[0]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-5.022 | TNS=-30333.724 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/is_reg_computed_76_reg_8806. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_76_reg_8806_reg[0]. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_comp_3.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_76_reg_8806[0]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.848 | TNS=-30333.391 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_72_reg_9614[0]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_72_reg_9614[0]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_72_reg_9614[0]_i_8_n_0. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_comp_4.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/ap_CS_fsm_reg[0]_rep_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.838 | TNS=-30333.351 |
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_72_reg_9614[0]_i_6_n_0.  Re-placed instance design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_72_reg_9614[0]_i_6
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_72_reg_9614[0]_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.832 | TNS=-30333.327 |
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_72_reg_9614[0]_i_9_n_0.  Re-placed instance design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_72_reg_9614[0]_i_9
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_72_reg_9614[0]_i_9_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.824 | TNS=-30333.296 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_79_reg_8200[0]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_79_reg_8200[0]_i_3_n_0. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_comp_5.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/ap_CS_fsm_reg[0]_rep_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.804 | TNS=-30337.149 |
+INFO: [Physopt 32-702] Processed net design_1_i/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_noinit.ram/doutb[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/ip_data_ram_WEN_A[1]. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/ip_data_ram_WEN_A[1]_INST_0_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/ap_CS_fsm_reg[0]_rep_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.804 | TNS=-30335.434 |
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/raddr_reg[7].  Re-placed instance design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/raddr_reg_reg[7]
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/raddr_reg[7]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.800 | TNS=-30335.315 |
+INFO: [Physopt 32-702] Processed net design_1_i/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_noinit.ram/doutb[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/ip_data_ram_WEN_A[3]. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/ip_data_ram_WEN_A[3]_INST_0_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/ap_CS_fsm_reg[0]_rep_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.794 | TNS=-30333.111 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/is_reg_computed_77_reg_8604. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_77_reg_8604_reg[0]. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_comp_1.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_76_reg_8806[0]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.787 | TNS=-30332.929 |
+INFO: [Physopt 32-702] Processed net design_1_i/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/doutb[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/ip_data_ram_WEN_A[0]. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/ip_data_ram_WEN_A[0]_INST_0_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/ap_CS_fsm_reg[0]_rep_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.787 | TNS=-30330.837 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 5 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_72_reg_9614[0]_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.775 | TNS=-30330.604 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/is_reg_computed_74_reg_9210. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_74_reg_9210_reg[0]. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_comp_3.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_72_reg_9614[0]_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.772 | TNS=-30330.390 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/is_reg_computed_73_reg_9412. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_73_reg_9412_reg[0]. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_comp_5.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_72_reg_9614[0]_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.763 | TNS=-30330.359 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/is_reg_computed_76_reg_8806. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_76_reg_8806_reg[0]. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_comp_7.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_76_reg_8806[0]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.744 | TNS=-30330.073 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/is_reg_computed_72_reg_9614. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_72_reg_9614[0]_i_4_n_0.  Re-placed instance design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_72_reg_9614[0]_i_4
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_72_reg_9614[0]_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.744 | TNS=-30330.209 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/is_reg_computed_93_reg_5372. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_93_reg_5372[0]_i_2_n_0.  Re-placed instance design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_93_reg_5372[0]_i_2
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_93_reg_5372[0]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.742 | TNS=-30329.989 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 16 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_72_reg_9614[0]_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.735 | TNS=-30329.933 |
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/raddr_reg[7].  Re-placed instance design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/raddr_reg_reg[7]
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/raddr_reg[7]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.735 | TNS=-30329.717 |
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/raddr_reg[6].  Re-placed instance design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/raddr_reg_reg[6]
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/raddr_reg[6]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.731 | TNS=-30329.244 |
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_0/inst/reg_file_11_fu_504_reg_n_0_[21].  Re-placed instance design_1_i/multicycle_pipeline_0/inst/reg_file_11_fu_504_reg[21]
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_0/inst/reg_file_11_fu_504_reg_n_0_[21]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.731 | TNS=-30327.996 |
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_0/inst/reg_file_11_fu_504_reg_n_0_[23].  Re-placed instance design_1_i/multicycle_pipeline_0/inst/reg_file_11_fu_504_reg[23]
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_0/inst/reg_file_11_fu_504_reg_n_0_[23]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.731 | TNS=-30326.746 |
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_0/inst/reg_file_11_fu_504_reg_n_0_[24].  Re-placed instance design_1_i/multicycle_pipeline_0/inst/reg_file_11_fu_504_reg[24]
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_0/inst/reg_file_11_fu_504_reg_n_0_[24]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.731 | TNS=-30325.498 |
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_0/inst/reg_file_11_fu_504_reg_n_0_[29].  Re-placed instance design_1_i/multicycle_pipeline_0/inst/reg_file_11_fu_504_reg[29]
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_0/inst/reg_file_11_fu_504_reg_n_0_[29]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.729 | TNS=-30324.250 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_72_reg_9614[0]_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_72_reg_9614[0]_i_7_n_0. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_comp_7.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_64_reg_11230[0]_i_5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.722 | TNS=-30327.919 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_72_reg_9614[0]_i_4_n_0_repN_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_73_reg_9412[0]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_73_reg_9412[0]_i_2_n_0. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_comp_9.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_64_reg_11230[0]_i_5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.719 | TNS=-30327.850 |
+INFO: [Physopt 32-702] Processed net design_1_i/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_noinit.ram/doutb[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[15].ram.r/prim_noinit.ram/ENA_I. Critical path length was reduced through logic transformation on cell design_1_i/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[15].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.TDP_SP36_NO_ECC_ATTR.ram_i_1_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/store_unit/user_resp/ip_data_ram_EN_A. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.713 | TNS=-30324.763 |
+INFO: [Physopt 32-702] Processed net design_1_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_noinit.ram/doutb[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/ap_CS_fsm_reg[0]_rep_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-134] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/full_n_reg_1. Rewiring did not optimize the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/full_n_reg_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/fifo_rreq/U_fifo_srl/full_n_reg. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/fifo_rreq/U_fifo_srl/full_n_reg. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/fifo_rreq/U_fifo_srl/ip_data_ram_EN_A_INST_0_i_6_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/tmp_10_fu_11777_p3. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.690 | TNS=-29130.659 |
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_76_reg_8806[0]_i_3_n_0.  Re-placed instance design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_comp_2
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_76_reg_8806[0]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.688 | TNS=-29130.651 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/is_reg_computed_79_reg_8200. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_79_reg_8200_reg[0]. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_comp_9.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_79_reg_8200[0]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.688 | TNS=-29130.413 |
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_1/inst/trunc_ln2_fu_15207_p4[9].  Re-placed instance design_1_i/multicycle_pipeline_1/inst/d_i_imm_6_fu_648_reg[10]
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/trunc_ln2_fu_15207_p4[9]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.688 | TNS=-29130.271 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/trunc_ln2_fu_15207_p4[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/ap_CS_fsm_reg[0]_rep_2[0]. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/d_i_is_jalr_fu_632[0]_i_1_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/E[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.683 | TNS=-29118.639 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 17 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_72_reg_9614[0]_i_9_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.683 | TNS=-29118.164 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_76_reg_8806[0]_i_3_n_0_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_76_reg_8806[0]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_76_reg_8806[0]_i_4_n_0. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_comp_11.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_64_reg_11230[0]_i_5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.682 | TNS=-29118.142 |
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_76_reg_8806_reg[0]. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_comp_13.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_76_reg_8806[0]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.662 | TNS=-29118.019 |
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_1/inst/reg_file_11_fu_504_reg_n_0_[14].  Re-placed instance design_1_i/multicycle_pipeline_1/inst/reg_file_11_fu_504_reg[14]
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/reg_file_11_fu_504_reg_n_0_[14]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.661 | TNS=-29116.451 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_77_reg_8604[0]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_77_reg_8604[0]_i_2_n_0. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_comp_15.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_64_reg_11230[0]_i_5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.620 | TNS=-29116.363 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/is_reg_computed_95_reg_4968. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_95_reg_496803_out.  Re-placed instance design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_95_reg_4968[0]_i_2
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_95_reg_496803_out. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.602 | TNS=-29116.209 |
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_1/inst/reg_file_11_fu_504_reg_n_0_[11].  Re-placed instance design_1_i/multicycle_pipeline_1/inst/reg_file_11_fu_504_reg[11]
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/reg_file_11_fu_504_reg_n_0_[11]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.602 | TNS=-29114.821 |
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_1/inst/reg_file_11_fu_504_reg_n_0_[22].  Re-placed instance design_1_i/multicycle_pipeline_1/inst/reg_file_11_fu_504_reg[22]
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/reg_file_11_fu_504_reg_n_0_[22]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.593 | TNS=-29113.433 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/is_reg_computed_92_reg_5574. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_92_reg_557408_out.  Re-placed instance design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_92_reg_5574[0]_i_2
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_92_reg_557408_out. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.577 | TNS=-29113.286 |
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/raddr_reg_n_0_[6].  Re-placed instance design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/raddr_reg[6]
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/raddr_reg_n_0_[6]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.577 | TNS=-29112.838 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/is_reg_computed_94_reg_5170. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_94_reg_5170_reg[0]. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_comp_18.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_94_reg_5170[0]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.575 | TNS=-29112.751 |
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_1/inst/reg_file_11_fu_504_reg_n_0_[29].  Re-placed instance design_1_i/multicycle_pipeline_1/inst/reg_file_11_fu_504_reg[29]
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/reg_file_11_fu_504_reg_n_0_[29]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.574 | TNS=-29111.445 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_90_reg_5978[0]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_90_reg_5978[0]_i_2_n_0. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_comp_19.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/ap_CS_fsm_reg[0]_rep_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.563 | TNS=-29114.090 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_71_reg_9816[0]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_71_reg_9816[0]_i_2_n_0. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_comp_21.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_64_reg_11230[0]_i_5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.560 | TNS=-29113.551 |
+INFO: [Physopt 32-702] Processed net design_1_i/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_noinit.ram/doutb[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/ip_data_ram_WEN_A[2]. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/ip_data_ram_WEN_A[2]_INST_0_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/ap_CS_fsm_reg[0]_rep_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.560 | TNS=-29111.492 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/full_n_reg_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/fifo_rreq/U_fifo_srl/full_n_reg. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/fifo_rreq/U_fifo_srl/full_n_reg. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/fifo_rreq/U_fifo_srl/ip_data_ram_EN_A_INST_0_i_6_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/tmp_10_fu_11777_p3. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.447 | TNS=-28651.149 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271_reg[19]_i_2_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271_reg[15]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[15]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 20 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[13]_i_10_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.415 | TNS=-28418.432 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271_reg[19]_i_2_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271_reg[15]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271_reg[11]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271_reg[7]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271_reg[3]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 20 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[3]_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.390 | TNS=-28286.708 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[13]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149[13]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149[13]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149[13]_i_9_n_0. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149[13]_i_9_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[13]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.386 | TNS=-28237.766 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[15]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.383 | TNS=-28225.535 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[7]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_safe_d_i_rs1_2_reg_20058_pp0_iter1_reg_reg[4]_1[3].  Re-placed instance design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[5]_i_1
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_safe_d_i_rs1_2_reg_20058_pp0_iter1_reg_reg[4]_1[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.378 | TNS=-28074.261 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149[13]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149[13]_i_10_n_0. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149[13]_i_10_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[13]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.375 | TNS=-28062.033 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[13]_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[13]_i_18_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[13]_i_18_n_0. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[13]_i_18_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[13]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.347 | TNS=-27841.816 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[7]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[7]_i_4_n_0. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[7]_i_4_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_safe_d_i_rs1_2_reg_20058_pp0_iter1_reg_reg[4]_1[4]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.321 | TNS=-27690.548 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[13]_i_19_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[13]_i_19_n_0. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[13]_i_19_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[13]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.320 | TNS=-27686.468 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149[13]_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149[13]_i_7_n_0. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149[13]_i_7_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[13]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.319 | TNS=-27682.392 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271_reg[11]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271_reg[7]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[7]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_safe_d_i_rs1_2_reg_20058_pp0_iter1_reg_reg[4]_1[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[6]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[6]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[6]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 23 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[6]_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.311 | TNS=-27579.526 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[3]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[1]_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149[2]_i_5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.295 | TNS=-27416.992 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149_reg[13]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[13]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[13]_i_7_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.292 | TNS=-27404.751 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[6]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[6]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[6]_i_3_n_0. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[6]_i_3_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/w_from_m_value_fu_596[14]_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.275 | TNS=-27289.647 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[15]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[15]_i_3_n_0. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[15]_i_3_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_safe_d_i_rs1_2_reg_20058_pp0_iter1_reg_reg[4]_1[13]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.265 | TNS=-27244.796 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 15 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/w_from_m_value_fu_596[6]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.264 | TNS=-27202.221 |
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[7]_i_5_n_0. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[7]_i_5_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_safe_d_i_rs1_2_reg_20058_pp0_iter1_reg_reg[4]_1[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.256 | TNS=-27046.743 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[15]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149_reg[14]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[14]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[14]_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[14]_i_34_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.253 | TNS=-27034.510 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[13]_i_17_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[13]_i_17_n_0. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[13]_i_17_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[13]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.251 | TNS=-27026.354 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[13]_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[13]_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[13]_i_13_n_0. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[13]_i_13_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[13]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.250 | TNS=-27022.283 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[13]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[13]_i_9_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.248 | TNS=-27014.117 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[13]_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.233 | TNS=-26952.943 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[7]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 23 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_safe_d_i_rs1_2_reg_20058_pp0_iter1_reg_reg[4]_1[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.232 | TNS=-26948.690 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271_reg[3]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[3]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[1]_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149[2]_i_5_n_0.  Re-placed instance design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149[2]_i_5
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149[2]_i_5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.231 | TNS=-26942.618 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149[13]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149[13]_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149[13]_i_12_n_0. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149[13]_i_12_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[13]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.228 | TNS=-26930.389 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[11]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149_reg[9]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[9]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[9]_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.227 | TNS=-26926.249 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[3]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[3]_i_5_n_0. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[3]_i_5_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_safe_d_i_rs1_2_reg_20058_pp0_iter1_reg_reg[4]_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.227 | TNS=-26907.994 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_safe_d_i_rs1_2_reg_20058_pp0_iter1_reg_reg[4]_1[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[5]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[5]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[5]_i_18_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[5]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[5]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.223 | TNS=-26873.897 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_safe_d_i_rs1_2_reg_20058_pp0_iter1_reg_reg[4]_1[4]_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.221 | TNS=-26865.499 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[3]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_safe_d_i_rs1_2_reg_20058_pp0_iter1_reg_reg[4]_1[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[3]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.219 | TNS=-26786.198 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 26 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[11]_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.219 | TNS=-26786.198 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[5]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/w_from_m_value_fu_596[5]_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.211 | TNS=-26751.370 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[13]_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.207 | TNS=-26735.055 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[7]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149_reg[7]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[7]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[7]_i_9_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.207 | TNS=-26735.055 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149_reg[7]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[7]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[7]_i_13_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.206 | TNS=-26730.602 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[14]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[14]_i_13_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.205 | TNS=-26726.531 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[7]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[7]_i_11_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.203 | TNS=-26700.964 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[7]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_safe_d_i_rs1_2_reg_20058_pp0_iter1_reg_reg[4]_1[2]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.199 | TNS=-26600.121 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[5]_i_17_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 28 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[5]_i_16_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.196 | TNS=-26587.339 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[7]_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.194 | TNS=-26578.447 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[9]_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.191 | TNS=-26566.031 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[3]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[3]_i_5_n_0. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[3]_i_5_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_safe_d_i_rs1_2_reg_20058_pp0_iter1_reg_reg[4]_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.188 | TNS=-26550.939 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[13]_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[13]_i_14_n_0. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[13]_i_14_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[13]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.186 | TNS=-26542.788 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[13]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[13]_i_33_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[13]_i_33_n_0. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[13]_i_33_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[13]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.185 | TNS=-26538.710 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[7]_i_9_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.185 | TNS=-26538.710 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[7]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_safe_d_i_rs1_2_reg_20058_pp0_iter1_reg_reg[4]_1[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[4]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[4]_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[4]_i_19_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[4]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 23 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[4]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.182 | TNS=-26525.919 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 19 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[1]_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.179 | TNS=-26487.043 |
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[1]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[1]_i_15_n_0.  Re-placed instance design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[1]_i_15
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[1]_i_15_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-4.173 | TNS=-26422.564 |
+INFO: [Common 17-14] Message 'Physopt 32-619' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149_reg[14]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[14]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[14]_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[13]_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/w_from_m_value_fu_596[14]_i_6_n_0_repN_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_73_reg_9412_reg[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/gmem_RDATA[14]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/is_reg_computed_73_reg_9412. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 23 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_72_reg_9614[0]_i_4_n_0. Optimization improves timing on the net.
+INFO: [Common 17-14] Message 'Physopt 32-735' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/is_reg_computed_76_reg_8806. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 20 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_noinit.ram/doutb[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/ap_CS_fsm_reg[0]_rep_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/full_n_reg_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/fifo_rreq/U_fifo_srl/full_n_reg. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271_reg[19]_i_2_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[3]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[1]_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/raddr_reg[7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/raddr_reg[7]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/pop. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/ap_enable_reg_pp0_iter4_reg. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/full_n_reg_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/fifo_rreq/U_fifo_srl/full_n_reg. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271_reg[19]_i_2_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[7]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_safe_d_i_rs1_2_reg_20058_pp0_iter1_reg_reg[4]_1[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[6]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[6]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[6]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 20 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[3]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[1]_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[1]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[1]_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[2]_i_34_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 21 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[7]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149_reg[7]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[7]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[7]_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[7]_i_34_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[7]_i_47_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 19 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[15]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[13]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 27 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[2]_i_36_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149[13]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149[13]_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 21 pins.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[11]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149_reg[8]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[8]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[15]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_safe_d_i_rs1_2_reg_20058_pp0_iter1_reg_reg[4]_1[13]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[3]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_safe_d_i_rs1_2_reg_20058_pp0_iter1_reg_reg[4]_1[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[15]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149_reg[14]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[14]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[14]_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[14]_i_34_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 23 pins.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[11]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149_reg[9]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[9]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[9]_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[9]_i_42_n_0.  Re-placed instance design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[9]_i_42
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149_reg[9]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[9]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[3]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_safe_d_i_rs1_2_reg_20058_pp0_iter1_reg_reg[4]_1[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[3]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[3]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[3]_i_21_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 21 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[7]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_safe_d_i_rs1_2_reg_20058_pp0_iter1_reg_reg[4]_1[4]_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[7]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_safe_d_i_rs1_2_reg_20058_pp0_iter1_reg_reg[4]_1[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[5]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[5]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[5]_i_17_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[5]_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[15]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[13]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[14]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 20 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[7]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_safe_d_i_rs1_2_reg_20058_pp0_iter1_reg_reg[4]_1[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[4]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[4]_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[4]_i_19_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[4]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[4]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149_reg[13]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[13]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[3]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_safe_d_i_rs1_2_reg_20058_pp0_iter1_reg_reg[4]_0_repN.  Re-placed instance design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[1]_i_1_comp
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[15]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[15]_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[15]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[31]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 15 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[8]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+Netlist sorting complete. Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.09 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 6921 ; free virtual = 24130
+Phase 3 Critical Path Optimization | Checksum: 1f116a3ee
+
+Time (s): cpu = 00:02:58 ; elapsed = 00:00:45 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 6921 ; free virtual = 24130
+
+Phase 4 Critical Path Optimization
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/raddr_reg[7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/rnext[7]. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/raddr_reg[7]_i_1_comp.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/reg_file_11_fu_504_reg_n_0_[13]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/flow_control_loop_delay_pipe_U/int_ap_start_reg. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/flow_control_loop_delay_pipe_U/reg_file_11_fu_504[31]_i_1_comp.
+INFO: [Physopt 32-702] Processed net design_1_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_noinit.ram/doutb[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/ap_CS_fsm_reg[0]_rep_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-134] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/full_n_reg_1. Rewiring did not optimize the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/full_n_reg_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/full_n_reg_1. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/ip_data_ram_EN_A_INST_0_i_2_comp.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/raddr_reg[6]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/rnext[6]. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/raddr_reg[6]_i_1_comp.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/is_reg_computed_87_reg_6584. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_87_reg_6584[0]_i_2_n_0.  Re-placed instance design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/is_reg_computed_87_reg_6584[0]_i_2
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/is_reg_computed_73_reg_9412. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 23 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_noinit.ram/doutb[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/full_n_reg_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/full_n_reg_1. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/ip_data_ram_EN_A_INST_0_i_2_comp.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/fifo_rreq/U_fifo_srl/mem_reg[2][61]_srl3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/control_s_axi_U/mem_reg[2][55]_srl3_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/control_s_axi_U/mem_reg[2][51]_srl3_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/control_s_axi_U/mem_reg[2][47]_srl3_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/control_s_axi_U/mem_reg[2][43]_srl3_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/control_s_axi_U/mem_reg[2][39]_srl3_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/control_s_axi_U/mem_reg[2][35]_srl3_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/control_s_axi_U/mem_reg[2][31]_srl3_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/control_s_axi_U/mem_reg[2][27]_srl3_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/control_s_axi_U/mem_reg[2][23]_srl3_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/control_s_axi_U/mem_reg[2][19]_srl3_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/control_s_axi_U/mem_reg[2][15]_srl3_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/control_s_axi_U/mem_reg[2][11]_srl3_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/control_s_axi_U/mem_reg[2][7]_srl3_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/control_s_axi_U/mem_reg[2][3]_srl3_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_is_valid_reg_1380_reg[0][0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_is_valid_reg_1380_reg[0][0]. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[2][3]_srl3_i_5_comp.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_is_valid_reg_1380_reg[0]_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_is_valid_reg_1380_reg[0]_0[0]. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[2][7]_srl3_i_5_comp.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271_reg[19]_i_2_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271_reg[15]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271_reg[11]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271_reg[7]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[7]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 23 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271_reg[19]_i_2_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271_reg[15]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271_reg[11]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271_reg[7]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[7]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149_reg[7]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[7]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[11]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149_reg[9]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[9]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[7]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_safe_d_i_rs1_2_reg_20058_pp0_iter1_reg_reg[4]_1[4]_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-601] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[6]_i_5_n_0. Net driver design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[6]_i_5 was replaced.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[11]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_safe_d_i_rs1_2_reg_20058_pp0_iter1_reg_reg[4]_1[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[5]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[5]_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[5]_i_27_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 28 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271_reg[3]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[3]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_safe_d_i_rs1_2_reg_20058_pp0_iter1_reg_reg[4]_1[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[3]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[3]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[3]_i_21_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[3]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[3]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 27 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[5]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[5]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[5]_i_6_n_0. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[5]_i_6_comp.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[7]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_safe_d_i_rs1_2_reg_20058_pp0_iter1_reg_reg[4]_1[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[4]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[4]_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[4]_i_19_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[4]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271_reg[3]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[3]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[3]_i_5_n_0. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[3]_i_5_comp_1.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149_reg[9]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[9]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[9]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[11]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149_reg[8]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[8]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[3]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_safe_d_i_rs1_2_reg_20058_pp0_iter1_reg_reg[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[0]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[0]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[0]_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[0]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[0]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 26 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[7]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149_reg[7]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[7]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[3]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[3]_i_6_n_0. Critical path length was reduced through logic transformation on cell design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[3]_i_6_comp.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[3]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[1]_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 28 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_noinit.ram/doutb[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/ap_CS_fsm_reg[0]_rep_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 19 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_noinit.ram/doutb[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/full_n_reg_1.  Re-placed instance design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/ip_data_ram_EN_A_INST_0_i_2_comp
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/fifo_rreq/U_fifo_srl/mem_reg[2][61]_srl3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_is_valid_reg_1380_reg[0]_1[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/d_i_type_1_fu_652_reg[1]_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271_reg[15]_i_2_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[3]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[1]_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[1]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[1]_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[2]_i_34_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/w_from_m_value_fu_596[2]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/w_from_m_value_fu_596[10]_i_5_n_0.  Re-placed instance design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/w_from_m_value_fu_596[10]_i_5
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[7]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149_reg[7]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[7]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[7]_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[7]_i_39_n_0.  Re-placed instance design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[7]_i_39
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 26 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[11]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149_reg[9]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[9]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[9]_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[9]_i_43_n_0.  Re-placed instance design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[9]_i_43
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[3]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_safe_d_i_rs1_2_reg_20058_pp0_iter1_reg_reg[4]_0_repN.  Re-placed instance design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[1]_i_1_comp_2
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[7]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_safe_d_i_rs1_2_reg_20058_pp0_iter1_reg_reg[4]_1[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[4]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[4]_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[4]_i_27_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[4]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[4]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/fifo_rreq/U_fifo_srl/mem_reg[2][61]_srl3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_is_valid_reg_1380_reg[0]_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/pc_1_fu_672_reg[7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271_reg[11]_i_2_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 23 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[9]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[9]_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[9]_i_35_n_0.  Re-placed instance design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[9]_i_35
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[9]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[9]_i_30_n_0.  Re-placed instance design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[9]_i_30
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[3]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[1]_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[1]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/next_pc_1_reg_20276[1]_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[2]_i_34_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/w_from_m_value_fu_596[2]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 15 pins.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 22 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[7]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_safe_d_i_rs1_2_reg_20058_pp0_iter1_reg_reg[4]_1[4]_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[6]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[6]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 26 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[7]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149_reg[7]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[7]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[7]_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[7]_i_34_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[7]_i_47_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/w_from_m_value_fu_596[7]_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 20 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_3_reg_20149_reg[7]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_0/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[7]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/result_25_reg_20271[3]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_safe_d_i_rs1_2_reg_20058_pp0_iter1_reg_reg[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[0]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608_reg[0]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/i_to_e_rv1_fu_608[0]_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[0]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/multicycle_pipeline_1/inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/reg_file_2_fu_468[0]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 24 pins.
+Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.08 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 6967 ; free virtual = 24174
+Phase 4 Critical Path Optimization | Checksum: dbffca33
+
+Time (s): cpu = 00:04:08 ; elapsed = 00:01:04 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 6967 ; free virtual = 24174
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 6967 ; free virtual = 24174
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-3.755 | TNS=-21794.758 |
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Critical Path  |          1.276  |       8539.940  |            0  |              0  |                   175  |           0  |           2  |  00:01:02  |
+|  Total          |          1.276  |       8539.940  |            0  |              0  |                   175  |           0  |           3  |  00:01:02  |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 6967 ; free virtual = 24174
+Ending Physical Synthesis Task | Checksum: ed8c181f
+
+Time (s): cpu = 00:04:09 ; elapsed = 00:01:04 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 6967 ; free virtual = 24173
+INFO: [Common 17-83] Releasing license: Implementation
+840 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:04:17 ; elapsed = 00:01:07 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 6967 ; free virtual = 24173
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 6967 ; free virtual = 24176
+Wrote PlaceDB: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 6899 ; free virtual = 24157
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 6899 ; free virtual = 24157
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 6899 ; free virtual = 24158
+Wrote Netlist Cache: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 6899 ; free virtual = 24160
+Wrote Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 6899 ; free virtual = 24161
+Write Physdb Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 6899 ; free virtual = 24160
+INFO: [Common 17-1381] The checkpoint '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/project_1.runs/impl_1/design_1_wrapper_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: 403d03d ConstDB: 0 ShapeSum: ca961c67 RouteDB: 15f972f0
+Post Restoration Checksum: NetGraph: 95e6436a | NumContArr: 70a235ec | Constraints: c2a8fa9d | Timing: c2a8fa9d
+Phase 1 Build RT Design | Checksum: 28bda6e90
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:17 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 6908 ; free virtual = 24132
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 28bda6e90
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:17 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 6906 ; free virtual = 24134
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 28bda6e90
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:17 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 6906 ; free virtual = 24134
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: 2585ac9c4
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:21 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 6872 ; free virtual = 24106
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-3.721 | TNS=-19182.455| WHS=-0.242 | THS=-141.083|
+
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 22308
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 22308
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 2efc935bb
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:22 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 6849 ; free virtual = 24099
+
+Phase 3 Global Routing
+Phase 3 Global Routing | Checksum: 2efc935bb
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:22 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 6849 ; free virtual = 24099
+
+Phase 4 Initial Routing
+
+Phase 4.1 Initial Net Routing Pass
+Phase 4.1 Initial Net Routing Pass | Checksum: 232c107c8
+
+Time (s): cpu = 00:00:57 ; elapsed = 00:00:25 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 6851 ; free virtual = 24092
+Phase 4 Initial Routing | Checksum: 232c107c8
+
+Time (s): cpu = 00:00:57 ; elapsed = 00:00:25 . Memory (MB): peak = 3391.969 ; gain = 0.000 ; free physical = 6851 ; free virtual = 24092
+INFO: [Route 35-580] Design has 180 pins with tight setup and hold constraints.
+
+The top 5 pins with tight setup and hold constraints:
+
++====================+===================+============================================================================+
+| Launch Setup Clock | Launch Hold Clock | Pin                                                                        |
++====================+===================+============================================================================+
+| clk_fpga_0         | clk_fpga_0        | design_1_i/multicycle_pipeline_1/inst/is_reg_computed_87_reg_6584_reg[0]/D |
+| clk_fpga_0         | clk_fpga_0        | design_1_i/multicycle_pipeline_0/inst/is_reg_computed_73_reg_9412_reg[0]/D |
+| clk_fpga_0         | clk_fpga_0        | design_1_i/multicycle_pipeline_1/inst/is_reg_computed_79_reg_8200_reg[0]/D |
+| clk_fpga_0         | clk_fpga_0        | design_1_i/multicycle_pipeline_0/inst/is_reg_computed_95_reg_4968_reg[0]/D |
+| clk_fpga_0         | clk_fpga_0        | design_1_i/multicycle_pipeline_1/inst/is_reg_computed_94_reg_5170_reg[0]/D |
++--------------------+-------------------+----------------------------------------------------------------------------+
+
+File with complete list of pins: tight_setup_hold_pins.txt
+
+
+Phase 5 Rip-up And Reroute
+
+Phase 5.1 Global Iteration 0
+ Number of Nodes with overlaps = 6535
+ Number of Nodes with overlaps = 1805
+ Number of Nodes with overlaps = 665
+ Number of Nodes with overlaps = 304
+ Number of Nodes with overlaps = 132
+ Number of Nodes with overlaps = 68
+ Number of Nodes with overlaps = 16
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.374 | TNS=-26677.725| WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Global Iteration 0 | Checksum: 187f410fb
+
+Time (s): cpu = 00:02:15 ; elapsed = 00:01:00 . Memory (MB): peak = 3411.699 ; gain = 19.730 ; free physical = 6855 ; free virtual = 24082
+
+Phase 5.2 Global Iteration 1
+ Number of Nodes with overlaps = 1664
+ Number of Nodes with overlaps = 584
+ Number of Nodes with overlaps = 200
+ Number of Nodes with overlaps = 85
+ Number of Nodes with overlaps = 28
+ Number of Nodes with overlaps = 28
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.304 | TNS=-26234.355| WHS=N/A    | THS=N/A    |
+
+Phase 5.2 Global Iteration 1 | Checksum: 3300b385c
+
+Time (s): cpu = 00:02:52 ; elapsed = 00:01:21 . Memory (MB): peak = 3411.699 ; gain = 19.730 ; free physical = 6858 ; free virtual = 24076
+
+Phase 5.3 Global Iteration 2
+ Number of Nodes with overlaps = 1519
+ Number of Nodes with overlaps = 540
+ Number of Nodes with overlaps = 140
+ Number of Nodes with overlaps = 63
+ Number of Nodes with overlaps = 21
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.224 | TNS=-25411.894| WHS=N/A    | THS=N/A    |
+
+Phase 5.3 Global Iteration 2 | Checksum: 30fa80015
+
+Time (s): cpu = 00:03:27 ; elapsed = 00:01:39 . Memory (MB): peak = 3419.699 ; gain = 27.730 ; free physical = 6885 ; free virtual = 24096
+
+Phase 5.4 Global Iteration 3
+ Number of Nodes with overlaps = 1796
+ Number of Nodes with overlaps = 501
+Phase 5.4 Global Iteration 3 | Checksum: 26f2c11dc
+
+Time (s): cpu = 00:03:43 ; elapsed = 00:01:46 . Memory (MB): peak = 3419.699 ; gain = 27.730 ; free physical = 6921 ; free virtual = 24121
+Phase 5 Rip-up And Reroute | Checksum: 26f2c11dc
+
+Time (s): cpu = 00:03:43 ; elapsed = 00:01:46 . Memory (MB): peak = 3419.699 ; gain = 27.730 ; free physical = 6921 ; free virtual = 24121
+
+Phase 6 Delay and Skew Optimization
+
+Phase 6.1 Delay CleanUp
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 211ca8fd7
+
+Time (s): cpu = 00:03:46 ; elapsed = 00:01:47 . Memory (MB): peak = 3419.699 ; gain = 27.730 ; free physical = 6921 ; free virtual = 24121
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.093 | TNS=-24670.770| WHS=N/A    | THS=N/A    |
+
+ Number of Nodes with overlaps = 0
+Phase 6.1 Delay CleanUp | Checksum: 270aea343
+
+Time (s): cpu = 00:03:47 ; elapsed = 00:01:47 . Memory (MB): peak = 3419.699 ; gain = 27.730 ; free physical = 6921 ; free virtual = 24121
+
+Phase 6.2 Clock Skew Optimization
+Phase 6.2 Clock Skew Optimization | Checksum: 270aea343
+
+Time (s): cpu = 00:03:47 ; elapsed = 00:01:47 . Memory (MB): peak = 3419.699 ; gain = 27.730 ; free physical = 6921 ; free virtual = 24121
+Phase 6 Delay and Skew Optimization | Checksum: 270aea343
+
+Time (s): cpu = 00:03:47 ; elapsed = 00:01:47 . Memory (MB): peak = 3419.699 ; gain = 27.730 ; free physical = 6921 ; free virtual = 24121
+
+Phase 7 Post Hold Fix
+
+Phase 7.1 Hold Fix Iter
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.067 | TNS=-24552.172| WHS=0.020  | THS=0.000  |
+
+Phase 7.1 Hold Fix Iter | Checksum: 2308e1cfa
+
+Time (s): cpu = 00:03:50 ; elapsed = 00:01:48 . Memory (MB): peak = 3419.699 ; gain = 27.730 ; free physical = 6921 ; free virtual = 24121
+Phase 7 Post Hold Fix | Checksum: 2308e1cfa
+
+Time (s): cpu = 00:03:51 ; elapsed = 00:01:48 . Memory (MB): peak = 3419.699 ; gain = 27.730 ; free physical = 6921 ; free virtual = 24121
+
+Phase 8 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 8.74531 %
+  Global Horizontal Routing Utilization  = 10.4102 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+
+--GLOBAL Congestion:
+Utilization threshold used for congestion level computation: 0.85
+Congestion Report
+North Dir 1x1 Area, Max Cong = 80.1802%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 98.1982%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X36Y110 -> INT_L_X36Y110
+   INT_R_X37Y110 -> INT_R_X37Y110
+   INT_R_X41Y105 -> INT_R_X41Y105
+   INT_R_X39Y104 -> INT_R_X39Y104
+   INT_R_X39Y103 -> INT_R_X39Y103
+East Dir 2x2 Area, Max Cong = 89.3382%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X38Y106 -> INT_R_X39Y107
+West Dir 2x2 Area, Max Cong = 88.2353%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X52Y114 -> INT_R_X53Y115
+   INT_L_X52Y108 -> INT_R_X53Y109
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 1 Aspect Ratio: 0.5 Sparse Ratio: 0.5
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 2 Aspect Ratio: 0.8 Sparse Ratio: 0.6875
+Direction: West
+----------------
+Congested clusters found at Level 1
+Effective congestion level: 2 Aspect Ratio: 1 Sparse Ratio: 1
+
+Phase 8 Route finalize | Checksum: 2308e1cfa
+
+Time (s): cpu = 00:03:51 ; elapsed = 00:01:48 . Memory (MB): peak = 3419.699 ; gain = 27.730 ; free physical = 6921 ; free virtual = 24121
+
+Phase 9 Verifying routed nets
+
+ Verification completed successfully
+Phase 9 Verifying routed nets | Checksum: 2308e1cfa
+
+Time (s): cpu = 00:03:51 ; elapsed = 00:01:48 . Memory (MB): peak = 3419.699 ; gain = 27.730 ; free physical = 6921 ; free virtual = 24121
+
+Phase 10 Depositing Routes
+Phase 10 Depositing Routes | Checksum: 248d9b7ce
+
+Time (s): cpu = 00:03:53 ; elapsed = 00:01:49 . Memory (MB): peak = 3419.699 ; gain = 27.730 ; free physical = 6917 ; free virtual = 24117
+
+Phase 11 Post Process Routing
+Phase 11 Post Process Routing | Checksum: 248d9b7ce
+
+Time (s): cpu = 00:03:53 ; elapsed = 00:01:49 . Memory (MB): peak = 3419.699 ; gain = 27.730 ; free physical = 6917 ; free virtual = 24117
+
+Phase 12 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-4.067 | TNS=-24552.172| WHS=0.020  | THS=0.000  |
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 12 Post Router Timing | Checksum: 248d9b7ce
+
+Time (s): cpu = 00:03:53 ; elapsed = 00:01:49 . Memory (MB): peak = 3419.699 ; gain = 27.730 ; free physical = 6917 ; free virtual = 24117
+Total Elapsed time in route_design: 109.15 secs
+
+Phase 13 Post-Route Event Processing
+Phase 13 Post-Route Event Processing | Checksum: 1672a7b5b
+
+Time (s): cpu = 00:03:53 ; elapsed = 00:01:49 . Memory (MB): peak = 3419.699 ; gain = 27.730 ; free physical = 6917 ; free virtual = 24117
+INFO: [Route 35-16] Router Completed Successfully
+Ending Routing Task | Checksum: 1672a7b5b
+
+Time (s): cpu = 00:03:54 ; elapsed = 00:01:49 . Memory (MB): peak = 3419.699 ; gain = 27.730 ; free physical = 6917 ; free virtual = 24117
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+860 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:03:58 ; elapsed = 00:01:51 . Memory (MB): peak = 3419.699 ; gain = 27.730 ; free physical = 6917 ; free virtual = 24117
+INFO: [Vivado 12-24828] Executing command : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
+Command: report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/project_1.runs/impl_1/design_1_wrapper_drc_routed.rpt.
+report_drc completed successfully
+INFO: [Vivado 12-24828] Executing command : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 8 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/project_1.runs/impl_1/design_1_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [Vivado 12-24828] Executing command : report_timing_summary -max_paths 10 -report_unconstrained -file design_1_wrapper_timing_summary_routed.rpt -pb design_1_wrapper_timing_summary_routed.pb -rpx design_1_wrapper_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+INFO: [Vivado 12-24838] Running report commands "report_bus_skew, report_incremental_reuse, report_route_status" in parallel.
+Running report generation with 3 threads.
+INFO: [Vivado 12-24828] Executing command : report_incremental_reuse -file design_1_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [Vivado 12-24828] Executing command : report_bus_skew -warn_on_violation -file design_1_wrapper_bus_skew_routed.rpt -pb design_1_wrapper_bus_skew_routed.pb -rpx design_1_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Vivado 12-24828] Executing command : report_route_status -file design_1_wrapper_route_status.rpt -pb design_1_wrapper_route_status.pb
+INFO: [Vivado 12-24828] Executing command : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
+Command: report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+880 Infos, 1 Warnings, 1 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [Vivado 12-24828] Executing command : report_clock_utilization -file design_1_wrapper_clock_utilization_routed.rpt
+WARNING: [Device 21-9320] Failed to find the Oracle tile group with name 'HSR_BOUNDARY_TOP'. This is required for Clock regions and Virtual grid.
+WARNING: [Device 21-2174] Failed to initialize Virtual grid.
+generate_parallel_reports: Time (s): cpu = 00:00:43 ; elapsed = 00:00:14 . Memory (MB): peak = 3507.742 ; gain = 88.043 ; free physical = 6855 ; free virtual = 24061
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3507.742 ; gain = 0.000 ; free physical = 6853 ; free virtual = 24062
+Wrote PlaceDB: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3507.742 ; gain = 0.000 ; free physical = 6841 ; free virtual = 24073
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3507.742 ; gain = 0.000 ; free physical = 6841 ; free virtual = 24073
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.42 ; elapsed = 00:00:00.28 . Memory (MB): peak = 3507.742 ; gain = 0.000 ; free physical = 6830 ; free virtual = 24067
+Wrote Netlist Cache: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3507.742 ; gain = 0.000 ; free physical = 6826 ; free virtual = 24065
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3507.742 ; gain = 0.000 ; free physical = 6826 ; free virtual = 24066
+Write Physdb Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3507.742 ; gain = 0.000 ; free physical = 6826 ; free virtual = 24066
+INFO: [Common 17-1381] The checkpoint '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/project_1.runs/impl_1/design_1_wrapper_routed.dcp' has been generated.
+Command: write_bitstream -force design_1_wrapper.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./design_1_wrapper.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Common 17-83] Releasing license: Implementation
+891 Infos, 3 Warnings, 1 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:34 ; elapsed = 00:00:15 . Memory (MB): peak = 3804.621 ; gain = 296.879 ; free physical = 6545 ; free virtual = 23764
+INFO: [Common 17-206] Exiting Vivado at Mon Sep  9 21:16:38 2024...

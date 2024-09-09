@@ -1,0 +1,557 @@
+INFO: [vitis-run 60-1548] Creating build summary session with primary output /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/multicycle_pipeline_ip/multicycle_pipeline_ip.hlsrun_csim_summary, at Mon Sep  9 18:42:21 2024
+INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run csim -work_dir /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/multicycle_pipeline_ip -config /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg -cmdlineconfig /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/multicycle_pipeline_ip/hls/config.cmdline
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1 (64-bit)
+  **** SW Build 5069499 on May 21 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Mon Sep  9 18:42:22 2024
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vitis_HLS/2024.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'goossens' on host 'goossens-Precision-5530' (Linux_x86_64 version 6.8.0-40-generic) on Mon Sep 09 18:42:24 CEST 2024
+INFO: [HLS 200-10] On os Ubuntu 22.04.4 LTS
+INFO: [HLS 200-10] In directory '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component'
+INFO: [HLS 200-2005] Using work_dir /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/multicycle_pipeline_ip 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+WARNING: [HLS 200-2001] file not found '/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/testbench_seq_multicore_multicycle_ip.cpp' see [hls] from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(10)
+WARNING: [HLS 200-2001] file not found '/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/wb.cpp' see [hls] from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(12)
+WARNING: [HLS 200-2001] file not found '/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/type.cpp' see [hls] from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(13)
+WARNING: [HLS 200-2001] file not found '/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/print.cpp' see [hls] from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(14)
+WARNING: [HLS 200-2001] file not found '/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/new_cycle.cpp' see [hls] from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(15)
+WARNING: [HLS 200-2001] file not found '/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/multicycle_pipeline_ip.cpp' see [hls] from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(16)
+WARNING: [HLS 200-2001] file not found '/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/mem_access.cpp' see [hls] from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(17)
+WARNING: [HLS 200-2001] file not found '/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/mem.cpp' see [hls] from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(18)
+WARNING: [HLS 200-2001] file not found '/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/issue.cpp' see [hls] from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(19)
+WARNING: [HLS 200-2001] file not found '/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/immediate.cpp' see [hls] from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(20)
+WARNING: [HLS 200-2001] file not found '/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/fetch.cpp' see [hls] from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(21)
+WARNING: [HLS 200-2001] file not found '/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/execute.cpp' see [hls] from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(22)
+WARNING: [HLS 200-2001] file not found '/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/emulate.cpp' see [hls] from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(23)
+WARNING: [HLS 200-2001] file not found '/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/disassemble.cpp' see [hls] from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(24)
+WARNING: [HLS 200-2001] file not found '/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/decode.cpp' see [hls] from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(25)
+WARNING: [HLS 200-2001] file not found '/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/compute.cpp' see [hls] from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(26)
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/wb.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(12)
+WARNING: [HLS 200-40] Cannot find design file '/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/wb.cpp'
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/type.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(13)
+WARNING: [HLS 200-40] Cannot find design file '/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/type.cpp'
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/print.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(14)
+WARNING: [HLS 200-40] Cannot find design file '/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/print.cpp'
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/new_cycle.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(15)
+WARNING: [HLS 200-40] Cannot find design file '/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/new_cycle.cpp'
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/multicycle_pipeline_ip.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(16)
+WARNING: [HLS 200-40] Cannot find design file '/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/multicycle_pipeline_ip.cpp'
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/mem_access.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(17)
+WARNING: [HLS 200-40] Cannot find design file '/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/mem_access.cpp'
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/mem.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(18)
+WARNING: [HLS 200-40] Cannot find design file '/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/mem.cpp'
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/issue.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(19)
+WARNING: [HLS 200-40] Cannot find design file '/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/issue.cpp'
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/immediate.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(20)
+WARNING: [HLS 200-40] Cannot find design file '/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/immediate.cpp'
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/fetch.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(21)
+WARNING: [HLS 200-40] Cannot find design file '/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/fetch.cpp'
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/execute.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(22)
+WARNING: [HLS 200-40] Cannot find design file '/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/execute.cpp'
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/emulate.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(23)
+WARNING: [HLS 200-40] Cannot find design file '/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/emulate.cpp'
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/disassemble.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(24)
+WARNING: [HLS 200-40] Cannot find design file '/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/disassemble.cpp'
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/decode.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(25)
+WARNING: [HLS 200-40] Cannot find design file '/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/decode.cpp'
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/compute.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(26)
+WARNING: [HLS 200-40] Cannot find design file '/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/compute.cpp'
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/compute.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(27)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/compute.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/decode.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(28)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/decode.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/disassemble.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(29)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/disassemble.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/emulate.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(30)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/emulate.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/execute.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(31)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/execute.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/fetch.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(32)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/fetch.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/immediate.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(33)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/immediate.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/issue.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(34)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/issue.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/mem.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(35)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/mem.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/mem_access.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(36)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/mem_access.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/multicycle_pipeline_ip.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(37)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/multicycle_pipeline_ip.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/new_cycle.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(38)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/new_cycle.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/print.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(39)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/print.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/type.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(40)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/type.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/wb.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(41)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/wb.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/testbench_seq_multicore_multicycle_ip.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(10)
+WARNING: [HLS 200-40] Cannot find test bench file '/home/bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/testbench_seq_multicore_multicycle_ip.cpp'
+INFO: [HLS 200-1465] Applying ini 'tb.file=/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/testbench_seq_multicore_multicycle_ip.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding test bench file '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/testbench_seq_multicore_multicycle_ip.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=multicycle_pipeline_ip' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(6)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(5)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(4)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying ini 'vivado.rtl=verilog' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/hls_config.cfg(8)
+WARNING: [HLS 200-1998] cannot find relative file path '../../../../../../../../bgoossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/testbench_seq_multicore_multicycle_ip.cpp' in directory(s): /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component/multicycle_pipeline_ip/solution /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_2c_ip/workspace/hls_component
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+make: 'csim.exe' is up to date.
+0000: 00000513      li a0, 0
+      a0  =                0 (       0)
+0004: 00000593      li a1, 0
+      a1  =                0 (       0)
+0008: 00000613      li a2, 0
+      a2  =                0 (       0)
+0012: 02860693      addi a3, a2, 40
+      a3  =               40 (      28)
+0016: 00158593      addi a1, a1, 1
+      a1  =                1 (       1)
+0020: 00b62023      sw a1, 0(a2)
+      m[    0] =                1 (       1)
+0024: 00460613      addi a2, a2, 4
+      a2  =                4 (       4)
+0028: fed61ae3      bne a2, a3, 16
+      pc  =               16 (      10)
+0016: 00158593      addi a1, a1, 1
+      a1  =                2 (       2)
+0020: 00b62023      sw a1, 0(a2)
+      m[    4] =                2 (       2)
+0024: 00460613      addi a2, a2, 4
+      a2  =                8 (       8)
+0028: fed61ae3      bne a2, a3, 16
+      pc  =               16 (      10)
+0016: 00158593      addi a1, a1, 1
+      a1  =                3 (       3)
+0020: 00b62023      sw a1, 0(a2)
+      m[    8] =                3 (       3)
+0024: 00460613      addi a2, a2, 4
+      a2  =               12 (       c)
+0028: fed61ae3      bne a2, a3, 16
+      pc  =               16 (      10)
+0016: 00158593      addi a1, a1, 1
+      a1  =                4 (       4)
+0020: 00b62023      sw a1, 0(a2)
+      m[    c] =                4 (       4)
+0024: 00460613      addi a2, a2, 4
+      a2  =               16 (      10)
+0028: fed61ae3      bne a2, a3, 16
+      pc  =               16 (      10)
+0016: 00158593      addi a1, a1, 1
+      a1  =                5 (       5)
+0020: 00b62023      sw a1, 0(a2)
+      m[   10] =                5 (       5)
+0024: 00460613      addi a2, a2, 4
+      a2  =               20 (      14)
+0028: fed61ae3      bne a2, a3, 16
+      pc  =               16 (      10)
+0016: 00158593      addi a1, a1, 1
+      a1  =                6 (       6)
+0020: 00b62023      sw a1, 0(a2)
+      m[   14] =                6 (       6)
+0024: 00460613      addi a2, a2, 4
+      a2  =               24 (      18)
+0028: fed61ae3      bne a2, a3, 16
+      pc  =               16 (      10)
+0016: 00158593      addi a1, a1, 1
+      a1  =                7 (       7)
+0020: 00b62023      sw a1, 0(a2)
+      m[   18] =                7 (       7)
+0024: 00460613      addi a2, a2, 4
+      a2  =               28 (      1c)
+0028: fed61ae3      bne a2, a3, 16
+      pc  =               16 (      10)
+0016: 00158593      addi a1, a1, 1
+      a1  =                8 (       8)
+0020: 00b62023      sw a1, 0(a2)
+      m[   1c] =                8 (       8)
+0024: 00460613      addi a2, a2, 4
+      a2  =               32 (      20)
+0028: fed61ae3      bne a2, a3, 16
+      pc  =               16 (      10)
+0016: 00158593      addi a1, a1, 1
+      a1  =                9 (       9)
+0020: 00b62023      sw a1, 0(a2)
+      m[   20] =                9 (       9)
+0024: 00460613      addi a2, a2, 4
+      a2  =               36 (      24)
+0028: fed61ae3      bne a2, a3, 16
+      pc  =               16 (      10)
+0016: 00158593      addi a1, a1, 1
+      a1  =               10 (       a)
+0020: 00b62023      sw a1, 0(a2)
+      m[   24] =               10 (       a)
+0024: 00460613      addi a2, a2, 4
+      a2  =               40 (      28)
+0028: fed61ae3      bne a2, a3, 16
+      pc  =               32 (      20)
+0032: 00000593      li a1, 0
+      a1  =                0 (       0)
+0036: 00000613      li a2, 0
+      a2  =                0 (       0)
+0040: 00062703      lw a4, 0(a2)
+      a4  =                1 (       1)    (m[    0])
+0044: 00e50533      add a0, a0, a4
+      a0  =                1 (       1)
+0048: 00460613      addi a2, a2, 4
+      a2  =                4 (       4)
+0052: fed61ae3      bne a2, a3, 40
+      pc  =               40 (      28)
+0040: 00062703      lw a4, 0(a2)
+      a4  =                2 (       2)    (m[    4])
+0044: 00e50533      add a0, a0, a4
+      a0  =                3 (       3)
+0048: 00460613      addi a2, a2, 4
+      a2  =                8 (       8)
+0052: fed61ae3      bne a2, a3, 40
+      pc  =               40 (      28)
+0040: 00062703      lw a4, 0(a2)
+      a4  =                3 (       3)    (m[    8])
+0044: 00e50533      add a0, a0, a4
+      a0  =                6 (       6)
+0048: 00460613      addi a2, a2, 4
+      a2  =               12 (       c)
+0052: fed61ae3      bne a2, a3, 40
+      pc  =               40 (      28)
+0040: 00062703      lw a4, 0(a2)
+      a4  =                4 (       4)    (m[    c])
+0044: 00e50533      add a0, a0, a4
+      a0  =               10 (       a)
+0048: 00460613      addi a2, a2, 4
+      a2  =               16 (      10)
+0052: fed61ae3      bne a2, a3, 40
+      pc  =               40 (      28)
+0040: 00062703      lw a4, 0(a2)
+      a4  =                5 (       5)    (m[   10])
+0044: 00e50533      add a0, a0, a4
+      a0  =               15 (       f)
+0048: 00460613      addi a2, a2, 4
+      a2  =               20 (      14)
+0052: fed61ae3      bne a2, a3, 40
+      pc  =               40 (      28)
+0040: 00062703      lw a4, 0(a2)
+      a4  =                6 (       6)    (m[   14])
+0044: 00e50533      add a0, a0, a4
+      a0  =               21 (      15)
+0048: 00460613      addi a2, a2, 4
+      a2  =               24 (      18)
+0052: fed61ae3      bne a2, a3, 40
+      pc  =               40 (      28)
+0040: 00062703      lw a4, 0(a2)
+      a4  =                7 (       7)    (m[   18])
+0044: 00e50533      add a0, a0, a4
+      a0  =               28 (      1c)
+0048: 00460613      addi a2, a2, 4
+      a2  =               28 (      1c)
+0052: fed61ae3      bne a2, a3, 40
+      pc  =               40 (      28)
+0040: 00062703      lw a4, 0(a2)
+      a4  =                8 (       8)    (m[   1c])
+0044: 00e50533      add a0, a0, a4
+      a0  =               36 (      24)
+0048: 00460613      addi a2, a2, 4
+      a2  =               32 (      20)
+0052: fed61ae3      bne a2, a3, 40
+      pc  =               40 (      28)
+0040: 00062703      lw a4, 0(a2)
+      a4  =                9 (       9)    (m[   20])
+0044: 00e50533      add a0, a0, a4
+      a0  =               45 (      2d)
+0048: 00460613      addi a2, a2, 4
+      a2  =               36 (      24)
+0052: fed61ae3      bne a2, a3, 40
+      pc  =               40 (      28)
+0040: 00062703      lw a4, 0(a2)
+      a4  =               10 (       a)    (m[   24])
+0044: 00e50533      add a0, a0, a4
+      a0  =               55 (      37)
+0048: 00460613      addi a2, a2, 4
+      a2  =               40 (      28)
+0052: fed61ae3      bne a2, a3, 40
+      pc  =               56 (      38)
+0056: 00a62223      sw a0, 4(a2)
+      m[   2c] =               55 (      37)
+0060: 00008067      ret
+      pc  =                0 (       0)
+ra  =                0 (       0)
+sp  =            65536 (   10000)
+gp  =                0 (       0)
+tp  =                0 (       0)
+t0  =                0 (       0)
+t1  =                0 (       0)
+t2  =                0 (       0)
+s0  =                0 (       0)
+s1  =                0 (       0)
+a0  =               55 (      37)
+a1  =                0 (       0)
+a2  =               40 (      28)
+a3  =               40 (      28)
+a4  =               10 (       a)
+a5  =                0 (       0)
+a6  =                0 (       0)
+a7  =                0 (       0)
+s2  =                0 (       0)
+s3  =                0 (       0)
+s4  =                0 (       0)
+s5  =                0 (       0)
+s6  =                0 (       0)
+s7  =                0 (       0)
+s8  =                0 (       0)
+s9  =                0 (       0)
+s10 =                0 (       0)
+s11 =                0 (       0)
+t3  =                0 (       0)
+t4  =                0 (       0)
+t5  =                0 (       0)
+t6  =                0 (       0)
+0000: 00000513      li a0, 0
+      a0  =                0 (       0)
+0004: 00000593      li a1, 0
+      a1  =                0 (       0)
+0008: 00000613      li a2, 0
+      a2  =                0 (       0)
+0012: 02860693      addi a3, a2, 40
+      a3  =               40 (      28)
+0016: 00158593      addi a1, a1, 1
+      a1  =                1 (       1)
+0020: 00b62023      sw a1, 0(a2)
+      m[10000] =                1 (       1)
+0024: 00460613      addi a2, a2, 4
+      a2  =                4 (       4)
+0028: fed61ae3      bne a2, a3, 16
+      pc  =               16 (      10)
+0016: 00158593      addi a1, a1, 1
+      a1  =                2 (       2)
+0020: 00b62023      sw a1, 0(a2)
+      m[10004] =                2 (       2)
+0024: 00460613      addi a2, a2, 4
+      a2  =                8 (       8)
+0028: fed61ae3      bne a2, a3, 16
+      pc  =               16 (      10)
+0016: 00158593      addi a1, a1, 1
+      a1  =                3 (       3)
+0020: 00b62023      sw a1, 0(a2)
+      m[10008] =                3 (       3)
+0024: 00460613      addi a2, a2, 4
+      a2  =               12 (       c)
+0028: fed61ae3      bne a2, a3, 16
+      pc  =               16 (      10)
+0016: 00158593      addi a1, a1, 1
+      a1  =                4 (       4)
+0020: 00b62023      sw a1, 0(a2)
+      m[1000c] =                4 (       4)
+0024: 00460613      addi a2, a2, 4
+      a2  =               16 (      10)
+0028: fed61ae3      bne a2, a3, 16
+      pc  =               16 (      10)
+0016: 00158593      addi a1, a1, 1
+      a1  =                5 (       5)
+0020: 00b62023      sw a1, 0(a2)
+      m[10010] =                5 (       5)
+0024: 00460613      addi a2, a2, 4
+      a2  =               20 (      14)
+0028: fed61ae3      bne a2, a3, 16
+      pc  =               16 (      10)
+0016: 00158593      addi a1, a1, 1
+      a1  =                6 (       6)
+0020: 00b62023      sw a1, 0(a2)
+      m[10014] =                6 (       6)
+0024: 00460613      addi a2, a2, 4
+      a2  =               24 (      18)
+0028: fed61ae3      bne a2, a3, 16
+      pc  =               16 (      10)
+0016: 00158593      addi a1, a1, 1
+      a1  =                7 (       7)
+0020: 00b62023      sw a1, 0(a2)
+      m[10018] =                7 (       7)
+0024: 00460613      addi a2, a2, 4
+      a2  =               28 (      1c)
+0028: fed61ae3      bne a2, a3, 16
+      pc  =               16 (      10)
+0016: 00158593      addi a1, a1, 1
+      a1  =                8 (       8)
+0020: 00b62023      sw a1, 0(a2)
+      m[1001c] =                8 (       8)
+0024: 00460613      addi a2, a2, 4
+      a2  =               32 (      20)
+0028: fed61ae3      bne a2, a3, 16
+      pc  =               16 (      10)
+0016: 00158593      addi a1, a1, 1
+      a1  =                9 (       9)
+0020: 00b62023      sw a1, 0(a2)
+      m[10020] =                9 (       9)
+0024: 00460613      addi a2, a2, 4
+      a2  =               36 (      24)
+0028: fed61ae3      bne a2, a3, 16
+      pc  =               16 (      10)
+0016: 00158593      addi a1, a1, 1
+      a1  =               10 (       a)
+0020: 00b62023      sw a1, 0(a2)
+      m[10024] =               10 (       a)
+0024: 00460613      addi a2, a2, 4
+      a2  =               40 (      28)
+0028: fed61ae3      bne a2, a3, 16
+      pc  =               32 (      20)
+0032: 00000593      li a1, 0
+      a1  =                0 (       0)
+0036: 00000613      li a2, 0
+      a2  =                0 (       0)
+0040: 00062703      lw a4, 0(a2)
+      a4  =                1 (       1)    (m[10000])
+0044: 00e50533      add a0, a0, a4
+      a0  =                1 (       1)
+0048: 00460613      addi a2, a2, 4
+      a2  =                4 (       4)
+0052: fed61ae3      bne a2, a3, 40
+      pc  =               40 (      28)
+0040: 00062703      lw a4, 0(a2)
+      a4  =                2 (       2)    (m[10004])
+0044: 00e50533      add a0, a0, a4
+      a0  =                3 (       3)
+0048: 00460613      addi a2, a2, 4
+      a2  =                8 (       8)
+0052: fed61ae3      bne a2, a3, 40
+      pc  =               40 (      28)
+0040: 00062703      lw a4, 0(a2)
+      a4  =                3 (       3)    (m[10008])
+0044: 00e50533      add a0, a0, a4
+      a0  =                6 (       6)
+0048: 00460613      addi a2, a2, 4
+      a2  =               12 (       c)
+0052: fed61ae3      bne a2, a3, 40
+      pc  =               40 (      28)
+0040: 00062703      lw a4, 0(a2)
+      a4  =                4 (       4)    (m[1000c])
+0044: 00e50533      add a0, a0, a4
+      a0  =               10 (       a)
+0048: 00460613      addi a2, a2, 4
+      a2  =               16 (      10)
+0052: fed61ae3      bne a2, a3, 40
+      pc  =               40 (      28)
+0040: 00062703      lw a4, 0(a2)
+      a4  =                5 (       5)    (m[10010])
+0044: 00e50533      add a0, a0, a4
+      a0  =               15 (       f)
+0048: 00460613      addi a2, a2, 4
+      a2  =               20 (      14)
+0052: fed61ae3      bne a2, a3, 40
+      pc  =               40 (      28)
+0040: 00062703      lw a4, 0(a2)
+      a4  =                6 (       6)    (m[10014])
+0044: 00e50533      add a0, a0, a4
+      a0  =               21 (      15)
+0048: 00460613      addi a2, a2, 4
+      a2  =               24 (      18)
+0052: fed61ae3      bne a2, a3, 40
+      pc  =               40 (      28)
+0040: 00062703      lw a4, 0(a2)
+      a4  =                7 (       7)    (m[10018])
+0044: 00e50533      add a0, a0, a4
+      a0  =               28 (      1c)
+0048: 00460613      addi a2, a2, 4
+      a2  =               28 (      1c)
+0052: fed61ae3      bne a2, a3, 40
+      pc  =               40 (      28)
+0040: 00062703      lw a4, 0(a2)
+      a4  =                8 (       8)    (m[1001c])
+0044: 00e50533      add a0, a0, a4
+      a0  =               36 (      24)
+0048: 00460613      addi a2, a2, 4
+      a2  =               32 (      20)
+0052: fed61ae3      bne a2, a3, 40
+      pc  =               40 (      28)
+0040: 00062703      lw a4, 0(a2)
+      a4  =                9 (       9)    (m[10020])
+0044: 00e50533      add a0, a0, a4
+      a0  =               45 (      2d)
+0048: 00460613      addi a2, a2, 4
+      a2  =               36 (      24)
+0052: fed61ae3      bne a2, a3, 40
+      pc  =               40 (      28)
+0040: 00062703      lw a4, 0(a2)
+      a4  =               10 (       a)    (m[10024])
+0044: 00e50533      add a0, a0, a4
+      a0  =               55 (      37)
+0048: 00460613      addi a2, a2, 4
+      a2  =               40 (      28)
+0052: fed61ae3      bne a2, a3, 40
+      pc  =               56 (      38)
+0056: 00a62223      sw a0, 4(a2)
+      m[1002c] =               55 (      37)
+0060: 00008067      ret
+      pc  =                0 (       0)
+ra  =                0 (       0)
+sp  =            65536 (   10000)
+gp  =                0 (       0)
+tp  =                0 (       0)
+t0  =                0 (       0)
+t1  =                0 (       0)
+t2  =                0 (       0)
+s0  =                0 (       0)
+s1  =                0 (       0)
+a0  =               55 (      37)
+a1  =                0 (       0)
+a2  =               40 (      28)
+a3  =               40 (      28)
+a4  =               10 (       a)
+a5  =                0 (       0)
+a6  =                0 (       0)
+a7  =                0 (       0)
+s2  =                0 (       0)
+s3  =                0 (       0)
+s4  =                0 (       0)
+s5  =                0 (       0)
+s6  =                0 (       0)
+s7  =                0 (       0)
+s8  =                0 (       0)
+s9  =                0 (       0)
+s10 =                0 (       0)
+s11 =                0 (       0)
+t3  =                0 (       0)
+t4  =                0 (       0)
+t5  =                0 (       0)
+t6  =                0 (       0)
+core 0: 88 fetched and decoded instructions in 279 cycles (ipc = 0.32)
+data memory dump (non null words)
+m[    0] =                1 (       1)
+m[    4] =                2 (       2)
+m[    8] =                3 (       3)
+m[    c] =                4 (       4)
+m[   10] =                5 (       5)
+m[   14] =                6 (       6)
+m[   18] =                7 (       7)
+m[   1c] =                8 (       8)
+m[   20] =                9 (       9)
+m[   24] =               10 (       a)
+m[   2c] =               55 (      37)
+core 1: 88 fetched and decoded instructions in 279 cycles (ipc = 0.32)
+data memory dump (non null words)
+m[10000] =                1 (       1)
+m[10004] =                2 (       2)
+m[10008] =                3 (       3)
+m[1000c] =                4 (       4)
+m[10010] =                5 (       5)
+m[10014] =                6 (       6)
+m[10018] =                7 (       7)
+m[1001c] =                8 (       8)
+m[10020] =                9 (       9)
+m[10024] =               10 (       a)
+m[1002c] =               55 (      37)
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-112] Total CPU user time: 3.45 seconds. Total CPU system time: 0.45 seconds. Total elapsed time: 3.74 seconds; peak allocated memory: 340.387 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 7s
