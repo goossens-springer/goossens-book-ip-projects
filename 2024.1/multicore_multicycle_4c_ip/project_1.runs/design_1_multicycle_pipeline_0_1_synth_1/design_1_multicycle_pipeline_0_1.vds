@@ -1,0 +1,622 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Tue Sep 10 18:33:43 2024
+# Process ID: 1009951
+# Current directory: /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.runs/design_1_multicycle_pipeline_0_1_synth_1
+# Command line: vivado -log design_1_multicycle_pipeline_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_multicycle_pipeline_0_1.tcl
+# Log file: /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.runs/design_1_multicycle_pipeline_0_1_synth_1/design_1_multicycle_pipeline_0_1.vds
+# Journal file: /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.runs/design_1_multicycle_pipeline_0_1_synth_1/vivado.jou
+# Running On        :goossens-Precision-5530
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 22.04.4 LTS
+# Processor Detail  :Intel(R) Xeon(R) E-2176M  CPU @ 2.70GHz
+# CPU Frequency     :3898.985 MHz
+# CPU Physical cores:6
+# CPU Logical cores :12
+# Host memory       :33276 MB
+# Swap memory       :2147 MB
+# Total Virtual     :35424 MB
+# Available Virtual :25067 MB
+#-----------------------------------------------------------
+source design_1_multicycle_pipeline_0_1.tcl -notrace
+create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1477.223 ; gain = 93.836 ; free physical = 312 ; free virtual = 21331
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/workspace/hls_component/multicycle_pipeline_ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2024.1/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_multicycle_pipeline_0_1
+Command: synth_design -top design_1_multicycle_pipeline_0_1 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Device 21-9227] Part: xc7z020clg400-1 does not have CEAM library.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1010153
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2273.281 ; gain = 422.715 ; free physical = 396 ; free virtual = 15047
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_multicycle_pipeline_0_1' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ip/design_1_multicycle_pipeline_0_1/synth/design_1_multicycle_pipeline_0_1.v:53]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip.v:9]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_control_s_axi' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_control_s_axi.v:9]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_control_s_axi_ram' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_control_s_axi.v:610]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_control_s_axi_ram' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_control_s_axi.v:610]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_control_s_axi.v:283]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_control_s_axi' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_control_s_axi.v:9]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_gmem_m_axi' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:14]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_store' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:820]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_fifo' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2582]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_srl' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2760]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_srl' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2760]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_fifo' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2582]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_fifo__parameterized0' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2582]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_mem' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2814]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_mem' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2814]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_fifo__parameterized0' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2582]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_fifo__parameterized1' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2582]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_srl__parameterized0' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2760]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_srl__parameterized0' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2760]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_fifo__parameterized1' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2582]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_fifo__parameterized2' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2582]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_srl__parameterized1' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2760]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_srl__parameterized1' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2760]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_fifo__parameterized2' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2582]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_store' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:820]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_load' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:328]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_fifo__parameterized3' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2582]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_mem__parameterized0' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2814]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_mem__parameterized0' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2814]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_fifo__parameterized3' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2582]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_load' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:328]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_write' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:1628]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_burst_converter' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:1948]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_reg_slice' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2480]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_reg_slice' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2480]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_burst_converter' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:1948]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_fifo__parameterized4' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2582]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_srl__parameterized2' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2760]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_srl__parameterized2' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2760]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_fifo__parameterized4' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2582]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_throttle' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2254]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_reg_slice__parameterized0' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2480]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_reg_slice__parameterized0' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2480]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_fifo__parameterized5' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2582]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_srl__parameterized3' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2760]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_srl__parameterized3' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2760]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_fifo__parameterized5' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2582]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_fifo__parameterized6' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2582]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_srl__parameterized4' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2760]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_srl__parameterized4' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2760]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_fifo__parameterized6' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2582]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_throttle' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2254]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_reg_slice__parameterized1' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2480]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_reg_slice__parameterized1' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2480]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:1939]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:1942]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_write' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:1628]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_read' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:1436]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_reg_slice__parameterized2' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2480]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_reg_slice__parameterized2' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:2480]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:1620]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_gmem_m_axi_read' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:1436]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_gmem_m_axi' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_gmem_m_axi.v:14]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_sparsemux_65_5_1_1_1' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_sparsemux_65_5_1_1_1.v:9]
+INFO: [Synth 8-226] default block is never used [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_sparsemux_65_5_1_1_1.v:223]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_sparsemux_65_5_1_1_1' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_sparsemux_65_5_1_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_sparsemux_13_5_32_1_1' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_sparsemux_13_5_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_sparsemux_13_5_32_1_1' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_sparsemux_13_5_32_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_sparsemux_15_6_1_1_1' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_sparsemux_15_6_1_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_sparsemux_15_6_1_1_1' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_sparsemux_15_6_1_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_sparsemux_17_7_32_1_1' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_sparsemux_17_7_32_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_sparsemux_17_7_32_1_1' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_sparsemux_17_7_32_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_sparsemux_65_5_32_1_1' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_sparsemux_65_5_32_1_1.v:9]
+INFO: [Synth 8-226] default block is never used [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_sparsemux_65_5_32_1_1.v:223]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_sparsemux_65_5_32_1_1' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_sparsemux_65_5_32_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_sparsemux_7_2_8_1_1' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_sparsemux_7_2_8_1_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_sparsemux_7_2_8_1_1' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_sparsemux_7_2_8_1_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'multicycle_pipeline_ip_flow_control_loop_delay_pipe' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_flow_control_loop_delay_pipe.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip_flow_control_loop_delay_pipe' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_flow_control_loop_delay_pipe.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'multicycle_pipeline_ip' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_multicycle_pipeline_0_1' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ip/design_1_multicycle_pipeline_0_1/synth/design_1_multicycle_pipeline_0_1.v:53]
+WARNING: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip_control_s_axi.v:370]
+WARNING: [Synth 8-6014] Unused sequential element ap_predicate_pred126_state9_reg was removed.  [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip.v:4476]
+WARNING: [Synth 8-6014] Unused sequential element ap_predicate_pred133_state9_reg was removed.  [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip.v:4477]
+WARNING: [Synth 8-6014] Unused sequential element ap_predicate_pred141_state9_reg was removed.  [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip.v:4478]
+WARNING: [Synth 8-6014] Unused sequential element ap_phi_reg_pp0_iter1_e_to_f_is_valid_reg_11530_reg was removed.  [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip.v:4614]
+WARNING: [Synth 8-7129] Port ap_done_int in module multicycle_pipeline_ip_flow_control_loop_delay_pipe is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_RID[0] in module multicycle_pipeline_ip_gmem_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_RRESP[1] in module multicycle_pipeline_ip_gmem_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_RRESP[0] in module multicycle_pipeline_ip_gmem_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_RUSER[0] in module multicycle_pipeline_ip_gmem_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_BID[0] in module multicycle_pipeline_ip_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_BRESP[1] in module multicycle_pipeline_ip_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_BRESP[0] in module multicycle_pipeline_ip_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_BUSER[0] in module multicycle_pipeline_ip_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[3] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[2] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[1] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[0] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[31] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[30] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[29] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[28] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[27] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[26] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[25] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[24] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[23] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[22] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[21] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[20] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[19] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[18] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[17] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[16] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[15] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[14] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[13] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[12] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[11] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[10] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[9] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[8] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[7] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[6] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[5] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[4] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[3] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[2] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[1] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[0] in module multicycle_pipeline_ip_control_s_axi_ram is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2442.250 ; gain = 591.684 ; free physical = 279 ; free virtual = 14201
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2451.156 ; gain = 600.590 ; free physical = 376 ; free virtual = 14166
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2451.156 ; gain = 600.590 ; free physical = 376 ; free virtual = 14166
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2451.156 ; gain = 0.000 ; free physical = 268 ; free virtual = 14060
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ip/design_1_multicycle_pipeline_0_1/constraints/multicycle_pipeline_ip_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ip/design_1_multicycle_pipeline_0_1/constraints/multicycle_pipeline_ip_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.runs/design_1_multicycle_pipeline_0_1_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.runs/design_1_multicycle_pipeline_0_1_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2584.938 ; gain = 0.000 ; free physical = 347 ; free virtual = 13895
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.37 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2584.938 ; gain = 0.000 ; free physical = 347 ; free virtual = 13895
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2584.938 ; gain = 734.371 ; free physical = 320 ; free virtual = 13866
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2592.941 ; gain = 742.375 ; free physical = 320 ; free virtual = 13864
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.runs/design_1_multicycle_pipeline_0_1_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2592.941 ; gain = 742.375 ; free physical = 320 ; free virtual = 13861
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'multicycle_pipeline_ip_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'multicycle_pipeline_ip_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'multicycle_pipeline_ip_gmem_m_axi_reg_slice'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'multicycle_pipeline_ip_gmem_m_axi_reg_slice__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'multicycle_pipeline_ip_gmem_m_axi_reg_slice__parameterized1'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'multicycle_pipeline_ip_gmem_m_axi_reg_slice__parameterized2'
+WARNING: [Synth 8-3936] Found unconnected internal register 'd_i_func7_1_fu_660_reg' and it is trimmed from '7' to '6' bits. [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.gen/sources_1/bd/design_1/ipshared/b298/hdl/verilog/multicycle_pipeline_ip.v:4651]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+WARNING: [Synth 8-6841] Block RAM (mem_reg) originally specified as a Byte Wide Write Enable RAM cannot take advantage of ByteWide feature and is implemented with single write enable per RAM due to following reason.
+(address width (13) is more than optimal threshold of 12. Implementing using BWWE will require more logic and timing would be suboptimal. Please use attribute ram_decomp = power if BWWE is desired.)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'multicycle_pipeline_ip_control_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'multicycle_pipeline_ip_control_s_axi'
+INFO: [Synth 8-7082] The signal mem_reg is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (4 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'multicycle_pipeline_ip_gmem_m_axi_reg_slice'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'multicycle_pipeline_ip_gmem_m_axi_reg_slice__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'multicycle_pipeline_ip_gmem_m_axi_reg_slice__parameterized1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'multicycle_pipeline_ip_gmem_m_axi_reg_slice__parameterized2'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 2592.941 ; gain = 742.375 ; free physical = 372 ; free virtual = 13801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   64 Bit       Adders := 2     
+	   2 Input   64 Bit       Adders := 2     
+	   2 Input   52 Bit       Adders := 2     
+	   2 Input   32 Bit       Adders := 7     
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   15 Bit       Adders := 1     
+	   2 Input   13 Bit       Adders := 5     
+	   2 Input   12 Bit       Adders := 4     
+	   2 Input    9 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 3     
+	   2 Input    6 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 19    
+	   2 Input    4 Bit       Adders := 9     
+	   2 Input    3 Bit       Adders := 6     
+	   2 Input    2 Bit       Adders := 7     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 11    
++---Registers : 
+	               96 Bit    Registers := 6     
+	               72 Bit    Registers := 3     
+	               64 Bit    Registers := 17    
+	               63 Bit    Registers := 1     
+	               52 Bit    Registers := 2     
+	               37 Bit    Registers := 1     
+	               36 Bit    Registers := 1     
+	               34 Bit    Registers := 1     
+	               33 Bit    Registers := 2     
+	               32 Bit    Registers := 74    
+	               20 Bit    Registers := 6     
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	               13 Bit    Registers := 15    
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 8     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 6     
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 3     
+	                5 Bit    Registers := 27    
+	                4 Bit    Registers := 20    
+	                3 Bit    Registers := 16    
+	                2 Bit    Registers := 26    
+	                1 Bit    Registers := 420   
++---RAMs : 
+	             256K Bit	(8192 X 32 bit)          RAMs := 1     
+	               8K Bit	(255 X 34 bit)          RAMs := 1     
+	              540 Bit	(15 X 36 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   96 Bit        Muxes := 2     
+	   2 Input   72 Bit        Muxes := 1     
+	   2 Input   64 Bit        Muxes := 8     
+	   2 Input   52 Bit        Muxes := 2     
+	   2 Input   33 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 90    
+	   3 Input   32 Bit        Muxes := 1     
+	   2 Input   20 Bit        Muxes := 4     
+	   2 Input   17 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 1     
+	   2 Input   13 Bit        Muxes := 13    
+	   4 Input   12 Bit        Muxes := 2     
+	   4 Input   11 Bit        Muxes := 2     
+	   2 Input   10 Bit        Muxes := 6     
+	   2 Input    9 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 3     
+	   4 Input    8 Bit        Muxes := 3     
+	   2 Input    7 Bit        Muxes := 2     
+	   2 Input    6 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 20    
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 17    
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 14    
+	   6 Input    3 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 65    
+	   3 Input    2 Bit        Muxes := 15    
+	   4 Input    2 Bit        Muxes := 5     
+	   5 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 252   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port in_BUS_RID[0] in module multicycle_pipeline_ip_gmem_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_RRESP[1] in module multicycle_pipeline_ip_gmem_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_RRESP[0] in module multicycle_pipeline_ip_gmem_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_RUSER[0] in module multicycle_pipeline_ip_gmem_m_axi_read is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_BID[0] in module multicycle_pipeline_ip_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_BRESP[1] in module multicycle_pipeline_ip_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_BRESP[0] in module multicycle_pipeline_ip_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_BUS_BUSER[0] in module multicycle_pipeline_ip_gmem_m_axi_write is either unconnected or has no load
+WARNING: [Synth 8-6841] Block RAM (int_ip_code_ram/mem_reg) originally specified as a Byte Wide Write Enable RAM cannot take advantage of ByteWide feature and is implemented with single write enable per RAM due to following reason.
+(address width (13) is more than optimal threshold of 12. Implementing using BWWE will require more logic and timing would be suboptimal. Please use attribute ram_decomp = power if BWWE is desired.)
+INFO: [Synth 8-7082] The signal store_unit/buff_wdata/U_fifo_mem/mem_reg is implemented as Block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (4 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+WARNING: [Synth 8-3332] Sequential element (FSM_onehot_rstate_reg[0]) is unused and will be removed from module multicycle_pipeline_ip_control_s_axi.
+WARNING: [Synth 8-3332] Sequential element (FSM_onehot_wstate_reg[0]) is unused and will be removed from module multicycle_pipeline_ip_control_s_axi.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:34 ; elapsed = 00:01:36 . Memory (MB): peak = 2592.941 ; gain = 742.375 ; free physical = 6401 ; free virtual = 19874
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++---------------------+-------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name          | RTL Object                                | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++---------------------+-------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst/control_s_axi_U | int_ip_code_ram/mem_reg                   | 8 K x 32(READ_FIRST)   | W | R | 8 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 8      | 
+|inst/gmem_m_axi_U    | store_unit/buff_wdata/U_fifo_mem/mem_reg  | 15 x 36(READ_FIRST)    | W |   | 15 x 36(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|inst/gmem_m_axi_U    | load_unit_0/buff_rdata/U_fifo_mem/mem_reg | 255 x 34(READ_FIRST)   | W |   | 255 x 34(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++---------------------+-------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:42 ; elapsed = 00:01:44 . Memory (MB): peak = 2592.941 ; gain = 742.375 ; free physical = 6389 ; free virtual = 19858
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:48 ; elapsed = 00:01:51 . Memory (MB): peak = 2627.941 ; gain = 777.375 ; free physical = 8789 ; free virtual = 22261
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++---------------------+-------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name          | RTL Object                                | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++---------------------+-------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst/control_s_axi_U | int_ip_code_ram/mem_reg                   | 8 K x 32(READ_FIRST)   | W | R | 8 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 8      | 
+|inst/gmem_m_axi_U    | store_unit/buff_wdata/U_fifo_mem/mem_reg  | 15 x 36(READ_FIRST)    | W |   | 15 x 36(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|inst/gmem_m_axi_U    | load_unit_0/buff_rdata/U_fifo_mem/mem_reg | 255 x 34(READ_FIRST)   | W |   | 255 x 34(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++---------------------+-------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_2_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_2_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_2_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_2_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/control_s_axi_U/int_ip_code_ram/mem_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/gmem_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:52 ; elapsed = 00:01:54 . Memory (MB): peak = 2627.941 ; gain = 777.375 ; free physical = 8758 ; free virtual = 22236
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:56 ; elapsed = 00:01:58 . Memory (MB): peak = 2627.941 ; gain = 777.375 ; free physical = 9291 ; free virtual = 22771
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:56 ; elapsed = 00:01:58 . Memory (MB): peak = 2627.941 ; gain = 777.375 ; free physical = 9291 ; free virtual = 22771
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:57 ; elapsed = 00:01:59 . Memory (MB): peak = 2627.941 ; gain = 777.375 ; free physical = 9293 ; free virtual = 22774
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:57 ; elapsed = 00:01:59 . Memory (MB): peak = 2627.941 ; gain = 777.375 ; free physical = 9293 ; free virtual = 22774
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:57 ; elapsed = 00:01:59 . Memory (MB): peak = 2627.941 ; gain = 777.375 ; free physical = 9307 ; free virtual = 22780
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:57 ; elapsed = 00:01:59 . Memory (MB): peak = 2627.941 ; gain = 777.375 ; free physical = 9307 ; free virtual = 22780
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++-----------------------+------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name            | RTL Name                                       | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++-----------------------+------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|multicycle_pipeline_ip | trunc_ln108_1_reg_19974_pp0_iter3_reg_reg[1]   | 3      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|multicycle_pipeline_ip | a1_reg_19963_pp0_iter3_reg_reg[0]              | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|multicycle_pipeline_ip | is_local_reg_19903_pp0_iter3_reg_reg[0]        | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|multicycle_pipeline_ip | e_to_m_is_store_reg_19890_pp0_iter3_reg_reg[0] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|multicycle_pipeline_ip | msize_2_reg_19907_pp0_iter6_reg_reg[1]         | 3      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|multicycle_pipeline_ip | e_to_m_is_load_reg_19894_pp0_iter6_reg_reg[0]  | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|multicycle_pipeline_ip | is_local_reg_19903_pp0_iter6_reg_reg[0]        | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|multicycle_pipeline_ip | e_to_m_is_store_reg_19890_pp0_iter6_reg_reg[0] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|multicycle_pipeline_ip | e_to_m_is_valid_reg_989_pp0_iter6_reg_reg[0]   | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|multicycle_pipeline_ip | data_ram_read_reg_19881_pp0_iter2_reg_reg[63]  | 3      | 63    | NO           | NO                 | YES               | 63     | 0       | 
+|multicycle_pipeline_ip | accessed_ip_reg_19898_pp0_iter2_reg_reg[1]     | 3      | 2     | NO           | NO                 | YES               | 2      | 0       | 
+|multicycle_pipeline_ip | gmem_addr_2_reg_19921_pp0_iter3_reg_reg[61]    | 4      | 62    | NO           | YES                | YES               | 62     | 0       | 
+|multicycle_pipeline_ip | gmem_addr_1_reg_19947_pp0_iter3_reg_reg[61]    | 4      | 62    | NO           | YES                | YES               | 62     | 0       | 
+|multicycle_pipeline_ip | shl_ln100_2_reg_20269_pp0_iter3_reg_reg[23]    | 3      | 8     | NO           | NO                 | YES               | 8      | 0       | 
+|multicycle_pipeline_ip | shl_ln100_reg_19916_pp0_iter3_reg_reg[3]       | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|multicycle_pipeline_ip | shl_ln100_reg_19916_pp0_iter3_reg_reg[2]       | 4      | 3     | NO           | NO                 | YES               | 3      | 0       | 
+|multicycle_pipeline_ip | shl_ln90_reg_19942_pp0_iter3_reg_reg[3]        | 4      | 4     | NO           | NO                 | YES               | 4      | 0       | 
+|multicycle_pipeline_ip | add_ln49_reg_20288_pp0_iter6_reg_reg[31]       | 5      | 32    | NO           | NO                 | NO                | 32     | 0       | 
+|multicycle_pipeline_ip | and_ln41_1_reg_20125_pp0_iter5_reg_reg[0]      | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++-----------------------+------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+
+Dynamic Shift Register Report:
++------------+-------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name    | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+-------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | mem_reg[2]  | 96     | 96         | 96     | 0       | 0      | 0      | 0      | 
+|dsrl__1     | mem_reg[14] | 1      | 1          | 1      | 0       | 0      | 0      | 0      | 
+|dsrl__2     | mem_reg[2]  | 1      | 1          | 1      | 0       | 0      | 0      | 0      | 
+|dsrl__3     | mem_reg[14] | 8      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__4     | mem_reg[14] | 72     | 72         | 72     | 0       | 0      | 0      | 0      | 
+|dsrl__5     | mem_reg[14] | 37     | 37         | 37     | 0       | 0      | 0      | 0      | 
++------------+-------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |   242|
+|2     |LUT1     |    44|
+|3     |LUT2     |   238|
+|4     |LUT3     |   841|
+|5     |LUT4     |  1540|
+|6     |LUT5     |   908|
+|7     |LUT6     |  2560|
+|8     |MUXF7    |   369|
+|9     |MUXF8    |   149|
+|10    |RAMB18E1 |     2|
+|12    |RAMB36E1 |     8|
+|13    |SRL16E   |   485|
+|14    |FDRE     |  4956|
+|15    |FDSE     |    17|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:57 ; elapsed = 00:01:59 . Memory (MB): peak = 2627.941 ; gain = 777.375 ; free physical = 9307 ; free virtual = 22780
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 14 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:53 ; elapsed = 00:01:56 . Memory (MB): peak = 2627.941 ; gain = 643.594 ; free physical = 9307 ; free virtual = 22780
+Synthesis Optimization Complete : Time (s): cpu = 00:01:57 ; elapsed = 00:01:59 . Memory (MB): peak = 2627.949 ; gain = 777.375 ; free physical = 9307 ; free virtual = 22780
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.1 ; elapsed = 00:00:00.09 . Memory (MB): peak = 2627.949 ; gain = 0.000 ; free physical = 9624 ; free virtual = 23097
+INFO: [Netlist 29-17] Analyzing 770 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2683.969 ; gain = 0.000 ; free physical = 9623 ; free virtual = 23104
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 906bc831
+INFO: [Common 17-83] Releasing license: Synthesis
+132 Infos, 67 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:10 ; elapsed = 00:02:07 . Memory (MB): peak = 2683.969 ; gain = 1188.902 ; free physical = 9623 ; free virtual = 23104
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2135.195; main = 1866.478; forked = 368.736
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3671.660; main = 2683.973; forked = 1043.715
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2707.980 ; gain = 0.000 ; free physical = 9623 ; free virtual = 23105
+INFO: [Common 17-1381] The checkpoint '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.runs/design_1_multicycle_pipeline_0_1_synth_1/design_1_multicycle_pipeline_0_1.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_multicycle_pipeline_0_1, cache-ID = f680d6eea4253c5c
+INFO: [Coretcl 2-1174] Renamed 39 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2707.980 ; gain = 0.000 ; free physical = 9543 ; free virtual = 23030
+INFO: [Common 17-1381] The checkpoint '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_4c_ip/project_1.runs/design_1_multicycle_pipeline_0_1_synth_1/design_1_multicycle_pipeline_0_1.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_multicycle_pipeline_0_1_utilization_synth.rpt -pb design_1_multicycle_pipeline_0_1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 10 18:36:09 2024...

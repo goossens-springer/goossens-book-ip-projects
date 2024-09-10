@@ -1,0 +1,778 @@
+--- !Passed
+Pass:            reflow-recursive-inline
+Name:            RecursiveInline
+DebugLoc:        { File: ../../multicycle_pipeline_ip.cpp, Line: 68, Column: 9 }
+Function:        _Z22multicycle_pipeline_ipjjPjPiPA8192_iS_S_
+Args:            
+  - String:          'Performing recursive inline in function '''
+  - Callee:          multicycle_pipeline_ip
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../fetch.cpp, Line: 23, Column: 3 }
+Function:        _ZL9stage_job7ap_uintILi13EEPjS1_P17decoded_control_s.215
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'decode_control(unsigned int, decoded_control_s*) (.216)'
+    DebugLoc:        { File: ../../fetch.cpp, Line: 10, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'stage_job(ap_uint<13>, unsigned int*, unsigned int*, decoded_control_s*) (.215)'
+    DebugLoc:        { File: ../../fetch.cpp, Line: 21, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../fetch.cpp, Line: 73, Column: 7 }
+Function:        _Z5fetch13from_f_to_f_s13from_d_to_f_s13from_e_to_f_s7ap_uintILi1EEPjPS_P13from_f_to_d_s.212
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'set_output_to_d(ap_uint<13>, unsigned int, decoded_control_s, from_f_to_d_s*) (.213)'
+    DebugLoc:        { File: ../../fetch.cpp, Line: 34, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fetch(from_f_to_f_s, from_d_to_f_s, from_e_to_f_s, ap_uint<1>, unsigned int*, from_f_to_f_s*, from_f_to_d_s*) (.212)'
+    DebugLoc:        { File: ../../fetch.cpp, Line: 48, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../fetch.cpp, Line: 72, Column: 7 }
+Function:        _Z5fetch13from_f_to_f_s13from_d_to_f_s13from_e_to_f_s7ap_uintILi1EEPjPS_P13from_f_to_d_s.212
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'set_output_to_f(ap_uint<13>, from_f_to_f_s*) (.214)'
+    DebugLoc:        { File: ../../fetch.cpp, Line: 27, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fetch(from_f_to_f_s, from_d_to_f_s, from_e_to_f_s, ap_uint<1>, unsigned int*, from_f_to_f_s*, from_f_to_d_s*) (.212)'
+    DebugLoc:        { File: ../../fetch.cpp, Line: 48, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../fetch.cpp, Line: 64, Column: 7 }
+Function:        _Z5fetch13from_f_to_f_s13from_d_to_f_s13from_e_to_f_s7ap_uintILi1EEPjPS_P13from_f_to_d_s.212
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'stage_job(ap_uint<13>, unsigned int*, unsigned int*, decoded_control_s*) (.215)'
+    DebugLoc:        { File: ../../fetch.cpp, Line: 21, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fetch(from_f_to_f_s, from_d_to_f_s, from_e_to_f_s, ap_uint<1>, unsigned int*, from_f_to_f_s*, from_f_to_d_s*) (.212)'
+    DebugLoc:        { File: ../../fetch.cpp, Line: 48, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../type.cpp, Line: 62, Column: 23 }
+Function:        _Z4type7ap_uintILi5EE.188
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'type_11(ap_uint<3>) (.192)'
+    DebugLoc:        { File: ../../type.cpp, Line: 42, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'type(ap_uint<5>) (.188)'
+    DebugLoc:        { File: ../../type.cpp, Line: 55, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../type.cpp, Line: 61, Column: 23 }
+Function:        _Z4type7ap_uintILi5EE.188
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'type_10(ap_uint<3>) (.193)'
+    DebugLoc:        { File: ../../type.cpp, Line: 29, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'type(ap_uint<5>) (.188)'
+    DebugLoc:        { File: ../../type.cpp, Line: 55, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../type.cpp, Line: 60, Column: 23 }
+Function:        _Z4type7ap_uintILi5EE.188
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'type_01(ap_uint<3>) (.194)'
+    DebugLoc:        { File: ../../type.cpp, Line: 16, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'type(ap_uint<5>) (.188)'
+    DebugLoc:        { File: ../../type.cpp, Line: 55, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../type.cpp, Line: 59, Column: 23 }
+Function:        _Z4type7ap_uintILi5EE.188
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'type_00(ap_uint<3>) (.195)'
+    DebugLoc:        { File: ../../type.cpp, Line: 3, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'type(ap_uint<5>) (.188)'
+    DebugLoc:        { File: ../../type.cpp, Line: 55, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../decode.cpp, Line: 52, Column: 15 }
+Function:        _ZL18decode_instructionj7ap_uintILi1EES0_S0_P21decoded_instruction_s.187
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'type(ap_uint<5>) (.188)'
+    DebugLoc:        { File: ../../type.cpp, Line: 55, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'decode_instruction(unsigned int, ap_uint<1>, ap_uint<1>, ap_uint<1>, decoded_instruction_s*) (.187)'
+    DebugLoc:        { File: ../../decode.cpp, Line: 16, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../decode.cpp, Line: 73, Column: 24 }
+Function:        _ZL16decode_immediatejP21decoded_instruction_s.146
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'j_immediate(decoded_immediate_s) (.148)'
+    DebugLoc:        { File: ../../immediate.cpp, Line: 27, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'decode_immediate(unsigned int, decoded_instruction_s*) (.146)'
+    DebugLoc:        { File: ../../decode.cpp, Line: 57, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../decode.cpp, Line: 72, Column: 24 }
+Function:        _ZL16decode_immediatejP21decoded_instruction_s.146
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'u_immediate(decoded_immediate_s) (.159)'
+    DebugLoc:        { File: ../../immediate.cpp, Line: 20, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'decode_immediate(unsigned int, decoded_instruction_s*) (.146)'
+    DebugLoc:        { File: ../../decode.cpp, Line: 57, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../decode.cpp, Line: 71, Column: 24 }
+Function:        _ZL16decode_immediatejP21decoded_instruction_s.146
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'b_immediate(decoded_immediate_s) (.162)'
+    DebugLoc:        { File: ../../immediate.cpp, Line: 14, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'decode_immediate(unsigned int, decoded_instruction_s*) (.146)'
+    DebugLoc:        { File: ../../decode.cpp, Line: 57, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../decode.cpp, Line: 70, Column: 24 }
+Function:        _ZL16decode_immediatejP21decoded_instruction_s.146
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          's_immediate(decoded_immediate_s) (.174)'
+    DebugLoc:        { File: ../../immediate.cpp, Line: 8, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'decode_immediate(unsigned int, decoded_instruction_s*) (.146)'
+    DebugLoc:        { File: ../../decode.cpp, Line: 57, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../decode.cpp, Line: 69, Column: 24 }
+Function:        _ZL16decode_immediatejP21decoded_instruction_s.146
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'i_immediate(decoded_immediate_s) (.175)'
+    DebugLoc:        { File: ../../immediate.cpp, Line: 2, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'decode_immediate(unsigned int, decoded_instruction_s*) (.146)'
+    DebugLoc:        { File: ../../decode.cpp, Line: 57, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../decode.cpp, Line: 85, Column: 3 }
+Function:        _ZL9stage_job7ap_uintILi13EEjS_ILi1EES1_S1_P21decoded_instruction_sPS0_.139
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'decode_instruction(unsigned int, ap_uint<1>, ap_uint<1>, ap_uint<1>, decoded_instruction_s*) (.187)'
+    DebugLoc:        { File: ../../decode.cpp, Line: 16, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'stage_job(ap_uint<13>, unsigned int, ap_uint<1>, ap_uint<1>, ap_uint<1>, decoded_instruction_s*, ap_uint<13>*) (.139)'
+    DebugLoc:        { File: ../../decode.cpp, Line: 84, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../decode.cpp, Line: 86, Column: 3 }
+Function:        _ZL9stage_job7ap_uintILi13EEjS_ILi1EES1_S1_P21decoded_instruction_sPS0_.139
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'decode_immediate(unsigned int, decoded_instruction_s*) (.146)'
+    DebugLoc:        { File: ../../decode.cpp, Line: 57, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'stage_job(ap_uint<13>, unsigned int, ap_uint<1>, ap_uint<1>, ap_uint<1>, decoded_instruction_s*, ap_uint<13>*) (.139)'
+    DebugLoc:        { File: ../../decode.cpp, Line: 84, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../decode.cpp, Line: 129, Column: 7 }
+Function:        _Z6decode13from_f_to_d_s7ap_uintILi1EEP13from_d_to_f_sP13from_d_to_i_s.136
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'set_output_to_i(ap_uint<13>, decoded_instruction_s, from_d_to_i_s*) (.137)'
+    DebugLoc:        { File: ../../decode.cpp, Line: 102, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'decode(from_f_to_d_s, ap_uint<1>, from_d_to_f_s*, from_d_to_i_s*) (.136)'
+    DebugLoc:        { File: ../../decode.cpp, Line: 114, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../decode.cpp, Line: 128, Column: 7 }
+Function:        _Z6decode13from_f_to_d_s7ap_uintILi1EEP13from_d_to_f_sP13from_d_to_i_s.136
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'set_output_to_f(ap_uint<13>, from_d_to_f_s*) (.138)'
+    DebugLoc:        { File: ../../decode.cpp, Line: 92, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'decode(from_f_to_d_s, ap_uint<1>, from_d_to_f_s*, from_d_to_i_s*) (.136)'
+    DebugLoc:        { File: ../../decode.cpp, Line: 114, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../decode.cpp, Line: 119, Column: 7 }
+Function:        _Z6decode13from_f_to_d_s7ap_uintILi1EEP13from_d_to_f_sP13from_d_to_i_s.136
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'stage_job(ap_uint<13>, unsigned int, ap_uint<1>, ap_uint<1>, ap_uint<1>, decoded_instruction_s*, ap_uint<13>*) (.139)'
+    DebugLoc:        { File: ../../decode.cpp, Line: 84, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'decode(from_f_to_d_s, ap_uint<1>, from_d_to_f_s*, from_d_to_i_s*) (.136)'
+    DebugLoc:        { File: ../../decode.cpp, Line: 114, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../issue.cpp, Line: 76, Column: 7 }
+Function:        _Z5issue13from_d_to_i_sPiP7ap_uintILi1EEP8i_safe_sP13from_i_to_e_sS3_.132
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'set_output_to_e(ap_uint<13>, decoded_instruction_s, int, int, from_i_to_e_s*) (.133)'
+    DebugLoc:        { File: ../../issue.cpp, Line: 35, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'issue(from_d_to_i_s, int*, ap_uint<1>*, i_safe_s*, from_i_to_e_s*, ap_uint<1>*) (.132)'
+    DebugLoc:        { File: ../../issue.cpp, Line: 51, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../issue.cpp, Line: 69, Column: 7 }
+Function:        _Z5issue13from_d_to_i_sPiP7ap_uintILi1EEP8i_safe_sP13from_i_to_e_sS3_.132
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'stage_job(decoded_instruction_s, int*, int*, int*) (.134)'
+    DebugLoc:        { File: ../../issue.cpp, Line: 22, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'issue(from_d_to_i_s, int*, ap_uint<1>*, i_safe_s*, from_i_to_e_s*, ap_uint<1>*) (.132)'
+    DebugLoc:        { File: ../../issue.cpp, Line: 51, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../issue.cpp, Line: 57, Column: 5 }
+Function:        _Z5issue13from_d_to_i_sPiP7ap_uintILi1EEP8i_safe_sP13from_i_to_e_sS3_.132
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'save_input_from_d(from_d_to_i_s, i_safe_s*) (.135)'
+    DebugLoc:        { File: ../../issue.cpp, Line: 10, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'issue(from_d_to_i_s, int*, ap_uint<1>*, i_safe_s*, from_i_to_e_s*, ap_uint<1>*) (.132)'
+    DebugLoc:        { File: ../../issue.cpp, Line: 51, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../execute.cpp, Line: 19, Column: 12 }
+Function:        _ZL7compute7ap_uintILi13EE21decoded_instruction_siiPS_ILi1EEPiS4_PS0_.104
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'compute_branch_result(int, int, ap_uint<3>) (.131)'
+    DebugLoc:        { File: ../../compute.cpp, Line: 6, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'compute(ap_uint<13>, decoded_instruction_s, int, int, ap_uint<1>*, int*, int*, ap_uint<13>*) (.104)'
+    DebugLoc:        { File: ../../execute.cpp, Line: 18, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../execute.cpp, Line: 22, Column: 14 }
+Function:        _ZL7compute7ap_uintILi13EE21decoded_instruction_siiPS_ILi1EEPiS4_PS0_.104
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'compute_next_pc(ap_uint<13>, decoded_instruction_s, int) (.105)'
+    DebugLoc:        { File: ../../compute.cpp, Line: 117, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'compute(ap_uint<13>, decoded_instruction_s, int, int, ap_uint<1>*, int*, int*, ap_uint<13>*) (.104)'
+    DebugLoc:        { File: ../../execute.cpp, Line: 18, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../execute.cpp, Line: 21, Column: 14 }
+Function:        _ZL7compute7ap_uintILi13EE21decoded_instruction_siiPS_ILi1EEPiS4_PS0_.104
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'compute_result(int, ap_uint<13>, decoded_instruction_s) (.117)'
+    DebugLoc:        { File: ../../compute.cpp, Line: 74, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'compute(ap_uint<13>, decoded_instruction_s, int, int, ap_uint<1>*, int*, int*, ap_uint<13>*) (.104)'
+    DebugLoc:        { File: ../../execute.cpp, Line: 18, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../execute.cpp, Line: 20, Column: 14 }
+Function:        _ZL7compute7ap_uintILi13EE21decoded_instruction_siiPS_ILi1EEPiS4_PS0_.104
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'compute_op_result(int, int, decoded_instruction_s) (.121)'
+    DebugLoc:        { File: ../../compute.cpp, Line: 32, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'compute(ap_uint<13>, decoded_instruction_s, int, int, ap_uint<1>*, int*, int*, ap_uint<13>*) (.104)'
+    DebugLoc:        { File: ../../execute.cpp, Line: 18, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../execute.cpp, Line: 110, Column: 5 }
+Function:        _Z7execute13from_i_to_e_sP13from_e_to_f_sP13from_e_to_m_s.86
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'set_output_to_m(decoded_instruction_s, int, int, ap_uint<13>, int, ap_uint<13>, from_e_to_m_s*) (.89)'
+    DebugLoc:        { File: ../../execute.cpp, Line: 49, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'execute(from_i_to_e_s, from_e_to_f_s*, from_e_to_m_s*) (.86)'
+    DebugLoc:        { File: ../../execute.cpp, Line: 89, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../execute.cpp, Line: 109, Column: 5 }
+Function:        _Z7execute13from_i_to_e_sP13from_e_to_f_sP13from_e_to_m_s.86
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'set_output_to_f(ap_uint<13>, from_e_to_f_s*) (.93)'
+    DebugLoc:        { File: ../../execute.cpp, Line: 35, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'execute(from_i_to_e_s, from_e_to_f_s*, from_e_to_m_s*) (.86)'
+    DebugLoc:        { File: ../../execute.cpp, Line: 89, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../execute.cpp, Line: 99, Column: 5 }
+Function:        _Z7execute13from_i_to_e_sP13from_e_to_f_sP13from_e_to_m_s.86
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'stage_job(ap_uint<13>, decoded_instruction_s, ap_uint<1>, ap_uint<13>, ap_uint<13>*) (.94)'
+    DebugLoc:        { File: ../../execute.cpp, Line: 29, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'execute(from_i_to_e_s, from_e_to_f_s*, from_e_to_m_s*) (.86)'
+    DebugLoc:        { File: ../../execute.cpp, Line: 89, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../execute.cpp, Line: 96, Column: 5 }
+Function:        _Z7execute13from_i_to_e_sP13from_e_to_f_sP13from_e_to_m_s.86
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'compute(ap_uint<13>, decoded_instruction_s, int, int, ap_uint<1>*, int*, int*, ap_uint<13>*) (.104)'
+    DebugLoc:        { File: ../../execute.cpp, Line: 18, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'execute(from_i_to_e_s, from_e_to_f_s*, from_e_to_m_s*) (.86)'
+    DebugLoc:        { File: ../../execute.cpp, Line: 89, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../mem_access.cpp, Line: 25, Column: 7 }
+Function:        _ZL9stage_job7ap_uintILi2EES_ILi1EES1_S1_S_ILi17EES_ILi3EEPiPA8192_iS4_.28
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'mem_store(ap_uint<2>, ap_uint<1>, int*, int (*) [8192], ap_uint<17>, int, ap_uint<2>) (.29)'
+    DebugLoc:        { File: ../../mem.cpp, Line: 75, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'stage_job(ap_uint<2>, ap_uint<1>, ap_uint<1>, ap_uint<1>, ap_uint<17>, ap_uint<3>, int*, int (*) [8192], int*) (.28)'
+    DebugLoc:        { File: ../../mem_access.cpp, Line: 19, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../mem_access.cpp, Line: 22, Column: 7 }
+Function:        _ZL9stage_job7ap_uintILi2EES_ILi1EES1_S1_S_ILi17EES_ILi3EEPiPA8192_iS4_.28
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'mem_load(ap_uint<2>, ap_uint<1>, int*, int (*) [8192], ap_uint<17>, ap_uint<3>) (.65)'
+    DebugLoc:        { File: ../../mem.cpp, Line: 9, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'stage_job(ap_uint<2>, ap_uint<1>, ap_uint<1>, ap_uint<1>, ap_uint<17>, ap_uint<3>, int*, int (*) [8192], int*) (.28)'
+    DebugLoc:        { File: ../../mem_access.cpp, Line: 19, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../mem_access.cpp, Line: 79, Column: 5 }
+Function:        _Z10mem_access7ap_uintILi2EE13from_e_to_m_sPiPA8192_iP13from_m_to_w_s.26
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'set_output_to_w(ap_uint<5>, ap_uint<1>, ap_uint<1>, ap_uint<1>, int, int, from_m_to_w_s*) (.27)'
+    DebugLoc:        { File: ../../mem_access.cpp, Line: 42, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'mem_access(ap_uint<2>, from_e_to_m_s, int*, int (*) [8192], from_m_to_w_s*) (.26)'
+    DebugLoc:        { File: ../../mem_access.cpp, Line: 61, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../mem_access.cpp, Line: 70, Column: 5 }
+Function:        _Z10mem_access7ap_uintILi2EE13from_e_to_m_sPiPA8192_iP13from_m_to_w_s.26
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'stage_job(ap_uint<2>, ap_uint<1>, ap_uint<1>, ap_uint<1>, ap_uint<17>, ap_uint<3>, int*, int (*) [8192], int*) (.28)'
+    DebugLoc:        { File: ../../mem_access.cpp, Line: 19, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'mem_access(ap_uint<2>, from_e_to_m_s, int*, int (*) [8192], from_m_to_w_s*) (.26)'
+    DebugLoc:        { File: ../../mem_access.cpp, Line: 61, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../wb.cpp, Line: 32, Column: 5 }
+Function:        _Z10write_back13from_m_to_w_sPiP7ap_uintILi1EE.21
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'stage_job(ap_uint<1>, ap_uint<5>, ap_uint<1>, int, int, int*) (.25)'
+    DebugLoc:        { File: ../../wb.cpp, Line: 18, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'write_back(from_m_to_w_s, int*, ap_uint<1>*) (.21)'
+    DebugLoc:        { File: ../../wb.cpp, Line: 30, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../multicycle_pipeline_ip.cpp, Line: 144, Column: 5 }
+Function:        _Z22multicycle_pipeline_ipjjPjPiPA8192_iS_S_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'running_cond_update(from_m_to_w_s, ap_uint<1>*) (.3)'
+    DebugLoc:        { File: ../../multicycle_pipeline_ip.cpp, Line: 39, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'multicycle_pipeline_ip(unsigned int, unsigned int, unsigned int*, int*, int (*) [8192], unsigned int*, unsigned int*)'
+    DebugLoc:        { File: ../../multicycle_pipeline_ip.cpp, Line: 59, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../multicycle_pipeline_ip.cpp, Line: 143, Column: 5 }
+Function:        _Z22multicycle_pipeline_ipjjPjPiPA8192_iS_S_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'statistic_update(from_m_to_w_s, unsigned int*, ap_uint<32>*) (.8)'
+    DebugLoc:        { File: ../../multicycle_pipeline_ip.cpp, Line: 48, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'multicycle_pipeline_ip(unsigned int, unsigned int, unsigned int*, int*, int (*) [8192], unsigned int*, unsigned int*)'
+    DebugLoc:        { File: ../../multicycle_pipeline_ip.cpp, Line: 59, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../multicycle_pipeline_ip.cpp, Line: 138, Column: 5 }
+Function:        _Z22multicycle_pipeline_ipjjPjPiPA8192_iS_S_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'write_back(from_m_to_w_s, int*, ap_uint<1>*) (.21)'
+    DebugLoc:        { File: ../../wb.cpp, Line: 30, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'multicycle_pipeline_ip(unsigned int, unsigned int, unsigned int*, int*, int (*) [8192], unsigned int*, unsigned int*)'
+    DebugLoc:        { File: ../../multicycle_pipeline_ip.cpp, Line: 59, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../multicycle_pipeline_ip.cpp, Line: 137, Column: 5 }
+Function:        _Z22multicycle_pipeline_ipjjPjPiPA8192_iS_S_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'mem_access(ap_uint<2>, from_e_to_m_s, int*, int (*) [8192], from_m_to_w_s*) (.26)'
+    DebugLoc:        { File: ../../mem_access.cpp, Line: 61, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'multicycle_pipeline_ip(unsigned int, unsigned int, unsigned int*, int*, int (*) [8192], unsigned int*, unsigned int*)'
+    DebugLoc:        { File: ../../multicycle_pipeline_ip.cpp, Line: 59, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../multicycle_pipeline_ip.cpp, Line: 124, Column: 5 }
+Function:        _Z22multicycle_pipeline_ipjjPjPiPA8192_iS_S_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'execute(from_i_to_e_s, from_e_to_f_s*, from_e_to_m_s*) (.86)'
+    DebugLoc:        { File: ../../execute.cpp, Line: 89, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'multicycle_pipeline_ip(unsigned int, unsigned int, unsigned int*, int*, int (*) [8192], unsigned int*, unsigned int*)'
+    DebugLoc:        { File: ../../multicycle_pipeline_ip.cpp, Line: 59, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../multicycle_pipeline_ip.cpp, Line: 122, Column: 5 }
+Function:        _Z22multicycle_pipeline_ipjjPjPiPA8192_iS_S_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'issue(from_d_to_i_s, int*, ap_uint<1>*, i_safe_s*, from_i_to_e_s*, ap_uint<1>*) (.132)'
+    DebugLoc:        { File: ../../issue.cpp, Line: 51, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'multicycle_pipeline_ip(unsigned int, unsigned int, unsigned int*, int*, int (*) [8192], unsigned int*, unsigned int*)'
+    DebugLoc:        { File: ../../multicycle_pipeline_ip.cpp, Line: 59, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../multicycle_pipeline_ip.cpp, Line: 121, Column: 5 }
+Function:        _Z22multicycle_pipeline_ipjjPjPiPA8192_iS_S_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'decode(from_f_to_d_s, ap_uint<1>, from_d_to_f_s*, from_d_to_i_s*) (.136)'
+    DebugLoc:        { File: ../../decode.cpp, Line: 114, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'multicycle_pipeline_ip(unsigned int, unsigned int, unsigned int*, int*, int (*) [8192], unsigned int*, unsigned int*)'
+    DebugLoc:        { File: ../../multicycle_pipeline_ip.cpp, Line: 59, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../multicycle_pipeline_ip.cpp, Line: 119, Column: 5 }
+Function:        _Z22multicycle_pipeline_ipjjPjPiPA8192_iS_S_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fetch(from_f_to_f_s, from_d_to_f_s, from_e_to_f_s, ap_uint<1>, unsigned int*, from_f_to_f_s*, from_f_to_d_s*) (.212)'
+    DebugLoc:        { File: ../../fetch.cpp, Line: 48, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'multicycle_pipeline_ip(unsigned int, unsigned int, unsigned int*, int*, int (*) [8192], unsigned int*, unsigned int*)'
+    DebugLoc:        { File: ../../multicycle_pipeline_ip.cpp, Line: 59, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../multicycle_pipeline_ip.cpp, Line: 115, Column: 2 }
+Function:        _Z22multicycle_pipeline_ipjjPjPiPA8192_iS_S_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'new_cycle(from_f_to_f_s, from_d_to_f_s, from_e_to_f_s, from_f_to_d_s, from_d_to_i_s, from_i_to_e_s, from_e_to_m_s, from_m_to_w_s, from_f_to_f_s*, from_d_to_f_s*, from_e_to_f_s*, from_f_to_d_s*, from_d_to_i_s*, from_i_to_e_s*, from_e_to_m_s*, from_m_to_w_s*) (.217)'
+    DebugLoc:        { File: ../../new_cycle.cpp, Line: 18, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'multicycle_pipeline_ip(unsigned int, unsigned int, unsigned int*, int*, int (*) [8192], unsigned int*, unsigned int*)'
+    DebugLoc:        { File: ../../multicycle_pipeline_ip.cpp, Line: 59, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ../../multicycle_pipeline_ip.cpp, Line: 93, Column: 3 }
+Function:        _Z22multicycle_pipeline_ipjjPjPiPA8192_iS_S_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'init_reg_file(ap_uint<2>, int*, ap_uint<1>*) (.220)'
+    DebugLoc:        { File: ../../multicycle_pipeline_ip.cpp, Line: 24, 
+                       Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'multicycle_pipeline_ip(unsigned int, unsigned int, unsigned int*, int*, int (*) [8192], unsigned int*, unsigned int*)'
+    DebugLoc:        { File: ../../multicycle_pipeline_ip.cpp, Line: 59, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ../../multicycle_pipeline_ip.cpp, Line: 59, Column: 0 }
+Function:        _Z22multicycle_pipeline_ipjjPjPiPA8192_iS_S_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_26_1
+  - String:          ''' ('
+  - LoopLoc:         '../../multicycle_pipeline_ip.cpp:26:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          multicycle_pipeline_ip
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../../multicycle_pipeline_ip.cpp, Line: 69, Column: 6 }
+Function:        _Z22multicycle_pipeline_ipjjPjPiPA8192_iS_S_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          reg_file
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ../../multicycle_pipeline_ip.cpp, Line: 71, Column: 8 }
+Function:        _Z22multicycle_pipeline_ipjjPjPiPA8192_iS_S_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          is_reg_computed
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: ../../wb.cpp, Line: 21, Column: 10 }
+Function:        _Z22multicycle_pipeline_ipjjPjPiPA8192_iS_S_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: ../../issue.cpp, Line: 23, Column: 10 }
+Function:        _Z22multicycle_pipeline_ipjjPjPiPA8192_iS_S_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: ../../issue.cpp, Line: 24, Column: 10 }
+Function:        _Z22multicycle_pipeline_ipjjPjPiPA8192_iS_S_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: ../../wb.cpp, Line: 21, Column: 10 }
+Function:        _Z22multicycle_pipeline_ipjjPjPiPA8192_iS_S_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: ../../issue.cpp, Line: 83, Column: 9 }
+Function:        _Z22multicycle_pipeline_ipjjPjPiPA8192_iS_S_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: ../../issue.cpp, Line: 66, Column: 7 }
+Function:        _Z22multicycle_pipeline_ipjjPjPiPA8192_iS_S_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Failure
+Pass:            reflow-array-partition
+Name:            WarnArrayXFORMOnIndexCast
+DebugLoc:        { File: ../../issue.cpp, Line: 63, Column: 7 }
+Function:        _Z22multicycle_pipeline_ipjjPjPiPA8192_iS_S_
+Args:            
+  - String:          Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations.
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: ../../multicycle_pipeline_ip.cpp, Line: 107, Column: 21 }
+Function:        _Z22multicycle_pipeline_ipjjPjPiPA8192_iS_S_
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_107_1
+  - String:          ' '
+  - LoopLoc:         '../../multicycle_pipeline_ip.cpp:107:21'
+  - String:          ' '
+  - Function:        'multicycle_pipeline_ip(unsigned int, unsigned int, unsigned int*, int*, int (*) [8192], unsigned int*, unsigned int*)'
+    DebugLoc:        { File: ../../multicycle_pipeline_ip.cpp, Line: 59, 
+                       Column: 0 }
+  - String:          ' '
+...
