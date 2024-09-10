@@ -22,6 +22,6 @@ To run the IP on the board:
 
 (7) run "hello_world"
 
-(8) create a "hello_world" template associated to the just created platform, update the "helloworld.c" source file with the content of the "multicore_multicycle_4c_ip/helloworld_par.c" file, copy the "multicore_multicycle_4c_ip/test_mem_par_ip0_text.hex" and the "multicore_multicycle_4c_ip/test_mem_par_otherip_text.hex" files to the "workspace/hello_world/src" folder, build "hello_world"
+(8) update the "helloworld.c" source file with the content of the "multicore_multicycle_4c_ip/helloworld_par.c" file, copy the "multicore_multicycle_4c_ip/test_mem_par_ip0_text.hex" and the "multicore_multicycle_4c_ip/test_mem_par_otherip_text.hex" files to the "workspace/hello_world/src" folder, build "hello_world"
 
 (9) run "hello_world"

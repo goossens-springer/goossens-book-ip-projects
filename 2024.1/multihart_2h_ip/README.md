@@ -22,6 +22,6 @@ To run the IP on the board:
 
 (7) run "hello_world"
 
-(8) create a "hello_world" template associated to the just created platform, update the "helloworld.c" source file with the content of the "multihart_2h_ip/helloworld_par.c" file, copy the "multihart_2h_ip/test_mem_par_2h_text.hex" file to the "workspace/hello_world/src" folder, build "hello_world"
+(8) update the "helloworld.c" source file with the content of the "multihart_2h_ip/helloworld_par.c" file, copy the "multihart_2h_ip/test_mem_par_2h_text.hex" file to the "workspace/hello_world/src" folder, build "hello_world"
 
 (9) run "hello_world"

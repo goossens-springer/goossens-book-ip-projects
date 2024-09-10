@@ -1,0 +1,1956 @@
+INFO: [vitis-run 60-1548] Creating build summary session with primary output /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/workspace/hls_component/multicycle_pipeline_ip/multicycle_pipeline_ip.hlsrun_csim_summary, at Tue Sep 10 19:08:46 2024
+INFO: [vitis-run 82-31] Launching vitis_hls: vitis_hls -nolog -run csim -work_dir /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/workspace/hls_component/multicycle_pipeline_ip -config /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/workspace/hls_component/hls_config.cfg -cmdlineconfig /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/workspace/hls_component/multicycle_pipeline_ip/hls/config.cmdline
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2024.1 (64-bit)
+  **** SW Build 5069499 on May 21 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Tue Sep 10 19:08:47 2024
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vitis_HLS/2024.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] For user 'goossens' on host 'goossens-Precision-5530' (Linux_x86_64 version 6.8.0-40-generic) on Tue Sep 10 19:08:49 CEST 2024
+INFO: [HLS 200-10] On os Ubuntu 22.04.4 LTS
+INFO: [HLS 200-10] In directory '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/workspace/hls_component'
+INFO: [HLS 200-2005] Using work_dir /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/workspace/hls_component/multicycle_pipeline_ip 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/wb.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/workspace/hls_component/hls_config.cfg(6)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/wb.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/type.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/workspace/hls_component/hls_config.cfg(7)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/type.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/print.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/workspace/hls_component/hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/print.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/new_cycle.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/workspace/hls_component/hls_config.cfg(9)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/new_cycle.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/multicycle_pipeline_ip.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/workspace/hls_component/hls_config.cfg(10)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/multicycle_pipeline_ip.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/mem_access.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/workspace/hls_component/hls_config.cfg(11)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/mem_access.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/mem.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/workspace/hls_component/hls_config.cfg(12)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/mem.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/issue.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/workspace/hls_component/hls_config.cfg(13)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/issue.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/immediate.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/workspace/hls_component/hls_config.cfg(14)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/immediate.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/fetch.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/workspace/hls_component/hls_config.cfg(15)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/fetch.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/execute.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/workspace/hls_component/hls_config.cfg(16)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/execute.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/emulate.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/workspace/hls_component/hls_config.cfg(17)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/emulate.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/disassemble.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/workspace/hls_component/hls_config.cfg(18)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/disassemble.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/decode.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/workspace/hls_component/hls_config.cfg(19)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/decode.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/compute.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/workspace/hls_component/hls_config.cfg(20)
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/compute.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'tb.file=/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/testbench_par_multicore_multicycle_ip.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/workspace/hls_component/hls_config.cfg(25)
+INFO: [HLS 200-10] Adding test bench file '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/testbench_par_multicore_multicycle_ip.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.top=multicycle_pipeline_ip' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/workspace/hls_component/hls_config.cfg(21)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/workspace/hls_component/hls_config.cfg(5)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2024.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/workspace/hls_component/hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/workspace/hls_component/hls_config.cfg(4)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/workspace/hls_component/hls_config.cfg(22)
+INFO: [HLS 200-1465] Applying ini 'vivado.rtl=verilog' from /home/goossens/goossens-book-ip-projects/2024.1/multicore_multicycle_8c_ip/workspace/hls_component/hls_config.cfg(23)
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch CLANG as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../../../testbench_par_multicore_multicycle_ip.cpp in debug mode
+   Generating csim.exe
+0000: 00351293      slli t0, a0, 3
+      t0  =                8 (       8)
+0004: 00151313      slli t1, a0, 1
+      t1  =                2 (       2)
+0008: 00000513      li a0, 0
+      a0  =                0 (       0)
+0012: 006285b3      add a1, t0, t1
+      a1  =               10 (       a)
+0016: 00000613      li a2, 0
+      a2  =                0 (       0)
+0020: 02860693      addi a3, a2, 40
+      a3  =               40 (      28)
+0024: 00158593      addi a1, a1, 1
+      a1  =               11 (       b)
+0028: 00b62023      sw a1, 0(a2)
+      m[ 4000] =               11 (       b)
+0032: 00460613      addi a2, a2, 4
+      a2  =                4 (       4)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               12 (       c)
+0028: 00b62023      sw a1, 0(a2)
+      m[ 4004] =               12 (       c)
+0032: 00460613      addi a2, a2, 4
+      a2  =                8 (       8)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               13 (       d)
+0028: 00b62023      sw a1, 0(a2)
+      m[ 4008] =               13 (       d)
+0032: 00460613      addi a2, a2, 4
+      a2  =               12 (       c)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               14 (       e)
+0028: 00b62023      sw a1, 0(a2)
+      m[ 400c] =               14 (       e)
+0032: 00460613      addi a2, a2, 4
+      a2  =               16 (      10)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               15 (       f)
+0028: 00b62023      sw a1, 0(a2)
+      m[ 4010] =               15 (       f)
+0032: 00460613      addi a2, a2, 4
+      a2  =               20 (      14)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               16 (      10)
+0028: 00b62023      sw a1, 0(a2)
+      m[ 4014] =               16 (      10)
+0032: 00460613      addi a2, a2, 4
+      a2  =               24 (      18)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               17 (      11)
+0028: 00b62023      sw a1, 0(a2)
+      m[ 4018] =               17 (      11)
+0032: 00460613      addi a2, a2, 4
+      a2  =               28 (      1c)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               18 (      12)
+0028: 00b62023      sw a1, 0(a2)
+      m[ 401c] =               18 (      12)
+0032: 00460613      addi a2, a2, 4
+      a2  =               32 (      20)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               19 (      13)
+0028: 00b62023      sw a1, 0(a2)
+      m[ 4020] =               19 (      13)
+0032: 00460613      addi a2, a2, 4
+      a2  =               36 (      24)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               20 (      14)
+0028: 00b62023      sw a1, 0(a2)
+      m[ 4024] =               20 (      14)
+0032: 00460613      addi a2, a2, 4
+      a2  =               40 (      28)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               40 (      28)
+0040: 00000593      li a1, 0
+      a1  =                0 (       0)
+0044: 00000613      li a2, 0
+      a2  =                0 (       0)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               11 (       b)    (m[ 4000])
+0052: 00460613      addi a2, a2, 4
+      a2  =                4 (       4)
+0056: 00e50533      add a0, a0, a4
+      a0  =               11 (       b)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               12 (       c)    (m[ 4004])
+0052: 00460613      addi a2, a2, 4
+      a2  =                8 (       8)
+0056: 00e50533      add a0, a0, a4
+      a0  =               23 (      17)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               13 (       d)    (m[ 4008])
+0052: 00460613      addi a2, a2, 4
+      a2  =               12 (       c)
+0056: 00e50533      add a0, a0, a4
+      a0  =               36 (      24)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               14 (       e)    (m[ 400c])
+0052: 00460613      addi a2, a2, 4
+      a2  =               16 (      10)
+0056: 00e50533      add a0, a0, a4
+      a0  =               50 (      32)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               15 (       f)    (m[ 4010])
+0052: 00460613      addi a2, a2, 4
+      a2  =               20 (      14)
+0056: 00e50533      add a0, a0, a4
+      a0  =               65 (      41)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               16 (      10)    (m[ 4014])
+0052: 00460613      addi a2, a2, 4
+      a2  =               24 (      18)
+0056: 00e50533      add a0, a0, a4
+      a0  =               81 (      51)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               17 (      11)    (m[ 4018])
+0052: 00460613      addi a2, a2, 4
+      a2  =               28 (      1c)
+0056: 00e50533      add a0, a0, a4
+      a0  =               98 (      62)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               18 (      12)    (m[ 401c])
+0052: 00460613      addi a2, a2, 4
+      a2  =               32 (      20)
+0056: 00e50533      add a0, a0, a4
+      a0  =              116 (      74)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               19 (      13)    (m[ 4020])
+0052: 00460613      addi a2, a2, 4
+      a2  =               36 (      24)
+0056: 00e50533      add a0, a0, a4
+      a0  =              135 (      87)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               20 (      14)    (m[ 4024])
+0052: 00460613      addi a2, a2, 4
+      a2  =               40 (      28)
+0056: 00e50533      add a0, a0, a4
+      a0  =              155 (      9b)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               64 (      40)
+0064: 00a62023      sw a0, 0(a2)
+      m[ 4028] =              155 (      9b)
+0068: 00008067      ret
+      pc  =                0 (       0)
+ra  =                0 (       0)
+sp  =            16384 (    4000)
+gp  =                0 (       0)
+tp  =                0 (       0)
+t0  =                8 (       8)
+t1  =                2 (       2)
+t2  =                0 (       0)
+s0  =                0 (       0)
+s1  =                0 (       0)
+a0  =              155 (      9b)
+a1  =                0 (       0)
+a2  =               40 (      28)
+a3  =               40 (      28)
+a4  =               20 (      14)
+a5  =                0 (       0)
+a6  =                0 (       0)
+a7  =                0 (       0)
+s2  =                0 (       0)
+s3  =                0 (       0)
+s4  =                0 (       0)
+s5  =                0 (       0)
+s6  =                0 (       0)
+s7  =                0 (       0)
+s8  =                0 (       0)
+s9  =                0 (       0)
+s10 =                0 (       0)
+s11 =                0 (       0)
+t3  =                0 (       0)
+t4  =                0 (       0)
+t5  =                0 (       0)
+t6  =                0 (       0)
+0000: 00351293      slli t0, a0, 3
+      t0  =               16 (      10)
+0004: 00151313      slli t1, a0, 1
+      t1  =                4 (       4)
+0008: 00000513      li a0, 0
+      a0  =                0 (       0)
+0012: 006285b3      add a1, t0, t1
+      a1  =               20 (      14)
+0016: 00000613      li a2, 0
+      a2  =                0 (       0)
+0020: 02860693      addi a3, a2, 40
+      a3  =               40 (      28)
+0024: 00158593      addi a1, a1, 1
+      a1  =               21 (      15)
+0028: 00b62023      sw a1, 0(a2)
+      m[ 8000] =               21 (      15)
+0032: 00460613      addi a2, a2, 4
+      a2  =                4 (       4)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               22 (      16)
+0028: 00b62023      sw a1, 0(a2)
+      m[ 8004] =               22 (      16)
+0032: 00460613      addi a2, a2, 4
+      a2  =                8 (       8)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               23 (      17)
+0028: 00b62023      sw a1, 0(a2)
+      m[ 8008] =               23 (      17)
+0032: 00460613      addi a2, a2, 4
+      a2  =               12 (       c)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               24 (      18)
+0028: 00b62023      sw a1, 0(a2)
+      m[ 800c] =               24 (      18)
+0032: 00460613      addi a2, a2, 4
+      a2  =               16 (      10)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               25 (      19)
+0028: 00b62023      sw a1, 0(a2)
+      m[ 8010] =               25 (      19)
+0032: 00460613      addi a2, a2, 4
+      a2  =               20 (      14)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               26 (      1a)
+0028: 00b62023      sw a1, 0(a2)
+      m[ 8014] =               26 (      1a)
+0032: 00460613      addi a2, a2, 4
+      a2  =               24 (      18)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               27 (      1b)
+0028: 00b62023      sw a1, 0(a2)
+      m[ 8018] =               27 (      1b)
+0032: 00460613      addi a2, a2, 4
+      a2  =               28 (      1c)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               28 (      1c)
+0028: 00b62023      sw a1, 0(a2)
+      m[ 801c] =               28 (      1c)
+0032: 00460613      addi a2, a2, 4
+      a2  =               32 (      20)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               29 (      1d)
+0028: 00b62023      sw a1, 0(a2)
+      m[ 8020] =               29 (      1d)
+0032: 00460613      addi a2, a2, 4
+      a2  =               36 (      24)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               30 (      1e)
+0028: 00b62023      sw a1, 0(a2)
+      m[ 8024] =               30 (      1e)
+0032: 00460613      addi a2, a2, 4
+      a2  =               40 (      28)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               40 (      28)
+0040: 00000593      li a1, 0
+      a1  =                0 (       0)
+0044: 00000613      li a2, 0
+      a2  =                0 (       0)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               21 (      15)    (m[ 8000])
+0052: 00460613      addi a2, a2, 4
+      a2  =                4 (       4)
+0056: 00e50533      add a0, a0, a4
+      a0  =               21 (      15)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               22 (      16)    (m[ 8004])
+0052: 00460613      addi a2, a2, 4
+      a2  =                8 (       8)
+0056: 00e50533      add a0, a0, a4
+      a0  =               43 (      2b)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               23 (      17)    (m[ 8008])
+0052: 00460613      addi a2, a2, 4
+      a2  =               12 (       c)
+0056: 00e50533      add a0, a0, a4
+      a0  =               66 (      42)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               24 (      18)    (m[ 800c])
+0052: 00460613      addi a2, a2, 4
+      a2  =               16 (      10)
+0056: 00e50533      add a0, a0, a4
+      a0  =               90 (      5a)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               25 (      19)    (m[ 8010])
+0052: 00460613      addi a2, a2, 4
+      a2  =               20 (      14)
+0056: 00e50533      add a0, a0, a4
+      a0  =              115 (      73)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               26 (      1a)    (m[ 8014])
+0052: 00460613      addi a2, a2, 4
+      a2  =               24 (      18)
+0056: 00e50533      add a0, a0, a4
+      a0  =              141 (      8d)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               27 (      1b)    (m[ 8018])
+0052: 00460613      addi a2, a2, 4
+      a2  =               28 (      1c)
+0056: 00e50533      add a0, a0, a4
+      a0  =              168 (      a8)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               28 (      1c)    (m[ 801c])
+0052: 00460613      addi a2, a2, 4
+      a2  =               32 (      20)
+0056: 00e50533      add a0, a0, a4
+      a0  =              196 (      c4)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               29 (      1d)    (m[ 8020])
+0052: 00460613      addi a2, a2, 4
+      a2  =               36 (      24)
+0056: 00e50533      add a0, a0, a4
+      a0  =              225 (      e1)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               30 (      1e)    (m[ 8024])
+0052: 00460613      addi a2, a2, 4
+      a2  =               40 (      28)
+0056: 00e50533      add a0, a0, a4
+      a0  =              255 (      ff)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               64 (      40)
+0064: 00a62023      sw a0, 0(a2)
+      m[ 8028] =              255 (      ff)
+0068: 00008067      ret
+      pc  =                0 (       0)
+ra  =                0 (       0)
+sp  =            16384 (    4000)
+gp  =                0 (       0)
+tp  =                0 (       0)
+t0  =               16 (      10)
+t1  =                4 (       4)
+t2  =                0 (       0)
+s0  =                0 (       0)
+s1  =                0 (       0)
+a0  =              255 (      ff)
+a1  =                0 (       0)
+a2  =               40 (      28)
+a3  =               40 (      28)
+a4  =               30 (      1e)
+a5  =                0 (       0)
+a6  =                0 (       0)
+a7  =                0 (       0)
+s2  =                0 (       0)
+s3  =                0 (       0)
+s4  =                0 (       0)
+s5  =                0 (       0)
+s6  =                0 (       0)
+s7  =                0 (       0)
+s8  =                0 (       0)
+s9  =                0 (       0)
+s10 =                0 (       0)
+s11 =                0 (       0)
+t3  =                0 (       0)
+t4  =                0 (       0)
+t5  =                0 (       0)
+t6  =                0 (       0)
+0000: 00351293      slli t0, a0, 3
+      t0  =               24 (      18)
+0004: 00151313      slli t1, a0, 1
+      t1  =                6 (       6)
+0008: 00000513      li a0, 0
+      a0  =                0 (       0)
+0012: 006285b3      add a1, t0, t1
+      a1  =               30 (      1e)
+0016: 00000613      li a2, 0
+      a2  =                0 (       0)
+0020: 02860693      addi a3, a2, 40
+      a3  =               40 (      28)
+0024: 00158593      addi a1, a1, 1
+      a1  =               31 (      1f)
+0028: 00b62023      sw a1, 0(a2)
+      m[ c000] =               31 (      1f)
+0032: 00460613      addi a2, a2, 4
+      a2  =                4 (       4)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               32 (      20)
+0028: 00b62023      sw a1, 0(a2)
+      m[ c004] =               32 (      20)
+0032: 00460613      addi a2, a2, 4
+      a2  =                8 (       8)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               33 (      21)
+0028: 00b62023      sw a1, 0(a2)
+      m[ c008] =               33 (      21)
+0032: 00460613      addi a2, a2, 4
+      a2  =               12 (       c)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               34 (      22)
+0028: 00b62023      sw a1, 0(a2)
+      m[ c00c] =               34 (      22)
+0032: 00460613      addi a2, a2, 4
+      a2  =               16 (      10)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               35 (      23)
+0028: 00b62023      sw a1, 0(a2)
+      m[ c010] =               35 (      23)
+0032: 00460613      addi a2, a2, 4
+      a2  =               20 (      14)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               36 (      24)
+0028: 00b62023      sw a1, 0(a2)
+      m[ c014] =               36 (      24)
+0032: 00460613      addi a2, a2, 4
+      a2  =               24 (      18)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               37 (      25)
+0028: 00b62023      sw a1, 0(a2)
+      m[ c018] =               37 (      25)
+0032: 00460613      addi a2, a2, 4
+      a2  =               28 (      1c)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               38 (      26)
+0028: 00b62023      sw a1, 0(a2)
+      m[ c01c] =               38 (      26)
+0032: 00460613      addi a2, a2, 4
+      a2  =               32 (      20)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               39 (      27)
+0028: 00b62023      sw a1, 0(a2)
+      m[ c020] =               39 (      27)
+0032: 00460613      addi a2, a2, 4
+      a2  =               36 (      24)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               40 (      28)
+0028: 00b62023      sw a1, 0(a2)
+      m[ c024] =               40 (      28)
+0032: 00460613      addi a2, a2, 4
+      a2  =               40 (      28)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               40 (      28)
+0040: 00000593      li a1, 0
+      a1  =                0 (       0)
+0044: 00000613      li a2, 0
+      a2  =                0 (       0)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               31 (      1f)    (m[ c000])
+0052: 00460613      addi a2, a2, 4
+      a2  =                4 (       4)
+0056: 00e50533      add a0, a0, a4
+      a0  =               31 (      1f)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               32 (      20)    (m[ c004])
+0052: 00460613      addi a2, a2, 4
+      a2  =                8 (       8)
+0056: 00e50533      add a0, a0, a4
+      a0  =               63 (      3f)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               33 (      21)    (m[ c008])
+0052: 00460613      addi a2, a2, 4
+      a2  =               12 (       c)
+0056: 00e50533      add a0, a0, a4
+      a0  =               96 (      60)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               34 (      22)    (m[ c00c])
+0052: 00460613      addi a2, a2, 4
+      a2  =               16 (      10)
+0056: 00e50533      add a0, a0, a4
+      a0  =              130 (      82)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               35 (      23)    (m[ c010])
+0052: 00460613      addi a2, a2, 4
+      a2  =               20 (      14)
+0056: 00e50533      add a0, a0, a4
+      a0  =              165 (      a5)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               36 (      24)    (m[ c014])
+0052: 00460613      addi a2, a2, 4
+      a2  =               24 (      18)
+0056: 00e50533      add a0, a0, a4
+      a0  =              201 (      c9)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               37 (      25)    (m[ c018])
+0052: 00460613      addi a2, a2, 4
+      a2  =               28 (      1c)
+0056: 00e50533      add a0, a0, a4
+      a0  =              238 (      ee)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               38 (      26)    (m[ c01c])
+0052: 00460613      addi a2, a2, 4
+      a2  =               32 (      20)
+0056: 00e50533      add a0, a0, a4
+      a0  =              276 (     114)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               39 (      27)    (m[ c020])
+0052: 00460613      addi a2, a2, 4
+      a2  =               36 (      24)
+0056: 00e50533      add a0, a0, a4
+      a0  =              315 (     13b)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               40 (      28)    (m[ c024])
+0052: 00460613      addi a2, a2, 4
+      a2  =               40 (      28)
+0056: 00e50533      add a0, a0, a4
+      a0  =              355 (     163)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               64 (      40)
+0064: 00a62023      sw a0, 0(a2)
+      m[ c028] =              355 (     163)
+0068: 00008067      ret
+      pc  =                0 (       0)
+ra  =                0 (       0)
+sp  =            16384 (    4000)
+gp  =                0 (       0)
+tp  =                0 (       0)
+t0  =               24 (      18)
+t1  =                6 (       6)
+t2  =                0 (       0)
+s0  =                0 (       0)
+s1  =                0 (       0)
+a0  =              355 (     163)
+a1  =                0 (       0)
+a2  =               40 (      28)
+a3  =               40 (      28)
+a4  =               40 (      28)
+a5  =                0 (       0)
+a6  =                0 (       0)
+a7  =                0 (       0)
+s2  =                0 (       0)
+s3  =                0 (       0)
+s4  =                0 (       0)
+s5  =                0 (       0)
+s6  =                0 (       0)
+s7  =                0 (       0)
+s8  =                0 (       0)
+s9  =                0 (       0)
+s10 =                0 (       0)
+s11 =                0 (       0)
+t3  =                0 (       0)
+t4  =                0 (       0)
+t5  =                0 (       0)
+t6  =                0 (       0)
+0000: 00351293      slli t0, a0, 3
+      t0  =               32 (      20)
+0004: 00151313      slli t1, a0, 1
+      t1  =                8 (       8)
+0008: 00000513      li a0, 0
+      a0  =                0 (       0)
+0012: 006285b3      add a1, t0, t1
+      a1  =               40 (      28)
+0016: 00000613      li a2, 0
+      a2  =                0 (       0)
+0020: 02860693      addi a3, a2, 40
+      a3  =               40 (      28)
+0024: 00158593      addi a1, a1, 1
+      a1  =               41 (      29)
+0028: 00b62023      sw a1, 0(a2)
+      m[10000] =               41 (      29)
+0032: 00460613      addi a2, a2, 4
+      a2  =                4 (       4)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               42 (      2a)
+0028: 00b62023      sw a1, 0(a2)
+      m[10004] =               42 (      2a)
+0032: 00460613      addi a2, a2, 4
+      a2  =                8 (       8)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               43 (      2b)
+0028: 00b62023      sw a1, 0(a2)
+      m[10008] =               43 (      2b)
+0032: 00460613      addi a2, a2, 4
+      a2  =               12 (       c)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               44 (      2c)
+0028: 00b62023      sw a1, 0(a2)
+      m[1000c] =               44 (      2c)
+0032: 00460613      addi a2, a2, 4
+      a2  =               16 (      10)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               45 (      2d)
+0028: 00b62023      sw a1, 0(a2)
+      m[10010] =               45 (      2d)
+0032: 00460613      addi a2, a2, 4
+      a2  =               20 (      14)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               46 (      2e)
+0028: 00b62023      sw a1, 0(a2)
+      m[10014] =               46 (      2e)
+0032: 00460613      addi a2, a2, 4
+      a2  =               24 (      18)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               47 (      2f)
+0028: 00b62023      sw a1, 0(a2)
+      m[10018] =               47 (      2f)
+0032: 00460613      addi a2, a2, 4
+      a2  =               28 (      1c)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               48 (      30)
+0028: 00b62023      sw a1, 0(a2)
+      m[1001c] =               48 (      30)
+0032: 00460613      addi a2, a2, 4
+      a2  =               32 (      20)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               49 (      31)
+0028: 00b62023      sw a1, 0(a2)
+      m[10020] =               49 (      31)
+0032: 00460613      addi a2, a2, 4
+      a2  =               36 (      24)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               50 (      32)
+0028: 00b62023      sw a1, 0(a2)
+      m[10024] =               50 (      32)
+0032: 00460613      addi a2, a2, 4
+      a2  =               40 (      28)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               40 (      28)
+0040: 00000593      li a1, 0
+      a1  =                0 (       0)
+0044: 00000613      li a2, 0
+      a2  =                0 (       0)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               41 (      29)    (m[10000])
+0052: 00460613      addi a2, a2, 4
+      a2  =                4 (       4)
+0056: 00e50533      add a0, a0, a4
+      a0  =               41 (      29)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               42 (      2a)    (m[10004])
+0052: 00460613      addi a2, a2, 4
+      a2  =                8 (       8)
+0056: 00e50533      add a0, a0, a4
+      a0  =               83 (      53)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               43 (      2b)    (m[10008])
+0052: 00460613      addi a2, a2, 4
+      a2  =               12 (       c)
+0056: 00e50533      add a0, a0, a4
+      a0  =              126 (      7e)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               44 (      2c)    (m[1000c])
+0052: 00460613      addi a2, a2, 4
+      a2  =               16 (      10)
+0056: 00e50533      add a0, a0, a4
+      a0  =              170 (      aa)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               45 (      2d)    (m[10010])
+0052: 00460613      addi a2, a2, 4
+      a2  =               20 (      14)
+0056: 00e50533      add a0, a0, a4
+      a0  =              215 (      d7)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               46 (      2e)    (m[10014])
+0052: 00460613      addi a2, a2, 4
+      a2  =               24 (      18)
+0056: 00e50533      add a0, a0, a4
+      a0  =              261 (     105)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               47 (      2f)    (m[10018])
+0052: 00460613      addi a2, a2, 4
+      a2  =               28 (      1c)
+0056: 00e50533      add a0, a0, a4
+      a0  =              308 (     134)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               48 (      30)    (m[1001c])
+0052: 00460613      addi a2, a2, 4
+      a2  =               32 (      20)
+0056: 00e50533      add a0, a0, a4
+      a0  =              356 (     164)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               49 (      31)    (m[10020])
+0052: 00460613      addi a2, a2, 4
+      a2  =               36 (      24)
+0056: 00e50533      add a0, a0, a4
+      a0  =              405 (     195)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               50 (      32)    (m[10024])
+0052: 00460613      addi a2, a2, 4
+      a2  =               40 (      28)
+0056: 00e50533      add a0, a0, a4
+      a0  =              455 (     1c7)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               64 (      40)
+0064: 00a62023      sw a0, 0(a2)
+      m[10028] =              455 (     1c7)
+0068: 00008067      ret
+      pc  =                0 (       0)
+ra  =                0 (       0)
+sp  =            16384 (    4000)
+gp  =                0 (       0)
+tp  =                0 (       0)
+t0  =               32 (      20)
+t1  =                8 (       8)
+t2  =                0 (       0)
+s0  =                0 (       0)
+s1  =                0 (       0)
+a0  =              455 (     1c7)
+a1  =                0 (       0)
+a2  =               40 (      28)
+a3  =               40 (      28)
+a4  =               50 (      32)
+a5  =                0 (       0)
+a6  =                0 (       0)
+a7  =                0 (       0)
+s2  =                0 (       0)
+s3  =                0 (       0)
+s4  =                0 (       0)
+s5  =                0 (       0)
+s6  =                0 (       0)
+s7  =                0 (       0)
+s8  =                0 (       0)
+s9  =                0 (       0)
+s10 =                0 (       0)
+s11 =                0 (       0)
+t3  =                0 (       0)
+t4  =                0 (       0)
+t5  =                0 (       0)
+t6  =                0 (       0)
+0000: 00351293      slli t0, a0, 3
+      t0  =               40 (      28)
+0004: 00151313      slli t1, a0, 1
+      t1  =               10 (       a)
+0008: 00000513      li a0, 0
+      a0  =                0 (       0)
+0012: 006285b3      add a1, t0, t1
+      a1  =               50 (      32)
+0016: 00000613      li a2, 0
+      a2  =                0 (       0)
+0020: 02860693      addi a3, a2, 40
+      a3  =               40 (      28)
+0024: 00158593      addi a1, a1, 1
+      a1  =               51 (      33)
+0028: 00b62023      sw a1, 0(a2)
+      m[14000] =               51 (      33)
+0032: 00460613      addi a2, a2, 4
+      a2  =                4 (       4)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               52 (      34)
+0028: 00b62023      sw a1, 0(a2)
+      m[14004] =               52 (      34)
+0032: 00460613      addi a2, a2, 4
+      a2  =                8 (       8)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               53 (      35)
+0028: 00b62023      sw a1, 0(a2)
+      m[14008] =               53 (      35)
+0032: 00460613      addi a2, a2, 4
+      a2  =               12 (       c)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               54 (      36)
+0028: 00b62023      sw a1, 0(a2)
+      m[1400c] =               54 (      36)
+0032: 00460613      addi a2, a2, 4
+      a2  =               16 (      10)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               55 (      37)
+0028: 00b62023      sw a1, 0(a2)
+      m[14010] =               55 (      37)
+0032: 00460613      addi a2, a2, 4
+      a2  =               20 (      14)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               56 (      38)
+0028: 00b62023      sw a1, 0(a2)
+      m[14014] =               56 (      38)
+0032: 00460613      addi a2, a2, 4
+      a2  =               24 (      18)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               57 (      39)
+0028: 00b62023      sw a1, 0(a2)
+      m[14018] =               57 (      39)
+0032: 00460613      addi a2, a2, 4
+      a2  =               28 (      1c)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               58 (      3a)
+0028: 00b62023      sw a1, 0(a2)
+      m[1401c] =               58 (      3a)
+0032: 00460613      addi a2, a2, 4
+      a2  =               32 (      20)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               59 (      3b)
+0028: 00b62023      sw a1, 0(a2)
+      m[14020] =               59 (      3b)
+0032: 00460613      addi a2, a2, 4
+      a2  =               36 (      24)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               60 (      3c)
+0028: 00b62023      sw a1, 0(a2)
+      m[14024] =               60 (      3c)
+0032: 00460613      addi a2, a2, 4
+      a2  =               40 (      28)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               40 (      28)
+0040: 00000593      li a1, 0
+      a1  =                0 (       0)
+0044: 00000613      li a2, 0
+      a2  =                0 (       0)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               51 (      33)    (m[14000])
+0052: 00460613      addi a2, a2, 4
+      a2  =                4 (       4)
+0056: 00e50533      add a0, a0, a4
+      a0  =               51 (      33)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               52 (      34)    (m[14004])
+0052: 00460613      addi a2, a2, 4
+      a2  =                8 (       8)
+0056: 00e50533      add a0, a0, a4
+      a0  =              103 (      67)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               53 (      35)    (m[14008])
+0052: 00460613      addi a2, a2, 4
+      a2  =               12 (       c)
+0056: 00e50533      add a0, a0, a4
+      a0  =              156 (      9c)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               54 (      36)    (m[1400c])
+0052: 00460613      addi a2, a2, 4
+      a2  =               16 (      10)
+0056: 00e50533      add a0, a0, a4
+      a0  =              210 (      d2)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               55 (      37)    (m[14010])
+0052: 00460613      addi a2, a2, 4
+      a2  =               20 (      14)
+0056: 00e50533      add a0, a0, a4
+      a0  =              265 (     109)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               56 (      38)    (m[14014])
+0052: 00460613      addi a2, a2, 4
+      a2  =               24 (      18)
+0056: 00e50533      add a0, a0, a4
+      a0  =              321 (     141)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               57 (      39)    (m[14018])
+0052: 00460613      addi a2, a2, 4
+      a2  =               28 (      1c)
+0056: 00e50533      add a0, a0, a4
+      a0  =              378 (     17a)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               58 (      3a)    (m[1401c])
+0052: 00460613      addi a2, a2, 4
+      a2  =               32 (      20)
+0056: 00e50533      add a0, a0, a4
+      a0  =              436 (     1b4)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               59 (      3b)    (m[14020])
+0052: 00460613      addi a2, a2, 4
+      a2  =               36 (      24)
+0056: 00e50533      add a0, a0, a4
+      a0  =              495 (     1ef)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               60 (      3c)    (m[14024])
+0052: 00460613      addi a2, a2, 4
+      a2  =               40 (      28)
+0056: 00e50533      add a0, a0, a4
+      a0  =              555 (     22b)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               64 (      40)
+0064: 00a62023      sw a0, 0(a2)
+      m[14028] =              555 (     22b)
+0068: 00008067      ret
+      pc  =                0 (       0)
+ra  =                0 (       0)
+sp  =            16384 (    4000)
+gp  =                0 (       0)
+tp  =                0 (       0)
+t0  =               40 (      28)
+t1  =               10 (       a)
+t2  =                0 (       0)
+s0  =                0 (       0)
+s1  =                0 (       0)
+a0  =              555 (     22b)
+a1  =                0 (       0)
+a2  =               40 (      28)
+a3  =               40 (      28)
+a4  =               60 (      3c)
+a5  =                0 (       0)
+a6  =                0 (       0)
+a7  =                0 (       0)
+s2  =                0 (       0)
+s3  =                0 (       0)
+s4  =                0 (       0)
+s5  =                0 (       0)
+s6  =                0 (       0)
+s7  =                0 (       0)
+s8  =                0 (       0)
+s9  =                0 (       0)
+s10 =                0 (       0)
+s11 =                0 (       0)
+t3  =                0 (       0)
+t4  =                0 (       0)
+t5  =                0 (       0)
+t6  =                0 (       0)
+0000: 00351293      slli t0, a0, 3
+      t0  =               48 (      30)
+0004: 00151313      slli t1, a0, 1
+      t1  =               12 (       c)
+0008: 00000513      li a0, 0
+      a0  =                0 (       0)
+0012: 006285b3      add a1, t0, t1
+      a1  =               60 (      3c)
+0016: 00000613      li a2, 0
+      a2  =                0 (       0)
+0020: 02860693      addi a3, a2, 40
+      a3  =               40 (      28)
+0024: 00158593      addi a1, a1, 1
+      a1  =               61 (      3d)
+0028: 00b62023      sw a1, 0(a2)
+      m[18000] =               61 (      3d)
+0032: 00460613      addi a2, a2, 4
+      a2  =                4 (       4)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               62 (      3e)
+0028: 00b62023      sw a1, 0(a2)
+      m[18004] =               62 (      3e)
+0032: 00460613      addi a2, a2, 4
+      a2  =                8 (       8)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               63 (      3f)
+0028: 00b62023      sw a1, 0(a2)
+      m[18008] =               63 (      3f)
+0032: 00460613      addi a2, a2, 4
+      a2  =               12 (       c)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               64 (      40)
+0028: 00b62023      sw a1, 0(a2)
+      m[1800c] =               64 (      40)
+0032: 00460613      addi a2, a2, 4
+      a2  =               16 (      10)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               65 (      41)
+0028: 00b62023      sw a1, 0(a2)
+      m[18010] =               65 (      41)
+0032: 00460613      addi a2, a2, 4
+      a2  =               20 (      14)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               66 (      42)
+0028: 00b62023      sw a1, 0(a2)
+      m[18014] =               66 (      42)
+0032: 00460613      addi a2, a2, 4
+      a2  =               24 (      18)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               67 (      43)
+0028: 00b62023      sw a1, 0(a2)
+      m[18018] =               67 (      43)
+0032: 00460613      addi a2, a2, 4
+      a2  =               28 (      1c)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               68 (      44)
+0028: 00b62023      sw a1, 0(a2)
+      m[1801c] =               68 (      44)
+0032: 00460613      addi a2, a2, 4
+      a2  =               32 (      20)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               69 (      45)
+0028: 00b62023      sw a1, 0(a2)
+      m[18020] =               69 (      45)
+0032: 00460613      addi a2, a2, 4
+      a2  =               36 (      24)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               70 (      46)
+0028: 00b62023      sw a1, 0(a2)
+      m[18024] =               70 (      46)
+0032: 00460613      addi a2, a2, 4
+      a2  =               40 (      28)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               40 (      28)
+0040: 00000593      li a1, 0
+      a1  =                0 (       0)
+0044: 00000613      li a2, 0
+      a2  =                0 (       0)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               61 (      3d)    (m[18000])
+0052: 00460613      addi a2, a2, 4
+      a2  =                4 (       4)
+0056: 00e50533      add a0, a0, a4
+      a0  =               61 (      3d)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               62 (      3e)    (m[18004])
+0052: 00460613      addi a2, a2, 4
+      a2  =                8 (       8)
+0056: 00e50533      add a0, a0, a4
+      a0  =              123 (      7b)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               63 (      3f)    (m[18008])
+0052: 00460613      addi a2, a2, 4
+      a2  =               12 (       c)
+0056: 00e50533      add a0, a0, a4
+      a0  =              186 (      ba)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               64 (      40)    (m[1800c])
+0052: 00460613      addi a2, a2, 4
+      a2  =               16 (      10)
+0056: 00e50533      add a0, a0, a4
+      a0  =              250 (      fa)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               65 (      41)    (m[18010])
+0052: 00460613      addi a2, a2, 4
+      a2  =               20 (      14)
+0056: 00e50533      add a0, a0, a4
+      a0  =              315 (     13b)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               66 (      42)    (m[18014])
+0052: 00460613      addi a2, a2, 4
+      a2  =               24 (      18)
+0056: 00e50533      add a0, a0, a4
+      a0  =              381 (     17d)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               67 (      43)    (m[18018])
+0052: 00460613      addi a2, a2, 4
+      a2  =               28 (      1c)
+0056: 00e50533      add a0, a0, a4
+      a0  =              448 (     1c0)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               68 (      44)    (m[1801c])
+0052: 00460613      addi a2, a2, 4
+      a2  =               32 (      20)
+0056: 00e50533      add a0, a0, a4
+      a0  =              516 (     204)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               69 (      45)    (m[18020])
+0052: 00460613      addi a2, a2, 4
+      a2  =               36 (      24)
+0056: 00e50533      add a0, a0, a4
+      a0  =              585 (     249)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               70 (      46)    (m[18024])
+0052: 00460613      addi a2, a2, 4
+      a2  =               40 (      28)
+0056: 00e50533      add a0, a0, a4
+      a0  =              655 (     28f)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               64 (      40)
+0064: 00a62023      sw a0, 0(a2)
+      m[18028] =              655 (     28f)
+0068: 00008067      ret
+      pc  =                0 (       0)
+ra  =                0 (       0)
+sp  =            16384 (    4000)
+gp  =                0 (       0)
+tp  =                0 (       0)
+t0  =               48 (      30)
+t1  =               12 (       c)
+t2  =                0 (       0)
+s0  =                0 (       0)
+s1  =                0 (       0)
+a0  =              655 (     28f)
+a1  =                0 (       0)
+a2  =               40 (      28)
+a3  =               40 (      28)
+a4  =               70 (      46)
+a5  =                0 (       0)
+a6  =                0 (       0)
+a7  =                0 (       0)
+s2  =                0 (       0)
+s3  =                0 (       0)
+s4  =                0 (       0)
+s5  =                0 (       0)
+s6  =                0 (       0)
+s7  =                0 (       0)
+s8  =                0 (       0)
+s9  =                0 (       0)
+s10 =                0 (       0)
+s11 =                0 (       0)
+t3  =                0 (       0)
+t4  =                0 (       0)
+t5  =                0 (       0)
+t6  =                0 (       0)
+0000: 00351293      slli t0, a0, 3
+      t0  =               56 (      38)
+0004: 00151313      slli t1, a0, 1
+      t1  =               14 (       e)
+0008: 00000513      li a0, 0
+      a0  =                0 (       0)
+0012: 006285b3      add a1, t0, t1
+      a1  =               70 (      46)
+0016: 00000613      li a2, 0
+      a2  =                0 (       0)
+0020: 02860693      addi a3, a2, 40
+      a3  =               40 (      28)
+0024: 00158593      addi a1, a1, 1
+      a1  =               71 (      47)
+0028: 00b62023      sw a1, 0(a2)
+      m[1c000] =               71 (      47)
+0032: 00460613      addi a2, a2, 4
+      a2  =                4 (       4)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               72 (      48)
+0028: 00b62023      sw a1, 0(a2)
+      m[1c004] =               72 (      48)
+0032: 00460613      addi a2, a2, 4
+      a2  =                8 (       8)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               73 (      49)
+0028: 00b62023      sw a1, 0(a2)
+      m[1c008] =               73 (      49)
+0032: 00460613      addi a2, a2, 4
+      a2  =               12 (       c)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               74 (      4a)
+0028: 00b62023      sw a1, 0(a2)
+      m[1c00c] =               74 (      4a)
+0032: 00460613      addi a2, a2, 4
+      a2  =               16 (      10)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               75 (      4b)
+0028: 00b62023      sw a1, 0(a2)
+      m[1c010] =               75 (      4b)
+0032: 00460613      addi a2, a2, 4
+      a2  =               20 (      14)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               76 (      4c)
+0028: 00b62023      sw a1, 0(a2)
+      m[1c014] =               76 (      4c)
+0032: 00460613      addi a2, a2, 4
+      a2  =               24 (      18)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               77 (      4d)
+0028: 00b62023      sw a1, 0(a2)
+      m[1c018] =               77 (      4d)
+0032: 00460613      addi a2, a2, 4
+      a2  =               28 (      1c)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               78 (      4e)
+0028: 00b62023      sw a1, 0(a2)
+      m[1c01c] =               78 (      4e)
+0032: 00460613      addi a2, a2, 4
+      a2  =               32 (      20)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               79 (      4f)
+0028: 00b62023      sw a1, 0(a2)
+      m[1c020] =               79 (      4f)
+0032: 00460613      addi a2, a2, 4
+      a2  =               36 (      24)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               24 (      18)
+0024: 00158593      addi a1, a1, 1
+      a1  =               80 (      50)
+0028: 00b62023      sw a1, 0(a2)
+      m[1c024] =               80 (      50)
+0032: 00460613      addi a2, a2, 4
+      a2  =               40 (      28)
+0036: fed61ae3      bne a2, a3, 24
+      pc  =               40 (      28)
+0040: 00000593      li a1, 0
+      a1  =                0 (       0)
+0044: 00000613      li a2, 0
+      a2  =                0 (       0)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               71 (      47)    (m[1c000])
+0052: 00460613      addi a2, a2, 4
+      a2  =                4 (       4)
+0056: 00e50533      add a0, a0, a4
+      a0  =               71 (      47)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               72 (      48)    (m[1c004])
+0052: 00460613      addi a2, a2, 4
+      a2  =                8 (       8)
+0056: 00e50533      add a0, a0, a4
+      a0  =              143 (      8f)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               73 (      49)    (m[1c008])
+0052: 00460613      addi a2, a2, 4
+      a2  =               12 (       c)
+0056: 00e50533      add a0, a0, a4
+      a0  =              216 (      d8)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               74 (      4a)    (m[1c00c])
+0052: 00460613      addi a2, a2, 4
+      a2  =               16 (      10)
+0056: 00e50533      add a0, a0, a4
+      a0  =              290 (     122)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               75 (      4b)    (m[1c010])
+0052: 00460613      addi a2, a2, 4
+      a2  =               20 (      14)
+0056: 00e50533      add a0, a0, a4
+      a0  =              365 (     16d)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               76 (      4c)    (m[1c014])
+0052: 00460613      addi a2, a2, 4
+      a2  =               24 (      18)
+0056: 00e50533      add a0, a0, a4
+      a0  =              441 (     1b9)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               77 (      4d)    (m[1c018])
+0052: 00460613      addi a2, a2, 4
+      a2  =               28 (      1c)
+0056: 00e50533      add a0, a0, a4
+      a0  =              518 (     206)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               78 (      4e)    (m[1c01c])
+0052: 00460613      addi a2, a2, 4
+      a2  =               32 (      20)
+0056: 00e50533      add a0, a0, a4
+      a0  =              596 (     254)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               79 (      4f)    (m[1c020])
+0052: 00460613      addi a2, a2, 4
+      a2  =               36 (      24)
+0056: 00e50533      add a0, a0, a4
+      a0  =              675 (     2a3)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               48 (      30)
+0048: 00062703      lw a4, 0(a2)
+      a4  =               80 (      50)    (m[1c024])
+0052: 00460613      addi a2, a2, 4
+      a2  =               40 (      28)
+0056: 00e50533      add a0, a0, a4
+      a0  =              755 (     2f3)
+0060: fed61ae3      bne a2, a3, 48
+      pc  =               64 (      40)
+0064: 00a62023      sw a0, 0(a2)
+      m[1c028] =              755 (     2f3)
+0068: 00008067      ret
+      pc  =                0 (       0)
+ra  =                0 (       0)
+sp  =            16384 (    4000)
+gp  =                0 (       0)
+tp  =                0 (       0)
+t0  =               56 (      38)
+t1  =               14 (       e)
+t2  =                0 (       0)
+s0  =                0 (       0)
+s1  =                0 (       0)
+a0  =              755 (     2f3)
+a1  =                0 (       0)
+a2  =               40 (      28)
+a3  =               40 (      28)
+a4  =               80 (      50)
+a5  =                0 (       0)
+a6  =                0 (       0)
+a7  =                0 (       0)
+s2  =                0 (       0)
+s3  =                0 (       0)
+s4  =                0 (       0)
+s5  =                0 (       0)
+s6  =                0 (       0)
+s7  =                0 (       0)
+s8  =                0 (       0)
+s9  =                0 (       0)
+s10 =                0 (       0)
+s11 =                0 (       0)
+t3  =                0 (       0)
+t4  =                0 (       0)
+t5  =                0 (       0)
+t6  =                0 (       0)
+0000: 00000513      li a0, 0
+      a0  =                0 (       0)
+0004: 00000593      li a1, 0
+      a1  =                0 (       0)
+0008: 00000613      li a2, 0
+      a2  =                0 (       0)
+0012: 02860693      addi a3, a2, 40
+      a3  =               40 (      28)
+0016: 00158593      addi a1, a1, 1
+      a1  =                1 (       1)
+0020: 00b62023      sw a1, 0(a2)
+      m[    0] =                1 (       1)
+0024: 00460613      addi a2, a2, 4
+      a2  =                4 (       4)
+0028: fed61ae3      bne a2, a3, 16
+      pc  =               16 (      10)
+0016: 00158593      addi a1, a1, 1
+      a1  =                2 (       2)
+0020: 00b62023      sw a1, 0(a2)
+      m[    4] =                2 (       2)
+0024: 00460613      addi a2, a2, 4
+      a2  =                8 (       8)
+0028: fed61ae3      bne a2, a3, 16
+      pc  =               16 (      10)
+0016: 00158593      addi a1, a1, 1
+      a1  =                3 (       3)
+0020: 00b62023      sw a1, 0(a2)
+      m[    8] =                3 (       3)
+0024: 00460613      addi a2, a2, 4
+      a2  =               12 (       c)
+0028: fed61ae3      bne a2, a3, 16
+      pc  =               16 (      10)
+0016: 00158593      addi a1, a1, 1
+      a1  =                4 (       4)
+0020: 00b62023      sw a1, 0(a2)
+      m[    c] =                4 (       4)
+0024: 00460613      addi a2, a2, 4
+      a2  =               16 (      10)
+0028: fed61ae3      bne a2, a3, 16
+      pc  =               16 (      10)
+0016: 00158593      addi a1, a1, 1
+      a1  =                5 (       5)
+0020: 00b62023      sw a1, 0(a2)
+      m[   10] =                5 (       5)
+0024: 00460613      addi a2, a2, 4
+      a2  =               20 (      14)
+0028: fed61ae3      bne a2, a3, 16
+      pc  =               16 (      10)
+0016: 00158593      addi a1, a1, 1
+      a1  =                6 (       6)
+0020: 00b62023      sw a1, 0(a2)
+      m[   14] =                6 (       6)
+0024: 00460613      addi a2, a2, 4
+      a2  =               24 (      18)
+0028: fed61ae3      bne a2, a3, 16
+      pc  =               16 (      10)
+0016: 00158593      addi a1, a1, 1
+      a1  =                7 (       7)
+0020: 00b62023      sw a1, 0(a2)
+      m[   18] =                7 (       7)
+0024: 00460613      addi a2, a2, 4
+      a2  =               28 (      1c)
+0028: fed61ae3      bne a2, a3, 16
+      pc  =               16 (      10)
+0016: 00158593      addi a1, a1, 1
+      a1  =                8 (       8)
+0020: 00b62023      sw a1, 0(a2)
+      m[   1c] =                8 (       8)
+0024: 00460613      addi a2, a2, 4
+      a2  =               32 (      20)
+0028: fed61ae3      bne a2, a3, 16
+      pc  =               16 (      10)
+0016: 00158593      addi a1, a1, 1
+      a1  =                9 (       9)
+0020: 00b62023      sw a1, 0(a2)
+      m[   20] =                9 (       9)
+0024: 00460613      addi a2, a2, 4
+      a2  =               36 (      24)
+0028: fed61ae3      bne a2, a3, 16
+      pc  =               16 (      10)
+0016: 00158593      addi a1, a1, 1
+      a1  =               10 (       a)
+0020: 00b62023      sw a1, 0(a2)
+      m[   24] =               10 (       a)
+0024: 00460613      addi a2, a2, 4
+      a2  =               40 (      28)
+0028: fed61ae3      bne a2, a3, 16
+      pc  =               32 (      20)
+0032: 00000593      li a1, 0
+      a1  =                0 (       0)
+0036: 00000613      li a2, 0
+      a2  =                0 (       0)
+0040: 00062703      lw a4, 0(a2)
+      a4  =                1 (       1)    (m[    0])
+0044: 00460613      addi a2, a2, 4
+      a2  =                4 (       4)
+0048: 00e50533      add a0, a0, a4
+      a0  =                1 (       1)
+0052: fed61ae3      bne a2, a3, 40
+      pc  =               40 (      28)
+0040: 00062703      lw a4, 0(a2)
+      a4  =                2 (       2)    (m[    4])
+0044: 00460613      addi a2, a2, 4
+      a2  =                8 (       8)
+0048: 00e50533      add a0, a0, a4
+      a0  =                3 (       3)
+0052: fed61ae3      bne a2, a3, 40
+      pc  =               40 (      28)
+0040: 00062703      lw a4, 0(a2)
+      a4  =                3 (       3)    (m[    8])
+0044: 00460613      addi a2, a2, 4
+      a2  =               12 (       c)
+0048: 00e50533      add a0, a0, a4
+      a0  =                6 (       6)
+0052: fed61ae3      bne a2, a3, 40
+      pc  =               40 (      28)
+0040: 00062703      lw a4, 0(a2)
+      a4  =                4 (       4)    (m[    c])
+0044: 00460613      addi a2, a2, 4
+      a2  =               16 (      10)
+0048: 00e50533      add a0, a0, a4
+      a0  =               10 (       a)
+0052: fed61ae3      bne a2, a3, 40
+      pc  =               40 (      28)
+0040: 00062703      lw a4, 0(a2)
+      a4  =                5 (       5)    (m[   10])
+0044: 00460613      addi a2, a2, 4
+      a2  =               20 (      14)
+0048: 00e50533      add a0, a0, a4
+      a0  =               15 (       f)
+0052: fed61ae3      bne a2, a3, 40
+      pc  =               40 (      28)
+0040: 00062703      lw a4, 0(a2)
+      a4  =                6 (       6)    (m[   14])
+0044: 00460613      addi a2, a2, 4
+      a2  =               24 (      18)
+0048: 00e50533      add a0, a0, a4
+      a0  =               21 (      15)
+0052: fed61ae3      bne a2, a3, 40
+      pc  =               40 (      28)
+0040: 00062703      lw a4, 0(a2)
+      a4  =                7 (       7)    (m[   18])
+0044: 00460613      addi a2, a2, 4
+      a2  =               28 (      1c)
+0048: 00e50533      add a0, a0, a4
+      a0  =               28 (      1c)
+0052: fed61ae3      bne a2, a3, 40
+      pc  =               40 (      28)
+0040: 00062703      lw a4, 0(a2)
+      a4  =                8 (       8)    (m[   1c])
+0044: 00460613      addi a2, a2, 4
+      a2  =               32 (      20)
+0048: 00e50533      add a0, a0, a4
+      a0  =               36 (      24)
+0052: fed61ae3      bne a2, a3, 40
+      pc  =               40 (      28)
+0040: 00062703      lw a4, 0(a2)
+      a4  =                9 (       9)    (m[   20])
+0044: 00460613      addi a2, a2, 4
+      a2  =               36 (      24)
+0048: 00e50533      add a0, a0, a4
+      a0  =               45 (      2d)
+0052: fed61ae3      bne a2, a3, 40
+      pc  =               40 (      28)
+0040: 00062703      lw a4, 0(a2)
+      a4  =               10 (       a)    (m[   24])
+0044: 00460613      addi a2, a2, 4
+      a2  =               40 (      28)
+0048: 00e50533      add a0, a0, a4
+      a0  =               55 (      37)
+0052: fed61ae3      bne a2, a3, 40
+      pc  =               56 (      38)
+0056: 02800613      li a2, 40
+      a2  =               40 (      28)
+0060: 00a62023      sw a0, 0(a2)
+      m[   28] =               55 (      37)
+0064: 00100593      li a1, 1
+      a1  =                1 (       1)
+0068: 00800613      li a2, 8
+      a2  =                8 (       8)
+0072: 00004737      lui a4, 16384
+      a4  =            16384 (    4000)
+0076: 00070793      addi a5, a4, 0
+      a5  =            16384 (    4000)
+0080: 02872683      lw a3, 40(a4)
+      a3  =              155 (      9b)    (m[ 4028])
+0084: fe068ee3      beq a3, zero, 80
+      pc  =               88 (      58)
+0088: 00d50533      add a0, a0, a3
+      a0  =              210 (      d2)
+0092: 00f70733      add a4, a4, a5
+      a4  =            32768 (    8000)
+0096: 00158593      addi a1, a1, 1
+      a1  =                2 (       2)
+0100: fec596e3      bne a1, a2, 80
+      pc  =               80 (      50)
+0080: 02872683      lw a3, 40(a4)
+      a3  =              255 (      ff)    (m[ 8028])
+0084: fe068ee3      beq a3, zero, 80
+      pc  =               88 (      58)
+0088: 00d50533      add a0, a0, a3
+      a0  =              465 (     1d1)
+0092: 00f70733      add a4, a4, a5
+      a4  =            49152 (    c000)
+0096: 00158593      addi a1, a1, 1
+      a1  =                3 (       3)
+0100: fec596e3      bne a1, a2, 80
+      pc  =               80 (      50)
+0080: 02872683      lw a3, 40(a4)
+      a3  =              355 (     163)    (m[ c028])
+0084: fe068ee3      beq a3, zero, 80
+      pc  =               88 (      58)
+0088: 00d50533      add a0, a0, a3
+      a0  =              820 (     334)
+0092: 00f70733      add a4, a4, a5
+      a4  =            65536 (   10000)
+0096: 00158593      addi a1, a1, 1
+      a1  =                4 (       4)
+0100: fec596e3      bne a1, a2, 80
+      pc  =               80 (      50)
+0080: 02872683      lw a3, 40(a4)
+      a3  =              455 (     1c7)    (m[10028])
+0084: fe068ee3      beq a3, zero, 80
+      pc  =               88 (      58)
+0088: 00d50533      add a0, a0, a3
+      a0  =             1275 (     4fb)
+0092: 00f70733      add a4, a4, a5
+      a4  =            81920 (   14000)
+0096: 00158593      addi a1, a1, 1
+      a1  =                5 (       5)
+0100: fec596e3      bne a1, a2, 80
+      pc  =               80 (      50)
+0080: 02872683      lw a3, 40(a4)
+      a3  =              555 (     22b)    (m[14028])
+0084: fe068ee3      beq a3, zero, 80
+      pc  =               88 (      58)
+0088: 00d50533      add a0, a0, a3
+      a0  =             1830 (     726)
+0092: 00f70733      add a4, a4, a5
+      a4  =            98304 (   18000)
+0096: 00158593      addi a1, a1, 1
+      a1  =                6 (       6)
+0100: fec596e3      bne a1, a2, 80
+      pc  =               80 (      50)
+0080: 02872683      lw a3, 40(a4)
+      a3  =              655 (     28f)    (m[18028])
+0084: fe068ee3      beq a3, zero, 80
+      pc  =               88 (      58)
+0088: 00d50533      add a0, a0, a3
+      a0  =             2485 (     9b5)
+0092: 00f70733      add a4, a4, a5
+      a4  =           114688 (   1c000)
+0096: 00158593      addi a1, a1, 1
+      a1  =                7 (       7)
+0100: fec596e3      bne a1, a2, 80
+      pc  =               80 (      50)
+0080: 02872683      lw a3, 40(a4)
+      a3  =              755 (     2f3)    (m[1c028])
+0084: fe068ee3      beq a3, zero, 80
+      pc  =               88 (      58)
+0088: 00d50533      add a0, a0, a3
+      a0  =             3240 (     ca8)
+0092: 00f70733      add a4, a4, a5
+      a4  =           131072 (   20000)
+0096: 00158593      addi a1, a1, 1
+      a1  =                8 (       8)
+0100: fec596e3      bne a1, a2, 80
+      pc  =              104 (      68)
+0104: 02c00613      li a2, 44
+      a2  =               44 (      2c)
+0108: 00a62023      sw a0, 0(a2)
+      m[   2c] =             3240 (     ca8)
+0112: 00008067      ret
+      pc  =                0 (       0)
+ra  =                0 (       0)
+sp  =            16384 (    4000)
+gp  =                0 (       0)
+tp  =                0 (       0)
+t0  =                0 (       0)
+t1  =                0 (       0)
+t2  =                0 (       0)
+s0  =                0 (       0)
+s1  =                0 (       0)
+a0  =             3240 (     ca8)
+a1  =                8 (       8)
+a2  =               44 (      2c)
+a3  =              755 (     2f3)
+a4  =           131072 (   20000)
+a5  =            16384 (    4000)
+a6  =                0 (       0)
+a7  =                0 (       0)
+s2  =                0 (       0)
+s3  =                0 (       0)
+s4  =                0 (       0)
+s5  =                0 (       0)
+s6  =                0 (       0)
+s7  =                0 (       0)
+s8  =                0 (       0)
+s9  =                0 (       0)
+s10 =                0 (       0)
+s11 =                0 (       0)
+t3  =                0 (       0)
+t4  =                0 (       0)
+t5  =                0 (       0)
+t6  =                0 (       0)
+core 0: 137 fetched and decoded instructions in 381 cycles (ipc = 0.36)
+data memory dump (non null words)
+m[    0] =                1 (       1)
+m[    4] =                2 (       2)
+m[    8] =                3 (       3)
+m[    c] =                4 (       4)
+m[   10] =                5 (       5)
+m[   14] =                6 (       6)
+m[   18] =                7 (       7)
+m[   1c] =                8 (       8)
+m[   20] =                9 (       9)
+m[   24] =               10 (       a)
+m[   28] =               55 (      37)
+m[   2c] =             3240 (     ca8)
+core 1: 90 fetched and decoded instructions in 243 cycles (ipc = 0.37)
+data memory dump (non null words)
+m[ 4000] =               11 (       b)
+m[ 4004] =               12 (       c)
+m[ 4008] =               13 (       d)
+m[ 400c] =               14 (       e)
+m[ 4010] =               15 (       f)
+m[ 4014] =               16 (      10)
+m[ 4018] =               17 (      11)
+m[ 401c] =               18 (      12)
+m[ 4020] =               19 (      13)
+m[ 4024] =               20 (      14)
+m[ 4028] =              155 (      9b)
+core 2: 90 fetched and decoded instructions in 243 cycles (ipc = 0.37)
+data memory dump (non null words)
+m[ 8000] =               21 (      15)
+m[ 8004] =               22 (      16)
+m[ 8008] =               23 (      17)
+m[ 800c] =               24 (      18)
+m[ 8010] =               25 (      19)
+m[ 8014] =               26 (      1a)
+m[ 8018] =               27 (      1b)
+m[ 801c] =               28 (      1c)
+m[ 8020] =               29 (      1d)
+m[ 8024] =               30 (      1e)
+m[ 8028] =              255 (      ff)
+core 3: 90 fetched and decoded instructions in 243 cycles (ipc = 0.37)
+data memory dump (non null words)
+m[ c000] =               31 (      1f)
+m[ c004] =               32 (      20)
+m[ c008] =               33 (      21)
+m[ c00c] =               34 (      22)
+m[ c010] =               35 (      23)
+m[ c014] =               36 (      24)
+m[ c018] =               37 (      25)
+m[ c01c] =               38 (      26)
+m[ c020] =               39 (      27)
+m[ c024] =               40 (      28)
+m[ c028] =              355 (     163)
+core 4: 90 fetched and decoded instructions in 243 cycles (ipc = 0.37)
+data memory dump (non null words)
+m[10000] =               41 (      29)
+m[10004] =               42 (      2a)
+m[10008] =               43 (      2b)
+m[1000c] =               44 (      2c)
+m[10010] =               45 (      2d)
+m[10014] =               46 (      2e)
+m[10018] =               47 (      2f)
+m[1001c] =               48 (      30)
+m[10020] =               49 (      31)
+m[10024] =               50 (      32)
+m[10028] =              455 (     1c7)
+core 5: 90 fetched and decoded instructions in 243 cycles (ipc = 0.37)
+data memory dump (non null words)
+m[14000] =               51 (      33)
+m[14004] =               52 (      34)
+m[14008] =               53 (      35)
+m[1400c] =               54 (      36)
+m[14010] =               55 (      37)
+m[14014] =               56 (      38)
+m[14018] =               57 (      39)
+m[1401c] =               58 (      3a)
+m[14020] =               59 (      3b)
+m[14024] =               60 (      3c)
+m[14028] =              555 (     22b)
+core 6: 90 fetched and decoded instructions in 243 cycles (ipc = 0.37)
+data memory dump (non null words)
+m[18000] =               61 (      3d)
+m[18004] =               62 (      3e)
+m[18008] =               63 (      3f)
+m[1800c] =               64 (      40)
+m[18010] =               65 (      41)
+m[18014] =               66 (      42)
+m[18018] =               67 (      43)
+m[1801c] =               68 (      44)
+m[18020] =               69 (      45)
+m[18024] =               70 (      46)
+m[18028] =              655 (     28f)
+core 7: 90 fetched and decoded instructions in 243 cycles (ipc = 0.37)
+data memory dump (non null words)
+m[1c000] =               71 (      47)
+m[1c004] =               72 (      48)
+m[1c008] =               73 (      49)
+m[1c00c] =               74 (      4a)
+m[1c010] =               75 (      4b)
+m[1c014] =               76 (      4c)
+m[1c018] =               77 (      4d)
+m[1c01c] =               78 (      4e)
+m[1c020] =               79 (      4f)
+m[1c024] =               80 (      50)
+m[1c028] =              755 (     2f3)
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-112] Total CPU user time: 4.69 seconds. Total CPU system time: 0.56 seconds. Total elapsed time: 5.05 seconds; peak allocated memory: 340.160 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 9s

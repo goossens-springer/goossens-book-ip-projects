@@ -1,0 +1,53 @@
+WORKFLOW_OPERATION simulation,dialog;
+
+DEFINE_MEMORY_TYPE blk_mem_gen_0_16K_4_MEM_DEVICE [0x00004000] 32;
+DEFINE_MEMORY_TYPE blk_mem_gen_1_16K_4_MEM_DEVICE [0x00004000] 32;
+DEFINE_MEMORY_TYPE blk_mem_gen_2_16K_4_MEM_DEVICE [0x00004000] 32;
+DEFINE_MEMORY_TYPE blk_mem_gen_3_16K_4_MEM_DEVICE [0x00004000] 32;
+DEFINE_MEMORY_TYPE blk_mem_gen_4_16K_3_MEM_DEVICE [0x00004000] 32;
+DEFINE_MEMORY_TYPE blk_mem_gen_5_16K_3_MEM_DEVICE [0x00004000] 32;
+DEFINE_MEMORY_TYPE blk_mem_gen_6_16K_3_MEM_DEVICE [0x00004000] 32;
+DEFINE_MEMORY_TYPE blk_mem_gen_7_16K_3_MEM_DEVICE [0x00004000] 32;
+
+ADDRESS_MAP processing_system7_0 ARM 100 processing_system7_0
+   ADDRESS_SPACE blk_mem_gen_0_16K_4_ADDR_SPACE blk_mem_gen_0_16K_4_MEM_DEVICE  [0x40080000:0x40083FFF] axi_bram_ctrl_0
+     BUS_BLOCK
+      blk_mem_gen_0_16K_4_BUS_BLK [31:0] INPUT = "design_1_blk_mem_gen_0_0.mem";
+     END_BUS_BLOCK;
+   END_ADDRESS_SPACE;
+   ADDRESS_SPACE blk_mem_gen_1_16K_4_ADDR_SPACE blk_mem_gen_1_16K_4_MEM_DEVICE  [0x40084000:0x40087FFF] axi_bram_ctrl_1
+     BUS_BLOCK
+      blk_mem_gen_1_16K_4_BUS_BLK [31:0] INPUT = "design_1_blk_mem_gen_0_1.mem";
+     END_BUS_BLOCK;
+   END_ADDRESS_SPACE;
+   ADDRESS_SPACE blk_mem_gen_2_16K_4_ADDR_SPACE blk_mem_gen_2_16K_4_MEM_DEVICE  [0x40088000:0x4008BFFF] axi_bram_ctrl_2
+     BUS_BLOCK
+      blk_mem_gen_2_16K_4_BUS_BLK [31:0] INPUT = "design_1_blk_mem_gen_0_2.mem";
+     END_BUS_BLOCK;
+   END_ADDRESS_SPACE;
+   ADDRESS_SPACE blk_mem_gen_3_16K_4_ADDR_SPACE blk_mem_gen_3_16K_4_MEM_DEVICE  [0x4008C000:0x4008FFFF] axi_bram_ctrl_3
+     BUS_BLOCK
+      blk_mem_gen_3_16K_4_BUS_BLK [31:0] INPUT = "design_1_blk_mem_gen_0_3.mem";
+     END_BUS_BLOCK;
+   END_ADDRESS_SPACE;
+   ADDRESS_SPACE blk_mem_gen_4_16K_3_ADDR_SPACE blk_mem_gen_4_16K_3_MEM_DEVICE  [0x40090000:0x40093FFF] axi_bram_ctrl_4
+     BUS_BLOCK
+      blk_mem_gen_4_16K_3_BUS_BLK [31:0] INPUT = "design_1_blk_mem_gen_0_4.mem";
+     END_BUS_BLOCK;
+   END_ADDRESS_SPACE;
+   ADDRESS_SPACE blk_mem_gen_5_16K_3_ADDR_SPACE blk_mem_gen_5_16K_3_MEM_DEVICE  [0x40094000:0x40097FFF] axi_bram_ctrl_5
+     BUS_BLOCK
+      blk_mem_gen_5_16K_3_BUS_BLK [31:0] INPUT = "design_1_blk_mem_gen_0_5.mem";
+     END_BUS_BLOCK;
+   END_ADDRESS_SPACE;
+   ADDRESS_SPACE blk_mem_gen_6_16K_3_ADDR_SPACE blk_mem_gen_6_16K_3_MEM_DEVICE  [0x40098000:0x4009BFFF] axi_bram_ctrl_6
+     BUS_BLOCK
+      blk_mem_gen_6_16K_3_BUS_BLK [31:0] INPUT = "design_1_blk_mem_gen_0_6.mem";
+     END_BUS_BLOCK;
+   END_ADDRESS_SPACE;
+   ADDRESS_SPACE blk_mem_gen_7_16K_3_ADDR_SPACE blk_mem_gen_7_16K_3_MEM_DEVICE  [0x4009C000:0x4009FFFF] axi_bram_ctrl_7
+     BUS_BLOCK
+      blk_mem_gen_7_16K_3_BUS_BLK [31:0] INPUT = "design_1_blk_mem_gen_0_7.mem";
+     END_BUS_BLOCK;
+   END_ADDRESS_SPACE;
+END_ADDRESS_MAP;
