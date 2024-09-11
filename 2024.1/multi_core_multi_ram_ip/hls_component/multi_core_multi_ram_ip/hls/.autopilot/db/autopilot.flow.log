@@ -1,0 +1,588 @@
+INFO-FLOW: Workspace /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls opened at Wed Sep 11 21:19:13 CEST 2024
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute   apply_ini /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/multi_core_multi_ram_ip.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(6) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/multi_core_multi_ram_ip.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(6)
+Execute     add_files /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/multi_core_multi_ram_ip.cpp 
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/multi_core_multi_ram_ip.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/multi_core_multi_ram_ip.h' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/multi_core_multi_ram_ip.h' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(7)
+Execute     add_files /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/multi_core_multi_ram_ip.h 
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/multi_core_multi_ram_ip.h' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/testbench_multi_core_multi_ram_ip.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/testbench_multi_core_multi_ram_ip.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(12)
+Execute     add_files -tb /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/testbench_multi_core_multi_ram_ip.cpp 
+INFO: [HLS 200-10] Adding test bench file '/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/testbench_multi_core_multi_ram_ip.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.top=multi_core_multi_ram_ip' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying ini 'syn.top=multi_core_multi_ram_ip' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(8)
+Execute     set_top multi_core_multi_ram_ip 
+Execute     send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(5)
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1465@%s 'part=xc7z020clg400-1' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(1)
+Execute     set_part xc7z020clg400-1 
+Execute       create_platform xc7z020clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /opt/Xilinx/Vitis_HLS/2024.1/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /opt/Xilinx/Vivado/2024.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 1.29 sec.
+Execute       source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 1.41 sec.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock=10ns' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(4)
+Execute     create_clock -period 10ns 
+Execute       ap_set_clock -name default -period 10 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(9)
+Execute     config_export -format=ip_catalog 
+Execute     send_msg_by_id INFO @200-1465@%s 'vivado.rtl=verilog' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying ini 'vivado.rtl=verilog' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(10)
+Execute     config_export -rtl=verilog 
+Command   apply_ini done; 1.43 sec.
+Execute   apply_ini /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/config.cmdline 
+Execute   csynth_design 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+INFO-FLOW: Running SLX 'csynth' proc: ::SLX::run_csynth
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 3.33 seconds. CPU system time: 0.34 seconds. Elapsed time: 3.51 seconds; current allocated memory: 339.996 MB.
+Execute       set_directive_top multi_core_multi_ram_ip -name=multi_core_multi_ram_ip 
+Execute       source /opt/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source /opt/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+INFO: [HLS 200-10] Analyzing design file '../../multi_core_multi_ram_ip.cpp' ... 
+INFO-FLOW: Compiling one TU...
+INFO-FLOW: Handling ../../multi_core_multi_ram_ip.cpp as C++
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+INFO-FLOW: run_clang exec: /opt/Xilinx/Vitis_HLS/2024.1/lnx64/tools/clang-3.9-csynth/bin/clang ../../multi_core_multi_ram_ip.cpp -foptimization-record-file=/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vitis_HLS/2024.1/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -insert-hls-directive=/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/all.directive.json -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -hls-clock-period=10 -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot -I /opt/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -I /usr/include/x86_64-linux-gnu -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.pp.0.cpp -hls-platform-db-name=/opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 > /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.cpp.clang.out.log 2> /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.cpp.clang.err.log
+INFO-FLOW: Done: GCC PP 39 time: 0.3 seconds per iteration
+INFO-FLOW: Source syntax check for synthesis
+INFO-FLOW: run_clang exec: /opt/Xilinx/Vitis_HLS/2024.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.pp.0.cpp -hls-platform-db-name=/opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 > /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/clang.out.log 2> /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/clang.err.log
+Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /opt/Xilinx/Vitis_HLS/2024.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/.systemc_flag -fix-errors /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.37 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /opt/Xilinx/Vitis_HLS/2024.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/all.directive.json -fix-errors /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.54 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.5 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: run_clang exec: /opt/Xilinx/Vitis_HLS/2024.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.pp.0.cpp.clang-tidy.loop-label.out.log 2> /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.pp.0.cpp.clang-tidy.loop-label.err.log
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Command       clang_tidy done; 0.7 sec.
+INFO-FLOW: run_clang exec: /opt/Xilinx/Vitis_HLS/2024.1/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.pp.0.cpp.xilinx-dataflow-lawyer.err.log
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: compiling source code to llvm bc
+INFO-FLOW: run_clang exec: /opt/Xilinx/Vitis_HLS/2024.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing -hls-emit-hint-scope /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -hls-clock-period=10 -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot -I /opt/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.bc -hls-platform-db-name=/opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 > /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.pp.0.cpp.clang.out.log 2> /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.pp.0.cpp.clang.err.log
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.02 seconds. CPU system time: 0.56 seconds. Elapsed time: 3.58 seconds; current allocated memory: 341.672 MB.
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute       run_link_or_opt -out /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.0.bc -args  "/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.g.bc"  
+INFO-FLOW: run_clang exec: /opt/Xilinx/Vitis_HLS/2024.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.g.bc -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.0.bc > /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.0.bc.llvm-link.out.log 2> /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.0.bc.llvm-link.err.log
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.1.lower.bc -args /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+INFO-FLOW: run_clang exec: /opt/Xilinx/Vitis_HLS/2024.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.1.lower.bc.opt.diag.yml /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.1.lower.bc > /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.1.lower.bc.opt.out.log 2> /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.1.lower.bc.opt.err.log
+INFO-FLOW: 
+INFO-FLOW: Running: gen_design_size_report post-opt
+INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
+INFO-FLOW: Linking math bc lib
+Execute       run_link_or_opt -out /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.2.m1.bc -args /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.1.lower.bc -only-needed /opt/Xilinx/Vitis_HLS/2024.1/lnx64/lib/libhlsm_39.bc /opt/Xilinx/Vitis_HLS/2024.1/lnx64/lib/libhlsmc++_39.bc 
+INFO-FLOW: run_clang exec: /opt/Xilinx/Vitis_HLS/2024.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.1.lower.bc -only-needed /opt/Xilinx/Vitis_HLS/2024.1/lnx64/lib/libhlsm_39.bc /opt/Xilinx/Vitis_HLS/2024.1/lnx64/lib/libhlsmc++_39.bc -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.2.m1.bc > /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log
+INFO-FLOW: 
+Command       run_link_or_opt done; 1.37 sec.
+Execute       run_link_or_opt -opt -out /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.3.fpc.bc -args /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=multi_core_multi_ram_ip -reflow-float-conversion 
+INFO-FLOW: run_clang exec: /opt/Xilinx/Vitis_HLS/2024.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=multi_core_multi_ram_ip -reflow-float-conversion -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.3.fpc.bc > /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log
+INFO-FLOW: 
+INFO-FLOW: Running: gen_design_size_report post-opt
+INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
+Command       run_link_or_opt done; 0.59 sec.
+Execute       run_link_or_opt -out /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.4.m2.bc -args /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /opt/Xilinx/Vitis_HLS/2024.1/lnx64/lib/libfloatconversion_39.bc 
+INFO-FLOW: run_clang exec: /opt/Xilinx/Vitis_HLS/2024.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /opt/Xilinx/Vitis_HLS/2024.1/lnx64/lib/libfloatconversion_39.bc -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.4.m2.bc > /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.5.gdce.bc -args /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=multi_core_multi_ram_ip 
+INFO-FLOW: run_clang exec: /opt/Xilinx/Vitis_HLS/2024.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=multi_core_multi_ram_ip -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.5.gdce.bc > /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log
+INFO-FLOW: 
+INFO-FLOW: Running: gen_design_size_report post-opt
+INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
+Execute       send_msg_by_id INFO @200-777@%s Vivado 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+Execute       is_m_axi_addr64 
+INFO-FLOW: Doing LTO.
+INFO-FLOW: run_clang (background poll_ms 5000) exec: /opt/Xilinx/Vitis_HLS/2024.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.0.bc.clang.reflow.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=multi_core_multi_ram_ip -mllvm -hls-db-dir -mllvm /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -reflow-enable-maxi-auto-id-channel=0 -mllvm -enable-fp-thr=0 -mllvm -reflow-bdd-simplify-threshold=1048576 -mllvm -reflow-fanout-threshold=16 -mllvm -reflow-complete-threshold=4 -mllvm -reflow-array-promotion-threshold=64 -mllvm -assume-maxi-align=1 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -ftime-report -mllvm -time-passes -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-small-array-partition=true -mllvm -reflow-enable-auto-array-partition-for-flatten=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-reserved-saxilite-registers=0 -mllvm -enable-reflow-auto-loop-pipeline -mllvm -reflow-max-unroll-threshold=409600 -mllvm -auto-unroll-tripcount-threshold=0 -mllvm -reflow-assume-no-address-wrap=true -mllvm -reflow-enable-occurrence-inference=true -mllvm -reflow-emit-hint-scope=true -mllvm -reflow-enable-codegen-with-if=true -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -default-clock-period=10 -mllvm -use_read_first_ram_in_loop=1 -mllvm -default-clock-uncertainty=2.7 -x ir /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.5.gdce.bc -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.lto.bc -hls-platform-db-name=/opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 2> /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.ld.0.bc.clang.reflow.err.log bg_poll_cmd: ::AP::poll_clang_39_closed_source
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 853 Compile/Link /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 853 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 47 Unroll/Inline (step 1) /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 47 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 46 Unroll/Inline (step 2) /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 46 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 47 Unroll/Inline (step 3) /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 47 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 43 Unroll/Inline (step 4) /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 43 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 45 Array/Struct (step 1) /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 45 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 45 Array/Struct (step 2) /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 45 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 45 Array/Struct (step 3) /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 45 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 45 Array/Struct (step 4) /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 45 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 45 Array/Struct (step 5) /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 45 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 45 Performance (step 1) /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 45 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 45 Performance (step 2) /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 45 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 45 Performance (step 3) /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 45 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 45 Performance (step 4) /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 45 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 51 HW Transforms (step 1) /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 51 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 56 HW Transforms (step 2) /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 56 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth_design_size.rpt
+INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.21 seconds. CPU system time: 0.4 seconds. Elapsed time: 7.15 seconds; current allocated memory: 343.309 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 343.309 MB.
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top multi_core_multi_ram_ip -deadargelim -mem2reg -instcombine -dce -presyn-prepare -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -promote-dbg-pointer -norm-name /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.0.bc -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 343.445 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -directive-preproc -mem2reg -dse -dce -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -directive-preproc -mem2reg -dse -dce -globaldce /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.1.bc -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.2.prechk.bc -f 
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.2.prechk.bc -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 343.477 MB.
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.g.1.bc to /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db -interface-port-rename -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -dce -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -loop-simplify -loop-bound -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -lcssa -loop-simplify -phi-select-elim -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -globaldce -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -scalar-stream -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -clean-array-spec -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.o.1.bc -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.o.1.tmp.bc -f 
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -barrier -norm-name /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.o.1.tmp.bc -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 365.367 MB.
+Execute         transform -hls -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg-lite -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -inst-simplify -cfgopt -simplifycfg-lite -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -inst-simplify -inst-rectify -instcombine -adce -deadargelim -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -mul2addshift -deadargelim -inst-simplify -dce -mem2reg -instcombine -gvn -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg-lite -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg-lite -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg-lite -loop-simplify -mergereturn -inst-simplify -inst-rectify -globaldce -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -inst-clarity -bitwidth -dce -validate-dataflow -dump-loop-dep-to-ir -check-all-ssdm -dump-complexity-metric /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.o.2.bc -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+Execute           auto_get_db
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -cdfg-build /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.o.3.bc -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 365.367 MB.
+INFO-FLOW: Finish building internal data model.
+Command     elaborate done; 10.83 sec.
+Execute     ap_eval exec zip -j /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'multi_core_multi_ram_ip' ...
+Execute       ap_set_top_model multi_core_multi_ram_ip 
+Execute       get_model_list multi_core_multi_ram_ip -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model multi_core_multi_ram_ip 
+Execute       get_model_list multi_core_multi_ram_ip -filter all-wo-channel 
+INFO-FLOW: Model list for configure: multi_core_multi_ram_ip
+INFO-FLOW: Configuring Module : multi_core_multi_ram_ip ...
+Execute       set_default_model multi_core_multi_ram_ip 
+Execute       apply_spec_resource_limit multi_core_multi_ram_ip 
+INFO-FLOW: Model list for preprocess: multi_core_multi_ram_ip
+INFO-FLOW: Preprocessing Module: multi_core_multi_ram_ip ...
+Execute       set_default_model multi_core_multi_ram_ip 
+Execute       cdfg_preprocess -model multi_core_multi_ram_ip 
+Execute       rtl_gen_preprocess multi_core_multi_ram_ip 
+INFO-FLOW: Model list for synthesis: multi_core_multi_ram_ip
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'multi_core_multi_ram_ip' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model multi_core_multi_ram_ip 
+Execute       schedule -model multi_core_multi_ram_ip 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_23_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 10, Final II = 10, Depth = 11, loop 'VITIS_LOOP_23_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.05 seconds; current allocated memory: 365.367 MB.
+Execute       syn_report -verbosereport -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.verbose.sched.rpt 
+Execute         list_part -family xc7z020-clg400-1 
+Execute           ap_family_info -name xc7z020-clg400-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+WARNING: [HLS 200-2049] Adding the rewind optimization to the pipelined process 'VITIS_LOOP_23_1' with inout ports inside a dataflow region can result in the creation of loop-carried dependencies and errors. Use caution when adding the rewind optimization to such loops.
+Execute       db_write -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.sched.adb -f 
+INFO-FLOW: Finish scheduling multi_core_multi_ram_ip.
+Execute       set_default_model multi_core_multi_ram_ip 
+Execute       bind -model multi_core_multi_ram_ip 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 365.367 MB.
+Execute       syn_report -verbosereport -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.verbose.bind.rpt 
+Execute         list_part -family xc7z020-clg400-1 
+Execute           ap_family_info -name xc7z020-clg400-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute       db_write -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.bind.adb -f 
+INFO-FLOW: Finish binding multi_core_multi_ram_ip.
+Execute       get_model_list multi_core_multi_ram_ip -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess multi_core_multi_ram_ip 
+INFO-FLOW: Model list for RTL generation: multi_core_multi_ram_ip
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'multi_core_multi_ram_ip' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model multi_core_multi_ram_ip -top_prefix  -sub_prefix multi_core_multi_ram_ip_ -mg_file /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.compgen.tcl 
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multi_core_multi_ram_ip/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multi_core_multi_ram_ip/ip_num' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multi_core_multi_ram_ip/local_ram' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'multi_core_multi_ram_ip/data_ram' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'multi_core_multi_ram_ip' to 's_axilite & ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'multi_core_multi_ram_ip' pipeline 'VITIS_LOOP_23_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Bundling port 'ip_num', 'data_ram' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'multi_core_multi_ram_ip'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 365.367 MB.
+Execute       source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.rtl_wrap.cfg.tcl 
+Execute       gen_rtl multi_core_multi_ram_ip -istop -style xilinx -f -lang vhdl -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/vhdl/multi_core_multi_ram_ip 
+Execute       gen_rtl multi_core_multi_ram_ip -istop -style xilinx -f -lang vlog -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/verilog/multi_core_multi_ram_ip 
+Execute       syn_report -csynth -model multi_core_multi_ram_ip -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/multi_core_multi_ram_ip_csynth.rpt 
+Execute         list_part -family xc7z020-clg400-1 
+Execute           ap_family_info -name xc7z020-clg400-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute       syn_report -rtlxml -model multi_core_multi_ram_ip -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/multi_core_multi_ram_ip_csynth.xml 
+Execute         list_part -family xc7z020-clg400-1 
+Execute           ap_family_info -name xc7z020-clg400-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute       syn_report -verbosereport -model multi_core_multi_ram_ip -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.verbose.rpt 
+Execute         list_part -family xc7z020-clg400-1 
+Execute           ap_family_info -name xc7z020-clg400-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute       db_write -model multi_core_multi_ram_ip -f -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.adb 
+Execute       db_write -model multi_core_multi_ram_ip -bindview -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info multi_core_multi_ram_ip -p /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip 
+Execute       export_constraint_db -f -tool general -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.constraint.tcl 
+Execute       syn_report -designview -model multi_core_multi_ram_ip -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.design.xml 
+Execute       syn_report -csynthDesign -model multi_core_multi_ram_ip -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth.rpt -MHOut /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/kernel_module_hierarchy.tcl 
+Execute         list_part -family xc7z020-clg400-1 
+Execute           ap_family_info -name xc7z020-clg400-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg400-1 -data family 
+Execute       syn_report -wcfg -model multi_core_multi_ram_ip -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model multi_core_multi_ram_ip -o /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.protoinst 
+Execute       sc_get_clocks multi_core_multi_ram_ip 
+Execute       sc_get_portdomain multi_core_multi_ram_ip 
+INFO-FLOW: Model list for RTL component generation: multi_core_multi_ram_ip
+INFO-FLOW: Handling components in module [multi_core_multi_ram_ip] ... 
+Execute       source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.compgen.tcl 
+INFO-FLOW: Found component multi_core_multi_ram_ip_gmem_m_axi.
+INFO-FLOW: Append model multi_core_multi_ram_ip_gmem_m_axi
+INFO-FLOW: Found component multi_core_multi_ram_ip_control_s_axi.
+INFO-FLOW: Append model multi_core_multi_ram_ip_control_s_axi
+INFO-FLOW: Found component multi_core_multi_ram_ip_flow_control_loop_pipe.
+INFO-FLOW: Append model multi_core_multi_ram_ip_flow_control_loop_pipe
+INFO-FLOW: Append model multi_core_multi_ram_ip
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: multi_core_multi_ram_ip_gmem_m_axi multi_core_multi_ram_ip_control_s_axi multi_core_multi_ram_ip_flow_control_loop_pipe multi_core_multi_ram_ip
+INFO-FLOW: Generating /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/autopilot.rtl.models.txt file...
+INFO-FLOW: To file: write model multi_core_multi_ram_ip_gmem_m_axi
+INFO-FLOW: To file: write model multi_core_multi_ram_ip_control_s_axi
+INFO-FLOW: To file: write model multi_core_multi_ram_ip_flow_control_loop_pipe
+INFO-FLOW: To file: write model multi_core_multi_ram_ip
+INFO-FLOW: Generating /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/autopilot.rtl.models.tcl file...
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate_csynth_design
+INFO-FLOW: DBG:PUTS: read_platform_lib /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/global.setting.tcl
+Execute       source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/generic/autopilot/common.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/generic/autopilot/op.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/global.setting.tcl 
+Execute       source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/vhdl' dstVlogDir='/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/vlog' tclDir='/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db' modelList='multi_core_multi_ram_ip_gmem_m_axi
+multi_core_multi_ram_ip_control_s_axi
+multi_core_multi_ram_ip_flow_control_loop_pipe
+multi_core_multi_ram_ip
+' expOnly='0'
+Execute       source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/global.setting.tcl 
+Execute       source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/global.setting.tcl 
+Execute       source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.compgen.tcl 
+Execute         source ./control.slave.tcl 
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.2 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.22 seconds; current allocated memory: 365.367 MB.
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='multi_core_multi_ram_ip_' outfile=''
+INFO-FLOW: Running: create_csynth_xml read xml data
+INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml bind info
+INFO-FLOW: Done: create_csynth_xml bind info time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml config info
+INFO-FLOW: Done: create_csynth_xml config info time: 0.1 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml write xml
+INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      create_csynth_xml wrote csynth_xml=/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/syn/report/csynth.xml
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='multi_core_multi_ram_ip_gmem_m_axi
+multi_core_multi_ram_ip_control_s_axi
+multi_core_multi_ram_ip_flow_control_loop_pipe
+multi_core_multi_ram_ip
+' rtl_lang='both' bootstrap_tcl='false' outdir='' outfilename=''
+Execute       source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/global.setting.tcl 
+Execute       source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/global.setting.tcl 
+Execute       source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/top-io-be.tcl 
+Execute       source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.tbgen.tcl 
+Execute       source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.compgen.dataonly.tcl 
+Execute       source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.compgen.dataonly.tcl 
+Execute       source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.rtl_wrap.cfg.tcl 
+Execute       source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.compgen.dataonly.tcl 
+Execute       source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.tbgen.tcl 
+Execute       source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.constraint.tcl 
+Execute       sc_get_clocks multi_core_multi_ram_ip 
+Execute       source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME control_s_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME control DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE s_axilite STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }} {BINDTYPE adapter ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA {} RTLNAME gmem_m_axi_U SOURCE {} VARIABLE {} LOOP {} BUNDLEDNAME gmem DSP 0 BRAM 4 URAM 0 STORAGESUBTYPE m_axi STORAGESIZE {} STORAGEUSAGE interface DISPNAME {bind_adapter }}} cache_nodes {} report_dict {TOPINST multi_core_multi_ram_ip MODULE2INSTS {multi_core_multi_ram_ip multi_core_multi_ram_ip} INST2MODULE {multi_core_multi_ram_ip multi_core_multi_ram_ip} INSTDATA {multi_core_multi_ram_ip {DEPTH 1 CHILDREN {}}} MODULEDATA {multi_core_multi_ram_ip {BINDINFO {{BINDTYPE op ID {} IMPL auto_sel LATENCY 0 OPTYPE select PRAGMA {} RTLNAME conv3_i_i16_fu_177_p3 SOURCE ../../multi_core_multi_ram_ip.cpp:19 VARIABLE conv3_i_i16 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op select} VISIBLE false} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln35_fu_248_p2 SOURCE ../../multi_core_multi_ram_ip.cpp:35 VARIABLE add_ln35 LOOP VITIS_LOOP_23_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME i_fu_274_p2 SOURCE ../../multi_core_multi_ram_ip.cpp:23 VARIABLE i LOOP VITIS_LOOP_23_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op add} VISIBLE true} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE seteq PRAGMA {} RTLNAME icmp_ln23_fu_284_p2 SOURCE ../../multi_core_multi_ram_ip.cpp:23 VARIABLE icmp_ln23 LOOP VITIS_LOOP_23_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 STORAGESUBTYPE {} DISPNAME {bind_op seteq} VISIBLE false}} AREA {DSP 0 BRAM 4 URAM 0}}}}'
+INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
+INFO-FLOW: Running: gen_csynth_sec_pragma
+INFO-FLOW: Done: gen_csynth_sec_pragma time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
+INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.45 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.48 seconds; current allocated memory: 365.367 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for multi_core_multi_ram_ip.
+INFO: [VLOG 209-307] Generating Verilog RTL for multi_core_multi_ram_ip.
+Execute       syn_report -model multi_core_multi_ram_ip -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+Command     autosyn done; 0.82 sec.
+Command   csynth_design done; 11.74 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 
+INFO-FLOW: Workspace /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls opened at Wed Sep 11 21:20:19 CEST 2024
+Execute     source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/global.setting.tcl 
+Execute     set_part xc7z020-clg400-1 
+Execute       create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: /opt/Xilinx/Vitis_HLS/2024.1/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /opt/Xilinx/Vivado/2024.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 1.29 sec.
+Execute       source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.12 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 1.46 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Command   open_solution done; 1.47 sec.
+Execute   apply_ini /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg 
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/multi_core_multi_ram_ip.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(6) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/multi_core_multi_ram_ip.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(6)
+Execute     add_files /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/multi_core_multi_ram_ip.cpp 
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/multi_core_multi_ram_ip.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/multi_core_multi_ram_ip.h' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(7) 
+INFO: [HLS 200-1465] Applying ini 'syn.file=/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/multi_core_multi_ram_ip.h' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(7)
+Execute     add_files /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/multi_core_multi_ram_ip.h 
+INFO: [HLS 200-10] Adding design file '/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/multi_core_multi_ram_ip.h' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'tb.file=/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/testbench_multi_core_multi_ram_ip.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(12) 
+INFO: [HLS 200-1465] Applying ini 'tb.file=/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/testbench_multi_core_multi_ram_ip.cpp' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(12)
+Execute     add_files -tb /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/testbench_multi_core_multi_ram_ip.cpp 
+INFO: [HLS 200-10] Adding test bench file '/home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/testbench_multi_core_multi_ram_ip.cpp' to the project
+Execute     send_msg_by_id INFO @200-1465@%s 'syn.top=multi_core_multi_ram_ip' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(8) 
+INFO: [HLS 200-1465] Applying ini 'syn.top=multi_core_multi_ram_ip' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(8)
+Execute     set_top multi_core_multi_ram_ip 
+Execute     send_msg_by_id INFO @200-1465@%s 'flow_target=vivado' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(5) 
+INFO: [HLS 200-1465] Applying ini 'flow_target=vivado' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(5)
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1465@%s 'part=xc7z020clg400-1' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(1) 
+INFO: [HLS 200-1465] Applying ini 'part=xc7z020clg400-1' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(1)
+Execute     set_part xc7z020clg400-1 
+Execute       create_platform xc7z020clg400-1 -board  
+Command       create_platform done; 0.17 sec.
+Execute       source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 0.3 sec.
+Execute     send_msg_by_id INFO @200-1465@%s 'clock=10ns' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(4) 
+INFO: [HLS 200-1465] Applying ini 'clock=10ns' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(4)
+Execute     create_clock -period 10ns 
+Execute       ap_set_clock -name default -period 10 -unit ns -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     send_msg_by_id INFO @200-1465@%s 'package.output.format=ip_catalog' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(9) 
+INFO: [HLS 200-1465] Applying ini 'package.output.format=ip_catalog' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(9)
+Execute     config_export -format=ip_catalog 
+Execute     send_msg_by_id INFO @200-1465@%s 'vivado.rtl=verilog' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(10) 
+INFO: [HLS 200-1465] Applying ini 'vivado.rtl=verilog' from /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/hls_config.cfg(10)
+Execute     config_export -rtl=verilog 
+Command   apply_ini done; 0.32 sec.
+Execute   apply_ini /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/config.cmdline 
+Execute   export_design -flow none 
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::app_get_file_relativeroot [AP::app_get_root] {}
+Execute     AP::get_vpp_package_output_file
+Execute     config_export -flow=none 
+INFO-FLOW: DBG:PUTS: export_design_wrap: -format ip_catalog -rtl verilog
+Execute     source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:   auto_impl: pack: -export -rtl verilog
+INFO-FLOW: DBG:PROC: ::AESL_AUTOIMPL::auto_impl args='-export -rtl verilog'
+Execute     source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO-FLOW: DBG:PUTS: automg_wrap -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate args='-export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag'
+INFO-FLOW: DBG:PUTS:     auto_generate -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+Execute     source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: read_platform_lib /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/global.setting.tcl
+Execute     source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/generic/autopilot/common.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/generic/autopilot/op.gen 
+Execute     source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/generic/autopilot/interface.gen 
+Execute     source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/global.setting.tcl 
+Execute     source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:PUTS:       initCTypeInfo top_module=multi_core_multi_ram_ip xml_exists=0
+Execute     source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.rtl_wrap.cfg.tcl 
+Execute     source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.rtl_wrap.cfg.tcl 
+Execute     source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.rtl_wrap.cfg.tcl 
+Execute     source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.tbgen.tcl 
+Execute     source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.tbgen.tcl 
+Execute     source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.tbgen.tcl 
+Execute     source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/global.setting.tcl 
+Execute     source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to multi_core_multi_ram_ip
+INFO-FLOW: DBG:PUTS:       generate_datafile_ip_script ip_types={vitis sysgen} #gSsdmPorts=0
+INFO-FLOW: DBG:PUTS: Skipping loadAnalyze_DB, #g_database=4
+INFO-FLOW: DBG:PUTS:       generate_json generate_bd_files=0 generate_xo_files=false #modelList=4 #gSsdmPorts=0
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='false' modelList='multi_core_multi_ram_ip_gmem_m_axi
+multi_core_multi_ram_ip_control_s_axi
+multi_core_multi_ram_ip_flow_control_loop_pipe
+multi_core_multi_ram_ip
+' rtl_lang='vlog' bootstrap_tcl='false' outdir='' outfilename=''
+Execute     source /opt/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute     source /opt/Xilinx/Vitis_HLS/2024.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute     source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/global.setting.tcl 
+Execute     source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/global.setting.tcl 
+Execute     source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/top-io-be.tcl 
+Execute     source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.tbgen.tcl 
+Execute     source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.compgen.dataonly.tcl 
+Execute     source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.compgen.dataonly.tcl 
+Execute     source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.rtl_wrap.cfg.tcl 
+Execute     source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.compgen.dataonly.tcl 
+Execute     source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.tbgen.tcl 
+Execute     source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/global.setting.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.constraint.tcl 
+Execute     sc_get_clocks multi_core_multi_ram_ip 
+Execute     source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:       generate_syn_sh
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:       generate_imp_constraints
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.constraint.tcl 
+Execute     source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/multi_core_multi_ram_ip.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       delete-temp-dirs (skipped for debug)
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO-FLOW: DBG:PUTS: read_platform_lib /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/global.setting.tcl
+Execute     source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/generic/autopilot/common.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/generic/autopilot/op.gen 
+Execute     source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/generic/autopilot/interface.gen 
+Execute     source /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/.autopilot/db/global.setting.tcl 
+Execute     source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/util.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source /opt/Xilinx/Vitis_HLS/2024.1/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:     IP package: exec /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/impl/ip/pack.sh
+INFO-FLOW: DBG:PUTS:     IP package: success /home/goossens/goossens-book-ip-projects/2024.1/multi_core_multi_ram_ip/workspace/hls_component/multi_core_multi_ram_ip/hls/impl/ip/pack.sh
+Execute     send_msg_by_id INFO @200-802@%s multi_core_multi_ram_ip/multi_core_multi_ram_ip.zip 
+INFO: [HLS 200-802] Generated output file multi_core_multi_ram_ip/multi_core_multi_ram_ip.zip
+Command   export_design done; 18.86 sec.
+Execute   close_project 
+Execute     close_solution 
+Execute       cleanup_all 
+Execute       cleanup_all 

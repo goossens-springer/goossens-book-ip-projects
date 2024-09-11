@@ -1,0 +1,223 @@
+
+
+================================================================
+== Synthesis Summary Report of 'rv32i_npp_ip'
+================================================================
++ General Information: 
+    * Date:           Wed Sep 11 20:50:57 2024
+    * Version:        2024.1 (Build 5069499 on May 21 2024)
+    * Project:        rv32i_npp_ip
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------+--------+-------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |       Modules      |  Issue |       | Latency | Latency| Iteration|         | Trip |          |      |    |           |           |     |
+    |       & Loops      |  Type  | Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT    | URAM|
+    +--------------------+--------+-------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |+ rv32i_npp_ip      |  Timing|  -2.39|        -|       -|         -|        0|     -|    rewind|     -|   -|  2974 (2%)|  3536 (6%)|    -|
+    | o VITIS_LOOP_45_2  |       -|   7.30|        -|       -|         7|        7|     -|       yes|     -|   -|          -|          -|    -|
+    +--------------------+--------+-------+---------+--------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 5             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+---------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register            | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+---------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL                | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER                | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER              | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR              | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | start_pc            | 0x10   | 32    | W      | Data signal of start_pc          |                                                                      |
+| s_axi_control | nb_instruction      | 0x18   | 32    | R      | Data signal of nb_instruction    |                                                                      |
+| s_axi_control | nb_instruction_ctrl | 0x1c   | 32    | R      | Control signal of nb_instruction | 0=nb_instruction_ap_vld                                              |
++---------------+---------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* BRAM
++----------------+------------+---------------+
+| Interface      | Data Width | Address Width |
++----------------+------------+---------------+
+| code_ram_PORTA | 32         | 32            |
+| data_ram_PORTA | 32         | 32            |
++----------------+------------+---------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------------+-----------+---------------+
+| Argument       | Direction | Datatype      |
++----------------+-----------+---------------+
+| start_pc       | in        | unsigned int  |
+| code_ram       | in        | unsigned int* |
+| data_ram       | inout     | int*          |
+| nb_instruction | out       | unsigned int* |
++----------------+-----------+---------------+
+
+* SW-to-HW Mapping
++----------------+----------------+-----------+-----------------------------------------------+
+| Argument       | HW Interface   | HW Type   | HW Info                                       |
++----------------+----------------+-----------+-----------------------------------------------+
+| start_pc       | s_axi_control  | register  | name=start_pc offset=0x10 range=32            |
+| code_ram       | code_ram_PORTA | interface |                                               |
+| data_ram       | data_ram_PORTA | interface |                                               |
+| nb_instruction | s_axi_control  | register  | name=nb_instruction offset=0x18 range=32      |
+| nb_instruction | s_axi_control  | register  | name=nb_instruction_ctrl offset=0x1c range=32 |
++----------------+----------------+-----------+-----------------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+
+================================================================
+== Bind Op Report
+================================================================
++---------------------------------+-----+--------+--------------------+-----------+-----------+---------+
+| Name                            | DSP | Pragma | Variable           | Op        | Impl      | Latency |
++---------------------------------+-----+--------+--------------------+-----------+-----------+---------+
+| + rv32i_npp_ip                  | 0   |        |                    |           |           |         |
+|   d_i_is_load_fu_1004_p2        |     |        | d_i_is_load        | seteq     | auto      | 0       |
+|   d_i_is_store_fu_1010_p2       |     |        | d_i_is_store       | seteq     | auto      | 0       |
+|   d_i_is_jalr_fu_1016_p2        |     |        | d_i_is_jalr        | seteq     | auto      | 0       |
+|   d_i_is_lui_fu_1022_p2         |     |        | d_i_is_lui         | seteq     | auto      | 0       |
+|   d_i_is_op_imm_fu_1028_p2      |     |        | d_i_is_op_imm      | seteq     | auto      | 0       |
+|   d_i_is_r_type_fu_1054_p2      |     |        | d_i_is_r_type      | seteq     | auto      | 0       |
+|   sparsemux_65_5_32_1_1_U1      |     |        | rv1                | sparsemux | auto      | 0       |
+|   sparsemux_65_5_32_1_1_U2      |     |        | rv2                | sparsemux | auto      | 0       |
+|   npc4_fu_1414_p2               |     |        | npc4               | add       | fabric    | 0       |
+|   result_2_fu_1428_p2           |     |        | result_2           | add       | fabric    | 0       |
+|   result_3_fu_1434_p3           |     |        | result_3           | select    | auto_sel  | 0       |
+|   grp_fu_625_p2                 |     |        | icmp_ln39          | setlt     | auto      | 0       |
+|   result_1_fu_1534_p14          |     |        | xor_ln39           | xor       | auto      | 0       |
+|   result_1_fu_1534_p10          |     |        | icmp_ln32          | seteq     | auto      | 0       |
+|   result_1_fu_1534_p8           |     |        | icmp_ln33          | setne     | auto      | 0       |
+|   result_1_fu_1534_p6           |     |        | icmp_ln36          | setlt     | auto      | 0       |
+|   icmp_ln37_fu_1459_p2          |     |        | icmp_ln37          | setlt     | auto      | 0       |
+|   result_1_fu_1534_p4           |     |        | xor_ln37           | xor       | auto      | 0       |
+|   result_1_fu_1534_p2           |     |        | icmp_ln38          | setlt     | auto      | 0       |
+|   icmp_ln31_fu_1477_p2          |     |        | icmp_ln31          | seteq     | auto      | 0       |
+|   icmp_ln31_1_fu_1482_p2        |     |        | icmp_ln31_1        | seteq     | auto      | 0       |
+|   icmp_ln31_2_fu_1487_p2        |     |        | icmp_ln31_2        | seteq     | auto      | 0       |
+|   icmp_ln31_3_fu_1492_p2        |     |        | icmp_ln31_3        | seteq     | auto      | 0       |
+|   icmp_ln31_4_fu_1497_p2        |     |        | icmp_ln31_4        | seteq     | auto      | 0       |
+|   icmp_ln31_5_fu_1502_p2        |     |        | icmp_ln31_5        | seteq     | auto      | 0       |
+|   icmp_ln31_6_fu_1507_p2        |     |        | icmp_ln31_6        | seteq     | auto      | 0       |
+|   or_ln31_fu_1512_p2            |     |        | or_ln31            | or        | auto      | 0       |
+|   sparsemux_15_6_1_1_1_U3       |     |        | result_1           | sparsemux | auto      | 0       |
+|   grp_fu_633_p2                 |     |        | result             | add       | fabric    | 0       |
+|   shift_3_fu_1574_p3            |     |        | shift_3            | select    | auto_sel  | 0       |
+|   result_29_fu_1580_p2          |     |        | result_29          | or        | auto      | 0       |
+|   result_26_fu_1590_p2          |     |        | result_26          | ashr      | auto_pipe | 0       |
+|   result_27_fu_1596_p2          |     |        | result_27          | lshr      | auto_pipe | 0       |
+|   result_28_fu_1602_p3          |     |        | result_28          | select    | auto_sel  | 0       |
+|   result_25_fu_1609_p2          |     |        | result_25          | xor       | auto      | 0       |
+|   result_24_fu_1615_p2          |     |        | result_24          | setlt     | auto      | 0       |
+|   result_23_fu_1621_p2          |     |        | result_23          | setlt     | auto      | 0       |
+|   result_22_fu_1631_p2          |     |        | result_22          | shl       | auto_pipe | 0       |
+|   and_ln55_1_fu_1637_p2         |     |        | and_ln55_1         | and       | auto      | 0       |
+|   result_19_fu_1641_p2          |     |        | result_19          | sub       | fabric    | 0       |
+|   grp_fu_633_p2                 |     |        | result_20          | add       | fabric    | 0       |
+|   result_21_fu_1647_p3          |     |        | result_21          | select    | auto_sel  | 0       |
+|   result_18_fu_1655_p2          |     |        | result_18          | and       | auto      | 0       |
+|   grp_fu_633_p2                 |     |        | result_17          | add       | fabric    | 0       |
+|   shift_1_fu_1669_p3            |     |        | shift_1            | select    | auto_sel  | 0       |
+|   result_16_fu_1675_p2          |     |        | result_16          | or        | auto      | 0       |
+|   result_13_fu_1685_p2          |     |        | result_13          | ashr      | auto_pipe | 0       |
+|   result_14_fu_1691_p2          |     |        | result_14          | lshr      | auto_pipe | 0       |
+|   result_15_fu_1697_p3          |     |        | result_15          | select    | auto_sel  | 0       |
+|   result_12_fu_1704_p2          |     |        | result_12          | xor       | auto      | 0       |
+|   grp_fu_625_p2                 |     |        | result_11          | setlt     | auto      | 0       |
+|   result_1_fu_1534_p6           |     |        | result_10          | setlt     | auto      | 0       |
+|   result_9_fu_1714_p2           |     |        | result_9           | shl       | auto_pipe | 0       |
+|   and_ln55_fu_1720_p2           |     |        | and_ln55           | and       | auto      | 0       |
+|   result_6_fu_1724_p2           |     |        | result_6           | sub       | fabric    | 0       |
+|   result_7_fu_1730_p2           |     |        | result_7           | add       | fabric    | 0       |
+|   result_8_fu_1736_p3           |     |        | result_8           | select    | auto_sel  | 0       |
+|   result_5_fu_1744_p2           |     |        | result_5           | and       | auto      | 0       |
+|   shl_ln236_fu_1818_p2          |     |        | shl_ln236          | shl       | auto_pipe | 0       |
+|   shl_ln236_2_fu_1836_p2        |     |        | shl_ln236_2        | shl       | auto_pipe | 0       |
+|   shl_ln233_fu_1850_p2          |     |        | shl_ln233          | shl       | auto_pipe | 0       |
+|   shl_ln233_2_fu_1869_p2        |     |        | shl_ln233_2        | shl       | auto_pipe | 0       |
+|   icmp_ln188_fu_1946_p2         |     |        | icmp_ln188         | seteq     | auto      | 0       |
+|   icmp_ln188_1_fu_1951_p2       |     |        | icmp_ln188_1       | seteq     | auto      | 0       |
+|   icmp_ln188_2_fu_1956_p2       |     |        | icmp_ln188_2       | seteq     | auto      | 0       |
+|   sparsemux_9_3_8_1_1_U4        |     |        | b                  | sparsemux | auto      | 0       |
+|   h_fu_2003_p3                  |     |        | h                  | select    | auto_sel  | 0       |
+|   icmp_ln22_fu_2019_p2          |     |        | icmp_ln22          | setne     | auto      | 0       |
+|   icmp_ln22_1_fu_2041_p2        |     |        | icmp_ln22_1        | setne     | auto      | 0       |
+|   and_ln22_fu_2047_p2           |     |        | and_ln22           | and       | auto      | 0       |
+|   add_ln153_fu_2227_p2          |     |        | add_ln153          | add       | fabric    | 0       |
+|   grp_fu_647_p2                 |     |        | add_ln150          | add       | fabric    | 0       |
+|   conv25_i110_i_i_pn_fu_2252_p3 |     |        | conv25_i110_i_i_pn | select    | auto_sel  | 0       |
+|   add_ln147_fu_2260_p2          |     |        | add_ln147          | add       | fabric    | 0       |
+|   grp_fu_647_p2                 |     |        | add_ln142          | add       | fabric    | 0       |
+|   add_ln138_fu_2279_p2          |     |        | add_ln138          | add       | fabric    | 0       |
+|   grp_fu_647_p2                 |     |        | add_ln139          | add       | fabric    | 0       |
+|   select_ln136_fu_2294_p3       |     |        | select_ln136       | select    | auto_sel  | 0       |
+|   grp_fu_647_p2                 |     |        | add_ln133          | add       | fabric    | 0       |
+|   grp_fu_647_p2                 |     |        | add_ln156          | add       | fabric    | 0       |
+|   icmp_ln18_fu_2316_p2          |     |        | icmp_ln18          | setne     | auto      | 0       |
+|   icmp_ln18_1_fu_2324_p2        |     |        | icmp_ln18_1        | setne     | auto      | 0       |
+|   or_ln18_fu_2330_p2            |     |        | or_ln18            | or        | auto      | 0       |
+|   add_ln40_fu_2338_p2           |     |        | add_ln40           | add       | fabric    | 0       |
++---------------------------------+-----+--------+--------------------+-----------+-----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| Name              | Usage     | Type      | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
+|                   |           |           |      |      |        |          |      |         | Banks            |
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| + rv32i_npp_ip    |           |           | 0    | 0    |        |          |      |         |                  |
+|   control_s_axi_U | interface | s_axilite |      |      |        |          |      |         |                  |
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+----------------------------------+-----------------------------------------------------------+
+| Type            | Options                          | Location                                                  |
++-----------------+----------------------------------+-----------------------------------------------------------+
+| interface       | s_axilite port=start_pc          | ../../rv32i_npp_ip.cpp:29 in rv32i_npp_ip, start_pc       |
+| interface       | bram port=code_ram               | ../../rv32i_npp_ip.cpp:30 in rv32i_npp_ip, code_ram       |
+| interface       | bram port=data_ram               | ../../rv32i_npp_ip.cpp:31 in rv32i_npp_ip, data_ram       |
+| interface       | s_axilite port=nb_instruction    | ../../rv32i_npp_ip.cpp:32 in rv32i_npp_ip, nb_instruction |
+| interface       | s_axilite port=return            | ../../rv32i_npp_ip.cpp:33 in rv32i_npp_ip, return         |
+| inline          | recursive                        | ../../rv32i_npp_ip.cpp:34 in rv32i_npp_ip                 |
+| array_partition | variable=reg_file dim=1 complete | ../../rv32i_npp_ip.cpp:37 in rv32i_npp_ip, reg_file       |
+| pipeline        | II=7                             | ../../rv32i_npp_ip.cpp:46 in rv32i_npp_ip                 |
++-----------------+----------------------------------+-----------------------------------------------------------+
+
+

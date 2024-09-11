@@ -1,0 +1,387 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Wed Sep 11 21:03:52 2024
+# Process ID: 1380883
+# Current directory: /home/goossens/goossens-book-ip-projects/2024.1/rv32i_npp_bram_ip/project_1.runs/design_1_axi_bram_ctrl_0_1_synth_1
+# Command line: vivado -log design_1_axi_bram_ctrl_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_bram_ctrl_0_1.tcl
+# Log file: /home/goossens/goossens-book-ip-projects/2024.1/rv32i_npp_bram_ip/project_1.runs/design_1_axi_bram_ctrl_0_1_synth_1/design_1_axi_bram_ctrl_0_1.vds
+# Journal file: /home/goossens/goossens-book-ip-projects/2024.1/rv32i_npp_bram_ip/project_1.runs/design_1_axi_bram_ctrl_0_1_synth_1/vivado.jou
+# Running On        :goossens-Precision-5530
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 22.04.4 LTS
+# Processor Detail  :Intel(R) Xeon(R) E-2176M  CPU @ 2.70GHz
+# CPU Frequency     :4062.678 MHz
+# CPU Physical cores:6
+# CPU Logical cores :12
+# Host memory       :33276 MB
+# Swap memory       :2147 MB
+# Total Virtual     :35424 MB
+# Available Virtual :26375 MB
+#-----------------------------------------------------------
+source design_1_axi_bram_ctrl_0_1.tcl -notrace
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1476.828 ; gain = 54.836 ; free physical = 8330 ; free virtual = 22671
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/goossens/goossens-book-ip-projects/2024.1/rv32i_npp_bram_ip/workspace/hls_component/rv32i_npp_ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2024.1/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_bram_ctrl_0_1
+Command: synth_design -top design_1_axi_bram_ctrl_0_1 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Device 21-9227] Part: xc7z020clg400-1 does not have CEAM library.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1381061
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2274.762 ; gain = 422.652 ; free physical = 2255 ; free virtual = 16589
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_bram_ctrl_0_1' [/home/goossens/goossens-book-ip-projects/2024.1/rv32i_npp_bram_ip/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_1/synth/design_1_axi_bram_ctrl_0_1.vhd:92]
+	Parameter C_BRAM_INST_MODE bound to: EXTERNAL - type: string 
+	Parameter C_MEMORY_DEPTH bound to: 32768 - type: integer 
+	Parameter C_BRAM_ADDR_WIDTH bound to: 15 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 17 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXI_PROTOCOL bound to: AXI4LITE - type: string 
+	Parameter C_S_AXI_SUPPORTS_NARROW_BURST bound to: 0 - type: integer 
+	Parameter C_SINGLE_PORT_BRAM bound to: 1 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_READ_LATENCY bound to: 1 - type: integer 
+	Parameter C_RD_CMD_OPTIMIZATION bound to: 0 - type: integer 
+	Parameter C_S_AXI_CTRL_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_ECC bound to: 0 - type: integer 
+	Parameter C_ECC_TYPE bound to: 0 - type: integer 
+	Parameter C_FAULT_INJECT bound to: 0 - type: integer 
+	Parameter C_ECC_ONOFF_RESET_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'axi_bram_ctrl' declared at '/home/goossens/goossens-book-ip-projects/2024.1/rv32i_npp_bram_ip/project_1.gen/sources_1/bd/design_1/ipshared/14fa/hdl/axi_bram_ctrl_v4_1_rfs.vhd:31263' bound to instance 'U0' of component 'axi_bram_ctrl' [/home/goossens/goossens-book-ip-projects/2024.1/rv32i_npp_bram_ip/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_1/synth/design_1_axi_bram_ctrl_0_1.vhd:231]
+INFO: [Synth 8-638] synthesizing module 'axi_bram_ctrl' [/home/goossens/goossens-book-ip-projects/2024.1/rv32i_npp_bram_ip/project_1.gen/sources_1/bd/design_1/ipshared/14fa/hdl/axi_bram_ctrl_v4_1_rfs.vhd:31434]
+INFO: [Synth 8-638] synthesizing module 'axi_bram_ctrl_top' [/home/goossens/goossens-book-ip-projects/2024.1/rv32i_npp_bram_ip/project_1.gen/sources_1/bd/design_1/ipshared/14fa/hdl/axi_bram_ctrl_v4_1_rfs.vhd:30438]
+INFO: [Synth 8-638] synthesizing module 'axi_lite' [/home/goossens/goossens-book-ip-projects/2024.1/rv32i_npp_bram_ip/project_1.gen/sources_1/bd/design_1/ipshared/14fa/hdl/axi_bram_ctrl_v4_1_rfs.vhd:6787]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/rv32i_npp_bram_ip/project_1.gen/sources_1/bd/design_1/ipshared/14fa/hdl/axi_bram_ctrl_v4_1_rfs.vhd:6787]
+INFO: [Synth 8-256] done synthesizing module 'axi_bram_ctrl_top' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/rv32i_npp_bram_ip/project_1.gen/sources_1/bd/design_1/ipshared/14fa/hdl/axi_bram_ctrl_v4_1_rfs.vhd:30438]
+INFO: [Synth 8-256] done synthesizing module 'axi_bram_ctrl' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/rv32i_npp_bram_ip/project_1.gen/sources_1/bd/design_1/ipshared/14fa/hdl/axi_bram_ctrl_v4_1_rfs.vhd:31434]
+INFO: [Synth 8-256] done synthesizing module 'design_1_axi_bram_ctrl_0_1' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/rv32i_npp_bram_ip/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_1/synth/design_1_axi_bram_ctrl_0_1.vhd:92]
+WARNING: [Synth 8-6014] Unused sequential element GEN_NO_RD_CMD_OPT.axi_arready_reg_reg was removed.  [/home/goossens/goossens-book-ip-projects/2024.1/rv32i_npp_bram_ip/project_1.gen/sources_1/bd/design_1/ipshared/14fa/hdl/axi_bram_ctrl_v4_1_rfs.vhd:8375]
+WARNING: [Synth 8-6014] Unused sequential element GEN_NO_RD_CMD_OPT.axi_rvalid_set_r_reg was removed.  [/home/goossens/goossens-book-ip-projects/2024.1/rv32i_npp_bram_ip/project_1.gen/sources_1/bd/design_1/ipshared/14fa/hdl/axi_bram_ctrl_v4_1_rfs.vhd:8376]
+WARNING: [Synth 8-6014] Unused sequential element GEN_NO_RD_CMD_OPT.axi_rlast_set_r_reg was removed.  [/home/goossens/goossens-book-ip-projects/2024.1/rv32i_npp_bram_ip/project_1.gen/sources_1/bd/design_1/ipshared/14fa/hdl/axi_bram_ctrl_v4_1_rfs.vhd:8377]
+WARNING: [Synth 8-7129] Port AXI_AWADDR[1] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_AWADDR[0] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_ARADDR[1] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_ARADDR[0] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWVALID in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWADDR[31] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWADDR[30] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWADDR[29] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWADDR[28] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWADDR[27] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWADDR[26] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWADDR[25] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWADDR[24] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWADDR[23] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWADDR[22] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWADDR[21] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWADDR[20] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWADDR[19] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWADDR[18] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWADDR[17] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWADDR[16] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWADDR[15] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWADDR[14] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWADDR[13] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWADDR[12] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWADDR[11] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWADDR[10] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWADDR[9] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWADDR[8] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWADDR[7] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWADDR[6] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWADDR[5] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWADDR[4] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWADDR[3] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWADDR[2] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWADDR[1] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_AWADDR[0] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WDATA[31] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WDATA[30] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WDATA[29] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WDATA[28] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WDATA[27] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WDATA[26] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WDATA[25] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WDATA[24] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WDATA[23] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WDATA[22] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WDATA[21] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WDATA[20] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WDATA[19] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WDATA[18] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WDATA[17] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WDATA[16] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WDATA[15] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WDATA[14] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WDATA[13] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WDATA[12] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WDATA[11] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WDATA[10] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WDATA[9] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WDATA[8] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WDATA[7] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WDATA[6] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WDATA[5] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WDATA[4] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WDATA[3] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WDATA[2] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WDATA[1] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WDATA[0] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_WVALID in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_BREADY in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_ARADDR[31] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_ARADDR[30] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_ARADDR[29] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_ARADDR[28] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_ARADDR[27] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_ARADDR[26] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_ARADDR[25] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_ARADDR[24] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_ARADDR[23] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_ARADDR[22] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_ARADDR[21] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_ARADDR[20] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_ARADDR[19] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_ARADDR[18] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_ARADDR[17] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_ARADDR[16] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_ARADDR[15] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_ARADDR[14] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_ARADDR[13] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_ARADDR[12] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_ARADDR[11] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_ARADDR[10] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_ARADDR[9] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_ARADDR[8] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_ARADDR[7] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_ARADDR[6] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_ARADDR[5] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_ARADDR[4] in module axi_lite is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AXI_CTRL_ARADDR[3] in module axi_lite is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2359.730 ; gain = 507.621 ; free physical = 1426 ; free virtual = 15777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2374.574 ; gain = 522.465 ; free physical = 1422 ; free virtual = 15769
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2374.574 ; gain = 522.465 ; free physical = 1422 ; free virtual = 15769
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2374.574 ; gain = 0.000 ; free physical = 1422 ; free virtual = 15769
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/goossens/goossens-book-ip-projects/2024.1/rv32i_npp_bram_ip/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_1/design_1_axi_bram_ctrl_0_1_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/goossens/goossens-book-ip-projects/2024.1/rv32i_npp_bram_ip/project_1.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_1/design_1_axi_bram_ctrl_0_1_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/goossens/goossens-book-ip-projects/2024.1/rv32i_npp_bram_ip/project_1.runs/design_1_axi_bram_ctrl_0_1_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/goossens/goossens-book-ip-projects/2024.1/rv32i_npp_bram_ip/project_1.runs/design_1_axi_bram_ctrl_0_1_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2508.324 ; gain = 0.000 ; free physical = 1251 ; free virtual = 15585
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2508.324 ; gain = 0.000 ; free physical = 1243 ; free virtual = 15577
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2508.324 ; gain = 656.215 ; free physical = 1025 ; free virtual = 15361
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2516.328 ; gain = 664.219 ; free physical = 1025 ; free virtual = 15361
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  /home/goossens/goossens-book-ip-projects/2024.1/rv32i_npp_bram_ip/project_1.runs/design_1_axi_bram_ctrl_0_1_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2516.328 ; gain = 664.219 ; free physical = 1017 ; free virtual = 15355
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'GEN_NO_RD_CMD_OPT.lite_sm_cs_reg' in module 'axi_lite'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                           000001 |                              000
+             sng_wr_data |                           100000 |                              011
+                 rd_data |                           010000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'GEN_NO_RD_CMD_OPT.lite_sm_cs_reg' using encoding 'one-hot' in module 'axi_lite'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2516.328 ; gain = 664.219 ; free physical = 1013 ; free virtual = 15350
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   3 Input    6 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 2     
+	   3 Input    4 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 18    
+	   3 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-3332] Sequential element (gext_inst.abcv4_0_ext_inst/GEN_AXI4LITE.I_AXI_LITE/FSM_onehot_GEN_NO_RD_CMD_OPT.lite_sm_cs_reg[3]) is unused and will be removed from module axi_bram_ctrl.
+INFO: [Synth 8-3332] Sequential element (gext_inst.abcv4_0_ext_inst/GEN_AXI4LITE.I_AXI_LITE/FSM_onehot_GEN_NO_RD_CMD_OPT.lite_sm_cs_reg[2]) is unused and will be removed from module axi_bram_ctrl.
+INFO: [Synth 8-3332] Sequential element (gext_inst.abcv4_0_ext_inst/GEN_AXI4LITE.I_AXI_LITE/FSM_onehot_GEN_NO_RD_CMD_OPT.lite_sm_cs_reg[1]) is unused and will be removed from module axi_bram_ctrl.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2516.328 ; gain = 664.219 ; free physical = 960 ; free virtual = 15299
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2516.328 ; gain = 664.219 ; free physical = 861 ; free virtual = 15194
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2516.328 ; gain = 664.219 ; free physical = 861 ; free virtual = 15194
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2516.328 ; gain = 664.219 ; free physical = 861 ; free virtual = 15194
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2516.328 ; gain = 664.219 ; free physical = 728 ; free virtual = 15061
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2516.328 ; gain = 664.219 ; free physical = 728 ; free virtual = 15061
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2516.328 ; gain = 664.219 ; free physical = 730 ; free virtual = 15063
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2516.328 ; gain = 664.219 ; free physical = 730 ; free virtual = 15063
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2516.328 ; gain = 664.219 ; free physical = 730 ; free virtual = 15064
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2516.328 ; gain = 664.219 ; free physical = 730 ; free virtual = 15064
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     1|
+|2     |LUT2 |     1|
+|3     |LUT3 |     5|
+|4     |LUT4 |     1|
+|5     |LUT5 |     3|
+|6     |LUT6 |    23|
+|7     |FDRE |    11|
+|8     |FDSE |     1|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2516.328 ; gain = 664.219 ; free physical = 730 ; free virtual = 15064
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 181 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2516.328 ; gain = 530.469 ; free physical = 731 ; free virtual = 15064
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 2516.336 ; gain = 664.219 ; free physical = 731 ; free virtual = 15064
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2516.336 ; gain = 0.000 ; free physical = 731 ; free virtual = 15064
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2572.355 ; gain = 0.000 ; free physical = 1328 ; free virtual = 15661
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: d3cf9af3
+INFO: [Common 17-83] Releasing license: Synthesis
+33 Infos, 104 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:36 . Memory (MB): peak = 2572.355 ; gain = 1075.715 ; free physical = 1334 ; free virtual = 15667
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1794.278; main = 1480.544; forked = 317.854
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3560.043; main = 2572.359; forked = 1043.711
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2596.367 ; gain = 0.000 ; free physical = 1334 ; free virtual = 15667
+INFO: [Common 17-1381] The checkpoint '/home/goossens/goossens-book-ip-projects/2024.1/rv32i_npp_bram_ip/project_1.runs/design_1_axi_bram_ctrl_0_1_synth_1/design_1_axi_bram_ctrl_0_1.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_axi_bram_ctrl_0_1, cache-ID = e40be046b14cbfc6
+INFO: [Coretcl 2-1174] Renamed 3 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2596.367 ; gain = 0.000 ; free physical = 1585 ; free virtual = 15919
+INFO: [Common 17-1381] The checkpoint '/home/goossens/goossens-book-ip-projects/2024.1/rv32i_npp_bram_ip/project_1.runs/design_1_axi_bram_ctrl_0_1_synth_1/design_1_axi_bram_ctrl_0_1.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_axi_bram_ctrl_0_1_utilization_synth.rpt -pb design_1_axi_bram_ctrl_0_1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 11 21:04:45 2024...

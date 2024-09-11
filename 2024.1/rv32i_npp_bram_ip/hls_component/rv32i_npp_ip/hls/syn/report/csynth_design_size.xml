@@ -1,0 +1,79 @@
+<design_size title="Design Size Report">
+    <item name="Total Instructions per Compilation Phase">
+        <table>
+            <keys size="4">Phase, Step, Instructions, Description</keys>
+            <column name="Compile/Link">, 8345, After all functions are compiled and linked into a single design</column>
+            <column name="">, , </column>
+            <column name="Unroll/Inline">, , After user unroll and inline pragmas are applied</column>
+            <column name="">(1) unroll,   524, user unroll pragmas are applied</column>
+            <column name="">(2) simplification,   415, simplification of applied user unroll pragmas</column>
+            <column name="">(3) inline,   407, user inline pragmas are applied</column>
+            <column name="">(4) simplification,   407, simplification of applied user inline pragmas</column>
+            <column name="">, , </column>
+            <column name="Array/Struct">, , After user array partition and struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(1) array partition,   634, user array partition pragmas are applied</column>
+            <column name="">(2) simplification,   596, simplification of applied user array partition &amp; struct aggregate/disaggregate pragmas</column>
+            <column name="">(3) aggregate/disaggregate ,   596, user struct aggregate/disaggregate pragmas are applied</column>
+            <column name="">(4) array reshape,   596, apply array reshape pragmas</column>
+            <column name="">(5) access patterns,   504, array access pattern optmizations</column>
+            <column name="">, , </column>
+            <column name="Performance">, , After transformations are applied to meet performance pragma targets</column>
+            <column name="">(1) loop simplification,   504, loop and instruction simplification</column>
+            <column name="">(2) parallelization,   503, loops are unrolled or pipelined to meet performance targets</column>
+            <column name="">(3) array partition,   503, arrays are partitioned to meet performance targets</column>
+            <column name="">(4) simplification,   503, simplification of design after performance transformations</column>
+            <column name="">, , </column>
+            <column name="HW Transforms">, , After hardware transfomations</column>
+            <column name="">(1) lowering,   529, initial conversion to HW specific instructions</column>
+            <column name="">(2) optimizations,   520, high level synthesis optimizations</column>
+        </table>
+    </item>
+    <item name="Instructions per Function for each Compilation Phase">
+        <hiertable>
+            <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
+            <rows>
+                <row id="0" col0="rv32i_npp_ip" col1="rv32i_npp_ip.cpp:24" col2="8345" col3="407" col4="504" col5="503" col6="520">
+                    <row id="6" col0="fetch" col1="fetch.cpp:8" col2="11" col3="" col4="" col5="" col6=""/>
+                    <row id="16" col0="decode" col1="decode.cpp:45" col2="4780" col3="" col4="" col5="" col6="">
+                        <row id="1" col0="decode_instruction" col1="decode.cpp:4" col2="1464" col3="" col4="" col5="" col6="">
+                            <row id="21" col0="type" col1="type.cpp:55" col2="892" col3="" col4="" col5="" col6="">
+                                <row id="13" col0="type_00" col1="type.cpp:3" col2="180" col3="" col4="" col5="" col6=""/>
+                                <row id="18" col0="type_01" col1="type.cpp:16" col2="180" col3="" col4="" col5="" col6=""/>
+                                <row id="19" col0="type_10" col1="type.cpp:29" col2="180" col3="" col4="" col5="" col6=""/>
+                                <row id="2" col0="type_11" col1="type.cpp:42" col2="180" col3="" col4="" col5="" col6=""/>
+                            </row>
+                        </row>
+                        <row id="23" col0="decode_immediate" col1="decode.cpp:23" col2="3313" col3="" col4="" col5="" col6="">
+                            <row id="25" col0="i_immediate" col1="immediate.cpp:2" col2="504" col3="" col4="" col5="" col6=""/>
+                            <row id="15" col0="s_immediate" col1="immediate.cpp:8" col2="504" col3="" col4="" col5="" col6=""/>
+                            <row id="22" col0="b_immediate" col1="immediate.cpp:14" col2="504" col3="" col4="" col5="" col6=""/>
+                            <row id="7" col0="u_immediate" col1="immediate.cpp:20" col2="658" col3="" col4="" col5="" col6=""/>
+                            <row id="9" col0="j_immediate" col1="immediate.cpp:27" col2="658" col3="" col4="" col5="" col6=""/>
+                        </row>
+                    </row>
+                    <row id="3" col0="execute" col1="execute.cpp:245" col2="3384" col3="" col4="" col5="" col6="">
+                        <row id="12" col0="read_reg" col1="execute.cpp:9" col2="21" col3="" col4="" col5="" col6=""/>
+                        <row id="20" col0="compute_result" col1="execute.cpp:80" col2="1043" col3="" col4="" col5="" col6="">
+                            <row id="17" col0="compute_op_result" col1="execute.cpp:43" col2="444" col2_disp=" 444 (2 calls)" col3="" col4="" col5="" col6=""/>
+                            <row id="14" col0="compute_branch_result" col1="execute.cpp:27" col2="155" col3="" col4="" col5="" col6=""/>
+                        </row>
+                        <row id="4" col0="mem_store" col1="execute.cpp:220" col2="222" col3="" col4="" col5="" col6=""/>
+                        <row id="5" col0="mem_load" col1="execute.cpp:161" col2="589" col3="" col4="" col5="" col6=""/>
+                        <row id="24" col0="write_reg" col1="execute.cpp:18" col2="63" col3="" col4="" col5="" col6=""/>
+                        <row id="8" col0="compute_next_pc" col1="execute.cpp:125" col2="1287" col3="" col4="" col5="" col6=""/>
+                    </row>
+                    <row id="10" col0="statistic_update" col1="rv32i_npp_ip.cpp:20" col2="4" col3="" col4="" col5="" col6=""/>
+                    <row id="11" col0="running_cond_update" col1="rv32i_npp_ip.cpp:14" col2="57" col3="" col4="" col5="" col6=""/>
+                </row>
+            </rows>
+            <notes/>
+        </hiertable>
+    </item>
+    <item name="Design Size Message Settings">
+        <table>
+            <keys size="3">Message Setting, Value, Description</keys>
+            <column name="config_compile -design_size_maximum_warning">100000, Show a warning when total design instructions exceeds this value</column>
+        </table>
+    </item>
+</design_size>
+
