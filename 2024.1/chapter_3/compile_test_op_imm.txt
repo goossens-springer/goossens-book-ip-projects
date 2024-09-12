@@ -1,0 +1,32 @@
+riscv32-unknown-elf-gcc test_op_imm.s -o test_op_imm
+
+
+riscv32-unknown-elf-objdump -t test_op_imm | grep main
+
+
+spike -d /opt/riscv/riscv32-unknown-elf/bin/pk test_op_imm
+untiln pc 0 1018c
+reg 0 a1
+reg 0 a2
+q
+
+
+spike -d /opt/riscv/riscv32-unknown-elf/bin/pk test_op_imm
+untiln pc 0 1018c
+reg 0
+q
+
+
+riscv32-unknown-elf-gcc -nostartfiles -Ttext 0 test_op_imm.s -o test_op_imm_0.elf
+
+
+riscv32-unknown-elf-objdump -d test_op_imm_0.elf > test_op_imm_0.dump
+cat test_op_imm_0.dump
+
+
+riscv32-unknown-elf-objcopy -O binary test_op_imm_0.elf test_op_imm_0_text.bin
+od -t x4 test_op_imm_0_text.bin
+
+
+hexdump -v -e '"0x" /4 "%08x" ",\n"' test_op_imm_0_text.bin > test_op_imm_0_text.hex
+cat test_op_imm_0_text.hex

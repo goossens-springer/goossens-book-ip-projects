@@ -1,0 +1,10 @@
+git clone https://github.com/riscv/riscv-isa-sim
+
+
+export RISCV=/opt/riscv
+cd $HOME/riscv-isa-sim
+mkdir build
+cd build
+../configure --prefix=$RISCV --with-isa=rv32i
+make
+sudo make install
