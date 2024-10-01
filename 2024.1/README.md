@@ -36,5 +36,3 @@ To run the "adder_ip" on the development board, first the design should be built
 If the run sets the "invalid command name ps7_init" error message, update the "workspace/hello_world/_ide/.theia/launch.json" file by replacing the occurrence of "my_adder_ip.tcl" with "ps7_init.tcl"
 
 It is important to build in the workspace successively the HLS component, the platform and the hello_world application, in order to have all the needed files in the proper accessible files
-
-
