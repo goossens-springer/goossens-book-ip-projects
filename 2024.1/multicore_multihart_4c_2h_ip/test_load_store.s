@@ -1,0 +1,31 @@
+       .globl  main
+main:
+       li      t0,1
+       li      t1,2
+       li      t2,-3
+       li      t3,-4
+       li      a0,0
+       sw      t0,0(a0)
+       addi    a0,a0,4
+       sh      t1,0(a0)
+       sh      t0,2(a0)
+       addi    a0,a0,4
+       sb      t3,0(a0)
+       sb      t2,1(a0)
+       sb      t1,2(a0)
+       sb      t0,3(a0)
+       lb      a1,0(a0)
+       lb      a2,1(a0)
+       lb      a3,2(a0)
+       lb      a4,3(a0)
+       lbu     a5,0(a0)
+       lbu     a6,1(a0)
+       lbu     a7,2(a0)
+       addi    a0,a0,-4
+       lh      s0,2(a0)
+       lh      s1,0(a0)
+       lhu     s2,4(a0)
+       lhu     s3,6(a0)
+       addi    a0,a0,-4
+       lw      s4,8(a0)
+       ret

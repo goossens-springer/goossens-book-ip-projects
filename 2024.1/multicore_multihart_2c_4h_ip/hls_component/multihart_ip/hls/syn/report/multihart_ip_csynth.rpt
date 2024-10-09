@@ -1,0 +1,229 @@
+
+
+================================================================
+== Vitis HLS Report for 'multihart_ip'
+================================================================
+* Date:           Wed Oct  9 17:47:00 2024
+
+* Version:        2024.1 (Build 5069499 on May 21 2024)
+* Project:        multihart_ip
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  |  10.00 ns|  20.068 ns|     2.70 ns|
+    +--------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------------------------+----------------------------------------+---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+        |                                                   |                                        |  Latency (cycles) |  Latency (absolute) |  Interval |                    Pipeline                   |
+        |                      Instance                     |                 Module                 |   min   |   max   |    min   |    max   | min | max |                      Type                     |
+        +---------------------------------------------------+----------------------------------------+---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+        |grp_multihart_ip_Pipeline_VITIS_LOOP_197_1_fu_199  |multihart_ip_Pipeline_VITIS_LOOP_197_1  |        ?|        ?|         ?|         ?|    0|    0|  loop auto-rewind stp(delay=0 clock cycles(s))|
+        +---------------------------------------------------+----------------------------------------+---------+---------+----------+----------+-----+-----+-----------------------------------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     34|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |       68|    -|   12059|  20138|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|    118|    -|
+|Register         |        -|    -|     207|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |       68|    0|   12266|  20290|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |       24|    0|      11|     38|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------------------------+----------------------------------------+---------+----+-------+-------+-----+
+    |                      Instance                     |                 Module                 | BRAM_18K| DSP|   FF  |  LUT  | URAM|
+    +---------------------------------------------------+----------------------------------------+---------+----+-------+-------+-----+
+    |control_s_axi_U                                    |control_s_axi                           |       64|   0|    418|    566|    0|
+    |gmem_m_axi_U                                       |gmem_m_axi                              |        4|   0|    824|    723|    0|
+    |grp_multihart_ip_Pipeline_VITIS_LOOP_197_1_fu_199  |multihart_ip_Pipeline_VITIS_LOOP_197_1  |        0|   0|  10817|  18849|    0|
+    +---------------------------------------------------+----------------------------------------+---------+----+-------+-------+-----+
+    |Total                                              |                                        |       68|   0|  12059|  20138|    0|
+    +---------------------------------------------------+----------------------------------------+---------+----+-------+-------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------+----------+----+---+----+------------+------------+
+    |      Variable Name      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------+----------+----+---+----+------------+------------+
+    |reg_file_fu_313_p2       |         +|   0|  0|  26|          19|          18|
+    |has_exited_12_fu_259_p2  |       xor|   0|  0|   2|           1|           2|
+    |has_exited_13_fu_273_p2  |       xor|   0|  0|   2|           1|           2|
+    |has_exited_14_fu_287_p2  |       xor|   0|  0|   2|           1|           2|
+    |has_exited_fu_245_p2     |       xor|   0|  0|   2|           1|           2|
+    +-------------------------+----------+----+---+----+------------+------------+
+    |Total                    |          |   0|  0|  34|          23|          26|
+    +-------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                |  48|          9|    1|          9|
+    |gmem_ARVALID             |   9|          2|    1|          2|
+    |gmem_AWVALID             |   9|          2|    1|          2|
+    |gmem_BREADY              |   9|          2|    1|          2|
+    |gmem_RREADY              |   9|          2|    1|          2|
+    |gmem_WVALID              |   9|          2|    1|          2|
+    |start_pc_address0_local  |  25|          5|    2|         10|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    | 118|         24|    8|         29|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------------------------+----+----+-----+-----------+
+    |                              Name                              | FF | LUT| Bits| Const Bits|
+    +----------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                       |   8|   0|    8|          0|
+    |data_ram_read_reg_392                                           |  64|   0|   64|          0|
+    |f_state_fetch_pc_20_reg_372                                     |  15|   0|   15|          0|
+    |f_state_fetch_pc_21_reg_382                                     |  15|   0|   15|          0|
+    |f_state_fetch_pc_22_reg_437                                     |  15|   0|   15|          0|
+    |f_state_fetch_pc_reg_362                                        |  15|   0|   15|          0|
+    |grp_multihart_ip_Pipeline_VITIS_LOOP_197_1_fu_199_ap_start_reg  |   1|   0|    1|          0|
+    |h_running_4_reg_407                                             |   1|   0|    1|          0|
+    |h_running_5_reg_417                                             |   1|   0|    1|          0|
+    |h_running_6_reg_427                                             |   1|   0|    1|          0|
+    |h_running_reg_397                                               |   1|   0|    1|          0|
+    |has_exited_12_reg_412                                           |   1|   0|    1|          0|
+    |has_exited_13_reg_422                                           |   1|   0|    1|          0|
+    |has_exited_14_reg_432                                           |   1|   0|    1|          0|
+    |has_exited_reg_402                                              |   1|   0|    1|          0|
+    |p_cast_reg_454                                                  |  62|   0|   62|          0|
+    |reg_file_260_reg_442                                            |   1|   0|    1|          0|
+    |reg_file_reg_449                                                |   2|   0|   19|         17|
+    |shl_i_i_i_reg_459                                               |   1|   0|    3|          2|
+    +----------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                           | 207|   0|  226|         19|
+    +----------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+--------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-----------------------+-----+-----+------------+--------------+--------------+
+|s_axi_control_AWVALID  |   in|    1|       s_axi|       control|         array|
+|s_axi_control_AWREADY  |  out|    1|       s_axi|       control|         array|
+|s_axi_control_AWADDR   |   in|   18|       s_axi|       control|         array|
+|s_axi_control_WVALID   |   in|    1|       s_axi|       control|         array|
+|s_axi_control_WREADY   |  out|    1|       s_axi|       control|         array|
+|s_axi_control_WDATA    |   in|   32|       s_axi|       control|         array|
+|s_axi_control_WSTRB    |   in|    4|       s_axi|       control|         array|
+|s_axi_control_ARVALID  |   in|    1|       s_axi|       control|         array|
+|s_axi_control_ARREADY  |  out|    1|       s_axi|       control|         array|
+|s_axi_control_ARADDR   |   in|   18|       s_axi|       control|         array|
+|s_axi_control_RVALID   |  out|    1|       s_axi|       control|         array|
+|s_axi_control_RREADY   |   in|    1|       s_axi|       control|         array|
+|s_axi_control_RDATA    |  out|   32|       s_axi|       control|         array|
+|s_axi_control_RRESP    |  out|    2|       s_axi|       control|         array|
+|s_axi_control_BVALID   |  out|    1|       s_axi|       control|         array|
+|s_axi_control_BREADY   |   in|    1|       s_axi|       control|         array|
+|s_axi_control_BRESP    |  out|    2|       s_axi|       control|         array|
+|ap_clk                 |   in|    1|  ap_ctrl_hs|  multihart_ip|  return value|
+|ap_rst_n               |   in|    1|  ap_ctrl_hs|  multihart_ip|  return value|
+|interrupt              |  out|    1|  ap_ctrl_hs|  multihart_ip|  return value|
+|m_axi_gmem_AWVALID     |  out|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_AWREADY     |   in|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_AWADDR      |  out|   64|       m_axi|          gmem|       pointer|
+|m_axi_gmem_AWID        |  out|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_AWLEN       |  out|    8|       m_axi|          gmem|       pointer|
+|m_axi_gmem_AWSIZE      |  out|    3|       m_axi|          gmem|       pointer|
+|m_axi_gmem_AWBURST     |  out|    2|       m_axi|          gmem|       pointer|
+|m_axi_gmem_AWLOCK      |  out|    2|       m_axi|          gmem|       pointer|
+|m_axi_gmem_AWCACHE     |  out|    4|       m_axi|          gmem|       pointer|
+|m_axi_gmem_AWPROT      |  out|    3|       m_axi|          gmem|       pointer|
+|m_axi_gmem_AWQOS       |  out|    4|       m_axi|          gmem|       pointer|
+|m_axi_gmem_AWREGION    |  out|    4|       m_axi|          gmem|       pointer|
+|m_axi_gmem_AWUSER      |  out|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_WVALID      |  out|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_WREADY      |   in|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_WDATA       |  out|   32|       m_axi|          gmem|       pointer|
+|m_axi_gmem_WSTRB       |  out|    4|       m_axi|          gmem|       pointer|
+|m_axi_gmem_WLAST       |  out|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_WID         |  out|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_WUSER       |  out|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_ARVALID     |  out|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_ARREADY     |   in|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_ARADDR      |  out|   64|       m_axi|          gmem|       pointer|
+|m_axi_gmem_ARID        |  out|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_ARLEN       |  out|    8|       m_axi|          gmem|       pointer|
+|m_axi_gmem_ARSIZE      |  out|    3|       m_axi|          gmem|       pointer|
+|m_axi_gmem_ARBURST     |  out|    2|       m_axi|          gmem|       pointer|
+|m_axi_gmem_ARLOCK      |  out|    2|       m_axi|          gmem|       pointer|
+|m_axi_gmem_ARCACHE     |  out|    4|       m_axi|          gmem|       pointer|
+|m_axi_gmem_ARPROT      |  out|    3|       m_axi|          gmem|       pointer|
+|m_axi_gmem_ARQOS       |  out|    4|       m_axi|          gmem|       pointer|
+|m_axi_gmem_ARREGION    |  out|    4|       m_axi|          gmem|       pointer|
+|m_axi_gmem_ARUSER      |  out|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_RVALID      |   in|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_RREADY      |  out|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_RDATA       |   in|   32|       m_axi|          gmem|       pointer|
+|m_axi_gmem_RLAST       |   in|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_RID         |   in|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_RUSER       |   in|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_RRESP       |   in|    2|       m_axi|          gmem|       pointer|
+|m_axi_gmem_BVALID      |   in|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_BREADY      |  out|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_BRESP       |   in|    2|       m_axi|          gmem|       pointer|
+|m_axi_gmem_BID         |   in|    1|       m_axi|          gmem|       pointer|
+|m_axi_gmem_BUSER       |   in|    1|       m_axi|          gmem|       pointer|
+|ip_data_ram_Addr_A     |  out|   32|        bram|   ip_data_ram|         array|
+|ip_data_ram_EN_A       |  out|    1|        bram|   ip_data_ram|         array|
+|ip_data_ram_WEN_A      |  out|    4|        bram|   ip_data_ram|         array|
+|ip_data_ram_Din_A      |  out|   32|        bram|   ip_data_ram|         array|
+|ip_data_ram_Dout_A     |   in|   32|        bram|   ip_data_ram|         array|
+|ip_data_ram_Clk_A      |  out|    1|        bram|   ip_data_ram|         array|
+|ip_data_ram_Rst_A      |  out|    1|        bram|   ip_data_ram|         array|
++-----------------------+-----+-----+------------+--------------+--------------+
+

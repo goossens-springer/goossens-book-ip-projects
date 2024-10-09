@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <core name="" type="" target="">
+    <kernel name="multihart_ip" language="c" vlnv="xilinx.com:hls:multihart_ip:1.0" attributes="" hash="" preferredWorkGroupSizeMultiple="0" workGroupSize="1" debug="false" interrupt="true">
+      <port name="S_AXI_CONTROL" mode="slave" range="0x1000" portType="addressable" base="0x00000000" dataWidth="64"/>
+      <port name="M_AXI_GMEM" mode="master" range="0xFFFFFFFF" dataWidth="-1" portType="addressable" base="0x00000000"/>
+      <arg name="ip_num" addressQualifier="0" id="0" port="S_AXI_CONTROL" size="0x4" offset="0x10" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="running_hart_set" addressQualifier="0" id="1" port="S_AXI_CONTROL" size="0x4" offset="0x18" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="start_pc" addressQualifier="0" id="2" port="S_AXI_CONTROL" size="0x4" offset="0x20" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="ip_code_ram" addressQualifier="0" id="3" port="S_AXI_CONTROL" size="0x4" offset="0x10000" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="data_ram" addressQualifier="1" id="4" port="M_AXI_GMEM" size="0x4" offset="0x28" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="nb_instruction" addressQualifier="0" id="5" port="S_AXI_CONTROL" size="0x4" offset="0x34" hostOffset="0x0" hostSize="0x4" type=""/>
+      <arg name="nb_cycle" addressQualifier="0" id="6" port="S_AXI_CONTROL" size="0x4" offset="0x44" hostOffset="0x0" hostSize="0x4" type=""/>
+      <compileWorkGroupSize x="1" y="1" z="1"/>
+    </kernel>
+  </core>
+</project>

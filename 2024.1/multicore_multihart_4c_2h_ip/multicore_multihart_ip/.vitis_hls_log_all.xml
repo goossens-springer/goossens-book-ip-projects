@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="multicore_multihart_ip" solutionName="solution1" date="2022-07-13T19:30:26.869+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-1016] The critical path in module 'multihart_ip' consists of the following:&#x9;'call' operation ('_ln947') to 'multihart_ip_Pipeline_VITIS_LOOP_197_1' [61]  (16.8 ns)&#xA;&#xA;&#xA;Resolution: For help on HLS 200-1016 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1016.html" projectName="multicore_multihart_ip" solutionName="solution1" date="2022-07-13T19:30:18.367+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-871] Estimated clock period (16.838ns) exceeds the target (target clock period: 10ns, clock uncertainty: 2.7ns, effective delay budget: 7.3ns).&#xA;Resolution: For help on HLS 200-871 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-871.html" projectName="multicore_multihart_ip" solutionName="solution1" date="2022-07-13T19:30:18.363+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-1016] The critical path in module 'multihart_ip_Pipeline_VITIS_LOOP_197_1' consists of the following:&#x9;'alloca' operation ('c.V') [185]  (0 ns)&#xA;&#x9;'load' operation ('c_V_10_load_1') on local variable 'c.V' [1149]  (0 ns)&#xA;&#x9;'xor' operation ('selected_hart') [1716]  (0.978 ns)&#xA;&#x9;'and' operation ('c.V', mem_access.cpp:91) [1717]  (0 ns)&#xA;&#x9;'or' operation ('is_selected.V', mem_access.cpp:110) [1721]  (0.978 ns)&#xA;&#x9;'select' operation ('accessing_hart.V', mem_access.cpp:163->multihart_ip.cpp:227) [1783]  (0.993 ns)&#xA;&#x9;'mux' operation ('ip.V', mem_access.cpp:167->multihart_ip.cpp:227) [1866]  (1.59 ns)&#xA;&#x9;'add' operation ('add_ln24', mem.cpp:24) [2177]  (0 ns)&#xA;&#x9;'add' operation ('add_ln24_1', mem.cpp:24) [2180]  (5.31 ns)&#xA;&#x9;'getelementptr' operation ('gmem_addr', mem.cpp:24) [2183]  (0 ns)&#xA;&#x9;bus request operation ('w_1_req', mem.cpp:24) on port 'gmem' (mem.cpp:24) [2184]  (7.3 ns)&#xA;&#xA;&#xA;Resolution: For help on HLS 200-1016 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1016.html" projectName="multicore_multihart_ip" solutionName="solution1" date="2022-07-13T19:30:14.759+0200" type="Warning"/>
+        <logs message="WARNING: [HLS 200-871] Estimated clock period (17.144ns) exceeds the target (target clock period: 10ns, clock uncertainty: 2.7ns, effective delay budget: 7.3ns).&#xA;Resolution: For help on HLS 200-871 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-871.html" projectName="multicore_multihart_ip" solutionName="solution1" date="2022-07-13T19:30:14.753+0200" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-52] Found false 'RAW' inter dependency for variable 'gmem'." projectName="multicore_multihart_ip" solutionName="solution1" date="2022-07-13T19:29:57.975+0200" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,874 @@
+
+
+================================================================
+== Synthesis Summary Report of 'multihart_ip'
+================================================================
++ General Information: 
+    * Date:           Wed Oct  2 20:14:47 2024
+    * Version:        2024.1 (Build 5069499 on May 21 2024)
+    * Project:        multihart_ip
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------------------------+--------+--------+---------+--------+----------+---------+------+----------+----------+----+-----------+-------------+-----+
+    |                  Modules                  |  Issue |        | Latency | Latency| Iteration|         | Trip |          |          |    |           |             |     |
+    |                  & Loops                  |  Type  |  Slack | (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined|   BRAM   | DSP|     FF    |     LUT     | URAM|
+    +-------------------------------------------+--------+--------+---------+--------+----------+---------+------+----------+----------+----+-----------+-------------+-----+
+    |+ multihart_ip                             |  Timing|  -10.96|        -|       -|         -|        -|     -|        no|  68 (24%)|   -|  8662 (8%)|  13177 (24%)|    -|
+    | + multihart_ip_Pipeline_VITIS_LOOP_197_1  |  Timing|  -10.96|        -|       -|         -|        -|     -|        no|         -|   -|  7249 (6%)|  11763 (22%)|    -|
+    |  o VITIS_LOOP_197_1                       |       -|    7.30|        -|       -|        14|        2|     -|       yes|         -|   -|          -|            -|    -|
+    +-------------------------------------------+--------+--------+---------+--------+----------+---------+------+----------+----------+----+-----------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface  | Read/Write | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|            |            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem | READ_WRITE | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
++------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+-------------------+
+| Interface     | Data Width | Address Width | Offset | Register | Resource Estimate |
++---------------+------------+---------------+--------+----------+-------------------+
+| s_axi_control | 32         | 18            | 16     | 0        | BRAM=64           |
++---------------+------------+---------------+--------+----------+-------------------+
+
+* S_AXILITE Registers
++---------------+---------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register            | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+---------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL                | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER                | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER              | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR              | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | ip_num              | 0x10   | 32    | W      | Data signal of ip_num            |                                                                      |
+| s_axi_control | running_hart_set    | 0x18   | 32    | W      | Data signal of running_hart_set  |                                                                      |
+| s_axi_control | data_ram_1          | 0x28   | 32    | W      | Data signal of data_ram          |                                                                      |
+| s_axi_control | data_ram_2          | 0x2c   | 32    | W      | Data signal of data_ram          |                                                                      |
+| s_axi_control | nb_instruction      | 0x34   | 32    | R      | Data signal of nb_instruction    |                                                                      |
+| s_axi_control | nb_instruction_ctrl | 0x38   | 32    | R      | Control signal of nb_instruction | 0=nb_instruction_ap_vld                                              |
+| s_axi_control | nb_cycle            | 0x44   | 32    | R      | Data signal of nb_cycle          |                                                                      |
+| s_axi_control | nb_cycle_ctrl       | 0x48   | 32    | R      | Control signal of nb_cycle       | 0=nb_cycle_ap_vld                                                    |
++---------------+---------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* BRAM
++-------------------+------------+---------------+
+| Interface         | Data Width | Address Width |
++-------------------+------------+---------------+
+| ip_data_ram_PORTA | 32         | 32            |
++-------------------+------------+---------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++------------------+-----------+---------------+
+| Argument         | Direction | Datatype      |
++------------------+-----------+---------------+
+| ip_num           | in        | unsigned int  |
+| running_hart_set | in        | unsigned int  |
+| start_pc         | in        | unsigned int* |
+| ip_code_ram      | in        | unsigned int* |
+| ip_data_ram      | inout     | int*          |
+| data_ram         | inout     | int*          |
+| nb_instruction   | out       | unsigned int* |
+| nb_cycle         | out       | unsigned int* |
++------------------+-----------+---------------+
+
+* SW-to-HW Mapping
++------------------+-------------------+-----------+----------+-----------------------------------------------+
+| Argument         | HW Interface      | HW Type   | HW Usage | HW Info                                       |
++------------------+-------------------+-----------+----------+-----------------------------------------------+
+| ip_num           | s_axi_control     | register  |          | name=ip_num offset=0x10 range=32              |
+| running_hart_set | s_axi_control     | register  |          | name=running_hart_set offset=0x18 range=32    |
+| start_pc         | s_axi_control     | memory    |          | name=start_pc offset=32 range=8               |
+| ip_code_ram      | s_axi_control     | memory    |          | name=ip_code_ram offset=131072 range=131072   |
+| ip_data_ram      | ip_data_ram_PORTA | interface |          |                                               |
+| data_ram         | m_axi_gmem        | interface |          | channel=0                                     |
+| data_ram         | s_axi_control     | register  | offset   | name=data_ram_1 offset=0x28 range=32          |
+| data_ram         | s_axi_control     | register  | offset   | name=data_ram_2 offset=0x2c range=32          |
+| nb_instruction   | s_axi_control     | register  |          | name=nb_instruction offset=0x34 range=32      |
+| nb_instruction   | s_axi_control     | register  |          | name=nb_instruction_ctrl offset=0x38 range=32 |
+| nb_cycle         | s_axi_control     | register  |          | name=nb_cycle offset=0x44 range=32            |
+| nb_cycle         | s_axi_control     | register  |          | name=nb_cycle_ctrl offset=0x48 range=32       |
++------------------+-------------------+-----------+----------+-----------------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------------------------+-----+--------+------------------------------+-----------+-----------+---------+
+| Name                                       | DSP | Pragma | Variable                     | Op        | Impl      | Latency |
++--------------------------------------------+-----+--------+------------------------------+-----------+-----------+---------+
+| + multihart_ip                             | 0   |        |                              |           |           |         |
+|   has_exited_fu_207_p2                     |     |        | has_exited                   | xor       | auto      | 0       |
+|   has_exited_6_fu_221_p2                   |     |        | has_exited_6                 | xor       | auto      | 0       |
+|   reg_file_fu_247_p2                       |     |        | reg_file                     | add       | fabric    | 0       |
+|  + multihart_ip_Pipeline_VITIS_LOOP_197_1  | 0   |        |                              |           |           |         |
+|    nbi_3_fu_13281_p2                       |     |        | nbi_3                        | add       | fabric    | 0       |
+|    nbc_3_fu_13287_p2                       |     |        | nbc_3                        | add       | fabric    | 0       |
+|    xor_ln55_fu_4210_p2                     |     |        | xor_ln55                     | xor       | auto      | 0       |
+|    c_fu_4216_p2                            |     |        | c                            | and       | auto      | 0       |
+|    xor_ln57_fu_4222_p2                     |     |        | xor_ln57                     | xor       | auto      | 0       |
+|    c_12_fu_4228_p2                         |     |        | c_12                         | and       | auto      | 0       |
+|    xor_ln73_fu_4234_p2                     |     |        | xor_ln73                     | xor       | auto      | 0       |
+|    selected_hart_fu_4240_p2                |     |        | selected_hart                | or        | auto      | 0       |
+|    is_selected_fu_4246_p2                  |     |        | is_selected                  | or        | auto      | 0       |
+|    select_ln118_fu_7157_p3                 |     |        | select_ln118                 | select    | auto_sel  | 0       |
+|    select_ln118_1_fu_7164_p3               |     |        | select_ln118_1               | select    | auto_sel  | 0       |
+|    xor_ln118_fu_4252_p2                    |     |        | xor_ln118                    | xor       | auto      | 0       |
+|    f_state_fetch_pc_6_fu_7171_p3           |     |        | f_state_fetch_pc_6           | select    | auto_sel  | 0       |
+|    f_state_fetch_pc_5_fu_7179_p3           |     |        | f_state_fetch_pc_5           | select    | auto_sel  | 0       |
+|    or_ln118_fu_4258_p2                     |     |        | or_ln118                     | and       | auto      | 0       |
+|    f_state_is_full_3_fu_4264_p2            |     |        | f_state_is_full_3            | or        | auto      | 0       |
+|    or_ln118_1_fu_4270_p2                   |     |        | or_ln118_1                   | and       | auto      | 0       |
+|    f_state_is_full_2_fu_4276_p2            |     |        | f_state_is_full_2            | or        | auto      | 0       |
+|    select_ln122_fu_7187_p3                 |     |        | select_ln122                 | select    | auto_sel  | 0       |
+|    select_ln122_1_fu_7194_p3               |     |        | select_ln122_1               | select    | auto_sel  | 0       |
+|    xor_ln122_fu_4282_p2                    |     |        | xor_ln122                    | xor       | auto      | 0       |
+|    f_state_fetch_pc_9_fu_7201_p3           |     |        | f_state_fetch_pc_9           | select    | auto_sel  | 0       |
+|    f_state_fetch_pc_8_fu_7209_p3           |     |        | f_state_fetch_pc_8           | select    | auto_sel  | 0       |
+|    or_ln122_fu_4288_p2                     |     |        | or_ln122                     | and       | auto      | 0       |
+|    f_state_is_full_5_fu_4294_p2            |     |        | f_state_is_full_5            | or        | auto      | 0       |
+|    or_ln122_1_fu_4300_p2                   |     |        | or_ln122_1                   | and       | auto      | 0       |
+|    f_state_is_full_4_fu_4306_p2            |     |        | f_state_is_full_4            | or        | auto      | 0       |
+|    select_ln127_12_fu_4312_p3              |     |        | select_ln127_12              | select    | auto_sel  | 0       |
+|    xor_ln127_fu_4320_p2                    |     |        | xor_ln127                    | xor       | auto      | 0       |
+|    xor_ln127_1_fu_4326_p2                  |     |        | xor_ln127_1                  | xor       | auto      | 0       |
+|    or_ln127_fu_4332_p2                     |     |        | or_ln127                     | or        | auto      | 0       |
+|    select_ln128_fu_4338_p3                 |     |        | select_ln128                 | select    | auto_sel  | 0       |
+|    p_ph_fu_4378_p6                         |     |        | xor_ln128                    | xor       | auto      | 0       |
+|    and_ln127_fu_4352_p2                    |     |        | and_ln127                    | and       | auto      | 0       |
+|    sel_tmp3_demorgan_fu_4358_p2            |     |        | sel_tmp3_demorgan            | or        | auto      | 0       |
+|    sel_tmp3_fu_4364_p2                     |     |        | sel_tmp3                     | xor       | auto      | 0       |
+|    sparsemux_7_2_1_1_1_U1                  |     |        | p_ph                         | sparsemux | auto      | 0       |
+|    empty_41_fu_7217_p2                     |     |        | empty_41                     | or        | auto      | 0       |
+|    fetching_hart_fu_4398_p3                |     |        | fetching_hart                | select    | auto_sel  | 0       |
+|    and_ln131_fu_7221_p2                    |     |        | and_ln131                    | and       | auto      | 0       |
+|    or_ln131_fu_7226_p2                     |     |        | or_ln131                     | or        | auto      | 0       |
+|    and_ln131_1_fu_7231_p2                  |     |        | and_ln131_1                  | and       | auto      | 0       |
+|    instruction2_i_i12246307_idx_fu_7237_p3 |     |        | instruction2_i_i12246307_idx | select    | auto_sel  | 0       |
+|    select_ln39_fu_7243_p3                  |     |        | select_ln39                  | select    | auto_sel  | 0       |
+|    select_ln134_fu_11502_p3                |     |        | select_ln134                 | select    | auto_sel  | 0       |
+|    select_ln134_1_fu_11509_p3              |     |        | select_ln134_1               | select    | auto_sel  | 0       |
+|    sel_tmp22_fu_7256_p2                    |     |        | sel_tmp22                    | xor       | auto      | 0       |
+|    or_ln131_1_fu_7262_p2                   |     |        | or_ln131_1                   | or        | auto      | 0       |
+|    xor_ln74_fu_7267_p2                     |     |        | xor_ln74                     | xor       | auto      | 0       |
+|    and_ln131_2_fu_7272_p2                  |     |        | and_ln131_2                  | and       | auto      | 0       |
+|    and_ln131_3_fu_7278_p2                  |     |        | and_ln131_3                  | and       | auto      | 0       |
+|    or_ln131_2_fu_7283_p2                   |     |        | or_ln131_2                   | or        | auto      | 0       |
+|    f_state_instruction_3_fu_11516_p3       |     |        | f_state_instruction_3        | select    | auto_sel  | 0       |
+|    f_state_instruction_2_fu_11523_p3       |     |        | f_state_instruction_2        | select    | auto_sel  | 0       |
+|    and_ln134_demorgan_fu_7289_p2           |     |        | and_ln134_demorgan           | and       | auto      | 0       |
+|    and_ln134_fu_7295_p2                    |     |        | and_ln134                    | xor       | auto      | 0       |
+|    f_state_is_full_7_fu_7301_p2            |     |        | f_state_is_full_7            | and       | auto      | 0       |
+|    not_sel_tmp27_fu_7306_p2                |     |        | not_sel_tmp27                | xor       | auto      | 0       |
+|    and_ln134_1_fu_7312_p2                  |     |        | and_ln134_1                  | or        | auto      | 0       |
+|    f_state_is_full_6_fu_7318_p2            |     |        | f_state_is_full_6            | and       | auto      | 0       |
+|    sel_tmp65_fu_7323_p2                    |     |        | sel_tmp65                    | xor       | auto      | 0       |
+|    and_ln131_4_fu_7329_p2                  |     |        | and_ln131_4                  | and       | auto      | 0       |
+|    and_ln131_5_fu_7335_p2                  |     |        | and_ln131_5                  | and       | auto      | 0       |
+|    sparsemux_7_2_1_1_1_U10                 |     |        | instruction2_i_i12246306_idx | sparsemux | auto      | 0       |
+|    f_to_d_fetch_pc_1_fu_7367_p3            |     |        | f_to_d_fetch_pc_1            | select    | auto_sel  | 0       |
+|    f_to_d_instruction_1_fu_11530_p3        |     |        | f_to_d_instruction_1         | select    | auto_sel  | 0       |
+|    xor_ln136_fu_4406_p2                    |     |        | xor_ln136                    | xor       | auto      | 0       |
+|    c_13_fu_4412_p2                         |     |        | c_13                         | and       | auto      | 0       |
+|    xor_ln138_fu_4418_p2                    |     |        | xor_ln138                    | xor       | auto      | 0       |
+|    c_14_fu_4424_p2                         |     |        | c_14                         | and       | auto      | 0       |
+|    selected_hart_1_fu_4430_p2              |     |        | selected_hart_1              | or        | auto      | 0       |
+|    is_selected_6_fu_4436_p2                |     |        | is_selected_6                | or        | auto      | 0       |
+|    select_ln198_fu_7375_p3                 |     |        | select_ln198                 | select    | auto_sel  | 0       |
+|    select_ln198_1_fu_7382_p3               |     |        | select_ln198_1               | select    | auto_sel  | 0       |
+|    select_ln198_2_fu_7389_p3               |     |        | select_ln198_2               | select    | auto_sel  | 0       |
+|    select_ln198_3_fu_7396_p3               |     |        | select_ln198_3               | select    | auto_sel  | 0       |
+|    xor_ln198_fu_4442_p2                    |     |        | xor_ln198                    | xor       | auto      | 0       |
+|    d_state_instruction_4_fu_7403_p3        |     |        | d_state_instruction_4        | select    | auto_sel  | 0       |
+|    d_state_instruction_3_fu_7411_p3        |     |        | d_state_instruction_3        | select    | auto_sel  | 0       |
+|    d_state_fetch_pc_4_fu_7419_p3           |     |        | d_state_fetch_pc_4           | select    | auto_sel  | 0       |
+|    d_state_fetch_pc_3_fu_7427_p3           |     |        | d_state_fetch_pc_3           | select    | auto_sel  | 0       |
+|    or_ln198_fu_4448_p2                     |     |        | or_ln198                     | and       | auto      | 0       |
+|    d_state_is_full_3_fu_4454_p2            |     |        | d_state_is_full_3            | or        | auto      | 0       |
+|    or_ln198_1_fu_4460_p2                   |     |        | or_ln198_1                   | and       | auto      | 0       |
+|    d_state_is_full_2_fu_4466_p2            |     |        | d_state_is_full_2            | or        | auto      | 0       |
+|    xor_ln202_fu_4472_p2                    |     |        | xor_ln202                    | xor       | auto      | 0       |
+|    or_ln202_fu_4478_p2                     |     |        | or_ln202                     | or        | auto      | 0       |
+|    decoding_hart_fu_4484_p3                |     |        | decoding_hart                | select    | auto_sel  | 0       |
+|    select_ln203_fu_4492_p3                 |     |        | select_ln203                 | select    | auto_sel  | 0       |
+|    xor_ln207_fu_4520_p2                    |     |        | xor_ln207                    | xor       | auto      | 0       |
+|    d_state_is_full_9_fu_4526_p2            |     |        | d_state_is_full_9            | and       | auto      | 0       |
+|    d_state_is_full_8_fu_4532_p2            |     |        | d_state_is_full_8            | and       | auto      | 0       |
+|    select_ln102_fu_7440_p3                 |     |        | select_ln102                 | select    | auto_sel  | 0       |
+|    d_i_is_lui_fu_7457_p2                   |     |        | d_i_is_lui                   | seteq     | auto      | 0       |
+|    d_i_is_jal_fu_7463_p2                   |     |        | d_i_is_jal                   | seteq     | auto      | 0       |
+|    d_state_d_i_is_jalr_fu_7469_p2          |     |        | d_state_d_i_is_jalr          | seteq     | auto      | 0       |
+|    d_i_is_load_1_fu_7475_p2                |     |        | d_i_is_load_1                | seteq     | auto      | 0       |
+|    d_i_is_store_fu_7481_p2                 |     |        | d_i_is_store                 | seteq     | auto      | 0       |
+|    icmp_ln41_fu_7487_p2                    |     |        | icmp_ln41                    | seteq     | auto      | 0       |
+|    or_ln101_fu_7553_p2                     |     |        | or_ln101                     | or        | auto      | 0       |
+|    or_ln101_1_fu_7559_p2                   |     |        | or_ln101_1                   | or        | auto      | 0       |
+|    icmp_ln50_fu_7565_p2                    |     |        | icmp_ln50                    | setne     | auto      | 0       |
+|    icmp_ln51_fu_7602_p2                    |     |        | icmp_ln51                    | seteq     | auto      | 0       |
+|    or_ln51_fu_7608_p2                      |     |        | or_ln51                      | or        | auto      | 0       |
+|    or_ln51_1_fu_7614_p2                    |     |        | or_ln51_1                    | or        | auto      | 0       |
+|    or_ln51_2_fu_7620_p2                    |     |        | or_ln51_2                    | or        | auto      | 0       |
+|    or_ln51_3_fu_7626_p2                    |     |        | or_ln51_3                    | or        | auto      | 0       |
+|    icmp_ln54_fu_7632_p2                    |     |        | icmp_ln54                    | setne     | auto      | 0       |
+|    xor_ln51_fu_7638_p2                     |     |        | xor_ln51                     | xor       | auto      | 0       |
+|    d_i_is_rs2_reg_fu_7644_p2               |     |        | d_i_is_rs2_reg               | and       | auto      | 0       |
+|    d_i_is_ret_fu_7650_p2                   |     |        | d_i_is_ret                   | seteq     | auto      | 0       |
+|    icmp_ln63_fu_7656_p2                    |     |        | icmp_ln63                    | seteq     | auto      | 0       |
+|    d_i_is_r_type_fu_11537_p2               |     |        | d_i_is_r_type                | seteq     | auto      | 0       |
+|    select_ln107_fu_7672_p3                 |     |        | select_ln107                 | select    | auto_sel  | 0       |
+|    d_to_f_relative_pc_1_ph_v_fu_11665_p3   |     |        | d_to_f_relative_pc_1_ph_v    | select    | auto_sel  | 0       |
+|    d_to_f_relative_pc_1_ph_fu_11672_p2     |     |        | d_to_f_relative_pc_1_ph      | add       | fabric    | 0       |
+|    icmp_ln228_fu_7679_p2                   |     |        | icmp_ln228                   | setne     | auto      | 0       |
+|    xor_ln229_fu_7685_p2                    |     |        | xor_ln229                    | xor       | auto      | 0       |
+|    xor_ln228_fu_7691_p2                    |     |        | xor_ln228                    | xor       | auto      | 0       |
+|    or_ln228_1_fu_7697_p2                   |     |        | or_ln228_1                   | or        | auto      | 0       |
+|    or_ln228_fu_7703_p2                     |     |        | or_ln228                     | or        | auto      | 0       |
+|    and_ln228_fu_7709_p2                    |     |        | and_ln228                    | and       | auto      | 0       |
+|    sparsemux_65_5_1_1_1_U2                 |     |        | tmp_9                        | sparsemux | auto      | 0       |
+|    is_locked_1_fu_4769_p2                  |     |        | is_locked_1                  | and       | auto      | 0       |
+|    sparsemux_65_5_1_1_1_U3                 |     |        | tmp_s                        | sparsemux | auto      | 0       |
+|    is_locked_2_fu_4911_p2                  |     |        | is_locked_2                  | and       | auto      | 0       |
+|    wait_12_fu_4917_p2                      |     |        | wait_12                      | or        | auto      | 0       |
+|    xor_ln80_fu_4923_p2                     |     |        | xor_ln80                     | xor       | auto      | 0       |
+|    and_ln80_fu_4929_p2                     |     |        | and_ln80                     | and       | auto      | 0       |
+|    xor_ln81_fu_4935_p2                     |     |        | xor_ln81                     | xor       | auto      | 0       |
+|    c_4_fu_4941_p2                          |     |        | c_4                          | and       | auto      | 0       |
+|    sparsemux_65_5_1_1_1_U4                 |     |        | tmp_4                        | sparsemux | auto      | 0       |
+|    is_locked_1_1_fu_5083_p2                |     |        | is_locked_1_1                | and       | auto      | 0       |
+|    sparsemux_65_5_1_1_1_U5                 |     |        | tmp_5                        | sparsemux | auto      | 0       |
+|    is_locked_2_1_fu_5225_p2                |     |        | is_locked_2_1                | and       | auto      | 0       |
+|    wait_12_1_fu_5231_p2                    |     |        | wait_12_1                    | or        | auto      | 0       |
+|    xor_ln91_fu_5237_p2                     |     |        | xor_ln91                     | xor       | auto      | 0       |
+|    and_ln91_fu_5243_p2                     |     |        | and_ln91                     | and       | auto      | 0       |
+|    xor_ln92_fu_5249_p2                     |     |        | xor_ln92                     | xor       | auto      | 0       |
+|    c_5_fu_5255_p2                          |     |        | c_5                          | and       | auto      | 0       |
+|    or_ln162_fu_5261_p2                     |     |        | or_ln162                     | or        | auto      | 0       |
+|    selected_hart_2_fu_5267_p2              |     |        | selected_hart_2              | or        | auto      | 0       |
+|    is_selected_7_fu_5273_p2                |     |        | is_selected_7                | or        | auto      | 0       |
+|    i_state_relative_pc_11_fu_11708_p3      |     |        | i_state_relative_pc_11       | select    | auto_sel  | 0       |
+|    i_state_relative_pc_10_fu_11715_p3      |     |        | i_state_relative_pc_10       | select    | auto_sel  | 0       |
+|    i_state_d_i_is_r_type_7_fu_7979_p3      |     |        | i_state_d_i_is_r_type_7      | select    | auto_sel  | 0       |
+|    i_state_d_i_is_r_type_4_fu_7986_p3      |     |        | i_state_d_i_is_r_type_4      | select    | auto_sel  | 0       |
+|    i_state_d_i_has_no_dest_7_fu_5279_p3    |     |        | i_state_d_i_has_no_dest_7    | select    | auto_sel  | 0       |
+|    i_state_d_i_has_no_dest_4_fu_5287_p3    |     |        | i_state_d_i_has_no_dest_4    | select    | auto_sel  | 0       |
+|    i_state_d_i_is_lui_7_fu_7993_p3         |     |        | i_state_d_i_is_lui_7         | select    | auto_sel  | 0       |
+|    i_state_d_i_is_lui_4_fu_8000_p3         |     |        | i_state_d_i_is_lui_4         | select    | auto_sel  | 0       |
+|    i_state_d_i_is_ret_7_fu_8007_p3         |     |        | i_state_d_i_is_ret_7         | select    | auto_sel  | 0       |
+|    i_state_d_i_is_ret_4_fu_8014_p3         |     |        | i_state_d_i_is_ret_4         | select    | auto_sel  | 0       |
+|    i_state_d_i_is_jal_7_fu_8021_p3         |     |        | i_state_d_i_is_jal_7         | select    | auto_sel  | 0       |
+|    i_state_d_i_is_jal_4_fu_8028_p3         |     |        | i_state_d_i_is_jal_4         | select    | auto_sel  | 0       |
+|    i_state_d_i_is_jalr_7_fu_8035_p3        |     |        | i_state_d_i_is_jalr_7        | select    | auto_sel  | 0       |
+|    i_state_d_i_is_jalr_4_fu_8042_p3        |     |        | i_state_d_i_is_jalr_4        | select    | auto_sel  | 0       |
+|    i_state_d_i_is_branch_7_fu_8049_p3      |     |        | i_state_d_i_is_branch_7      | select    | auto_sel  | 0       |
+|    i_state_d_i_is_branch_4_fu_8056_p3      |     |        | i_state_d_i_is_branch_4      | select    | auto_sel  | 0       |
+|    i_state_d_i_is_store_7_fu_8063_p3       |     |        | i_state_d_i_is_store_7       | select    | auto_sel  | 0       |
+|    i_state_d_i_is_store_4_fu_8070_p3       |     |        | i_state_d_i_is_store_4       | select    | auto_sel  | 0       |
+|    i_state_d_i_is_load_7_fu_8077_p3        |     |        | i_state_d_i_is_load_7        | select    | auto_sel  | 0       |
+|    i_state_d_i_is_load_4_fu_8084_p3        |     |        | i_state_d_i_is_load_4        | select    | auto_sel  | 0       |
+|    i_state_d_i_is_rs2_reg_7_fu_5295_p3     |     |        | i_state_d_i_is_rs2_reg_7     | select    | auto_sel  | 0       |
+|    i_state_d_i_is_rs2_reg_4_fu_5303_p3     |     |        | i_state_d_i_is_rs2_reg_4     | select    | auto_sel  | 0       |
+|    i_state_d_i_is_rs1_reg_7_fu_5311_p3     |     |        | i_state_d_i_is_rs1_reg_7     | select    | auto_sel  | 0       |
+|    i_state_d_i_is_rs1_reg_4_fu_5319_p3     |     |        | i_state_d_i_is_rs1_reg_4     | select    | auto_sel  | 0       |
+|    i_state_d_i_imm_11_fu_8091_p3           |     |        | i_state_d_i_imm_11           | select    | auto_sel  | 0       |
+|    i_state_d_i_imm_10_fu_8098_p3           |     |        | i_state_d_i_imm_10           | select    | auto_sel  | 0       |
+|    i_state_d_i_type_7_fu_8105_p3           |     |        | i_state_d_i_type_7           | select    | auto_sel  | 0       |
+|    i_state_d_i_type_4_fu_8112_p3           |     |        | i_state_d_i_type_4           | select    | auto_sel  | 0       |
+|    i_state_d_i_func7_7_fu_8119_p3          |     |        | i_state_d_i_func7_7          | select    | auto_sel  | 0       |
+|    i_state_d_i_func7_4_fu_8126_p3          |     |        | i_state_d_i_func7_4          | select    | auto_sel  | 0       |
+|    i_state_d_i_rs2_11_fu_5327_p3           |     |        | i_state_d_i_rs2_11           | select    | auto_sel  | 0       |
+|    i_state_d_i_rs2_10_fu_5335_p3           |     |        | i_state_d_i_rs2_10           | select    | auto_sel  | 0       |
+|    i_state_d_i_rs1_11_fu_5343_p3           |     |        | i_state_d_i_rs1_11           | select    | auto_sel  | 0       |
+|    i_state_d_i_rs1_10_fu_5351_p3           |     |        | i_state_d_i_rs1_10           | select    | auto_sel  | 0       |
+|    i_state_d_i_func3_11_fu_8133_p3         |     |        | i_state_d_i_func3_11         | select    | auto_sel  | 0       |
+|    i_state_d_i_func3_10_fu_8140_p3         |     |        | i_state_d_i_func3_10         | select    | auto_sel  | 0       |
+|    i_state_d_i_rd_7_fu_5359_p3             |     |        | i_state_d_i_rd_7             | select    | auto_sel  | 0       |
+|    i_state_d_i_rd_4_fu_5367_p3             |     |        | i_state_d_i_rd_4             | select    | auto_sel  | 0       |
+|    i_state_fetch_pc_11_fu_8147_p3          |     |        | i_state_fetch_pc_11          | select    | auto_sel  | 0       |
+|    i_state_fetch_pc_10_fu_8154_p3          |     |        | i_state_fetch_pc_10          | select    | auto_sel  | 0       |
+|    xor_ln210_fu_8161_p2                    |     |        | xor_ln210                    | xor       | auto      | 0       |
+|    sparsemux_65_5_1_1_1_U6                 |     |        | tmp_7                        | sparsemux | auto      | 0       |
+|    sparsemux_65_5_1_1_1_U7                 |     |        | tmp_2                        | sparsemux | auto      | 0       |
+|    select_ln30_fu_5647_p3                  |     |        | select_ln30                  | select    | auto_sel  | 0       |
+|    is_locked_1_2_fu_5655_p2                |     |        | is_locked_1_2                | and       | auto      | 0       |
+|    sparsemux_65_5_1_1_1_U8                 |     |        | tmp_3                        | sparsemux | auto      | 0       |
+|    sparsemux_65_5_1_1_1_U9                 |     |        | tmp_6                        | sparsemux | auto      | 0       |
+|    select_ln33_fu_5933_p3                  |     |        | select_ln33                  | select    | auto_sel  | 0       |
+|    is_locked_2_2_fu_5941_p2                |     |        | is_locked_2_2                | and       | auto      | 0       |
+|    i_state_wait_12_2_fu_5947_p2            |     |        | i_state_wait_12_2            | or        | auto      | 0       |
+|    select_ln34_fu_5953_p3                  |     |        | select_ln34                  | select    | auto_sel  | 0       |
+|    select_ln34_1_fu_5961_p3                |     |        | select_ln34_1                | select    | auto_sel  | 0       |
+|    i_state_wait_12_4_fu_5969_p3            |     |        | i_state_wait_12_4            | select    | auto_sel  | 0       |
+|    i_state_wait_12_3_fu_5977_p3            |     |        | i_state_wait_12_3            | select    | auto_sel  | 0       |
+|    i_state_relative_pc_6_fu_11722_p3       |     |        | i_state_relative_pc_6        | select    | auto_sel  | 0       |
+|    i_state_relative_pc_5_fu_11730_p3       |     |        | i_state_relative_pc_5        | select    | auto_sel  | 0       |
+|    i_state_d_i_is_r_type_6_fu_8166_p3      |     |        | i_state_d_i_is_r_type_6      | select    | auto_sel  | 0       |
+|    i_state_d_i_is_r_type_5_fu_8174_p3      |     |        | i_state_d_i_is_r_type_5      | select    | auto_sel  | 0       |
+|    i_state_d_i_has_no_dest_6_fu_5985_p3    |     |        | i_state_d_i_has_no_dest_6    | select    | auto_sel  | 0       |
+|    i_state_d_i_has_no_dest_5_fu_5993_p3    |     |        | i_state_d_i_has_no_dest_5    | select    | auto_sel  | 0       |
+|    i_state_d_i_is_lui_6_fu_8182_p3         |     |        | i_state_d_i_is_lui_6         | select    | auto_sel  | 0       |
+|    i_state_d_i_is_lui_5_fu_8190_p3         |     |        | i_state_d_i_is_lui_5         | select    | auto_sel  | 0       |
+|    i_state_d_i_is_ret_6_fu_8198_p3         |     |        | i_state_d_i_is_ret_6         | select    | auto_sel  | 0       |
+|    i_state_d_i_is_ret_5_fu_8206_p3         |     |        | i_state_d_i_is_ret_5         | select    | auto_sel  | 0       |
+|    i_state_d_i_is_jal_6_fu_8214_p3         |     |        | i_state_d_i_is_jal_6         | select    | auto_sel  | 0       |
+|    i_state_d_i_is_jal_5_fu_8222_p3         |     |        | i_state_d_i_is_jal_5         | select    | auto_sel  | 0       |
+|    i_state_d_i_is_jalr_6_fu_8230_p3        |     |        | i_state_d_i_is_jalr_6        | select    | auto_sel  | 0       |
+|    i_state_d_i_is_jalr_5_fu_8238_p3        |     |        | i_state_d_i_is_jalr_5        | select    | auto_sel  | 0       |
+|    i_state_d_i_is_branch_6_fu_8246_p3      |     |        | i_state_d_i_is_branch_6      | select    | auto_sel  | 0       |
+|    i_state_d_i_is_branch_5_fu_8254_p3      |     |        | i_state_d_i_is_branch_5      | select    | auto_sel  | 0       |
+|    i_state_d_i_is_store_6_fu_8262_p3       |     |        | i_state_d_i_is_store_6       | select    | auto_sel  | 0       |
+|    i_state_d_i_is_store_5_fu_8270_p3       |     |        | i_state_d_i_is_store_5       | select    | auto_sel  | 0       |
+|    i_state_d_i_is_load_6_fu_8278_p3        |     |        | i_state_d_i_is_load_6        | select    | auto_sel  | 0       |
+|    i_state_d_i_is_load_5_fu_8286_p3        |     |        | i_state_d_i_is_load_5        | select    | auto_sel  | 0       |
+|    i_state_d_i_is_rs2_reg_6_fu_6001_p3     |     |        | i_state_d_i_is_rs2_reg_6     | select    | auto_sel  | 0       |
+|    i_state_d_i_is_rs2_reg_5_fu_6009_p3     |     |        | i_state_d_i_is_rs2_reg_5     | select    | auto_sel  | 0       |
+|    i_state_d_i_is_rs1_reg_6_fu_6017_p3     |     |        | i_state_d_i_is_rs1_reg_6     | select    | auto_sel  | 0       |
+|    i_state_d_i_is_rs1_reg_5_fu_6025_p3     |     |        | i_state_d_i_is_rs1_reg_5     | select    | auto_sel  | 0       |
+|    i_state_d_i_imm_6_fu_8294_p3            |     |        | i_state_d_i_imm_6            | select    | auto_sel  | 0       |
+|    i_state_d_i_imm_5_fu_8302_p3            |     |        | i_state_d_i_imm_5            | select    | auto_sel  | 0       |
+|    i_state_d_i_type_6_fu_8310_p3           |     |        | i_state_d_i_type_6           | select    | auto_sel  | 0       |
+|    i_state_d_i_type_5_fu_8318_p3           |     |        | i_state_d_i_type_5           | select    | auto_sel  | 0       |
+|    i_state_d_i_func7_6_fu_8326_p3          |     |        | i_state_d_i_func7_6          | select    | auto_sel  | 0       |
+|    i_state_d_i_func7_5_fu_8334_p3          |     |        | i_state_d_i_func7_5          | select    | auto_sel  | 0       |
+|    i_state_d_i_rs2_6_fu_6033_p3            |     |        | i_state_d_i_rs2_6            | select    | auto_sel  | 0       |
+|    i_state_d_i_rs2_5_fu_6041_p3            |     |        | i_state_d_i_rs2_5            | select    | auto_sel  | 0       |
+|    i_state_d_i_rs1_6_fu_6049_p3            |     |        | i_state_d_i_rs1_6            | select    | auto_sel  | 0       |
+|    i_state_d_i_rs1_5_fu_6057_p3            |     |        | i_state_d_i_rs1_5            | select    | auto_sel  | 0       |
+|    i_state_d_i_func3_6_fu_8342_p3          |     |        | i_state_d_i_func3_6          | select    | auto_sel  | 0       |
+|    i_state_d_i_func3_5_fu_8350_p3          |     |        | i_state_d_i_func3_5          | select    | auto_sel  | 0       |
+|    i_state_d_i_rd_6_fu_6065_p3             |     |        | i_state_d_i_rd_6             | select    | auto_sel  | 0       |
+|    i_state_d_i_rd_5_fu_6073_p3             |     |        | i_state_d_i_rd_5             | select    | auto_sel  | 0       |
+|    i_state_fetch_pc_6_fu_8358_p3           |     |        | i_state_fetch_pc_6           | select    | auto_sel  | 0       |
+|    i_state_fetch_pc_5_fu_8366_p3           |     |        | i_state_fetch_pc_5           | select    | auto_sel  | 0       |
+|    i_state_is_full_3_fu_8374_p2            |     |        | i_state_is_full_3            | and       | auto      | 0       |
+|    i_state_is_full_5_fu_8379_p2            |     |        | i_state_is_full_5            | or        | auto      | 0       |
+|    i_state_is_full_2_fu_8385_p2            |     |        | i_state_is_full_2            | and       | auto      | 0       |
+|    i_state_is_full_4_fu_8391_p2            |     |        | i_state_is_full_4            | or        | auto      | 0       |
+|    xor_ln214_fu_6081_p2                    |     |        | xor_ln214                    | xor       | auto      | 0       |
+|    or_ln214_fu_6087_p2                     |     |        | or_ln214                     | or        | auto      | 0       |
+|    select_ln215_fu_6093_p3                 |     |        | select_ln215                 | select    | auto_sel  | 0       |
+|    issuing_hart_fu_6101_p3                 |     |        | issuing_hart                 | select    | auto_sel  | 0       |
+|    i_to_e_d_i_has_no_dest_fu_6109_p3       |     |        | i_to_e_d_i_has_no_dest       | select    | auto_sel  | 0       |
+|    xor_ln221_fu_8397_p2                    |     |        | xor_ln221                    | xor       | auto      | 0       |
+|    select_ln216_fu_6117_p3                 |     |        | select_ln216                 | select    | auto_sel  | 0       |
+|    select_ln221_3_fu_6125_p3               |     |        | select_ln221_3               | select    | auto_sel  | 0       |
+|    xor_ln221_1_fu_6133_p2                  |     |        | xor_ln221_1                  | xor       | auto      | 0       |
+|    or_ln215_fu_6139_p2                     |     |        | or_ln215                     | or        | auto      | 0       |
+|    and_ln215_fu_6145_p2                    |     |        | and_ln215                    | and       | auto      | 0       |
+|    cmp_i_i3786375_fu_8402_p3               |     |        | cmp_i_i3786375               | select    | auto_sel  | 0       |
+|    empty_43_fu_8408_p3                     |     |        | empty_43                     | select    | auto_sel  | 0       |
+|    conv_i30_i6373_fu_8413_p3               |     |        | conv_i30_i6373               | select    | auto_sel  | 0       |
+|    i_to_e_d_i_rd_fu_8418_p3                |     |        | i_to_e_d_i_rd                | select    | auto_sel  | 0       |
+|    i_hart_1_fu_8660_p2                     |     |        | select_ln221                 | select    | auto_sel  | 0       |
+|    i_destination_1_fu_8680_p2              |     |        | select_ln221_1               | select    | auto_sel  | 0       |
+|    i_to_e_d_i_rs1_fu_8440_p3               |     |        | i_to_e_d_i_rs1               | select    | auto_sel  | 0       |
+|    i_to_e_d_i_rs2_fu_8446_p3               |     |        | i_to_e_d_i_rs2               | select    | auto_sel  | 0       |
+|    sparsemux_65_5_32_1_1_U18               |     |        | tmp_8                        | sparsemux | auto      | 0       |
+|    sparsemux_65_5_32_1_1_U19               |     |        | tmp_1                        | sparsemux | auto      | 0       |
+|    i_to_e_rv1_fu_12706_p3                  |     |        | i_to_e_rv1                   | select    | auto_sel  | 0       |
+|    sparsemux_65_5_32_1_1_U20               |     |        | tmp_10                       | sparsemux | auto      | 0       |
+|    sparsemux_65_5_32_1_1_U21               |     |        | tmp_11                       | sparsemux | auto      | 0       |
+|    i_to_e_rv2_fu_12983_p3                  |     |        | i_to_e_rv2                   | select    | auto_sel  | 0       |
+|    i_to_e_fetch_pc_fu_8452_p3              |     |        | i_to_e_fetch_pc              | select    | auto_sel  | 0       |
+|    i_to_e_d_i_func3_fu_8460_p3             |     |        | i_to_e_d_i_func3             | select    | auto_sel  | 0       |
+|    i_to_e_d_i_func7_fu_8468_p3             |     |        | i_to_e_d_i_func7             | select    | auto_sel  | 0       |
+|    i_to_e_d_i_type_fu_8476_p3              |     |        | i_to_e_d_i_type              | select    | auto_sel  | 0       |
+|    i_to_e_d_i_imm_fu_8484_p3               |     |        | i_to_e_d_i_imm               | select    | auto_sel  | 0       |
+|    i_to_e_d_i_is_load_fu_8492_p3           |     |        | i_to_e_d_i_is_load           | select    | auto_sel  | 0       |
+|    i_to_e_d_i_is_store_fu_8500_p3          |     |        | i_to_e_d_i_is_store          | select    | auto_sel  | 0       |
+|    i_to_e_d_i_is_branch_fu_8508_p3         |     |        | i_to_e_d_i_is_branch         | select    | auto_sel  | 0       |
+|    i_to_e_d_i_is_jalr_fu_8516_p3           |     |        | i_to_e_d_i_is_jalr           | select    | auto_sel  | 0       |
+|    i_to_e_d_i_is_jal_fu_8524_p3            |     |        | i_to_e_d_i_is_jal            | select    | auto_sel  | 0       |
+|    i_to_e_d_i_is_ret_fu_8532_p3            |     |        | i_to_e_d_i_is_ret            | select    | auto_sel  | 0       |
+|    i_to_e_d_i_is_lui_fu_8540_p3            |     |        | i_to_e_d_i_is_lui            | select    | auto_sel  | 0       |
+|    i_to_e_d_i_is_r_type_fu_8548_p3         |     |        | i_to_e_d_i_is_r_type         | select    | auto_sel  | 0       |
+|    i_to_e_relative_pc_fu_11738_p3          |     |        | i_to_e_relative_pc           | select    | auto_sel  | 0       |
+|    or_ln215_1_fu_6151_p2                   |     |        | or_ln215_1                   | or        | auto      | 0       |
+|    xor_ln215_fu_6157_p2                    |     |        | xor_ln215                    | xor       | auto      | 0       |
+|    and_ln215_1_fu_6163_p2                  |     |        | and_ln215_1                  | and       | auto      | 0       |
+|    and_ln216_fu_8556_p2                    |     |        | and_ln216                    | and       | auto      | 0       |
+|    cmp_i_i3786374_fu_8560_p3               |     |        | cmp_i_i3786374               | select    | auto_sel  | 0       |
+|    conv_i30_i6372_fu_8567_p3               |     |        | conv_i30_i6372               | select    | auto_sel  | 0       |
+|    i_destination_1_fu_8680_p4              |     |        | select_ln223                 | select    | auto_sel  | 0       |
+|    xor_ln216_fu_8579_p2                    |     |        | xor_ln216                    | xor       | auto      | 0       |
+|    and_ln216_1_fu_8584_p2                  |     |        | and_ln216_1                  | and       | auto      | 0       |
+|    or_ln216_fu_8589_p2                     |     |        | or_ln216                     | or        | auto      | 0       |
+|    i_state_is_full_7_demorgan_fu_8594_p2   |     |        | i_state_is_full_7_demorgan   | and       | auto      | 0       |
+|    i_state_is_full_7_fu_8600_p2            |     |        | i_state_is_full_7            | xor       | auto      | 0       |
+|    i_state_is_full_9_fu_8606_p2            |     |        | i_state_is_full_9            | and       | auto      | 0       |
+|    not_sel_tmp192_fu_8612_p2               |     |        | not_sel_tmp192               | xor       | auto      | 0       |
+|    i_state_is_full_6_fu_8618_p2            |     |        | i_state_is_full_6            | or        | auto      | 0       |
+|    i_state_is_full_8_fu_8624_p2            |     |        | i_state_is_full_8            | and       | auto      | 0       |
+|    sel_tmp212_fu_8630_p2                   |     |        | sel_tmp212                   | xor       | auto      | 0       |
+|    and_ln215_2_fu_8635_p2                  |     |        | and_ln215_2                  | and       | auto      | 0       |
+|    or_ln216_1_fu_8640_p2                   |     |        | or_ln216_1                   | or        | auto      | 0       |
+|    and_ln216_2_fu_8646_p2                  |     |        | and_ln216_2                  | and       | auto      | 0       |
+|    sparsemux_7_2_1_1_1_U11                 |     |        | i_hart_1                     | sparsemux | auto      | 0       |
+|    sparsemux_7_2_5_1_1_U12                 |     |        | i_destination_1              | sparsemux | auto      | 0       |
+|    empty_44_fu_8700_p2                     |     |        | empty_44                     | and       | auto      | 0       |
+|    i_to_e_hart_1_fu_8706_p3                |     |        | i_to_e_hart_1                | select    | auto_sel  | 0       |
+|    i_to_e_fetch_pc_1_fu_8713_p3            |     |        | i_to_e_fetch_pc_1            | select    | auto_sel  | 0       |
+|    i_to_e_d_i_rd_1_fu_8720_p3              |     |        | i_to_e_d_i_rd_1              | select    | auto_sel  | 0       |
+|    i_to_e_d_i_func3_1_fu_8728_p3           |     |        | i_to_e_d_i_func3_1           | select    | auto_sel  | 0       |
+|    i_to_e_d_i_rs2_1_fu_8735_p3             |     |        | i_to_e_d_i_rs2_1             | select    | auto_sel  | 0       |
+|    i_to_e_d_i_func7_1_fu_8743_p3           |     |        | i_to_e_d_i_func7_1           | select    | auto_sel  | 0       |
+|    i_to_e_d_i_type_1_fu_8751_p3            |     |        | i_to_e_d_i_type_1            | select    | auto_sel  | 0       |
+|    i_to_e_d_i_imm_1_fu_8759_p3             |     |        | i_to_e_d_i_imm_1             | select    | auto_sel  | 0       |
+|    i_to_e_d_i_is_load_1_fu_8766_p3         |     |        | i_to_e_d_i_is_load_1         | select    | auto_sel  | 0       |
+|    i_to_e_d_i_is_store_1_fu_8773_p3        |     |        | i_to_e_d_i_is_store_1        | select    | auto_sel  | 0       |
+|    i_to_e_d_i_is_branch_1_fu_8780_p3       |     |        | i_to_e_d_i_is_branch_1       | select    | auto_sel  | 0       |
+|    i_to_e_d_i_is_jalr_1_fu_8788_p3         |     |        | i_to_e_d_i_is_jalr_1         | select    | auto_sel  | 0       |
+|    i_to_e_d_i_is_jal_1_fu_8796_p3          |     |        | i_to_e_d_i_is_jal_1          | select    | auto_sel  | 0       |
+|    i_to_e_d_i_is_ret_1_fu_8804_p3          |     |        | i_to_e_d_i_is_ret_1          | select    | auto_sel  | 0       |
+|    i_to_e_d_i_is_lui_1_fu_8812_p3          |     |        | i_to_e_d_i_is_lui_1          | select    | auto_sel  | 0       |
+|    i_to_e_d_i_has_no_dest_1_fu_8820_p3     |     |        | i_to_e_d_i_has_no_dest_1     | select    | auto_sel  | 0       |
+|    i_to_e_d_i_is_r_type_1_fu_8828_p3       |     |        | i_to_e_d_i_is_r_type_1       | select    | auto_sel  | 0       |
+|    i_to_e_relative_pc_1_fu_11745_p3        |     |        | i_to_e_relative_pc_1         | select    | auto_sel  | 0       |
+|    i_to_e_rv1_1_fu_12990_p3                |     |        | i_to_e_rv1_1                 | select    | auto_sel  | 0       |
+|    i_to_e_rv2_1_fu_12996_p3                |     |        | i_to_e_rv2_1                 | select    | auto_sel  | 0       |
+|    xor_ln115_fu_2995_p2                    |     |        | xor_ln115                    | xor       | auto      | 0       |
+|    c_15_fu_6169_p2                         |     |        | c_15                         | and       | auto      | 0       |
+|    xor_ln117_fu_6174_p2                    |     |        | xor_ln117                    | xor       | auto      | 0       |
+|    c_16_fu_6179_p2                         |     |        | c_16                         | and       | auto      | 0       |
+|    selected_hart_3_fu_6185_p2              |     |        | selected_hart_3              | or        | auto      | 0       |
+|    is_selected_8_fu_6190_p2                |     |        | is_selected_8                | or        | auto      | 0       |
+|    select_ln187_fu_11752_p3                |     |        | select_ln187                 | select    | auto_sel  | 0       |
+|    select_ln187_1_fu_11759_p3              |     |        | select_ln187_1               | select    | auto_sel  | 0       |
+|    select_ln187_2_fu_11766_p3              |     |        | select_ln187_2               | select    | auto_sel  | 0       |
+|    select_ln187_3_fu_11773_p3              |     |        | select_ln187_3               | select    | auto_sel  | 0       |
+|    select_ln187_4_fu_8836_p3               |     |        | select_ln187_4               | select    | auto_sel  | 0       |
+|    select_ln187_5_fu_8843_p3               |     |        | select_ln187_5               | select    | auto_sel  | 0       |
+|    select_ln187_6_fu_8850_p3               |     |        | select_ln187_6               | select    | auto_sel  | 0       |
+|    select_ln187_7_fu_8857_p3               |     |        | select_ln187_7               | select    | auto_sel  | 0       |
+|    select_ln187_8_fu_8864_p3               |     |        | select_ln187_8               | select    | auto_sel  | 0       |
+|    select_ln187_9_fu_8871_p3               |     |        | select_ln187_9               | select    | auto_sel  | 0       |
+|    select_ln187_10_fu_8878_p3              |     |        | select_ln187_10              | select    | auto_sel  | 0       |
+|    select_ln187_11_fu_8885_p3              |     |        | select_ln187_11              | select    | auto_sel  | 0       |
+|    select_ln187_12_fu_8892_p3              |     |        | select_ln187_12              | select    | auto_sel  | 0       |
+|    select_ln187_13_fu_8899_p3              |     |        | select_ln187_13              | select    | auto_sel  | 0       |
+|    select_ln187_14_fu_8906_p3              |     |        | select_ln187_14              | select    | auto_sel  | 0       |
+|    select_ln187_15_fu_8913_p3              |     |        | select_ln187_15              | select    | auto_sel  | 0       |
+|    select_ln187_16_fu_8920_p3              |     |        | select_ln187_16              | select    | auto_sel  | 0       |
+|    select_ln187_17_fu_8927_p3              |     |        | select_ln187_17              | select    | auto_sel  | 0       |
+|    select_ln187_18_fu_8934_p3              |     |        | select_ln187_18              | select    | auto_sel  | 0       |
+|    select_ln187_19_fu_8941_p3              |     |        | select_ln187_19              | select    | auto_sel  | 0       |
+|    select_ln187_20_fu_6196_p3              |     |        | select_ln187_20              | select    | auto_sel  | 0       |
+|    select_ln187_21_fu_6204_p3              |     |        | select_ln187_21              | select    | auto_sel  | 0       |
+|    select_ln187_22_fu_6212_p3              |     |        | select_ln187_22              | select    | auto_sel  | 0       |
+|    select_ln187_23_fu_6220_p3              |     |        | select_ln187_23              | select    | auto_sel  | 0       |
+|    select_ln187_24_fu_6228_p3              |     |        | select_ln187_24              | select    | auto_sel  | 0       |
+|    select_ln187_25_fu_6236_p3              |     |        | select_ln187_25              | select    | auto_sel  | 0       |
+|    select_ln187_26_fu_8948_p3              |     |        | select_ln187_26              | select    | auto_sel  | 0       |
+|    select_ln187_27_fu_8955_p3              |     |        | select_ln187_27              | select    | auto_sel  | 0       |
+|    select_ln187_28_fu_8962_p3              |     |        | select_ln187_28              | select    | auto_sel  | 0       |
+|    select_ln187_29_fu_8969_p3              |     |        | select_ln187_29              | select    | auto_sel  | 0       |
+|    select_ln187_30_fu_8976_p3              |     |        | select_ln187_30              | select    | auto_sel  | 0       |
+|    select_ln187_31_fu_8983_p3              |     |        | select_ln187_31              | select    | auto_sel  | 0       |
+|    select_ln187_32_fu_6244_p3              |     |        | select_ln187_32              | select    | auto_sel  | 0       |
+|    select_ln187_33_fu_6252_p3              |     |        | select_ln187_33              | select    | auto_sel  | 0       |
+|    select_ln187_34_fu_8990_p3              |     |        | select_ln187_34              | select    | auto_sel  | 0       |
+|    select_ln187_35_fu_8997_p3              |     |        | select_ln187_35              | select    | auto_sel  | 0       |
+|    select_ln187_36_fu_6260_p3              |     |        | select_ln187_36              | select    | auto_sel  | 0       |
+|    select_ln187_37_fu_6268_p3              |     |        | select_ln187_37              | select    | auto_sel  | 0       |
+|    xor_ln187_fu_6276_p2                    |     |        | xor_ln187                    | xor       | auto      | 0       |
+|    e_state_relative_pc_1_fu_11780_p3       |     |        | e_state_relative_pc_1        | select    | auto_sel  | 0       |
+|    e_state_relative_pc_fu_11788_p3         |     |        | e_state_relative_pc          | select    | auto_sel  | 0       |
+|    e_state_rv2_4_fu_11796_p3               |     |        | e_state_rv2_4                | select    | auto_sel  | 0       |
+|    e_state_rv2_3_fu_11804_p3               |     |        | e_state_rv2_3                | select    | auto_sel  | 0       |
+|    e_state_rv1_4_fu_9004_p3                |     |        | e_state_rv1_4                | select    | auto_sel  | 0       |
+|    e_state_rv1_3_fu_9012_p3                |     |        | e_state_rv1_3                | select    | auto_sel  | 0       |
+|    e_state_d_i_is_r_type_4_fu_9020_p3      |     |        | e_state_d_i_is_r_type_4      | select    | auto_sel  | 0       |
+|    e_state_d_i_is_r_type_3_fu_9028_p3      |     |        | e_state_d_i_is_r_type_3      | select    | auto_sel  | 0       |
+|    e_state_d_i_has_no_dest_4_fu_9036_p3    |     |        | e_state_d_i_has_no_dest_4    | select    | auto_sel  | 0       |
+|    e_state_d_i_has_no_dest_3_fu_9044_p3    |     |        | e_state_d_i_has_no_dest_3    | select    | auto_sel  | 0       |
+|    e_state_d_i_is_lui_4_fu_9052_p3         |     |        | e_state_d_i_is_lui_4         | select    | auto_sel  | 0       |
+|    e_state_d_i_is_lui_3_fu_9060_p3         |     |        | e_state_d_i_is_lui_3         | select    | auto_sel  | 0       |
+|    e_state_d_i_is_ret_4_fu_9068_p3         |     |        | e_state_d_i_is_ret_4         | select    | auto_sel  | 0       |
+|    e_state_d_i_is_ret_3_fu_9076_p3         |     |        | e_state_d_i_is_ret_3         | select    | auto_sel  | 0       |
+|    e_state_d_i_is_jal_4_fu_9084_p3         |     |        | e_state_d_i_is_jal_4         | select    | auto_sel  | 0       |
+|    e_state_d_i_is_jal_3_fu_9092_p3         |     |        | e_state_d_i_is_jal_3         | select    | auto_sel  | 0       |
+|    e_state_d_i_is_jalr_4_fu_9100_p3        |     |        | e_state_d_i_is_jalr_4        | select    | auto_sel  | 0       |
+|    e_state_d_i_is_jalr_3_fu_9108_p3        |     |        | e_state_d_i_is_jalr_3        | select    | auto_sel  | 0       |
+|    e_state_d_i_is_branch_4_fu_9116_p3      |     |        | e_state_d_i_is_branch_4      | select    | auto_sel  | 0       |
+|    e_state_d_i_is_branch_3_fu_9124_p3      |     |        | e_state_d_i_is_branch_3      | select    | auto_sel  | 0       |
+|    e_state_d_i_is_store_4_fu_6282_p3       |     |        | e_state_d_i_is_store_4       | select    | auto_sel  | 0       |
+|    e_state_d_i_is_store_3_fu_6290_p3       |     |        | e_state_d_i_is_store_3       | select    | auto_sel  | 0       |
+|    e_state_d_i_is_load_4_fu_6298_p3        |     |        | e_state_d_i_is_load_4        | select    | auto_sel  | 0       |
+|    e_state_d_i_is_load_3_fu_6306_p3        |     |        | e_state_d_i_is_load_3        | select    | auto_sel  | 0       |
+|    e_state_d_i_imm_4_fu_6314_p3            |     |        | e_state_d_i_imm_4            | select    | auto_sel  | 0       |
+|    e_state_d_i_imm_3_fu_6322_p3            |     |        | e_state_d_i_imm_3            | select    | auto_sel  | 0       |
+|    e_state_d_i_type_4_fu_9132_p3           |     |        | e_state_d_i_type_4           | select    | auto_sel  | 0       |
+|    e_state_d_i_type_3_fu_9140_p3           |     |        | e_state_d_i_type_3           | select    | auto_sel  | 0       |
+|    e_state_d_i_func7_4_fu_9148_p3          |     |        | e_state_d_i_func7_4          | select    | auto_sel  | 0       |
+|    e_state_d_i_func7_3_fu_9156_p3          |     |        | e_state_d_i_func7_3          | select    | auto_sel  | 0       |
+|    e_state_d_i_rs2_4_fu_9164_p3            |     |        | e_state_d_i_rs2_4            | select    | auto_sel  | 0       |
+|    e_state_d_i_rs2_3_fu_9172_p3            |     |        | e_state_d_i_rs2_3            | select    | auto_sel  | 0       |
+|    e_state_d_i_func3_4_fu_6330_p3          |     |        | e_state_d_i_func3_4          | select    | auto_sel  | 0       |
+|    e_state_d_i_func3_3_fu_6338_p3          |     |        | e_state_d_i_func3_3          | select    | auto_sel  | 0       |
+|    e_state_d_i_rd_4_fu_9180_p3             |     |        | e_state_d_i_rd_4             | select    | auto_sel  | 0       |
+|    e_state_d_i_rd_3_fu_9188_p3             |     |        | e_state_d_i_rd_3             | select    | auto_sel  | 0       |
+|    e_state_fetch_pc_4_fu_6346_p3           |     |        | e_state_fetch_pc_4           | select    | auto_sel  | 0       |
+|    e_state_fetch_pc_3_fu_6354_p3           |     |        | e_state_fetch_pc_3           | select    | auto_sel  | 0       |
+|    or_ln187_fu_6362_p2                     |     |        | or_ln187                     | and       | auto      | 0       |
+|    e_state_is_full_3_fu_6368_p2            |     |        | e_state_is_full_3            | or        | auto      | 0       |
+|    or_ln187_1_fu_6374_p2                   |     |        | or_ln187_1                   | and       | auto      | 0       |
+|    e_state_is_full_2_fu_6380_p2            |     |        | e_state_is_full_2            | or        | auto      | 0       |
+|    executing_hart_fu_6386_p3               |     |        | executing_hart               | select    | auto_sel  | 0       |
+|    select_ln192_fu_6394_p3                 |     |        | select_ln192                 | select    | auto_sel  | 0       |
+|    select_ln42_fu_9196_p3                  |     |        | select_ln42                  | select    | auto_sel  | 0       |
+|    rv2_fu_11812_p3                         |     |        | rv2                          | select    | auto_sel  | 0       |
+|    func3_fu_6400_p3                        |     |        | func3                        | select    | auto_sel  | 0       |
+|    icmp_ln24_fu_11819_p2                   |     |        | icmp_ln24                    | setlt     | auto      | 0       |
+|    result_24_fu_11918_p14                  |     |        | xor_ln24                     | xor       | auto      | 0       |
+|    result_24_fu_11918_p10                  |     |        | icmp_ln9                     | seteq     | auto      | 0       |
+|    result_24_fu_11918_p8                   |     |        | icmp_ln11                    | setne     | auto      | 0       |
+|    result_24_fu_11918_p6                   |     |        | icmp_ln16                    | setlt     | auto      | 0       |
+|    icmp_ln18_fu_11845_p2                   |     |        | icmp_ln18                    | setlt     | auto      | 0       |
+|    result_24_fu_11918_p4                   |     |        | xor_ln18                     | xor       | auto      | 0       |
+|    result_24_fu_11918_p2                   |     |        | icmp_ln21                    | setlt     | auto      | 0       |
+|    icmp_ln8_fu_11861_p2                    |     |        | icmp_ln8                     | seteq     | auto      | 0       |
+|    icmp_ln8_1_fu_11866_p2                  |     |        | icmp_ln8_1                   | seteq     | auto      | 0       |
+|    icmp_ln8_2_fu_11871_p2                  |     |        | icmp_ln8_2                   | seteq     | auto      | 0       |
+|    icmp_ln8_3_fu_11876_p2                  |     |        | icmp_ln8_3                   | seteq     | auto      | 0       |
+|    icmp_ln8_4_fu_11881_p2                  |     |        | icmp_ln8_4                   | seteq     | auto      | 0       |
+|    icmp_ln8_5_fu_11886_p2                  |     |        | icmp_ln8_5                   | seteq     | auto      | 0       |
+|    icmp_ln8_6_fu_11891_p2                  |     |        | icmp_ln8_6                   | seteq     | auto      | 0       |
+|    or_ln8_fu_11896_p2                      |     |        | or_ln8                       | or        | auto      | 0       |
+|    sparsemux_15_6_1_1_1_U15                |     |        | result_24                    | sparsemux | auto      | 0       |
+|    d_i_rs2_2_fu_11954_p3                   |     |        | d_i_rs2_2                    | select    | auto_sel  | 0       |
+|    d_i_imm_7_fu_9207_p3                    |     |        | d_i_imm_7                    | select    | auto_sel  | 0       |
+|    d_i_is_r_type_1_fu_9212_p3              |     |        | d_i_is_r_type_1              | select    | auto_sel  | 0       |
+|    f7_6_fu_9235_p3                         |     |        | f7_6                         | select    | auto_sel  | 0       |
+|    shift_2_fu_11963_p3                     |     |        | shift_2                      | select    | auto_sel  | 0       |
+|    rv2_2_fu_11970_p3                       |     |        | rv2_2                        | select    | auto_sel  | 0       |
+|    result_25_fu_12075_p16                  |     |        | result                       | and       | auto      | 0       |
+|    and_ln45_fu_11981_p2                    |     |        | and_ln45                     | and       | auto      | 0       |
+|    result_2_fu_11985_p2                    |     |        | result_2                     | sub       | fabric    | 0       |
+|    result_3_fu_11990_p2                    |     |        | result_3                     | add       | fabric    | 0       |
+|    result_25_fu_12075_p14                  |     |        | result_4                     | select    | auto_sel  | 0       |
+|    result_25_fu_12075_p12                  |     |        | result_5                     | shl       | auto_pipe | 0       |
+|    result_6_fu_12012_p2                    |     |        | result_6                     | setlt     | auto      | 0       |
+|    result_7_fu_12021_p2                    |     |        | result_7                     | setlt     | auto      | 0       |
+|    result_25_fu_12075_p6                   |     |        | result_8                     | xor       | auto      | 0       |
+|    result_9_fu_12035_p2                    |     |        | result_9                     | ashr      | auto_pipe | 0       |
+|    result_10_fu_12040_p2                   |     |        | result_10                    | lshr      | auto_pipe | 0       |
+|    result_25_fu_12075_p4                   |     |        | result_11                    | select    | auto_sel  | 0       |
+|    result_25_fu_12075_p2                   |     |        | result_12                    | or        | auto      | 0       |
+|    sparsemux_17_7_32_1_1_U16               |     |        | result_25                    | sparsemux | auto      | 0       |
+|    pc_fu_6408_p3                           |     |        | pc                           | select    | auto_sel  | 0       |
+|    d_i_type_1_fu_9246_p3                   |     |        | d_i_type_1                   | select    | auto_sel  | 0       |
+|    d_i_is_load_fu_6416_p3                  |     |        | d_i_is_load                  | select    | auto_sel  | 0       |
+|    d_i_is_jalr_fu_9253_p3                  |     |        | d_i_is_jalr                  | select    | auto_sel  | 0       |
+|    d_i_is_lui_1_fu_9260_p3                 |     |        | d_i_is_lui_1                 | select    | auto_sel  | 0       |
+|    npc4_fu_9280_p2                         |     |        | npc4                         | add       | fabric    | 0       |
+|    result_15_fu_9290_p2                    |     |        | result_15                    | add       | fabric    | 0       |
+|    result_16_fu_9300_p2                    |     |        | result_16                    | add       | fabric    | 0       |
+|    result_26_fu_9377_p4                    |     |        | result_17                    | select    | auto_sel  | 0       |
+|    result_26_fu_9377_p10                   |     |        | result_18                    | select    | auto_sel  | 0       |
+|    icmp_ln78_fu_9321_p2                    |     |        | icmp_ln78                    | seteq     | auto      | 0       |
+|    icmp_ln78_1_fu_9327_p2                  |     |        | icmp_ln78_1                  | seteq     | auto      | 0       |
+|    icmp_ln78_2_fu_9333_p2                  |     |        | icmp_ln78_2                  | seteq     | auto      | 0       |
+|    icmp_ln78_3_fu_9339_p2                  |     |        | icmp_ln78_3                  | seteq     | auto      | 0       |
+|    sel_tmp502_fu_9345_p2                   |     |        | sel_tmp502                   | and       | auto      | 0       |
+|    sel_tmp504_fu_9351_p2                   |     |        | sel_tmp504                   | xor       | auto      | 0       |
+|    sel_tmp505_fu_9357_p2                   |     |        | sel_tmp505                   | and       | auto      | 0       |
+|    sparsemux_13_5_32_1_1_U13               |     |        | result_26                    | sparsemux | auto      | 0       |
+|    j_b_target_pc_fu_9419_p2                |     |        | j_b_target_pc                | add       | fabric    | 0       |
+|    add_ln121_fu_9428_p2                    |     |        | add_ln121                    | add       | fabric    | 0       |
+|    next_pc_fu_9444_p3                      |     |        | next_pc                      | select    | auto_sel  | 0       |
+|    select_ln64_fu_9452_p3                  |     |        | select_ln64                  | select    | auto_sel  | 0       |
+|    and_ln64_fu_12115_p2                    |     |        | and_ln64                     | and       | auto      | 0       |
+|    or_ln64_fu_12120_p2                     |     |        | or_ln64                      | or        | auto      | 0       |
+|    select_ln63_fu_12125_p3                 |     |        | select_ln63                  | select    | auto_sel  | 0       |
+|    e_to_f_target_pc_fu_12132_p3            |     |        | e_to_f_target_pc             | select    | auto_sel  | 0       |
+|    or_ln68_fu_9459_p2                      |     |        | or_ln68                      | or        | auto      | 0       |
+|    e_to_m_is_ret_fu_9465_p3                |     |        | e_to_m_is_ret                | select    | auto_sel  | 0       |
+|    icmp_ln71_fu_9472_p2                    |     |        | icmp_ln71                    | setne     | auto      | 0       |
+|    xor_ln70_fu_9478_p2                     |     |        | xor_ln70                     | xor       | auto      | 0       |
+|    or_ln70_fu_9484_p2                      |     |        | or_ln70                      | or        | auto      | 0       |
+|    e_state_is_target_fu_9490_p3            |     |        | e_state_is_target            | select    | auto_sel  | 0       |
+|    e_to_m_rd_fu_9498_p3                    |     |        | e_to_m_rd                    | select    | auto_sel  | 0       |
+|    e_to_m_has_no_dest_fu_9505_p3           |     |        | e_to_m_has_no_dest           | select    | auto_sel  | 0       |
+|    e_to_m_is_store_fu_6424_p3              |     |        | e_to_m_is_store              | select    | auto_sel  | 0       |
+|    select_ln98_fu_9516_p3                  |     |        | select_ln98                  | select    | auto_sel  | 0       |
+|    or_ln98_fu_9523_p2                      |     |        | or_ln98                      | or        | auto      | 0       |
+|    or_ln98_1_fu_9529_p2                    |     |        | or_ln98_1                    | or        | auto      | 0       |
+|    e_to_m_value_s_fu_12156_p8              |     |        | select_ln100                 | select    | auto_sel  | 0       |
+|    xor_ln191_fu_6432_p2                    |     |        | xor_ln191                    | xor       | auto      | 0       |
+|    and_ln191_fu_6438_p2                    |     |        | and_ln191                    | and       | auto      | 0       |
+|    xor_ln192_fu_6444_p2                    |     |        | xor_ln192                    | xor       | auto      | 0       |
+|    and_ln192_fu_6450_p2                    |     |        | and_ln192                    | and       | auto      | 0       |
+|    or_ln192_fu_6456_p2                     |     |        | or_ln192                     | or        | auto      | 0       |
+|    e_state_is_full_5_demorgan_fu_6462_p2   |     |        | e_state_is_full_5_demorgan   | and       | auto      | 0       |
+|    e_state_is_full_5_fu_6468_p2            |     |        | e_state_is_full_5            | xor       | auto      | 0       |
+|    e_state_is_full_7_fu_6474_p2            |     |        | e_state_is_full_7            | and       | auto      | 0       |
+|    not_sel_tmp514_fu_6480_p2               |     |        | not_sel_tmp514               | xor       | auto      | 0       |
+|    e_state_is_full_4_fu_6486_p2            |     |        | e_state_is_full_4            | or        | auto      | 0       |
+|    e_state_is_full_6_fu_6492_p2            |     |        | e_state_is_full_6            | and       | auto      | 0       |
+|    or_ln134_fu_6498_p2                     |     |        | or_ln134                     | or        | auto      | 0       |
+|    xor_ln134_fu_6504_p2                    |     |        | xor_ln134                    | xor       | auto      | 0       |
+|    and_ln192_1_fu_6510_p2                  |     |        | and_ln192_1                  | and       | auto      | 0       |
+|    or_ln192_1_fu_6516_p2                   |     |        | or_ln192_1                   | or        | auto      | 0       |
+|    and_ln192_2_fu_9535_p2                  |     |        | and_ln192_2                  | and       | auto      | 0       |
+|    and_ln192_3_fu_9540_p2                  |     |        | and_ln192_3                  | and       | auto      | 0       |
+|    and_ln192_4_fu_9545_p2                  |     |        | and_ln192_4                  | and       | auto      | 0       |
+|    sparsemux_9_3_32_1_1_U17                |     |        | e_to_m_value_s               | sparsemux | auto      | 0       |
+|    e_to_m_address_1_fu_9551_p3             |     |        | e_to_m_address_1             | select    | auto_sel  | 0       |
+|    sparsemux_7_2_1_1_1_U14                 |     |        | e_to_m_is_ret_s              | sparsemux | auto      | 0       |
+|    e_to_m_func3_1_fu_6522_p3               |     |        | e_to_m_func3_1               | select    | auto_sel  | 0       |
+|    e_to_m_is_store_1_fu_6529_p3            |     |        | e_to_m_is_store_1            | select    | auto_sel  | 0       |
+|    e_to_m_is_load_1_fu_6536_p3             |     |        | e_to_m_is_load_1             | select    | auto_sel  | 0       |
+|    e_to_m_has_no_dest_1_fu_9584_p3         |     |        | e_to_m_has_no_dest_1         | select    | auto_sel  | 0       |
+|    e_to_m_rd_1_fu_9590_p3                  |     |        | e_to_m_rd_1                  | select    | auto_sel  | 0       |
+|    e_to_m_hart_1_fu_6543_p3                |     |        | e_to_m_hart_1                | select    | auto_sel  | 0       |
+|    e_to_f_target_pc_2_fu_12178_p3          |     |        | e_to_f_target_pc_2           | select    | auto_sel  | 0       |
+|    e_to_f_hart_fu_6550_p3                  |     |        | e_to_f_hart                  | select    | auto_sel  | 0       |
+|    e_to_f_is_valid_fu_9596_p2              |     |        | e_to_f_is_valid              | and       | auto      | 0       |
+|    selected_hart_5_fu_3001_p2              |     |        | selected_hart_5              | xor       | auto      | 0       |
+|    c_17_fu_3007_p2                         |     |        | c_17                         | and       | auto      | 0       |
+|    xor_ln93_fu_3013_p2                     |     |        | xor_ln93                     | xor       | auto      | 0       |
+|    c_18_fu_3019_p2                         |     |        | c_18                         | and       | auto      | 0       |
+|    selected_hart_4_fu_3025_p2              |     |        | selected_hart_4              | or        | auto      | 0       |
+|    is_selected_4_fu_3031_p2                |     |        | is_selected_4                | or        | auto      | 0       |
+|    select_ln154_fu_3041_p3                 |     |        | select_ln154                 | select    | auto_sel  | 0       |
+|    xor_ln154_fu_3049_p2                    |     |        | xor_ln154                    | xor       | auto      | 0       |
+|    xor_ln40_fu_3089_p2                     |     |        | xor_ln40                     | xor       | auto      | 0       |
+|    m_state_is_local_ip_2_fu_3095_p2        |     |        | m_state_is_local_ip_2        | xor       | auto      | 0       |
+|    select_ln158_fu_3101_p3                 |     |        | select_ln158                 | select    | auto_sel  | 0       |
+|    select_ln158_1_fu_3109_p3               |     |        | select_ln158_1               | select    | auto_sel  | 0       |
+|    select_ln158_2_fu_3117_p3               |     |        | select_ln158_2               | select    | auto_sel  | 0       |
+|    select_ln158_3_fu_3125_p3               |     |        | select_ln158_3               | select    | auto_sel  | 0       |
+|    select_ln158_4_fu_3133_p3               |     |        | select_ln158_4               | select    | auto_sel  | 0       |
+|    select_ln158_5_fu_3141_p3               |     |        | select_ln158_5               | select    | auto_sel  | 0       |
+|    select_ln158_6_fu_9601_p3               |     |        | select_ln158_6               | select    | auto_sel  | 0       |
+|    select_ln158_7_fu_9608_p3               |     |        | select_ln158_7               | select    | auto_sel  | 0       |
+|    select_ln158_8_fu_13749_p3              |     |        | select_ln158_8               | select    | auto_sel  | 0       |
+|    select_ln158_9_fu_13755_p3              |     |        | select_ln158_9               | select    | auto_sel  | 0       |
+|    select_ln158_10_fu_3149_p3              |     |        | select_ln158_10              | select    | auto_sel  | 0       |
+|    select_ln158_11_fu_3157_p3              |     |        | select_ln158_11              | select    | auto_sel  | 0       |
+|    select_ln158_12_fu_9615_p3              |     |        | select_ln158_12              | select    | auto_sel  | 0       |
+|    select_ln158_13_fu_9622_p3              |     |        | select_ln158_13              | select    | auto_sel  | 0       |
+|    select_ln158_14_fu_3165_p3              |     |        | select_ln158_14              | select    | auto_sel  | 0       |
+|    select_ln158_15_fu_3173_p3              |     |        | select_ln158_15              | select    | auto_sel  | 0       |
+|    select_ln158_16_fu_3181_p3              |     |        | select_ln158_16              | select    | auto_sel  | 0       |
+|    select_ln158_17_fu_3189_p3              |     |        | select_ln158_17              | select    | auto_sel  | 0       |
+|    select_ln158_18_fu_3197_p3              |     |        | select_ln158_18              | select    | auto_sel  | 0       |
+|    select_ln158_19_fu_3205_p3              |     |        | select_ln158_19              | select    | auto_sel  | 0       |
+|    select_ln158_20_fu_6558_p3              |     |        | select_ln158_20              | select    | auto_sel  | 0       |
+|    select_ln158_21_fu_6565_p3              |     |        | select_ln158_21              | select    | auto_sel  | 0       |
+|    select_ln158_22_fu_6572_p3              |     |        | select_ln158_22              | select    | auto_sel  | 0       |
+|    select_ln158_23_fu_6579_p3              |     |        | select_ln158_23              | select    | auto_sel  | 0       |
+|    xor_ln158_fu_6586_p2                    |     |        | xor_ln158                    | xor       | auto      | 0       |
+|    m_state_accessed_ip_4_fu_3213_p3        |     |        | m_state_accessed_ip_4        | select    | auto_sel  | 0       |
+|    m_state_accessed_ip_3_fu_3221_p3        |     |        | m_state_accessed_ip_3        | select    | auto_sel  | 0       |
+|    m_state_accessed_h_4_fu_3229_p3         |     |        | m_state_accessed_h_4         | select    | auto_sel  | 0       |
+|    m_state_accessed_h_3_fu_3237_p3         |     |        | m_state_accessed_h_3         | select    | auto_sel  | 0       |
+|    m_state_is_local_ip_4_fu_3245_p3        |     |        | m_state_is_local_ip_4        | select    | auto_sel  | 0       |
+|    m_state_is_local_ip_3_fu_3253_p3        |     |        | m_state_is_local_ip_3        | select    | auto_sel  | 0       |
+|    m_state_result_4_fu_9629_p3             |     |        | m_state_result_4             | select    | auto_sel  | 0       |
+|    m_state_result_3_fu_9637_p3             |     |        | m_state_result_3             | select    | auto_sel  | 0       |
+|    m_state_value_3_fu_13761_p3             |     |        | m_state_value_3              | select    | auto_sel  | 0       |
+|    m_state_value_2_fu_13769_p3             |     |        | m_state_value_2              | select    | auto_sel  | 0       |
+|    m_state_address_4_fu_3261_p3            |     |        | m_state_address_4            | select    | auto_sel  | 0       |
+|    m_state_address_3_fu_3269_p3            |     |        | m_state_address_3            | select    | auto_sel  | 0       |
+|    m_state_is_ret_4_fu_9645_p3             |     |        | m_state_is_ret_4             | select    | auto_sel  | 0       |
+|    m_state_is_ret_3_fu_9653_p3             |     |        | m_state_is_ret_3             | select    | auto_sel  | 0       |
+|    m_state_func3_4_fu_3277_p3              |     |        | m_state_func3_4              | select    | auto_sel  | 0       |
+|    m_state_func3_3_fu_3285_p3              |     |        | m_state_func3_3              | select    | auto_sel  | 0       |
+|    m_state_is_store_4_fu_3293_p3           |     |        | m_state_is_store_4           | select    | auto_sel  | 0       |
+|    m_state_is_store_3_fu_3301_p3           |     |        | m_state_is_store_3           | select    | auto_sel  | 0       |
+|    m_state_is_load_4_fu_3309_p3            |     |        | m_state_is_load_4            | select    | auto_sel  | 0       |
+|    m_state_is_load_3_fu_3317_p3            |     |        | m_state_is_load_3            | select    | auto_sel  | 0       |
+|    m_state_has_no_dest_4_fu_6591_p3        |     |        | m_state_has_no_dest_4        | select    | auto_sel  | 0       |
+|    m_state_has_no_dest_3_fu_6599_p3        |     |        | m_state_has_no_dest_3        | select    | auto_sel  | 0       |
+|    m_state_rd_4_fu_6607_p3                 |     |        | m_state_rd_4                 | select    | auto_sel  | 0       |
+|    m_state_rd_3_fu_6615_p3                 |     |        | m_state_rd_3                 | select    | auto_sel  | 0       |
+|    or_ln158_fu_6623_p2                     |     |        | or_ln158                     | and       | auto      | 0       |
+|    m_state_is_full_3_fu_6628_p2            |     |        | m_state_is_full_3            | or        | auto      | 0       |
+|    or_ln158_1_fu_6633_p2                   |     |        | or_ln158_1                   | and       | auto      | 0       |
+|    m_state_is_full_2_fu_6639_p2            |     |        | m_state_is_full_2            | or        | auto      | 0       |
+|    empty_45_fu_3325_p2                     |     |        | empty_45                     | and       | auto      | 0       |
+|    m_to_w_is_valid_1_fu_3331_p2            |     |        | m_to_w_is_valid_1            | or        | auto      | 0       |
+|    accessing_hart_fu_3337_p3               |     |        | accessing_hart               | select    | auto_sel  | 0       |
+|    xor_ln166_fu_6744_p2                    |     |        | xor_ln166                    | xor       | auto      | 0       |
+|    m_state_is_full_9_fu_6749_p2            |     |        | m_state_is_full_9            | and       | auto      | 0       |
+|    m_state_is_full_8_fu_6755_p2            |     |        | m_state_is_full_8            | and       | auto      | 0       |
+|    ip_fu_3395_p3                           |     |        | ip                           | select    | auto_sel  | 0       |
+|    hart_8_fu_3403_p3                       |     |        | hart_8                       | select    | auto_sel  | 0       |
+|    is_local_fu_3411_p3                     |     |        | is_local                     | select    | auto_sel  | 0       |
+|    m_to_w_is_load_1_fu_3419_p3             |     |        | m_to_w_is_load_1             | select    | auto_sel  | 0       |
+|    is_store_fu_3427_p3                     |     |        | is_store                     | select    | auto_sel  | 0       |
+|    select_ln78_fu_3435_p3                  |     |        | select_ln78                  | select    | auto_sel  | 0       |
+|    msize_fu_3457_p3                        |     |        | msize                        | select    | auto_sel  | 0       |
+|    select_ln65_fu_13787_p3                 |     |        | select_ln65                  | select    | auto_sel  | 0       |
+|    add_ln104_fu_3495_p2                    |     |        | add_ln104                    | add       | fabric    | 0       |
+|    shl_ln108_fu_3509_p2                    |     |        | shl_ln108                    | shl       | auto_pipe | 0       |
+|    shl_ln108_2_fu_13830_p2                 |     |        | shl_ln108_2                  | shl       | auto_pipe | 0       |
+|    shl_ln102_fu_3547_p2                    |     |        | shl_ln102                    | shl       | auto_pipe | 0       |
+|    shl_ln102_2_fu_13847_p2                 |     |        | shl_ln102_2                  | shl       | auto_pipe | 0       |
+|    add_ln91_fu_3567_p2                     |     |        | add_ln91                     | add       | fabric    | 0       |
+|    shl_ln95_fu_3581_p2                     |     |        | shl_ln95                     | shl       | auto_pipe | 0       |
+|    shl_ln95_2_fu_13881_p2                  |     |        | shl_ln95_2                   | shl       | auto_pipe | 0       |
+|    shl_ln89_fu_3611_p2                     |     |        | shl_ln89                     | shl       | auto_pipe | 0       |
+|    shl_ln89_2_fu_13898_p2                  |     |        | shl_ln89_2                   | shl       | auto_pipe | 0       |
+|    sparsemux_7_2_8_1_1_U22                 |     |        | b_3                          | sparsemux | auto      | 0       |
+|    h_fu_14002_p3                           |     |        | h                            | select    | auto_sel  | 0       |
+|    sparsemux_13_3_32_1_1_U23               |     |        | result_28                    | sparsemux | auto      | 0       |
+|    select_ln60_fu_14048_p3                 |     |        | select_ln60                  | select    | auto_sel  | 0       |
+|    select_ln60_1_fu_14054_p3               |     |        | select_ln60_1                | select    | auto_sel  | 0       |
+|    m_to_w_rd_1_fu_6760_p3                  |     |        | m_to_w_rd_1                  | select    | auto_sel  | 0       |
+|    m_to_w_has_no_dest_1_fu_6767_p3         |     |        | m_to_w_has_no_dest_1         | select    | auto_sel  | 0       |
+|    m_to_w_is_ret_1_fu_9886_p3              |     |        | m_to_w_is_ret_1              | select    | auto_sel  | 0       |
+|    m_to_w_value_1_fu_14076_p3              |     |        | m_to_w_value_1               | select    | auto_sel  | 0       |
+|    m_to_w_result_1_fu_9893_p3              |     |        | m_to_w_result_1              | select    | auto_sel  | 0       |
+|    is_selected_5_fu_3704_p2                |     |        | is_selected_5                | or        | auto      | 0       |
+|    select_ln127_fu_6806_p3                 |     |        | select_ln127                 | select    | auto_sel  | 0       |
+|    select_ln127_1_fu_6813_p3               |     |        | select_ln127_1               | select    | auto_sel  | 0       |
+|    select_ln127_2_fu_13366_p3              |     |        | select_ln127_2               | select    | auto_sel  | 0       |
+|    select_ln127_3_fu_13373_p3              |     |        | select_ln127_3               | select    | auto_sel  | 0       |
+|    select_ln127_4_fu_6820_p3               |     |        | select_ln127_4               | select    | auto_sel  | 0       |
+|    select_ln127_5_fu_6827_p3               |     |        | select_ln127_5               | select    | auto_sel  | 0       |
+|    select_ln127_6_fu_3710_p3               |     |        | select_ln127_6               | select    | auto_sel  | 0       |
+|    select_ln127_7_fu_3718_p3               |     |        | select_ln127_7               | select    | auto_sel  | 0       |
+|    select_ln127_8_fu_3726_p3               |     |        | select_ln127_8               | select    | auto_sel  | 0       |
+|    select_ln127_9_fu_3734_p3               |     |        | select_ln127_9               | select    | auto_sel  | 0       |
+|    select_ln127_10_fu_3742_p3              |     |        | select_ln127_10              | select    | auto_sel  | 0       |
+|    select_ln127_11_fu_3750_p3              |     |        | select_ln127_11              | select    | auto_sel  | 0       |
+|    xor_ln127_2_fu_3758_p2                  |     |        | xor_ln127_2                  | xor       | auto      | 0       |
+|    w_state_result_4_fu_6834_p3             |     |        | w_state_result_4             | select    | auto_sel  | 0       |
+|    w_state_result_3_fu_6842_p3             |     |        | w_state_result_3             | select    | auto_sel  | 0       |
+|    w_state_value_4_fu_13380_p3             |     |        | w_state_value_4              | select    | auto_sel  | 0       |
+|    w_state_value_3_fu_13388_p3             |     |        | w_state_value_3              | select    | auto_sel  | 0       |
+|    w_state_is_ret_4_fu_6850_p3             |     |        | w_state_is_ret_4             | select    | auto_sel  | 0       |
+|    w_state_is_ret_3_fu_6858_p3             |     |        | w_state_is_ret_3             | select    | auto_sel  | 0       |
+|    w_state_is_load_4_fu_3764_p3            |     |        | w_state_is_load_4            | select    | auto_sel  | 0       |
+|    w_state_is_load_3_fu_3772_p3            |     |        | w_state_is_load_3            | select    | auto_sel  | 0       |
+|    w_state_has_no_dest_4_fu_3780_p3        |     |        | w_state_has_no_dest_4        | select    | auto_sel  | 0       |
+|    w_state_has_no_dest_3_fu_3788_p3        |     |        | w_state_has_no_dest_3        | select    | auto_sel  | 0       |
+|    w_state_rd_4_fu_3796_p3                 |     |        | w_state_rd_4                 | select    | auto_sel  | 0       |
+|    w_state_rd_3_fu_3804_p3                 |     |        | w_state_rd_3                 | select    | auto_sel  | 0       |
+|    or_ln127_1_fu_3812_p2                   |     |        | or_ln127_1                   | and       | auto      | 0       |
+|    w_state_is_full_2_fu_3818_p2            |     |        | w_state_is_full_2            | or        | auto      | 0       |
+|    or_ln127_2_fu_3824_p2                   |     |        | or_ln127_2                   | and       | auto      | 0       |
+|    w_state_is_full_fu_3830_p2              |     |        | w_state_is_full              | or        | auto      | 0       |
+|    is_writing_fu_3836_p2                   |     |        | is_writing                   | or        | auto      | 0       |
+|    writing_hart_fu_3842_p3                 |     |        | writing_hart                 | select    | auto_sel  | 0       |
+|    select_ln136_fu_3850_p3                 |     |        | select_ln136                 | select    | auto_sel  | 0       |
+|    xor_ln136_1_fu_9916_p2                  |     |        | xor_ln136_1                  | xor       | auto      | 0       |
+|    is_unlock_fu_9921_p2                    |     |        | is_unlock                    | and       | auto      | 0       |
+|    select_ln138_fu_3858_p3                 |     |        | select_ln138                 | select    | auto_sel  | 0       |
+|    w_destination_1_fu_9926_p3              |     |        | w_destination_1              | select    | auto_sel  | 0       |
+|    w_hart_1_fu_9932_p3                     |     |        | w_hart_1                     | select    | auto_sel  | 0       |
+|    xor_ln141_fu_6876_p2                    |     |        | xor_ln141                    | xor       | auto      | 0       |
+|    w_state_is_full_5_fu_6881_p2            |     |        | w_state_is_full_5            | and       | auto      | 0       |
+|    w_state_is_full_4_fu_6886_p2            |     |        | w_state_is_full_4            | and       | auto      | 0       |
+|    select_ln47_fu_3896_p3                  |     |        | select_ln47                  | select    | auto_sel  | 0       |
+|    reg_file_130_fu_6890_p3                 |     |        | reg_file_130                 | select    | auto_sel  | 0       |
+|    reg_file_129_fu_13396_p3                |     |        | reg_file_129                 | select    | auto_sel  | 0       |
+|    select_ln52_fu_6897_p3                  |     |        | select_ln52                  | select    | auto_sel  | 0       |
+|    select_ln52_1_fu_6914_p3                |     |        | select_ln52_1                | select    | auto_sel  | 0       |
+|    icmp_ln52_fu_6921_p2                    |     |        | icmp_ln52                    | seteq     | auto      | 0       |
+|    or_ln53_fu_6937_p2                      |     |        | or_ln53                      | or        | auto      | 0       |
+|    or_ln53_1_fu_6941_p2                    |     |        | or_ln53_1                    | or        | auto      | 0       |
+|    xor_ln91_2_fu_9943_p2                   |     |        | xor_ln91_2                   | xor       | auto      | 0       |
+|    or_ln91_fu_9948_p2                      |     |        | or_ln91                      | or        | auto      | 0       |
+|    and_ln91_2_fu_9953_p2                   |     |        | and_ln91_2                   | and       | auto      | 0       |
+|    xor_ln93_1_fu_9959_p2                   |     |        | xor_ln93_1                   | xor       | auto      | 0       |
+|    and_ln93_fu_9965_p2                     |     |        | and_ln93                     | and       | auto      | 0       |
+|    and_ln95_fu_9971_p2                     |     |        | and_ln95                     | and       | auto      | 0       |
+|    xor_ln95_fu_9977_p2                     |     |        | xor_ln95                     | xor       | auto      | 0       |
+|    icmp_ln95_fu_9983_p2                    |     |        | icmp_ln95                    | setne     | auto      | 0       |
+|    or_ln95_fu_9989_p2                      |     |        | or_ln95                      | or        | auto      | 0       |
+|    and_ln69_fu_3904_p2                     |     |        | and_ln69                     | and       | auto      | 0       |
++--------------------------------------------+-----+--------+------------------------------+-----------+-----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| Name              | Usage     | Type      | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
+|                   |           |           |      |      |        |          |      |         | Banks            |
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| + multihart_ip    |           |           | 68   | 0    |        |          |      |         |                  |
+|   control_s_axi_U | interface | s_axilite | 64   |      |        |          |      |         |                  |
+|   gmem_m_axi_U    | interface | m_axi     | 4    |      |        |          |      |         |                  |
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+------------------------------------------------------------+--------------------------------------------------------------+
+| Type            | Options                                                    | Location                                                     |
++-----------------+------------------------------------------------------------+--------------------------------------------------------------+
+| unroll          |                                                            | ../../decode.cpp:15 in init_d_state                          |
+| unroll          |                                                            | ../../execute.cpp:15 in init_e_state                         |
+| unroll          |                                                            | ../../fetch.cpp:17 in init_f_state                           |
+| unroll          |                                                            | ../../issue.cpp:12 in init_i_state                           |
+| unroll          |                                                            | ../../mem_access.cpp:14 in init_m_state                      |
+| unroll          |                                                            | ../../multihart_ip.cpp:29 in init_file                       |
+| unroll          |                                                            | ../../multihart_ip.cpp:32 in init_file                       |
+| unroll          |                                                            | ../../multihart_ip.cpp:53 in init_exit                       |
+| unroll          |                                                            | ../../multihart_ip.cpp:67 in running_cond_update             |
+| interface       | s_axilite port=ip_num                                      | ../../multihart_ip.cpp:110 in multihart_ip, ip_num           |
+| interface       | s_axilite port=running_hart_set                            | ../../multihart_ip.cpp:111 in multihart_ip, running_hart_set |
+| interface       | s_axilite port=start_pc                                    | ../../multihart_ip.cpp:112 in multihart_ip, start_pc         |
+| interface       | s_axilite port=ip_code_ram                                 | ../../multihart_ip.cpp:113 in multihart_ip, ip_code_ram      |
+| interface       | bram port=ip_data_ram storage_type=ram_1p                  | ../../multihart_ip.cpp:114 in multihart_ip, ip_data_ram      |
+| interface       | m_axi port=data_ram offset=slave                           | ../../multihart_ip.cpp:115 in multihart_ip, data_ram         |
+| interface       | s_axilite port=nb_instruction                              | ../../multihart_ip.cpp:116 in multihart_ip, nb_instruction   |
+| interface       | s_axilite port=nb_cycle                                    | ../../multihart_ip.cpp:117 in multihart_ip, nb_cycle         |
+| interface       | s_axilite port=return                                      | ../../multihart_ip.cpp:118 in multihart_ip, return           |
+| inline          | recursive                                                  | ../../multihart_ip.cpp:119 in multihart_ip                   |
+| array_partition | variable=reg_file dim=0 complete                           | ../../multihart_ip.cpp:121 in multihart_ip, reg_file         |
+| array_partition | variable=is_reg_computed dim=0 complete                    | ../../multihart_ip.cpp:123 in multihart_ip, is_reg_computed  |
+| array_partition | variable=f_state_is_full dim=1 complete                    | ../../multihart_ip.cpp:127 in multihart_ip, f_state_is_full  |
+| array_partition | variable=f_state dim=1 complete                            | ../../multihart_ip.cpp:129 in multihart_ip, f_state          |
+| array_partition | variable=d_state_is_full dim=1 complete                    | ../../multihart_ip.cpp:133 in multihart_ip, d_state_is_full  |
+| array_partition | variable=d_state dim=1 complete                            | ../../multihart_ip.cpp:135 in multihart_ip, d_state          |
+| array_partition | variable=i_state_is_full dim=1 complete                    | ../../multihart_ip.cpp:140 in multihart_ip, i_state_is_full  |
+| array_partition | variable=i_state dim=1 complete                            | ../../multihart_ip.cpp:142 in multihart_ip, i_state          |
+| array_partition | variable=e_state_is_full dim=1 complete                    | ../../multihart_ip.cpp:146 in multihart_ip, e_state_is_full  |
+| array_partition | variable=e_state dim=1 complete                            | ../../multihart_ip.cpp:148 in multihart_ip, e_state          |
+| array_partition | variable=m_state_is_full dim=1 complete                    | ../../multihart_ip.cpp:153 in multihart_ip, m_state_is_full  |
+| array_partition | variable=m_state                                           | ../../multihart_ip.cpp:155 in multihart_ip, m_state          |
+| array_partition | variable=w_state_is_full dim=1 complete                    | ../../multihart_ip.cpp:159 in multihart_ip, w_state_is_full  |
+| array_partition | variable=w_state dim=1 complete                            | ../../multihart_ip.cpp:161 in multihart_ip, w_state          |
+| array_partition | variable=has_exited dim=1 complete                         | ../../multihart_ip.cpp:163 in multihart_ip, has_exited       |
+| dependence      | dependent=false direction=RAW type=inter variable=data_ram | ../../multihart_ip.cpp:198 in multihart_ip, data_ram         |
+| pipeline        | II=2                                                       | ../../multihart_ip.cpp:199 in multihart_ip                   |
+| unroll          |                                                            | ../../wb.cpp:18 in init_w_state                              |
++-----------------+------------------------------------------------------------+--------------------------------------------------------------+
+
+

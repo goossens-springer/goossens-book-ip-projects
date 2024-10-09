@@ -1,0 +1,401 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Wed Oct  9 18:55:02 2024
+# Process ID: 212379
+# Current directory: /home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.runs/design_1_xbar_0_synth_1
+# Command line: vivado -log design_1_xbar_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_xbar_0.tcl
+# Log file: /home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.runs/design_1_xbar_0_synth_1/design_1_xbar_0.vds
+# Journal file: /home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.runs/design_1_xbar_0_synth_1/vivado.jou
+# Running On        :goossens-Precision-5530
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 22.04.5 LTS
+# Processor Detail  :Intel(R) Xeon(R) E-2176M  CPU @ 2.70GHz
+# CPU Frequency     :3199.970 MHz
+# CPU Physical cores:6
+# CPU Logical cores :12
+# Host memory       :67049 MB
+# Swap memory       :2147 MB
+# Total Virtual     :69196 MB
+# Available Virtual :51453 MB
+#-----------------------------------------------------------
+source design_1_xbar_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1476.984 ; gain = 72.836 ; free physical = 38611 ; free virtual = 52449
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/workspace/hls_component/multihart_ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2024.1/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_xbar_0
+Command: synth_design -top design_1_xbar_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Device 21-9227] Part: xc7z020clg400-1 does not have CEAM library.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 212982
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2283.004 ; gain = 421.801 ; free physical = 35867 ; free virtual = 49700
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ip/design_1_xbar_0/synth/design_1_xbar_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_32_axi_crossbar' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/e9d8/hdl/axi_crossbar_v2_1_vl_rfs.v:4871]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_32_crossbar_sasd' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/e9d8/hdl/axi_crossbar_v2_1_vl_rfs.v:1234]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_32_addr_decoder' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/e9d8/hdl/axi_crossbar_v2_1_vl_rfs.v:790]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_comparator_static' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_carry_and' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_carry_and' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_comparator_static' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_comparator_static__parameterized0' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_comparator_static__parameterized0' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_comparator_static__parameterized1' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_comparator_static__parameterized1' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_comparator_static__parameterized2' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_comparator_static__parameterized2' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_comparator_static__parameterized3' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_comparator_static__parameterized3' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_comparator_static__parameterized4' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_comparator_static__parameterized4' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_comparator_static__parameterized5' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_comparator_static__parameterized5' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_comparator_static__parameterized6' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_comparator_static__parameterized6' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_32_addr_decoder' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/e9d8/hdl/axi_crossbar_v2_1_vl_rfs.v:790]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_mux_enc' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_mux_enc' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_mux_enc__parameterized0' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_mux_enc__parameterized0' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_32_decerr_slave' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/e9d8/hdl/axi_crossbar_v2_1_vl_rfs.v:3493]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_32_decerr_slave' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/e9d8/hdl/axi_crossbar_v2_1_vl_rfs.v:3493]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_32_addr_arbiter_sasd' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/e9d8/hdl/axi_crossbar_v2_1_vl_rfs.v:63]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_mux_enc__parameterized1' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_mux_enc__parameterized1' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_32_addr_arbiter_sasd' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/e9d8/hdl/axi_crossbar_v2_1_vl_rfs.v:63]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_32_splitter' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/e9d8/hdl/axi_crossbar_v2_1_vl_rfs.v:4451]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_32_splitter' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/e9d8/hdl/axi_crossbar_v2_1_vl_rfs.v:4451]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_32_splitter__parameterized0' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/e9d8/hdl/axi_crossbar_v2_1_vl_rfs.v:4451]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_32_splitter__parameterized0' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/e9d8/hdl/axi_crossbar_v2_1_vl_rfs.v:4451]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_mux_enc__parameterized2' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_mux_enc__parameterized2' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_mux_enc__parameterized3' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_mux_enc__parameterized3' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_31_axic_register_slice' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/92b2/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_mux_enc__parameterized4' [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_mux_enc__parameterized4' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_32_crossbar_sasd' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/e9d8/hdl/axi_crossbar_v2_1_vl_rfs.v:1234]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_32_axi_crossbar' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/e9d8/hdl/axi_crossbar_v2_1_vl_rfs.v:4871]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (0#1) [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ip/design_1_xbar_0/synth/design_1_xbar_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element gen_debug_trans_seq.debug_aw_trans_seq_i_reg was removed.  [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/e9d8/hdl/axi_crossbar_v2_1_vl_rfs.v:2051]
+WARNING: [Synth 8-6014] Unused sequential element gen_debug_trans_seq.debug_ar_trans_seq_i_reg was removed.  [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/e9d8/hdl/axi_crossbar_v2_1_vl_rfs.v:2062]
+WARNING: [Synth 8-6014] Unused sequential element gen_debug_trans_seq.debug_w_beat_cnt_i_reg was removed.  [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/e9d8/hdl/axi_crossbar_v2_1_vl_rfs.v:2073]
+WARNING: [Synth 8-6014] Unused sequential element gen_debug_trans_seq.debug_r_beat_cnt_i_reg was removed.  [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ipshared/e9d8/hdl/axi_crossbar_v2_1_vl_rfs.v:2086]
+WARNING: [Synth 8-7129] Port S_AXI_AWID[0] in module axi_crossbar_v2_1_32_decerr_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WLAST in module axi_crossbar_v2_1_32_decerr_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARID[0] in module axi_crossbar_v2_1_32_decerr_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARLEN[7] in module axi_crossbar_v2_1_32_decerr_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARLEN[6] in module axi_crossbar_v2_1_32_decerr_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARLEN[5] in module axi_crossbar_v2_1_32_decerr_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARLEN[4] in module axi_crossbar_v2_1_32_decerr_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARLEN[3] in module axi_crossbar_v2_1_32_decerr_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARLEN[2] in module axi_crossbar_v2_1_32_decerr_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARLEN[1] in module axi_crossbar_v2_1_32_decerr_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARLEN[0] in module axi_crossbar_v2_1_32_decerr_slave is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[1] in module axi_crossbar_v2_1_32_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR[0] in module axi_crossbar_v2_1_32_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWID[4] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWID[3] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWID[2] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWID[1] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWID[0] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WID[4] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WID[3] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WID[2] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WID[1] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WID[0] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARID[4] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARID[3] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARID[2] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARID[1] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARID[0] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BID[7] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BID[6] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BID[5] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BID[4] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BID[3] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BID[2] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BID[1] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BID[0] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RID[7] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RID[6] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RID[5] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RID[4] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RID[3] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RID[2] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RID[1] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RID[0] in module axi_crossbar_v2_1_32_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awid[4] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awid[3] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awid[2] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awid[1] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awid[0] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[39] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[38] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[37] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[36] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[35] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[34] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[33] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[32] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[31] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[30] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[29] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[28] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[27] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[26] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[25] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[24] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[23] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[22] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[21] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[20] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[19] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[18] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[17] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[16] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[15] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[14] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[13] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[12] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[11] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[10] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[9] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[8] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[7] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[6] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[5] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[4] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[3] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[2] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[1] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[0] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awsize[14] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awsize[13] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awsize[12] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awsize[11] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awsize[10] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awsize[9] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awsize[8] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awsize[7] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awsize[6] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awsize[5] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awsize[4] in module axi_crossbar_v2_1_32_axi_crossbar is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2475.941 ; gain = 614.738 ; free physical = 36315 ; free virtual = 50153
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2475.941 ; gain = 614.738 ; free physical = 36309 ; free virtual = 50146
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2475.941 ; gain = 614.738 ; free physical = 36309 ; free virtual = 50146
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2475.941 ; gain = 0.000 ; free physical = 35980 ; free virtual = 49817
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.gen/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.runs/design_1_xbar_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.runs/design_1_xbar_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2579.785 ; gain = 0.000 ; free physical = 35892 ; free virtual = 49730
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2579.785 ; gain = 0.000 ; free physical = 35891 ; free virtual = 49728
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2579.785 ; gain = 718.582 ; free physical = 35890 ; free virtual = 49727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2587.789 ; gain = 726.586 ; free physical = 35889 ; free virtual = 49727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.runs/design_1_xbar_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2587.789 ; gain = 726.586 ; free physical = 35889 ; free virtual = 49727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2587.789 ; gain = 726.586 ; free physical = 35906 ; free virtual = 49743
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               96 Bit    Registers := 1     
+	               36 Bit    Registers := 2     
+	                9 Bit    Registers := 1     
+	                5 Bit    Registers := 5     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 10    
++---Muxes : 
+	   2 Input   96 Bit        Muxes := 5     
+	   2 Input   36 Bit        Muxes := 2     
+	   2 Input    9 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 98    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2587.789 ; gain = 726.586 ; free physical = 35646 ; free virtual = 49485
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 2587.789 ; gain = 726.586 ; free physical = 37120 ; free virtual = 50967
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 2587.789 ; gain = 726.586 ; free physical = 37547 ; free virtual = 51391
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 2587.789 ; gain = 726.586 ; free physical = 37544 ; free virtual = 51387
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 2587.789 ; gain = 726.586 ; free physical = 37586 ; free virtual = 51430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 2587.789 ; gain = 726.586 ; free physical = 37586 ; free virtual = 51430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 2587.789 ; gain = 726.586 ; free physical = 37585 ; free virtual = 51430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 2587.789 ; gain = 726.586 ; free physical = 37585 ; free virtual = 51430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 2587.789 ; gain = 726.586 ; free physical = 37585 ; free virtual = 51430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 2587.789 ; gain = 726.586 ; free physical = 37585 ; free virtual = 51430
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     1|
+|2     |LUT2 |    63|
+|3     |LUT3 |    69|
+|4     |LUT4 |   308|
+|5     |LUT5 |    64|
+|6     |LUT6 |   462|
+|7     |FDRE |   194|
+|8     |FDSE |     1|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 2587.789 ; gain = 726.586 ; free physical = 37585 ; free virtual = 51430
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 343 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 2587.789 ; gain = 622.742 ; free physical = 37584 ; free virtual = 51428
+Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 2587.797 ; gain = 726.586 ; free physical = 37584 ; free virtual = 51428
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2587.797 ; gain = 0.000 ; free physical = 37914 ; free virtual = 51757
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2643.816 ; gain = 0.000 ; free physical = 37940 ; free virtual = 51786
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 8b59afe6
+INFO: [Common 17-83] Releasing license: Synthesis
+67 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:56 ; elapsed = 00:00:54 . Memory (MB): peak = 2643.816 ; gain = 1143.051 ; free physical = 37948 ; free virtual = 51791
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1989.892; main = 1615.212; forked = 377.872
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3690.891; main = 2643.820; forked = 1103.098
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2667.828 ; gain = 0.000 ; free physical = 37946 ; free virtual = 51790
+INFO: [Common 17-1381] The checkpoint '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.runs/design_1_xbar_0_synth_1/design_1_xbar_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_xbar_0, cache-ID = 6f354ce3c749c5c7
+INFO: [Coretcl 2-1174] Renamed 7 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2667.828 ; gain = 0.000 ; free physical = 37904 ; free virtual = 51750
+INFO: [Common 17-1381] The checkpoint '/home/goossens/goossens-book-ip-projects/2024.1/multicore_multihart_4c_2h_ip/multicore_multihart_4c_2h/multicore_multihart_4c_2h.runs/design_1_xbar_0_synth_1/design_1_xbar_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_xbar_0_utilization_synth.rpt -pb design_1_xbar_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Oct  9 18:56:17 2024...
