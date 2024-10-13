@@ -55,6 +55,7 @@
 #define LOG_IP_DATA_RAM_SIZE  (15-LOG_NB_IP)//in words
 #define IP_DATA_RAM_SIZE      (1<<LOG_IP_DATA_RAM_SIZE)
 #define DATA_RAM               XPAR_AXI_BRAM_CTRL_0_BASEADDR
+#define IP_RAM_SIZE           (XPAR_MULTICYCLE_PIPELINE_1_BASEADDR-XPAR_MULTICYCLE_PIPELINE_0_BASEADDR)
 #define LINE_X                64
 #define COLUMN_X              96
 #define LINE_Y                COLUMN_X

@@ -21,7 +21,8 @@
 #define COLUMN_Z               COLUMN_Y
 #define SIZE_X          ((LINE_X*COLUMN_X)/(NB_IP*NB_HART))
 #define SIZE_XY  (SIZE_X+(LINE_Y*COLUMN_Y)/(NB_IP*NB_HART))
-#define DATA_RAM               0x40000000
+#define DATA_RAM               XPAR_AXI_BRAM_CTRL_0_BASEADDR
+#define IP_RAM_SIZE           (XPAR_MULTIHART_IP_1_BASEADDR-XPAR_MULTIHART_IP_0_BASEADDR)
 int *data_ram = (int*)DATA_RAM;
 XMultihart_ip_Config *cfg_ptr[NB_IP];
 XMultihart_ip ip[NB_IP];
@@ -59,7 +60,7 @@ int main(){
         printf("\n");
       }
   for (int i=0; i<NB_IP; i++){
-    cfg_ptr[i] = XMultihart_ip_LookupConfig(i);
+    cfg_ptr[i] = XMultihart_ip_LookupConfig(XPAR_MULTIHART_IP_0_BASEADDR+i*IP_RAM_SIZE);
     XMultihart_ip_CfgInitialize
       (&ip[i], cfg_ptr[i]);
     XMultihart_ip_Set_ip_num(&ip[i], i);

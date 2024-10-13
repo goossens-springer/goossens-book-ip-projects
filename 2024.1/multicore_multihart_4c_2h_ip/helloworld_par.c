@@ -12,7 +12,8 @@
 #define LOG_IP_DATA_RAM_SIZE   (LOG_DATA_RAM_SIZE-LOG_NB_IP)//in words
 #define LOG_HART_DATA_RAM_SIZE (LOG_IP_DATA_RAM_SIZE-LOG_NB_HART)
 #define HART_DATA_RAM_SIZE     (1<<LOG_HART_DATA_RAM_SIZE)
-#define DATA_RAM               0x40000000
+#define DATA_RAM               XPAR_AXI_BRAM_CTRL_0_BASEADDR
+#define IP_RAM_SIZE           (XPAR_MULTIHART_IP_1_BASEADDR-XPAR_MULTIHART_IP_0_BASEADDR)
 #define OTHER_HART_START       0x78/4
 int *data_ram = (int*)DATA_RAM;
 XMultihart_ip_Config *cfg_ptr[NB_IP];
@@ -31,7 +32,7 @@ int main(){
   for (int h=0; h<NB_HART; h++)
     start_pc[h] = 0;
   for (int i=0; i<NB_IP; i++){
-    cfg_ptr[i] = XMultihart_ip_LookupConfig(i);
+    cfg_ptr[i] = XMultihart_ip_LookupConfig(XPAR_MULTIHART_IP_0_BASEADDR+i*IP_RAM_SIZE);
     XMultihart_ip_CfgInitialize(&ip[i], cfg_ptr[i]);
     XMultihart_ip_Set_ip_num(&ip[i], i);
     XMultihart_ip_Set_running_hart_set(&ip[i], (1<<NB_HART)-1);
