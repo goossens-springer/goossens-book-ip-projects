@@ -29,7 +29,7 @@ char     *name[38] = {
 int main(){
   word_type d;
   cfg_ptr = XSimple_pipeline_ip_LookupConfig
-    (XPAR_XSIMPLE_PIPELINE_IP_0_DEVICE_ID);
+    (XPAR_XSIMPLE_PIPELINE_IP_0_BASEADDR);
   XSimple_pipeline_ip_CfgInitialize(&ip, cfg_ptr);
   XSimple_pipeline_ip_Set_start_pc(&ip, 0);
   XSimple_pipeline_ip_Write_code_ram_Words

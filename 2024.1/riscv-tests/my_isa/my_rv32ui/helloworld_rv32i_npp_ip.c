@@ -28,7 +28,7 @@ char     *name[38] = {
 };
 int main(){
   word_type d;
-  cfg_ptr = XRv32i_npp_ip_LookupConfig(XPAR_XRV32I_NPP_IP_0_DEVICE_ID);
+  cfg_ptr = XRv32i_npp_ip_LookupConfig(XPAR_RV32I_NPP_IP_0_BASEADDR);
   XRv32i_npp_ip_CfgInitialize(&ip, cfg_ptr);
   XRv32i_npp_ip_Set_start_pc(&ip, 0);
   XRv32i_npp_ip_Write_code_ram_Words(&ip, 0, code_ram, CODE_RAM_SIZE);

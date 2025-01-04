@@ -29,7 +29,7 @@ char     *name[38] = {
 int main(){
   word_type d;
   cfg_ptr = XMulticycle_pipeline_ip_LookupConfig
-    (XPAR_XMULTICYCLE_PIPELINE_IP_0_DEVICE_ID);
+    (XPAR_XMULTICYCLE_PIPELINE_IP_0_BASEADDR);
   XMulticycle_pipeline_ip_CfgInitialize(&ip, cfg_ptr);
   XMulticycle_pipeline_ip_Set_start_pc(&ip, 0);
   XMulticycle_pipeline_ip_Write_code_ram_Words

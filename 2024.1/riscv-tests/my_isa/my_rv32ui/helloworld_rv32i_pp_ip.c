@@ -29,7 +29,7 @@ char     *name[38] = {
 int main(){
   word_type d;
   cfg_ptr = XRv32i_pp_ip_LookupConfig
-    (XPAR_XRV32I_PP_IP_0_DEVICE_ID);
+    (XPAR_XRV32I_PP_IP_0_BASEADDR);
   XRv32i_pp_ip_CfgInitialize(&ip, cfg_ptr);
   XRv32i_pp_ip_Set_start_pc(&ip, 0);
   XRv32i_pp_ip_Write_code_ram_Words

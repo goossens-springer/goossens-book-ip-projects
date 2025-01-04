@@ -34,7 +34,7 @@ char      name[][38] = {
 int main(){
   word_type d;
   cfg_ptr = XMultihart_ip_LookupConfig
-    (XPAR_XMULTIHART_IP_0_DEVICE_ID);
+    (XPAR_XMULTIHART_I_0_BASEADDR);
   XMultihart_ip_CfgInitialize(&ip, cfg_ptr);
   XMultihart_ip_Set_running_hart_set(&ip, (1<<NB_HART)-1);
   XMultihart_ip_Write_start_pc_Words
