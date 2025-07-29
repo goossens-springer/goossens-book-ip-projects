@@ -1,0 +1,55 @@
+sudo apt-get install build-essential gdb
+
+
+cd
+git clone https://git.code.sf.net/p/openocd/code openocd-code
+cd openocd-code
+./bootstrap
+./configure --enable-jtag_vpi --enable-remote-bitbang
+make
+sudo make install
+
+
+riscv32-unknown-elf-gcc -g -nostartfiles -T spike.lds test_op_imm.s -o test_op_imm
+
+
+spike --rbb-port=9824 -m0x0010010000:0x10000 test_op_imm
+
+
+openocd -f spike.cfg
+
+
+riscv32-unknown-elf-gdb
+target remote localhost:3333
+file test_op_imm
+load
+l
+p $pc
+si
+info reg a1
+info reg a2
+l
+b 16
+c
+
+
+riscv32-unknown-elf-gcc -nostartfiles -T spike.lds -g -O3 basicmath_simple.c -o basicmath_simple -lm
+
+
+spike --rbb-port=9824 -m0x0010010000:0x10000 basicmath_simple
+
+
+openocd -f spike.cfg
+
+
+riscv32-unknown-elf-gdb
+target remote localhost:3333
+file basicmath_simple
+load
+set $pc = 0x10018390
+set $sp = 0x10020000
+l
+b 33
+c
+x/16x 0x1001ffc0
+

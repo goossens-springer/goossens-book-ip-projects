@@ -1,0 +1,43 @@
+#ifndef __EXECUTE
+#define __EXECUTE
+#include "ap_int.h"
+#include "simple_pipeline_ip.h"
+void read_reg(
+  int      *reg_file,
+  reg_num_t rs1,
+  reg_num_t rs2,
+  int      *rv1,
+  int      *rv2);
+void write_reg(
+  decoded_instruction_t d_i,
+  int                  *reg_file,
+  int                   result);
+bit_t compute_branch_result(
+  int     rv1,
+  int     rv2,
+  func3_t func3);
+int compute_op_result(
+  decoded_instruction_t d_i,
+  int                   rv1,
+  int                   rv2);
+int compute_result(
+  code_address_t        pc,
+  decoded_instruction_t d_i,
+  int                   rv1,
+  int                   op_result);
+code_address_t compute_next_pc(
+  code_address_t        pc,
+  decoded_instruction_t d_i,
+  bit_t                 cond,
+  int                   rv1);
+int mem_load(
+  int             *data_ram,
+  b_data_address_t address,
+  func3_t          msize);
+void mem_store(
+  int             *data_ram,
+  b_data_address_t address,
+  int              rv2,
+  ap_uint<2>       msize);
+
+#endif
