@@ -6,3 +6,5 @@ The 2024.1 folder corresponds to an update to be used with the Vitis 2024.1 vers
 The 2023.1 and 2023.2 versions are not recommended. Either install Vitis 2022.1 or 2024.1.
 
 New !!! The Vitis 2025.1 version is now supported. Find all the experiments in the book adapted to the Vitis 2025.1 version.
+
+New !!! I have added a "fir" folder in which you will find the HLS implementation of a fir filter. The source code is given in the folder. A readme.md file is also available. It can be implemented in whatever Vitis version, following the recipes given in the other folders, e.g. for Vitis 2025.1, implement an hls_component, a platform and a hello_world driver as explained in the 2025.1 folder.
